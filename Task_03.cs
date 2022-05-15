@@ -22,5 +22,16 @@ namespace Task_03
 
             Console.WriteLine($"Sum = {sum}, Product = {product}");
         }
+		
+		public static void Task3(int n)
+		//A three-digit number n is given. The first left digit was crossed out and ascribed to the right. Find the obtained number.
+		//Example: n = 450  =>  result = 504
+				 //n = 807  =>  result = 78
+				 //n = 695  =>  result = 956
+        {
+            int result = ((n/10)%10) * 100 + (n%10) * 10 + (n/100);
+
+            Console.WriteLine($"Result is {result}");
+        }
     }
 }
