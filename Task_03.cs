@@ -62,7 +62,7 @@ namespace Task_03
 			//n = 807  result = 708  
 			//n = 695  result = 596  
 
-		{  
+        {  
             int result = 100 * (n % 10) + 10 * (n % 100 / 10) + (n / 100);  
   
             Console.WriteLine(result);  
