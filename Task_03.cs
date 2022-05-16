@@ -44,7 +44,7 @@ namespace Task_03
 
             Console.WriteLine(result);  
         }  
-		
+  		
 		public static void Task5(int n)  
 		//A three-digit number n is given. Find the number that was obtained by processing the initial digit from the right to the left.  
 		//Example n = 450  result = 54  
@@ -52,9 +52,19 @@ namespace Task_03
 				//n = 695  result = 596  
 		{  
             int result = 100 * (n % 10) + 10 * (n % 100 / 10) + (n / 100);  
-
+  
             Console.WriteLine(result);  
         }  
-		
-    }
-}
+  		
+		public static void Task4(int n)  
+		//A three-digit number n is given. The first right digit was crossed out and ascribed to the left. Find the obtained number.  
+		//Example n = 450  result = 45  
+				//n = 807  result = 780  
+				//n = 695  result = 569  
+        {  
+            int result = 100 * (n % 10) + 10 * (n / 100) + (n % 100 / 10);  
+  
+            Console.WriteLine(result);  
+        }  
+    }  
+}  
