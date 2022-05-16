@@ -56,7 +56,7 @@ namespace Task_03
             Console.WriteLine(result);  
         }  
   		
-		public static void Task5(int n)  
+		public static void Task6(int n)  
 		//A three-digit number n is given. The first right digit was crossed out and ascribed to the left. Find the obtained number.  
 		//Example n = 450  result = 45  
 				//n = 807  result = 780  
