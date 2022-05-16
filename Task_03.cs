@@ -33,5 +33,17 @@ namespace Task_03
 
             Console.WriteLine($"Result is {result}");
         }
+		
+		public static void Task4(int n)
+		//A two-digit number n is given. Find the number that was obtained after reordering the initial numbers.
+		//Example: n = 45  result = 54
+				 //n = 80  result = 8
+				 //n = 69  result = 96
+
+        {
+            int result = 10 * (n % 10) + (n / 10);
+
+            Console.WriteLine(result);
+        }
     }
 }
