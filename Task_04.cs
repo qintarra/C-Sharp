@@ -2,15 +2,20 @@
 {
     public static class Tasks
     {   
-        public static void Task1(int a)
+        public static void Task1(int a, int b)
 
-        //Find square's area following the formula: S = a²
-        //Example: а = 4   area = 16
+        /* The rectangle's sides are a and b. Find its perimeter using the formula: P = 2×(a + b).
+         * Find its area following the formula: S = a × b
+         * Example: а = 5, b = 3   perimeter = 16
+         *      а = 5, b = 3   area = 15
+         */
 
         {
-            int perimeter = (4 * a);
-				
-            Console.WriteLine($"P = {perimeter}");
+            int perimeter = 2 * (a + b), area = a * b;
+
+            Console.WriteLine($"P = {perimeter}, S = {area}");
         }
+
+
     }
 }
