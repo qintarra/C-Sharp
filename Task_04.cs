@@ -41,5 +41,18 @@
 
             Console.WriteLine($"L = {Math.Round(circumference, 2)}, S = {Math.Round(area, 2)}");
         }
+
+        public static void Task4(int a, int b, int c)
+
+        /* The cuboid`s edges are a,  b,  c. Find its volume using the formula: V = a × b × c.
+         * Find its surface area following the formula: S = 2×(a×b + b×c + a×c).
+         * Example: а = 4, b = 2, c = 3   volume = 24   surface area = 52
+         */
+
+        {
+            int volume = a * b * c, surfaceArea = 2 * (a * b + b * c + a * c);
+
+            Console.WriteLine($"V = {volume}, S = {surfaceArea}");
+        }
     }
 }
