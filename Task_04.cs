@@ -28,5 +28,18 @@
 
             Console.WriteLine($"V = {volume}, S = {surfaceArea}");
         }
+
+        public static void Task3(int r)
+
+        /* Find the circumference L and the area of a circle S of a given radius 
+         * using the formula L = 2 × π × r ,  S = π × R², where π = 3.14.
+         * Example: r = 5   circumference = 31.4    area = 78.5
+         */
+
+        {
+            double pi = 3.14, circumference = 2 * pi * r, area = pi * r * r;
+
+            Console.WriteLine($"L = {Math.Round(circumference, 2)}, S = {Math.Round(area, 2)}");
+        }
     }
 }
