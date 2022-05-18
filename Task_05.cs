@@ -7,6 +7,7 @@
         /* Given an integer A. If A is positive, then add 1 to it. Otherwise subtract 2 from it.  
          * Example: A = 19  =>  A = 20  
          *          A = -13  =>  A = -15
+         */
 
         {
             if (a > 0)
@@ -19,7 +20,7 @@
             }
         }
 
-        public static int Task3(int a)
+        public static int Task2(int a)
 
         /* Given an integer A. If it is positive, then add 4 to it; 
          * if negative, then subtract 7 from it; if zero, then replace it with 5.
@@ -45,6 +46,26 @@
                 }
             }
         }
+
+        public static (int a, int b) Task1(int a, int b)
+
+        /* Two values of integer type are given: A and B. If their values are not equal, then assign the sum of these values to each variable, 
+         * and if they are equal, then assign zero values to the variables.
+         * Example: A = 5;  B = 5 =>  A = 0; B = 0
+         *          A = -25;  B = 8 =>  A = -17; B = -17
+         */
+
+        {
+            if (a != b)
+            {
+                return (a = (a + b), b = a);
+            }
+            else
+            {
+                return (a = 0, b = 0);
+            }
+        }
+
 
     }
 }
