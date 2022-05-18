@@ -47,7 +47,7 @@
             }
         }
 
-        public static (int a, int b) Task1(int a, int b)
+        public static (int a, int b) Task3(int a, int b)
 
         /* Two values of integer type are given: A and B. If their values are not equal, then assign the sum of these values to each variable, 
          * and if they are equal, then assign zero values to the variables.
@@ -63,6 +63,25 @@
             else
             {
                 return (a = 0, b = 0);
+            }
+        }
+
+        public static int Task4(int a, int b, int c)
+
+        /* Given three unequal numbers A, B, C. Find the smallest of them.
+         * Example: A = 8;  B = -2 ; C = 3 =>  Min = -2
+         *          A = -24;  B = -3 ; C = 0 =>  Min = -24
+         */
+
+        {
+            var min = Math.Min(a, b);
+            if (min < c)
+            {
+                return min;
+            }
+            else
+            {
+                return c;
             }
         }
 
