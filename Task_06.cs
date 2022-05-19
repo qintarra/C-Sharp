@@ -3,6 +3,13 @@
     public static class Tasks
     {
         public static int Task1(int a,  int b, int c)
+
+        /* Given three unequal numbers A, B, C. Find the sum of the two largest of them
+         * Example: A = 11;  B = 34 ; C = 7 =>  Result = 45
+         *          A = 17;  B = -12 ; C = -6 =>  Result = 11
+         *          A = 5;  B = 0 ; C = 13 =>  Result = 18
+         */     
+
         {
             var result = 0;
             if (a > b && b > c)
@@ -39,6 +46,27 @@
             c = max;
             return (a, b, c);
         }
+
+        public static (int a, int b, int c) Task3(int a, int b, int c)
+
+        /* Given three real type values A, B, C. If their values are in ascending order (A < B< C), then double them; 
+         * otherwise, replace the value of each variable with the opposite one.
+         * Example: A = 8;  B = 17 ; C = 45 =>  A = 16;  B = 34 ; C = 90
+         *          A = -1;  B = 10 ; C = -5 =>  A = 1;  B = -10 ; C = 5
+         *          A = -25;  B = -23 ; C = -16 =>  A = -50;  B = -46 ; C = -32
+         */
+
+        {
+            if (a < b && b < c)
+            {
+                return (a * 2, b * 2, c * 2);
+            }
+            else
+            {
+                return (-a, -b, -c);
+            }
+        }
+
 
 
     }
