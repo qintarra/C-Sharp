@@ -18,7 +18,7 @@
             {
                 return a - 2;
             }
-			// Another option: a = a > 0 ? a + 1 : a - 2;
+		// Another option: a = a > 0 ? a + 1 : a - 2;
         }
 		
         public static int Task2(int a)
@@ -46,7 +46,7 @@
                     return 5;
                 }
             }
-			// Another option: a = a > 0 ? a + 4 : a < 0 ? a - 7 : a = 5;
+		// Another option: a = a > 0 ? a + 4 : a < 0 ? a - 7 : a = 5;
         }
 		
         public static (int a, int b) Task3(int a, int b)
