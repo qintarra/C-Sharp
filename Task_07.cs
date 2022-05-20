@@ -12,17 +12,14 @@ namespace Task_07
 
             while (n <= m)
             {
-                if (n % 2 == 0)
-                {
-                    sum += n;
-                }
+                sum += (n % 2 == 0) ? n : 0;
                 n++;
             }
 
             return sum;
         }
 		
-		public static int Task2(int n, int m)
+	public static int Task2(int n, int m)
 		
 	// Get the sum of odd numbers in the interval from n to m including.
 	// Example: n = 4, m = 10   sum = 21
@@ -38,6 +35,22 @@ namespace Task_07
 
             return sum;
         }
+		
+	public static int Task3(int n)
+		
+	// Get the sum of the digits of the number n (>0)
+	// Example: n = 25041   sum = 12
+		
+        {
+            int sum = 0;
 
+            while (n > 0)
+            {
+                sum += n % 10;
+                n /= 10;
+            }
+
+            return sum;
+        }
     }
 }
