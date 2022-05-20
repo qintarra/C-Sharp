@@ -18,8 +18,9 @@
             {
                 return a - 2;
             }
+			// Another option: a = a > 0 ? a + 1 : a - 2;
         }
-
+		
         public static int Task2(int a)
 
         /* Given an integer A. If it is positive, then add 4 to it; 
@@ -45,8 +46,9 @@
                     return 5;
                 }
             }
+			// Another option: a = a > 0 ? a + 4 : a < 0 ? a - 7 : a = 5;
         }
-
+		
         public static (int a, int b) Task3(int a, int b)
 
         /* Two values of integer type are given: A and B. If their values are not equal, then assign the sum of these values to each variable, 
