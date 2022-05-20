@@ -73,6 +73,5 @@ namespace Task_07
 
             return sum;
         }
-
     }
 }
