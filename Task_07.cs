@@ -52,5 +52,27 @@ namespace Task_07
 
             return sum;
         }
+		
+	public static int Task4(int n)
+	
+	// Get the sum of the even-digits of the number n (>0).
+	// Example: n = 215480   sum = 14
+	
+        {
+            int sum = 0;
+
+            while (n > 0)
+            {
+                
+                if (n % 2 == 0)
+                {
+                    sum += n % 10;
+                }
+                n /= 10;
+            }
+
+            return sum;
+        }
+
     }
 }
