@@ -99,6 +99,18 @@ namespace Task_07
 
             return max;
         }
+		
+	public static int Task6(int n)
+	
+	// Find the smallest integer that can be obtained by rearranging the digits of number n (>0).
+	// Example: n = 31041   result = 1134
+	
+        {
+            int result = int.Parse(new string(n.ToString().OrderBy(n => n).ToArray()));
+
+            return result;
+        }
+
 
 		
     }
