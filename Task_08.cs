@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task08
+namespace Task_08
 
 {
     // Sum and amount of even and odd numbers in a range
