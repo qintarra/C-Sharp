@@ -72,5 +72,34 @@ namespace Task_07
 
             return sum;
         }
+		
+	public static int Task5(int n)
+	
+	// Choose the larger of the two values. The first value is the sum of all even-digits of the number n (>0), 
+	// the second value is the sum of all odd-digits of the number n (>0).
+	// Example: n = 52012  max = 6
+	
+        {
+            int sum1 = 0;
+            int sum2 = 0;
+
+            while (n > 0)
+            {
+                if (n % 2 == 0)
+                {
+                    sum1 += n % 10;
+                }
+                else if (n % 2 != 0)
+                {
+                    sum2 += n % 10;
+                }
+                n /= 10;
+            }
+            int max = Math.Max(sum1, sum2);
+
+            return max;
+        }
+
+		
     }
 }
