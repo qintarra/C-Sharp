@@ -110,8 +110,5 @@ namespace Task_07
 
             return result;
         }
-
-
-		
     }
 }
