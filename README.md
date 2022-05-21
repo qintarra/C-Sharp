@@ -6,4 +6,5 @@ Task_02	Enter 3 numbers and display the value of the sum and product of these nu
 Task_03 Exercises with numbers (sum, product, rearrangement).  
 Task_04 Linear calculations.  
 Task_05 Conditions and statements.  
-Task_06 Once more: conditions and statements.  
+Task_06 More conditions and statements.  
+Task_07 Basic statements: loops.  
