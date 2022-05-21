@@ -3,7 +3,7 @@
 namespace Task02
 
 {
-    //Sum and amount of even and odd numbers in a range
+    // Sum and amount of even and odd numbers in a range
     internal class Program
     {
         static void Main(string[] args)
