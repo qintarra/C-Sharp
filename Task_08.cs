@@ -1,9 +1,10 @@
 ﻿using System;
 
-namespace Task02
+namespace Task08
 
 {
     // Sum and amount of even and odd numbers in a range
+	
     internal class Program
     {
         static void Main(string[] args)
