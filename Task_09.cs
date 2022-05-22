@@ -11,7 +11,7 @@ namespace Task_09
             {
                 Console.Clear();
                 double firstValue, secondValue;
-                string action;
+                string action; // In this variable, we store the actions that we will perform with our numbers.
 
                 try
                 {
