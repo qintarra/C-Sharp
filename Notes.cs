@@ -1,9 +1,7 @@
-// My notes from books and lectures.
-
 using System;
 
 namespace Notes_01
-
+// My notes from books and lectures.
 {
     internal class Program
     {
@@ -38,6 +36,16 @@ namespace Notes_01
 			// % operator - reminder of a division
 
             Console.WriteLine($"{x} + {y} = {z}");
+			
+			// Mathematical functions. Math class methods
+            double x = double.Parse(Console.ReadLine());
+            double y = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("sin({0}) = {1}",x,Math.Sin(x));
+            Console.WriteLine("{0}^2 = {1}",y,Math.Pow(y, 2));
+            Console.WriteLine("square root of {0} = {1}",x,Math.Sqrt(x));   
+            Console.WriteLine("minimum = {0}",Math.Min(x,y));
+            Console.WriteLine("maximum = {0}",Math.Max(x, y));
 			
 
       
