@@ -9,7 +9,7 @@ namespace Notes_01
         {
             Console.WriteLine("Hello World!");
 			
-			int number;
+	int number;
             number = 10;
             double ak = 5.45;
             string s = "any text";
@@ -21,7 +21,7 @@ namespace Notes_01
             Console.WriteLine(b);
             Console.WriteLine(t);
 			
-			int x = 10;
+	int x = 10;
             int y = 20;
             int z = x + y;
             Console.WriteLine(z);
@@ -29,15 +29,15 @@ namespace Notes_01
             Console.WriteLine("{0} = {1} + {2}", z, y, x);
             Console.WriteLine($"{x} + {y} = {z}");
 			
-			// Two methods for converting a string to number
+		// Two methods for converting a string to number
             int x = int.Parse(Console.ReadLine());
             int y = Convert.ToInt32(Console.ReadLine());
             int z = x + y; // Operators: +, -, *, /, %
-			// % operator - reminder of a division
+		// % operator - reminder of a division
 
             Console.WriteLine($"{x} + {y} = {z}");
 			
-			// Mathematical functions. Math class methods
+		// Mathematical functions. Math class methods
             double x = double.Parse(Console.ReadLine());
             double y = Convert.ToDouble(Console.ReadLine());
 
@@ -47,8 +47,34 @@ namespace Notes_01
             Console.WriteLine("minimum = {0}",Math.Min(x,y));
             Console.WriteLine("maximum = {0}",Math.Max(x, y));
 			
+	//Conditional operator full form
 
+            int x = int.Parse(Console.ReadLine());
+
+            if (x % 2 == 0)
+            {
+                Console.WriteLine($"Number {x} is even");
+            }
+            else
+            {
+                Console.WriteLine($"Number {x} is odd");
+            }
       
+	//Conditional operator short form
+
+            int x = int.Parse(Console.ReadLine());
+
+            if (x % 2 == 0)
+            {
+                Console.WriteLine($"Number {x} is even");
+            }
+
+            if (x % 2 != 0)
+            {
+                Console.WriteLine($"Number {x} is odd");
+            }
+
+	  
         }
     }
 }
