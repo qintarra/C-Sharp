@@ -111,9 +111,21 @@ namespace Notes_02
                     Console.WriteLine($"The number {z} is odd");
                     break;
             }
-
+			
+			//2.5
+			Console.WriteLine("Enter raiting from 0 to 100");
+            switch (int.Parse(Console.ReadLine()))
+            {
+                case int r when r > 100:
+                    Console.WriteLine("The raiting can't be more than 100");
+                    break;
+                case int r when r < 0:
+                    Console.WriteLine("The raiting can't be less than 0");
+                    break;
+                case int r:
+                    Console.WriteLine($"Your raiting is {r} points");
+                    break;
+            }
         }
-
-
     }
 }
