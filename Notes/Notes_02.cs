@@ -88,6 +88,29 @@ namespace Notes_02
                     Console.WriteLine("Number out of range");
                     break;
             }
+			
+			//2.4
+            Console.WriteLine("Please enter a number");
+            int z = int.Parse(Console.ReadLine());
+            if (z % 2 == 0)
+            {
+                Console.WriteLine($"The number {z} is even");
+            }
+            else
+            {
+                Console.WriteLine($"The number {z} is odd");
+            }
+
+            switch (z % 2 == 0)
+            {
+
+                case true:
+                    Console.WriteLine($"The number {z} is even");
+                    break;
+                case false:
+                    Console.WriteLine($"The number {z} is odd");
+                    break;
+            }
 
         }
 
