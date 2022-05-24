@@ -38,10 +38,11 @@ namespace Notes_02
                     Console.WriteLine("You are mistaken");
                     break;
             }
+			
             Console.WriteLine("Continue...");
 			
-			//2.2
-			Console.WriteLine("Where do we go from here? (right, left, straight)");
+            //2.2
+            Console.WriteLine("Where do we go from here? (right, left, straight)");
             string direction = Console.ReadLine();
             switch (direction)
             {
@@ -59,8 +60,8 @@ namespace Notes_02
                     break;
             }
 			
-			//2.3
-			Console.WriteLine("Please enter a number from 1 to 10");
+            //2.3
+            Console.WriteLine("Please enter a number from 1 to 10");
             int y = int.Parse(Console.ReadLine());
 
             switch (y)
