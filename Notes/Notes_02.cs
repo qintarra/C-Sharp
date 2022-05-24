@@ -112,8 +112,8 @@ namespace Notes_02
                     break;
             }
 			
-			//2.5
-			Console.WriteLine("Enter raiting from 0 to 100");
+            //2.5
+            Console.WriteLine("Enter raiting from 0 to 100");
             switch (int.Parse(Console.ReadLine()))
             {
                 case int r when r > 100:
