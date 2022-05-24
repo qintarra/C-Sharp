@@ -58,6 +58,35 @@ namespace Notes_02
                     Console.WriteLine("You can tell the end is near");
                     break;
             }
+			
+			//2.3
+			Console.WriteLine("Please enter a number from 1 to 10");
+            int y = int.Parse(Console.ReadLine());
+
+            switch (y)
+            {
+                case 1:
+                    Console.WriteLine("This is not a prime and not composite number");
+                    break;
+                case 2:
+                    Console.WriteLine("This is only even prime number");
+                    break;
+                case 3:
+                case 5:
+                case 7:
+                    Console.WriteLine("This is a prime number");
+                    break;
+                case 4:
+                case 6:
+                case 8:
+                case 9:
+                case 10:
+                    Console.WriteLine("This is a composite number");
+                    break;
+                default:
+                    Console.WriteLine("Number out of range");
+                    break;
+            }
 
         }
 
