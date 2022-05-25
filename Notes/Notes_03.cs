@@ -74,10 +74,17 @@ namespace Notes_03
             }
             while (b < 11);
 			
-			//3.3
+            //3.3
             for (int c = 1; c < 11; c++)
             {
                 Console.WriteLine(c);
+            }
+			
+			//3.4
+            for (int d = 1; d < 11; d += 1)
+            {
+                if (d == 6 || d == 9) continue;
+                Console.WriteLine(d);
             }
 
 
