@@ -80,12 +80,19 @@ namespace Notes_03
                 Console.WriteLine(c);
             }
 			
-			//3.4
+            //3.4
             for (int d = 1; d < 11; d += 1)
             {
                 if (d == 6 || d == 9) continue;
                 Console.WriteLine(d);
             }
+			
+            //3.5
+            for (int e = 1; e < 11; e++)
+            {
+                if (e == 6) break;
+                Console.WriteLine(e);
+			}
 
 
 
