@@ -57,35 +57,13 @@ namespace Notes_03
             Console.WriteLine(max);
 			
 			
-			int z = int.Parse(Console.ReadLine());
-
-            if (x > y)
+			//3.1
+			int a = 1;
+            while (a < 11)
             {
-                if (x > z)
-                {
-                    max = x;
-                }
-                else
-                {
-                    max = z;
-                }
+                Console.WriteLine(x);
+                a = a + 1; //a++
             }
-            else
-            {
-                if (y > z)
-                {
-                    max = y;
-                }
-                else
-                {
-                    max = z;
-                }
-            }
-
-            Console.WriteLine(max);
-
-            max = x > y ? x > z ? x : z : y > z ? y : z; //using ternary operator
-            Console.WriteLine(max);
 
 
 
