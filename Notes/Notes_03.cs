@@ -21,12 +21,72 @@ namespace Notes_03
             Console.WriteLine($"Max = {max}");
 
             max = x > y ? x : y; //solution with ternary operator
-
             Console.WriteLine($"Max = {max}");
 
             Console.WriteLine($"max = {(x > y ? x : y)}"); //another solution
 
-           
+
+            int z = int.Parse(Console.ReadLine());
+
+            if (x > y)
+            {
+                if (x > z)
+                {
+                    max = x;
+                }
+                else
+                {
+                    max = z;
+                }
+            }
+            else
+            {
+                if (y > z)
+                {
+                    max = y;
+                }
+                else
+                {
+                    max = z;
+                }
+            }
+
+            Console.WriteLine(max);
+
+            max = x > y ? x > z ? x : z : y > z ? y : z; //using ternary operator
+            Console.WriteLine(max);
+			
+			
+			int z = int.Parse(Console.ReadLine());
+
+            if (x > y)
+            {
+                if (x > z)
+                {
+                    max = x;
+                }
+                else
+                {
+                    max = z;
+                }
+            }
+            else
+            {
+                if (y > z)
+                {
+                    max = y;
+                }
+                else
+                {
+                    max = z;
+                }
+            }
+
+            Console.WriteLine(max);
+
+            max = x > y ? x > z ? x : z : y > z ? y : z; //using ternary operator
+            Console.WriteLine(max);
+
 
 
         }
