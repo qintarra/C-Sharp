@@ -57,13 +57,22 @@ namespace Notes_03
             Console.WriteLine(max);
 			
 			
-			//3.1
-			int a = 1;
+            //3.1
+            int a = 1;
             while (a < 11)
             {
                 Console.WriteLine(x);
                 a = a + 1; //a++
             }
+			
+            //3.2
+            int b = 1;
+            do
+            {
+                Console.WriteLine(x);
+                b += 1; //b++
+            }
+            while (b < 11);
 
 
 
