@@ -92,11 +92,15 @@ namespace Notes_03
             {
                 if (e == 6) break;
                 Console.WriteLine(e);
-			}
-
-
-
+            }
+			
+            //3.6
+            int sum = 0;
+            for (int f = 1; f < 11; f++)
+            {
+                sum += f;
+            }
+            Console.WriteLine(sum);
         }
-
     }
 }
