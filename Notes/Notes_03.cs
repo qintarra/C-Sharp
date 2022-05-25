@@ -61,7 +61,7 @@ namespace Notes_03
             int a = 1;
             while (a < 11)
             {
-                Console.WriteLine(x);
+                Console.WriteLine(a);
                 a = a + 1; //a++
             }
 			
@@ -69,10 +69,16 @@ namespace Notes_03
             int b = 1;
             do
             {
-                Console.WriteLine(x);
+                Console.WriteLine(b);
                 b += 1; //b++
             }
             while (b < 11);
+			
+			//3.3
+            for (int c = 1; c < 11; c++)
+            {
+                Console.WriteLine(c);
+            }
 
 
 
