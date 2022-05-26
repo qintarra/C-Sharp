@@ -25,6 +25,15 @@ namespace Notes_04
             {
                 m[i] = Convert.ToInt32(Console.ReadLine());
             }
+			
+            //Loop through an array using for loop
+            int sum = 0;
+            for (int i = 0; i < m.Length; i++)
+            {
+                sum += m[i];
+            }
+
+            Console.WriteLine($"sum = {sum} ");
         }
     }
 }
