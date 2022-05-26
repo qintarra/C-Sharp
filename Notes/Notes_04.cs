@@ -43,6 +43,29 @@ namespace Notes_04
             }
 
             Console.WriteLine($"sum = {sum} ");
+			
+            //Finding minimum and maximum values
+            int min = m[0];
+            int nmin = 0;
+            int max = m[0];
+            int nmax = 0;
+
+            for (int i = 1; i < 5; i++)
+            {
+                if (min > m[i])
+                {
+                    min = m[i];
+                    nmin = i;
+                }
+                if (max < m[i])
+                {
+                    max = m[i];
+                    nmax = i;
+                }
+            }
+
+            Console.WriteLine($"Minimum = {min} position = {nmin}");
+            Console.WriteLine($"Maximum = {max} position = {nmax}");
         }
     }
 }
