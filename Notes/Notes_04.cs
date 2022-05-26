@@ -18,6 +18,13 @@ namespace Notes_04
             }
 
             Console.WriteLine();
+			
+            //Entering array elements
+            Console.WriteLine("Enter 5 numbers");
+            for (int i = 0; i < 5; i++)
+            {
+                m[i] = Convert.ToInt32(Console.ReadLine());
+            }
         }
     }
 }
