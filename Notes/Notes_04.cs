@@ -34,6 +34,15 @@ namespace Notes_04
             }
 
             Console.WriteLine($"sum = {sum} ");
+			
+            //Loop through an array using foreach loop
+            sum = 0;
+            foreach (int x in m)
+            {
+                sum += x;
+            }
+
+            Console.WriteLine($"sum = {sum} ");
         }
     }
 }
