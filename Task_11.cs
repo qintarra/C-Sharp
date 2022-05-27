@@ -55,6 +55,24 @@ namespace Task_11
 
             return result;
         }
+		
+		//Calculate the number of negative elements of the array.
+		//Example: array = { 25, -6, 59, -37 }    =>  result = 2
+		public static int Task1(int[] array)
+        {
+            int result = 0;
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < 0)
+                {
+                    result++;
+                }
+            }
+
+            return result;
+        }
+
 
 
 
