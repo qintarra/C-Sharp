@@ -13,3 +13,4 @@ Task_07 Basic statements: loops.
 Task_08 Calculate sum and amount of even and odd numbers in a range.  
 Task_09 Simple calculator.   
 Task_10 Entering an array from the console.  
+Task_11 Calculation of sum, product, and numbers of elements in arrays  
