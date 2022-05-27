@@ -56,9 +56,9 @@ namespace Task_11
             return result;
         }
 		
-		//Calculate the number of negative elements of the array.
-		//Example: array = { 25, -6, 59, -37 }    =>  result = 2
-		public static int Task1(int[] array)
+        //Calculate the number of negative elements of the array.
+        //Example: array = { 25, -6, 59, -37 }    =>  result = 2
+        public static int Task4(int[] array)
         {
             int result = 0;
             
@@ -72,6 +72,25 @@ namespace Task_11
 
             return result;
         }
+		
+        //Calculate the product of positive elements of the array greater than the value of a.
+        //Example: array = { 8, 1, -12, -2 },  a = -5   =>  result = 8
+        //		   array = { -25, -6, 2, 12 }, a = 1    =>  result = 24
+        public static int Task5(int[] array, int a)
+        {
+            int result = 1;
+
+            for (int i = 0; i < array.Length; i++ )
+            {
+                if (array[i] > 0 && array[i] > a)
+                {
+                    result *= array[i];
+                }
+            }
+
+            return result;
+        }
+
 
 
 
