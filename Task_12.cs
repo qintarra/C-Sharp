@@ -21,6 +21,30 @@ namespace Task_12
 
             return (sum, number);
         }
+		
+        //Calculate the arithmetic mean of the array’s elements greater than the value of a.
+        //Example: array = { -25, -6, 2, 12 }, a = 1    =>  result = 7
+        //         array = { 8, 3, -12, -2 },  a = -5   =>  result = 3
+
+		public static double Task2(int[] array, int a)
+        {
+            double result = 0.0;
+            double sum = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > a)
+                {
+					sum += array[i];
+                    result++;
+                }
+            }
+
+            result = sum / result;
+			
+            return result;
+        }
+
 
 		
 	}
