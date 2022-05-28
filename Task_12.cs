@@ -93,6 +93,21 @@ namespace Task_12
 
             return result;
         }
+		
+        //Add to the value of the elements the values ​​of their indices if the value and index are both even or both odd.
+        //Example: array = { -25, -6, 2, 12 }    =>  array = { -25, -6, 4, 12 }
+        //         array = { 8, 3, -12, -2 }     =>  array = { 8, 4, -10, -2 }
+		public static int[] Task5(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+
+                if ((array[i] + i) % 2 == 0)
+                {
+                    array[i] += i;
+                }
+            return array;
+        }
+
 
 
 
