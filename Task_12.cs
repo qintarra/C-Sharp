@@ -71,6 +71,30 @@ namespace Task_12
 
             return result;
         }
+		
+        //Find the minimum value among the elements of the array greater than the value of a.
+        //Example: array = { 25, -6, 0, 11, 10 }, a = 10    =>  result = 11
+        //         array = { 0, 8, 5, -2 },       a = 4     =>  result = 5
+        public static int Task4(int[] array, int a)
+        {
+            int result = 0;
+            int min = 0;
+            for (; min < array.Length; min++)
+            {
+                if (array[min] > a)
+                    break;
+            }
+            for (int i = min + 1; i < array.Length; ++i)
+            {
+                if (array[i] > a && array[i] < array[min])
+                min = i;
+            }
+            result = array[min];
+
+            return result;
+        }
+
+
 
 
 
