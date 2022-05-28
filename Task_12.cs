@@ -108,10 +108,10 @@ namespace Task_12
             return array;
         }
 		
-		//Double the values ​​of the array elements greater than a, and write zero to all others.
-		//Example: array = { 25, -6, 0, 11, 10 }, a = 10    =>  array = { 50, -6, 0, 22, 10 }
+        //Double the values ​​of the array elements greater than a, and write zero to all others.
+        //Example: array = { 25, -6, 0, 11, 10 }, a = 10    =>  array = { 50, -6, 0, 22, 10 }
         //         array = { 0, 8, 5, -2 },       a = 4     =>  array = { 0, 16, 10, -2 }
-		public static int[] Task3(int[] array, int a)
+        public static int[] Task6(int[] array, int a)
         {
 
             for (int i = 0; i < array.Length; i++)
@@ -128,13 +128,5 @@ namespace Task_12
             }
                 return array;
         }
-
-
-
-
-
-
-
-		
     }
 }
