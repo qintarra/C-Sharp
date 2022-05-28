@@ -97,7 +97,7 @@ namespace Task_12
         //Add to the value of the elements the values ​​of their indices if the value and index are both even or both odd.
         //Example: array = { -25, -6, 2, 12 }    =>  array = { -25, -6, 4, 12 }
         //         array = { 8, 3, -12, -2 }     =>  array = { 8, 4, -10, -2 }
-		public static int[] Task5(int[] array)
+        public static int[] Task5(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
 
@@ -107,6 +107,28 @@ namespace Task_12
                 }
             return array;
         }
+		
+		//Double the values ​​of the array elements greater than a, and write zero to all others.
+		//Example: array = { 25, -6, 0, 11, 10 }, a = 10    =>  array = { 50, -6, 0, 22, 10 }
+        //         array = { 0, 8, 5, -2 },       a = 4     =>  array = { 0, 16, 10, -2 }
+		public static int[] Task3(int[] array, int a)
+        {
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > a)
+                {
+                    array[i] *= 2;
+                }
+                if (array[i] <= a)
+                {
+                    array[i] = 0;
+                }
+
+            }
+                return array;
+        }
+
 
 
 
