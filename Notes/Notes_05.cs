@@ -40,7 +40,7 @@ namespace Notes_05
                 Console.WriteLine();
             }
 			
-            //Finding sum in two-dimensional array (using for cycle)
+            //Finding sum in a two-dimensional array (using 'for' cycle)
             int sum = 0;
             for (int i = 0; i < mas.GetLength(0); i++)
             {
@@ -79,7 +79,15 @@ namespace Notes_05
                 Console.WriteLine();
             }
 			
-			
+			//Finding sum in the jagged array through 'for' cycle
+			int sum = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < mas[i].Length; j++)
+                {
+                    sum += mas[i][j];
+                }
+            }
 
         }
     }
