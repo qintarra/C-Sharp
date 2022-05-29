@@ -67,6 +67,17 @@ namespace Notes_04
                     mas[i][j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
+			
+			//Displayng the jaggd array on the screen
+            Console.WriteLine("Jagged array:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < mas[i].Length; j++)
+                {
+                    Console.Write($"{ mas[i][j]}");
+                }
+                Console.WriteLine();
+            }
 
         }
     }
