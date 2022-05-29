@@ -39,6 +39,18 @@ namespace Notes_04
                 }
                 Console.WriteLine();
             }
+			
+            //5.2 Find sum in two-dimensional array (using for cycle)
+            int sum = 0;
+            for (int i = 0; i < mas.GetLength(0); i++)
+            {
+                for (int j = 0; j < mas.GetLength(0); j++)
+                {
+                    sum += mas[i, j];
+                }
+            }
+
+            Console.WriteLine($"Sum = {sum}");
         }
     }
 }
