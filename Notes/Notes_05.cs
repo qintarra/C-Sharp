@@ -51,6 +51,13 @@ namespace Notes_04
             }
 
             Console.WriteLine($"Sum = {sum}");
+			
+            //5.3 Jaggad arrays
+            int[][] mas = new int[3][];
+            mas[0] = new int[2]; //allocate memory for the first subarray
+            mas[1] = new int[4]; //allocate memory for the second subarray
+            mas[2] = new int[3]; //allocate memory for the third subarray
+
         }
     }
 }
