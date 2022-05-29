@@ -79,8 +79,8 @@ namespace Notes_05
                 Console.WriteLine();
             }
 			
-			//Finding sum in the jagged array through 'for' cycle
-			int sum = 0;
+            //Finding sum in the jagged array through 'for' cycle
+            int sum = 0;
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < mas[i].Length; j++)
@@ -89,10 +89,10 @@ namespace Notes_05
                 }
             }
 			
-			Console.WriteLine($"Sum = {sum}");
+            Console.WriteLine($"Sum = {sum}");
 			
-			//Finding sum in the jagged array through 'foreach' cycle
-			sum = 0;
+            //Finding sum in the jagged array through 'foreach' cycle
+            sum = 0;
             foreach (int[] y in mas)
             {
                 foreach (int x in y)
