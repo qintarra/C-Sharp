@@ -29,7 +29,7 @@ namespace Notes_05
                 }
             }
 			
-            //Can be skipped if no need to output
+            //It can be skipped if there is no need to output
             Console.WriteLine("Source array");
             for (int i = 0; i < n; i++)
             {
@@ -88,7 +88,20 @@ namespace Notes_05
                     sum += mas[i][j];
                 }
             }
+			
+			Console.WriteLine($"Sum = {sum}");
+			
+			//Finding sum in the jagged array through 'foreach' cycle
+			sum = 0;
+            foreach (int[] y in mas)
+            {
+                foreach (int x in y)
+                {
+                    sum += x;
+                }
+            }
 
+            Console.WriteLine($"Sum = {sum} ");
         }
     }
 }
