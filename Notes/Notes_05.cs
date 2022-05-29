@@ -57,6 +57,16 @@ namespace Notes_04
             mas[0] = new int[2]; //allocate memory for the first subarray
             mas[1] = new int[4]; //allocate memory for the second subarray
             mas[2] = new int[3]; //allocate memory for the third subarray
+			
+            //Entering value from the keyboard
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Enter {0} row", i + 1);
+                for (int j = 0; j < mas[i].Length; j++)
+                {
+                    mas[i][j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
 
         }
     }
