@@ -1,12 +1,12 @@
 using System;
 
-namespace Notes_04
+namespace Notes_05
 {
     public static class Program
     {
         static void Main(string[] args)
         {
-			//5.1
+			//Two-dimensional array
             int[,] arr = { { 3, 6, 1},
                            {4, 2, 7 },
                            {9, 0, 8 }};
@@ -40,7 +40,7 @@ namespace Notes_04
                 Console.WriteLine();
             }
 			
-            //5.2 Find sum in two-dimensional array (using for cycle)
+            //Finding sum in two-dimensional array (using for cycle)
             int sum = 0;
             for (int i = 0; i < mas.GetLength(0); i++)
             {
@@ -52,13 +52,13 @@ namespace Notes_04
 
             Console.WriteLine($"Sum = {sum}");
 			
-            //5.3 Jaggad arrays
+            //Jaggad arrays
             int[][] mas = new int[3][];
             mas[0] = new int[2]; //allocate memory for the first subarray
             mas[1] = new int[4]; //allocate memory for the second subarray
             mas[2] = new int[3]; //allocate memory for the third subarray
 			
-            //Entering value from the keyboard
+            //Entering values from the keyboard
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Enter {0} row", i + 1);
@@ -68,7 +68,7 @@ namespace Notes_04
                 }
             }
 			
-			//Displayng the jaggd array on the screen
+            //Displayng the jagged array on the screen
             Console.WriteLine("Jagged array:");
             for (int i = 0; i < 3; i++)
             {
@@ -78,6 +78,8 @@ namespace Notes_04
                 }
                 Console.WriteLine();
             }
+			
+			
 
         }
     }
