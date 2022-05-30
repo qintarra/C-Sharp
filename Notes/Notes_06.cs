@@ -41,6 +41,18 @@ namespace Notes_06
                 Console.Write($"{x} ");
             }
             Console.WriteLine();
+			
+			
+			Console.WriteLine("Enter the number of items");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter array elements into a cloumn");
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            foreach (int x in arr)
+                Console.Write("{0} ", x);
+
+            Console.WriteLine();
             
         }
     }
