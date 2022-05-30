@@ -45,7 +45,7 @@ namespace Notes_06
 			
             Console.WriteLine("Enter the number of items");
             int n = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter array elements into a cloumn");
+            Console.WriteLine("Enter array elements into a column");
             int[] arr = new int[n];
             for (int i = 0; i < n; i++)
                 arr[i] = Convert.ToInt32(Console.ReadLine());
@@ -65,6 +65,18 @@ namespace Notes_06
             foreach (int x in mas3)
                 sum += x;
             Console.WriteLine("Sum {0}", sum);
+			
+			
+            Array mas1 = Array.CreateInstance(typeof(int), 5);
+            Console.WriteLine("Enter 5 array elements into a column");
+            for (int i = 0; i < mas1.Length; i++)
+            {
+                mas1.SetValue(int.Parse(Console.ReadLine()), i);
+            }
+            foreach (int x in mas1)
+            {
+                Console.WriteLine(x);
+            }
             
         }
     }
