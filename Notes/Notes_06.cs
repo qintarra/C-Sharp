@@ -32,6 +32,15 @@ namespace Notes_06
                 Console.Write($"{x} ");
             }
             Console.WriteLine();
+			
+			
+            Array.Sort(mas);
+            Console.WriteLine("Sorted array");
+            foreach (int x in mas)
+            {
+                Console.Write($"{x} ");
+            }
+            Console.WriteLine();
             
         }
     }
