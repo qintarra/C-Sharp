@@ -79,7 +79,7 @@ namespace Notes_06
             }
             
 			
-			Array arr2 = Array.CreateInstance(typeof(int), 3, 4);
+            Array arr2 = Array.CreateInstance(typeof(int), 3, 4);
             Console.WriteLine("Enter 12 array elements into a column");
             for (int i = 0; i < arr2.GetLength(0); i++)
                 for (int j = 0; j < arr2.GetLength(1); j++)
@@ -87,11 +87,23 @@ namespace Notes_06
                     arr2.SetValue(int.Parse(Console.ReadLine()), i, j);
                 }
 
-            int s = 0;
+            int s = 0; //sum
             for (int i = 0; i < arr2.GetLength(0); i++)
                 for (int j = 0; j < arr2.GetLength(1); j++)
                 {
                     s += Convert.ToInt32(arr2.GetValue(i, j));
+                }
+            Console.WriteLine("Sum = {0}", s);
+			
+			
+            //int [,] mas3 = mas2;     //ERROR 
+            int[,] arr3 = (int[,])arr2;
+
+            s = 0;
+            for (int i = 0; i < mas3.GetLength(0); i++)
+                for (int j = 0; j < mas3.GetLength(1); j++)
+                {
+                    s += arr3[i, j];
                 }
             Console.WriteLine("Sum = {0}", s);
         }
