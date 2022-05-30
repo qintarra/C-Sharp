@@ -78,6 +78,22 @@ namespace Notes_06
                 Console.WriteLine(x);
             }
             
+			
+			Array arr2 = Array.CreateInstance(typeof(int), 3, 4);
+            Console.WriteLine("Enter 12 array elements into a column");
+            for (int i = 0; i < arr2.GetLength(0); i++)
+                for (int j = 0; j < arr2.GetLength(1); j++)
+                {
+                    arr2.SetValue(int.Parse(Console.ReadLine()), i, j);
+                }
+
+            int s = 0;
+            for (int i = 0; i < arr2.GetLength(0); i++)
+                for (int j = 0; j < arr2.GetLength(1); j++)
+                {
+                    s += Convert.ToInt32(arr2.GetValue(i, j));
+                }
+            Console.WriteLine("Sum = {0}", s);
         }
     }
 }
