@@ -43,7 +43,7 @@ namespace Notes_06
             Console.WriteLine();
 			
 			
-			Console.WriteLine("Enter the number of items");
+            Console.WriteLine("Enter the number of items");
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter array elements into a cloumn");
             int[] arr = new int[n];
@@ -53,6 +53,18 @@ namespace Notes_06
                 Console.Write("{0} ", x);
 
             Console.WriteLine();
+			
+			
+            Console.WriteLine("Enter array elements separated by a space");
+            string[] mas2 = Console.ReadLine().Split(' ');
+            int[] mas3 = new int[mas2.Length];
+            for (int i = 0; i < mas3.Length; i++)
+                mas3[i] = int.Parse(mas2[i]);
+
+            int sum = 0;
+            foreach (int x in mas3)
+                sum += x;
+            Console.WriteLine("Sum {0}", sum);
             
         }
     }
