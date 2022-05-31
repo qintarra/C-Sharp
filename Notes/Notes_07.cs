@@ -6,13 +6,20 @@ namespace Notes_07
     {
         static void Main(string[] args)
         {
-			//Remember about the reference type of arrays
+            //Remember about the reference type of arrays
 			
-			//Create the first array of the integers
-            int[] mas1 = new int[3];
-            mas1[0] = 1;
-            mas1[1] = 2;
-            mas1[2] = 3;
+            //Create the first array of the integers
+            int[] arr1 = new int[3];
+            arr1[0] = 1;
+            arr1[1] = 2;
+            arr1[2] = 3;
+			
+			//Displaying the first array
+            Console.WriteLine("First array");
+            foreach (int x in arr1)
+            {
+                Console.WriteLine(x);
+            }
             
         }
     }
