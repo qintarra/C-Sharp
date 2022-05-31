@@ -31,6 +31,13 @@ namespace Notes_07
 			
             //Change the value of an element of the second array
             arr2[0] = 100;
+			
+            //Displaying the second array
+            Console.WriteLine("Second array");
+            foreach (int x in arr2)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 }
