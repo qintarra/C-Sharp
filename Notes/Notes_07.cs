@@ -28,6 +28,9 @@ namespace Notes_07
             {
                 Console.WriteLine(x);
             }
+			
+            //Change the value of an element of the second array
+            arr2[0] = 100;
         }
     }
 }
