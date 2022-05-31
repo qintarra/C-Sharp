@@ -38,6 +38,13 @@ namespace Notes_07
             {
                 Console.WriteLine(x);
             }
+			
+            //Displaying the first array
+            Console.WriteLine("First array");
+            foreach (int x in arr1)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 }
