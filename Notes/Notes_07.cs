@@ -45,6 +45,14 @@ namespace Notes_07
             {
                 Console.WriteLine(x);
             }
+			
+			
+            //Get array elements from the end
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            Console.WriteLine(numbers[^1]);
+            Console.WriteLine(numbers[^2]);
+            Console.WriteLine(numbers[^3]);
         }
     }
 }
