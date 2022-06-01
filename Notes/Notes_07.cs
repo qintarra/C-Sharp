@@ -67,6 +67,11 @@ namespace Notes_07
             {
                 Console.WriteLine(sl);
             }
+			
+            //Use in arrays or rows
+            string input = "It's a test of ranges!";
+            string output = input[^7..^1];
+            Console.WriteLine(output); //Output: Ranges
         }
     }
 }
