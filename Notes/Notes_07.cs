@@ -79,6 +79,11 @@ namespace Notes_07
 
             output = input[..^1]; //Equivalemt of input[^0..^1]
             Console.WriteLine(output); //Output: It's a test of ranges
+			
+            //Save range to variables and use them later
+            Range r = 0..^8;
+            output = input[r];
+            Console.WriteLine(output);
         }
     }
 }
