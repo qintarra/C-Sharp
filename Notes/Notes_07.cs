@@ -60,6 +60,13 @@ namespace Notes_07
             Index i2 = ^4; //number 4 from the end
             int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             Console.WriteLine($"{a[i1]}, {a[i2]}"); //3, 6
+			
+            //Get range
+            var slice = a[i1..i2]; //3, 4, 5
+            foreach (var sl in slice)
+            {
+                Console.WriteLine(sl);
+            }
         }
     }
 }
