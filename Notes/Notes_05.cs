@@ -44,7 +44,7 @@ namespace Notes_05
             int sum = 0;
             for (int i = 0; i < mas.GetLength(0); i++)
             {
-                for (int j = 0; j < mas.GetLength(0); j++)
+                for (int j = 0; j < mas.GetLength(1); j++)
                 {
                     sum += mas[i, j];
                 }
