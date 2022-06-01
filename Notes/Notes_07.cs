@@ -72,6 +72,13 @@ namespace Notes_07
             string input = "It's a test of ranges!";
             string output = input[^7..^1];
             Console.WriteLine(output); //Output: Ranges
+			
+            //Omit the first or last index of a range
+            output = input[^7..]; //Equivalemt of input[^7..^0]
+            Console.WriteLine(output); //Output: Ranges!
+
+            output = input[..^1]; //Equivalemt of input[^0..^1]
+            Console.WriteLine(output); //Output: It's a test of ranges
         }
     }
 }
