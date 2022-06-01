@@ -53,6 +53,13 @@ namespace Notes_07
             Console.WriteLine(numbers[^1]);
             Console.WriteLine(numbers[^2]);
             Console.WriteLine(numbers[^3]);
+			
+            //Indexes and ranges - an easy way to get subarrays from arrays
+            //Indexation
+            Index i1 = 3; //number 3 from the begining
+            Index i2 = ^4; //number 4 from the end
+            int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Console.WriteLine($"{a[i1]}, {a[i2]}"); //3, 6
         }
     }
 }
