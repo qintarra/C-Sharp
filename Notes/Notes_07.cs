@@ -88,9 +88,11 @@ namespace Notes_07
 			
             int[] myArray = { 16, 37, 131, 88, 45, 4, 4, 9, 5, 131, 24, 3 };
 			
-			Console.WriteLine(myArray.Min());
+            Console.WriteLine(myArray.Min());
             Console.WriteLine(myArray.Max());
             Console.WriteLine(myArray.Sum());
+			
+            Console.WriteLine(myArray.Where(i => i % 2 == 0).Sum()); // Sum of even numbers of array elements
         }
     }
 }
