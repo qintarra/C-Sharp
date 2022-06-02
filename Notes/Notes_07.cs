@@ -99,6 +99,9 @@ namespace Notes_07
             int[] result1 = myArray.Distinct().ToArray(); // Get the unique elements of an array
 			
             int[] result2 = myArray.OrderBy(i => i).ToArray(); // Sort array in ascending order
+			
+            // Array.Sort(myArray);
+            int[] result3 = myArray.OrderByDescending(i => i).ToArray(); // Sort array in descending order
         }
     }
 }
