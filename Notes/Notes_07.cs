@@ -97,6 +97,8 @@ namespace Notes_07
             Console.WriteLine(myArray.Where(i => i % 2 == 1).Min()); // The smallest odd number in the array
 			
             int[] result1 = myArray.Distinct().ToArray(); // Get the unique elements of an array
+			
+            int[] result2 = myArray.OrderBy(i => i).ToArray(); // Sort array in ascending order
         }
     }
 }
