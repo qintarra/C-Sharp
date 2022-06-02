@@ -102,6 +102,10 @@ namespace Notes_07
 			
             // Array.Sort(myArray);
             int[] result3 = myArray.OrderByDescending(i => i).ToArray(); // Sort array in descending order
+			
+            Console.WriteLine("result1: " + string.Join(",", result1));
+            Console.WriteLine("result2: " + string.Join(",", result2));
+            Console.WriteLine("result3: " + string.Join(",", result3));
         }
     }
 }
