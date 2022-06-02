@@ -93,6 +93,8 @@ namespace Notes_07
             Console.WriteLine(myArray.Sum());
 			
             Console.WriteLine(myArray.Where(i => i % 2 == 0).Sum()); // Sum of even numbers of array elements
+			
+			Console.WriteLine(myArray.Where(i => i % 2 == 1).Min()); // The smallest odd number in the array
         }
     }
 }
