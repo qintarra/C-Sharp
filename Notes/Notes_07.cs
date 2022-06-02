@@ -84,6 +84,8 @@ namespace Notes_07
             Range r = 0..^8;
             output = input[r];
             Console.WriteLine(output);
+			
+            int[] myArray = { 16, 37, 131, 88, 45, 4, 4, 9, 5, 131, 24, 3 };
         }
     }
 }
