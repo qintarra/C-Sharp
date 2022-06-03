@@ -18,6 +18,17 @@ namespace Task_13
                     myArray[i, j] = random.Next(100);
                 }
             }
+			
+			for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i,j] + "\t");
+                }
+                Console.WriteLine();
+            }
+			
+
         }
     }
 }
