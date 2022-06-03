@@ -11,7 +11,13 @@ namespace Task_13
 
             Random random = new Random();
 
-            
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    myArray[i, j] = random.Next(100);
+                }
+            }
         }
     }
 }
