@@ -108,6 +108,10 @@ namespace Notes_07
             int result4 = Array.Find(myArray, i => i < 80); //To find the first element of an array that satisfies a condition
             int result5 = Array.FindLast(myArray, i => i < 80); //To find the first element from the end of an array
             int [] result6 = Array.FindAll(myArray, i => i < 80); //To find all elements of an array
+			
+            Console.WriteLine("result4: " + string.Join(",", result4));
+            Console.WriteLine("result5: " + string.Join(",", result5));
+            Console.WriteLine("result6: " + string.Join(",", result6));
         }
     }
 }
