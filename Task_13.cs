@@ -19,7 +19,7 @@ namespace Task_13
                 }
             }
 			
-			for (int i = 0; i < myArray.GetLength(0); i++)
+            for (int i = 0; i < myArray.GetLength(0); i++)
             {
                 for (int j = 0; j < myArray.GetLength(1); j++)
                 {
