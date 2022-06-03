@@ -97,9 +97,7 @@ namespace Notes_07
             Console.WriteLine(myArray.Where(i => i % 2 == 1).Min()); // The smallest odd number in the array
 			
             int[] result1 = myArray.Distinct().ToArray(); // Get the unique elements of an array
-			
             int[] result2 = myArray.OrderBy(i => i).ToArray(); // Sort array in ascending order
-			
             // Array.Sort(myArray);
             int[] result3 = myArray.OrderByDescending(i => i).ToArray(); // Sort array in descending order
 			
@@ -108,6 +106,7 @@ namespace Notes_07
             Console.WriteLine("result3: " + string.Join(",", result3));
 			
             int result4 = Array.Find(myArray, i => i < 80); //To find the first element of an array that satisfies a condition
+            int result5 = Array.FindLast(myArray, i => i < 80); //To find the first element from the end of an array
         }
     }
 }
