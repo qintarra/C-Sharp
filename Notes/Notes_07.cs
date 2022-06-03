@@ -106,6 +106,8 @@ namespace Notes_07
             Console.WriteLine("result1: " + string.Join(",", result1));
             Console.WriteLine("result2: " + string.Join(",", result2));
             Console.WriteLine("result3: " + string.Join(",", result3));
+			
+            int result4 = Array.Find(myArray, i => i < 80); //To find the first element of an array that satisfies a condition
         }
     }
 }
