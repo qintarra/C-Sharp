@@ -95,7 +95,7 @@ namespace Task_14
 
             for (int i = 0; i < array.GetLength(0); i++)
 
-                for (int j = 0; j < array.GetLength(0); j++)
+                for (int j = 0; j < array.GetLength(1); j++)
 
                     if (array[i, j] > a)
                     {
@@ -104,10 +104,37 @@ namespace Task_14
 
             return product;
         }
+		
+        /*Find the sum of the minimum elements of all columns.
+        Example:
+                array: { { 21, 12, 7 },
+                         { -3, -14, 3 },
+                         { 9, -19 ,15 } };
 
 
+                sum = -19;
+        */
+		
+        public static int Task5(int[,] array)
+        {
+            int sum = 0;
 
+            int [] min = new int [array.GetLength(0)];
 
+            for (int j = 0; j < array.GetLength(0); j++)
+            {
+                min[j] = array[0, j];
 
+                for (int i = 0; i < array.GetLength(1); i++)
+                {
+                    if (min[j] > array[i, j])
+
+                        min[j] = array[i, j];
+                }
+                sum += min[j];
+            }
+
+            return sum;
+        }
     }
 }
