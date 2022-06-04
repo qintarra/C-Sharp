@@ -51,7 +51,29 @@ namespace Task_13
                 }
                 Console.WriteLine();
             }
+			
+            //Filling a two-dimensional array from the keyboard (typeof string)
+            string[,] arr = new string[2, 2];
 
+            Console.WriteLine("Enter an array elements:");
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    
+                    arr[i, j] = Console.ReadLine();
+                }
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write(arr[i,j] + "\t");
+                }
+                Console.WriteLine();
         }
     }
 }
