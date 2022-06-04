@@ -52,6 +52,30 @@ namespace Task_14
 
             return sum;
         }
+		
+        /*Rewrite the values of the elements, subtracting from them the value of the row number of the element.
+        Example:
+                array: { { 4, 5, -6 },
+                         { 13, -15, 14 },
+                         { 0, 4 ,2 } }
+
+
+                result:{ { 4, 5, -6 },
+                         { 12, -16, 13 },
+                         { -2, 2 ,0 } }
+        */
+        public static void Task3(int[,] matrix)
+        {
+
+            for (int i = 1; i < matrix.GetLength(0); i++)
+
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] -= i;
+                }
+
+        }
+
 
 
 
