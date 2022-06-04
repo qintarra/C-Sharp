@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Task_14
 {
@@ -75,6 +79,32 @@ namespace Task_14
                 }
 
         }
+		
+        /*Calculate the product of positive elements greater than the value of 'a'.
+        Example:
+                array: { { -12, 3, 5 },
+                         { 6, -22, 3 },
+                         { -30, -5, 13 } };
+
+                product = 78;
+        */
+		
+        public static int Task4(int[,] array, int a)
+        {
+            int product = 1;
+
+            for (int i = 0; i < array.GetLength(0); i++)
+
+                for (int j = 0; j < array.GetLength(0); j++)
+
+                    if (array[i, j] > a)
+                    {
+                        product *= array[i, j];
+                    }
+
+            return product;
+        }
+
 
 
 
