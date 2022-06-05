@@ -63,6 +63,49 @@ namespace Task_15
 
             return amount;
         }
+		
+        /*Write the product of the elements of each line, greater than the arithmetic mean of the elements of the line into the new array 'minarray'.
+        Example: 
+                array: { { 15, 20, 5 },
+                         { 15, 3, 9 },
+                         { 12, 35 ,6 } }
+
+                minarray = { 300, 15, 35 }
+        */
+		
+		public static int[] Task3(int[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+
+            int[] minarray = new int[rows];
+
+            for (int i = 0; i < rows; i++)
+            {
+                int sum = 0;
+
+                for (int j = 0; j < columns; j++)
+                {
+                    sum += array[i, j];
+                    minarray[i] = sum / columns;
+                }
+            }
+            for (int i = 0; i < rows; i++)
+            {
+                int prod = 1;
+
+                for (int j = 0; j < columns; j++)
+                {
+                    if (array[i, j] > minarray[i])
+                    {
+                        prod *= array[i, j];
+                    }
+                }
+                minarray[i] = prod;
+            }
+            return minarray;
+        }
+
 
 
         
