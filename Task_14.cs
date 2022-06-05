@@ -12,8 +12,9 @@ namespace Task_14
         Example: 
                 array: { { -12, 3, 5 },
                          { 31, -22, 3 },
-                         { -30, -5, 13 } };
-                sum = 55;
+                         { -30, -5, 13 } }
+						 
+                sum = 55
         */
         public static int Task1(int[,] array)
         {
@@ -37,7 +38,7 @@ namespace Task_14
                          { -3, -14, -52 },
                          { 9, -14 ,15 } }
 
-                sum = 19;
+                sum = 19
         */
 		
         public static int Task2(int[,] matrix)
@@ -84,9 +85,9 @@ namespace Task_14
         Example:
                 array: { { -12, 3, 5 },
                          { 6, -22, 3 },
-                         { -30, -5, 13 } };
+                         { -30, -5, 13 } }
 
-                product = 78;
+                product = 78
         */
 		
         public static int Task4(int[,] array, int a)
@@ -109,9 +110,9 @@ namespace Task_14
         Example:
                 array: { { 21, 12, 7 },
                          { -3, -14, 3 },
-                         { 9, -19 ,15 } };
+                         { 9, -19 ,15 } }
 
-                sum = -19;
+                sum = -19
         */
 		
         public static int Task5(int[,] array)
@@ -143,10 +144,10 @@ namespace Task_14
                          { 8, 0 ,2 } }
 
 
-                minarray: { -6, -15, 0 };
+                minarray: { -6, -15, 0 }
         */
 		
-        public static int[] Task3(int[,] array)
+        public static int[] Task6(int[,] array)
         {
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
