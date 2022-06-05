@@ -21,7 +21,7 @@ namespace Task_14
 
             for (int i = 0; i < array.GetLength(0); i++)
             
-                for (int j = 0; j < array.GetLength(0); j++)
+                for (int j = 0; j < array.GetLength(1); j++)
 
                     if (array[i, j] > 0)
                     {
@@ -111,7 +111,6 @@ namespace Task_14
                          { -3, -14, 3 },
                          { 9, -19 ,15 } };
 
-
                 sum = -19;
         */
 		
@@ -135,6 +134,39 @@ namespace Task_14
             }
 
             return sum;
+        }
+		
+        /*Write the minimum values of each line into the new array 'minarray'.
+        Example:
+                array: { { 4, 5, -6 },
+                         { 13, -15, 14 },
+                         { 8, 0 ,2 } }
+
+
+                minarray: { -6, -15, 0 };
+        */
+		
+        public static int[] Task3(int[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+
+            int[] minarray = new int[rows];
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                int min = int.MaxValue;
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (min > array[i, j])
+                    {
+                        min = array[i, j];
+                        minarray[i] = min;
+                    }
+                }
+            }
+
+            return minarray;
         }
     }
 }
