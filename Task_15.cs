@@ -17,7 +17,6 @@ namespace Task_15
                 a = 5	 
                 average = 3
         */
-		
         public static double Task1(int[,] array, int a)
         {
             double average = 0;
@@ -46,7 +45,6 @@ namespace Task_15
 
                 amount = 3
         */
-		
         public static int Task2(int[,] array)
         {
             int amount = 0;
@@ -72,7 +70,6 @@ namespace Task_15
 
                 minarray = { 300, 15, 35 }
         */
-		
 		public static int[] Task3(int[,] array)
         {
             int rows = array.GetUpperBound(0) + 1;
@@ -114,7 +111,6 @@ namespace Task_15
 
                 minarray: { -6, -15, 0 }
         */
-		
         public static int[] Task4(int[,] array)
         {
             int rows = array.GetUpperBound(0) + 1;
@@ -136,6 +132,6 @@ namespace Task_15
             }
 
             return minarray;
-		}
+        }
     }
 }
