@@ -70,7 +70,7 @@ namespace Task_15
 
                 minarray = { 300, 15, 35 }
         */
-		public static int[] Task3(int[,] array)
+        public static int[] Task3(int[,] array)
         {
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
