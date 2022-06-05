@@ -87,6 +87,7 @@ namespace Task_15
                     minarray[i] = sum / columns;
                 }
             }
+			
             for (int i = 0; i < rows; i++)
             {
                 int prod = 1;
@@ -100,6 +101,7 @@ namespace Task_15
                 }
                 minarray[i] = prod;
             }
+			
             return minarray;
         }
 		
