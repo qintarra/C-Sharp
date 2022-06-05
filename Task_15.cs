@@ -25,7 +25,7 @@ namespace Task_15
 
             for (int i = 0; i < array.GetLength(0); i++)
 
-                for (int j = 0; j < array.GetLength(0); j++)
+                for (int j = 0; j < array.GetLength(1); j++)
 
                     if (array[i, j] < a)
                     {
@@ -37,6 +37,33 @@ namespace Task_15
 
             return average;
         }
+		
+		/*Calculate the amount of negative elements below the main diagonal.
+        Example: 
+                array: { { 15, 60, 65 },
+                         { -5, 14, 53 },
+                         { -1, -10 ,59 } }
+
+				amount = 3
+        */
+		
+        public static int Task2(int[,] array)
+        {
+            int amount = 0;
+
+            for (int i = 1; i < array.GetLength(0); i++)
+
+                for (int j = 0; j < i; j++)
+
+                    if (array[i, j] < 0)
+
+                    {
+                        amount++;
+                    }
+
+            return amount;
+        }
+
 
         
     }
