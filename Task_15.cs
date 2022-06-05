@@ -38,13 +38,13 @@ namespace Task_15
             return average;
         }
 		
-		/*Calculate the amount of negative elements below the main diagonal.
+        /*Calculate the amount of negative elements below the main diagonal.
         Example: 
                 array: { { 15, 60, 65 },
                          { -5, 14, 53 },
                          { -1, -10 ,59 } }
 
-				amount = 3
+                amount = 3
         */
 		
         public static int Task2(int[,] array)
@@ -112,7 +112,6 @@ namespace Task_15
                          { 13, -15, 14 },
                          { 8, 0 ,2 } }
 
-
                 minarray: { -6, -15, 0 }
         */
 		
@@ -137,5 +136,6 @@ namespace Task_15
             }
 
             return minarray;
+		}
     }
 }
