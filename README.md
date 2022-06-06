@@ -18,4 +18,4 @@ Task_12 Calculating the arithmetic mean, min/max values, and change values in ar
 Task_13 Filling a two-dimensional array (with random numbers, from keyboard).  
 Task_14 Calculations in two-dimensional arrays (sum/subtracting/product with conditions, rewriting elements)  
 Task_15 Calculations in two-dimensional arrays (arithmetic average, rewriting values to the new array)  
-
+Task_16 Calculations in two-dimensional arrays (with columns, rows, diagonals)  
