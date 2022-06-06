@@ -57,13 +57,13 @@ namespace Task_16
             return product;
         }
 		
-        /*Write the sum of the elements of each column into the new array sumarray.
+        /*Write the sum of the elements of each column into the new array 'sumarray'.
         Example:
                 array: { { 0, 90, 90 },
-                 { 7, 3, 3 },
-                 { 72, 5 ,56 } }
+                         { 7, 3, 3 },
+                         { 72, 5 ,56 } }
 
-                { 79, 98, 149 }
+                sumarray = { 79, 98, 149 }
         */
         public static int[] Task3(int[,] array)
         {
@@ -81,9 +81,35 @@ namespace Task_16
             return sumarray;
         }
 		
-		
+        /*Find the maximum value among the arithmetic means of the strings.
+        Example:
+                array: { { 2, 4, 4 },
+                       { 1, 0, 3 },
+                       { 2, 5 ,3 } }
 
+                maxValue = 3.33
+        */
+        public static double Task4(int[,] array)
+        {
+            double maxValue = 0;
 
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                double sum = 0;
+                double mean = 0;
+
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    sum += array[i, j];
+                    mean = sum / array.GetLength(0);
+                }
+
+                if (mean > maxValue)
+                    maxValue = mean;
+            }
+
+            return maxValue;
+        }
 	}
 }
 	
