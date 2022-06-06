@@ -16,4 +16,6 @@ Task_10 Entering an array from the console.
 Task_11 Calculation of sum, product, and numbers of elements in arrays  
 Task_12 Calculating the arithmetic mean, min/max values, and change values in arrays.  
 Task_13 Filling a two-dimensional array (with random numbers, from keyboard).  
-Task_14 Calculations in two-dimensional arrays (sum/subtracting/product with conditions, rewriting elements) 
+Task_14 Calculations in two-dimensional arrays (sum/subtracting/product with conditions, rewriting elements)  
+Task_15 Calculations in two-dimensional arrays (arithmetic average, rewriting values to the new array)  
+
