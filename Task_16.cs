@@ -56,6 +56,33 @@ namespace Task_16
 
             return product;
         }
+		
+        /*Write the sum of the elements of each column into the new array sumarray.
+        Example:
+                array: { { 0, 90, 90 },
+                 { 7, 3, 3 },
+                 { 72, 5 ,56 } }
+
+                { 79, 98, 149 }
+        */
+        public static int[] Task3(int[,] array)
+        {
+            int rows = array.GetUpperBound(0) + 1;
+            int columns = array.Length / rows;
+
+            int[] sumarray = new int[columns];
+
+            for (int i = 0; i < rows; i++)
+            
+                for (int j = 0; j < columns; j++)
+                
+                    sumarray [j] += array[i, j];
+                 
+            return sumarray;
+        }
+		
+		
+
 
 	}
 }
