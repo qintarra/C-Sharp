@@ -40,7 +40,6 @@ namespace Task_14
 
                 sum = 19
         */
-		
         public static int Task2(int[,] matrix)
         {
             int sum = 0;
@@ -89,7 +88,6 @@ namespace Task_14
 
                 product = 78
         */
-		
         public static int Task4(int[,] array, int a)
         {
             int product = 1;
@@ -104,70 +102,6 @@ namespace Task_14
                     }
 
             return product;
-        }
-		
-        /*Find the sum of the minimum elements of all columns.
-        Example:
-                array: { { 21, 12, 7 },
-                         { -3, -14, 3 },
-                         { 9, -19 ,15 } }
-
-                sum = -19
-        */
-		
-        public static int Task5(int[,] array)
-        {
-            int sum = 0;
-
-            int [] min = new int [array.GetLength(0)];
-
-            for (int j = 0; j < array.GetLength(0); j++)
-            {
-                min[j] = array[0, j];
-
-                for (int i = 0; i < array.GetLength(1); i++)
-                {
-                    if (min[j] > array[i, j])
-
-                        min[j] = array[i, j];
-                }
-                sum += min[j];
-            }
-
-            return sum;
-        }
-		
-        /*Write the minimum values of each line into the new array 'minarray'.
-        Example:
-                array: { { 4, 5, -6 },
-                         { 13, -15, 14 },
-                         { 8, 0 ,2 } }
-
-
-                minarray: { -6, -15, 0 }
-        */
-		
-        public static int[] Task6(int[,] array)
-        {
-            int rows = array.GetUpperBound(0) + 1;
-            int columns = array.Length / rows;
-
-            int[] minarray = new int[rows];
-
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                int min = int.MaxValue;
-                for (int j = 0; j < array.GetLength(1); j++)
-                {
-                    if (min > array[i, j])
-                    {
-                        min = array[i, j];
-                        minarray[i] = min;
-                    }
-                }
-            }
-
-            return minarray;
         }
     }
 }
