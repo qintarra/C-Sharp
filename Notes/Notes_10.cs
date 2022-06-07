@@ -1,6 +1,6 @@
 using System;
 
-namespace Lection1_end
+namespace Notes_10.txt
 {
     enum StaffPosition
     {
