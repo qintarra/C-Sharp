@@ -34,7 +34,41 @@ namespace Notes_08
             }
             Console.WriteLine();
 
-            
+            //Jagged multi-dimensional array
+            Random random2 = new Random();
+
+            int[][][] myArray2 = new int[random2.Next(3, 6)][][];
+
+            for (int c = 0; c < myArray2.Length; c++)
+            {
+                myArray2[c] = new int[random2.Next(2, 6)][];
+
+                for (int d = 0; d < myArray2[c].Length; d++)
+                {
+                    myArray2[c][d] = new int[random2.Next(2, 6)];
+
+                    for (int e = 0; e < myArray2[c][d].Length; e++)
+                    {
+                        myArray2[c][d][e] = random2.Next(100);
+                    }
+                }
+            }
+
+            for (int c = 0; c < myArray2.Length; c++)
+            {
+                Console.WriteLine("Page №: " + (c + 1));
+
+                for (int d = 0; d < myArray2[c].Length; d++)
+                {
+                    for (int e = 0; e < myArray2[c][d].Length; e++)
+                    {
+                        Console.Write(myArray2[c][d][e] + " ");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
     }
 }
