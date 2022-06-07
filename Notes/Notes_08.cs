@@ -70,7 +70,7 @@ namespace Notes_08
             }
             Console.WriteLine();
 			
-			//Multi-dimensional array
+            //Multi-dimensional array
             Random random3 = new Random();
 
             int[,,,] myArray3 = new int[3, 2, 3, 5];
