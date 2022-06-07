@@ -69,6 +69,46 @@ namespace Notes_08
                 Console.WriteLine();
             }
             Console.WriteLine();
+			
+			//Multi-dimensional array
+            Random random3 = new Random();
+
+            int[,,,] myArray3 = new int[3, 2, 3, 5];
+
+            for (int i = 0; i < myArray3.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray3.GetLength(1); j++)
+                {
+                    for (int k = 0; k < myArray3.GetLength(2); k++)
+                    {
+                        for (int l = 0; l < myArray3.GetLength(3); l++)
+                        {
+                            myArray3[i, j, k, l] = random3.Next(100);
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < myArray3.GetLength(0); i++)
+            {
+                Console.WriteLine("==Book №: " + (i + 1) + "==");
+
+                for (int j = 0; j < myArray3.GetLength(1); j++)
+                {
+                    Console.WriteLine("Page №: " + (j + 1));
+                    for (int k = 0; k < myArray3.GetLength(2); k++)
+                    {
+                        for (int l = 0; l < myArray3.GetLength(3); l++)
+                        {
+                            Console.Write(myArray3[i,j,k,l] + " ");
+                        }
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
     }
 }
