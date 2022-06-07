@@ -1,6 +1,6 @@
 using System;
 
-namespace Notes_10.txt
+namespace Notes_10.cs
 {
     enum StaffPosition
     {
