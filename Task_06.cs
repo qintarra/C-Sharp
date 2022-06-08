@@ -84,6 +84,32 @@
             else
                 return (-a, -b, -c);
         }
+		
+        public static int SumOfOddDigits(int n)
+		
+        //For a positive integer n calculate the result value, which is equal to the sum of the odd numbers in n
+        //Example: n = 1234   result = 4 (1 + 3)
+        //         n = 246    result = 0  
+		
+        {
+            int x;
+            int result = 0;
+            
+            while (n != 0)
+            {
+                x = n % 10;
+
+                if (x % 2 != 0)
+                {
+                    result += x;
+                }
+
+                n /= 10;
+            }
+
+            return result;
+        }
+
     }
 }
 
