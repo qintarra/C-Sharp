@@ -116,9 +116,16 @@ namespace Task_07
         //Find the maximum integer, that can be obtained by numbers of an arbitrary three-digit positive integer n permutation (100<=n<=999).
         //Example: n = 165   result =  651 
         {
-            int result = int.Parse(new string(n.ToString().OrderByDescending(n => n).ToArray()));
-
-            return result;
+            int a = n /100;
+            int b = n / 10 % 10;
+            int c = n % 10;
+            int min = Math.Min(Math.Min(a, b), c);
+            int max = Math.Max(Math.Max(a, b), c);
+            int mid = a + b + c - max - min;
+            return Convert.ToInt32($"{max}{mid}{min}");
+			
+            //int result = int.Parse(new string(n.ToString().OrderByDescending(n => n).ToArray()));
+            //return result;
         }
     }
 }
