@@ -128,9 +128,28 @@
             return number;
         }
 		
+        public static int SumOfFirstNFibonacciNumbers(int n)
 		
+        //For a positive integer n, calculate the result value equal to the sum of the first n Fibonacci numbers
+        //Note: Fibonacci numbers are a series of numbers in which each next number is equal to the sum of the two preceding ones: 
+        //0, 1, 1, 2, 3, 5, 8, 13... (F0=0, F1=F2=1, then F(n)=F(n-1)+F(n-2) for n>2)
+		
+        {
+            int result = 0;
+            int f0 = 0;
+            int f1 = 1;
+            int next;
 
+            for (int i = 0; i < n; i++)
+            {
+                result += f0;
+                next = f0 + f1;
+                f0 = f1;
+                f1 = next;
+            }
 
+            return result;
+        }
     }
 }
 
