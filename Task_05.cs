@@ -89,7 +89,7 @@
 		
         public static int Task5(int n)
 		
-		/* For a given integer n calculate the value which is equal to:
+        /* For a given integer n calculate the value which is equal to:
         *
         *squared number, if its value is strictly positive;
         *modulus of a number, if its value is strictly negative;
