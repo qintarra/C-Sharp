@@ -4,8 +4,8 @@ namespace Task_07
     {
         public static int Task1(int n, int m)
 		
-	// Get the sum of even numbers in the interval from n to m including.
-	// Example: n = 4, m = 9   sum = 18 
+        // Get the sum of even numbers in the interval from n to m including.
+        // Example: n = 4, m = 9   sum = 18 
 		
         {
             int sum = 0;
@@ -19,10 +19,10 @@ namespace Task_07
             return sum;
         }
 		
-	public static int Task2(int n, int m)
+        public static int Task2(int n, int m)
 		
-	// Get the sum of odd numbers in the interval from n to m including.
-	// Example: n = 4, m = 10   sum = 21
+        // Get the sum of odd numbers in the interval from n to m including.
+        // Example: n = 4, m = 10   sum = 21
 		
         {
             int sum = 0;
@@ -36,10 +36,10 @@ namespace Task_07
             return sum;
         }
 		
-	public static int Task3(int n)
+        public static int Task3(int n)
 		
-	// Get the sum of the digits of the number n (>0)
-	// Example: n = 25041   sum = 12
+        // Get the sum of the digits of the number n (>0)
+        // Example: n = 25041   sum = 12
 		
         {
             int sum = 0;
@@ -53,10 +53,10 @@ namespace Task_07
             return sum;
         }
 		
-	public static int Task4(int n)
+        public static int Task4(int n)
 	
-	// Get the sum of the even-digits of the number n (>0).
-	// Example: n = 215480   sum = 14
+        // Get the sum of the even-digits of the number n (>0).
+        // Example: n = 215480   sum = 14
 	
         {
             int sum = 0;
@@ -73,11 +73,11 @@ namespace Task_07
             return sum;
         }
 		
-	public static int Task5(int n)
+        public static int Task5(int n)
 	
-	// Choose the larger of the two values. The first value is the sum of all even-digits of the number n (>0), 
-	// the second value is the sum of all odd-digits of the number n (>0).
-	// Example: n = 52012  max = 6
+        // Choose the larger of the two values. The first value is the sum of all even-digits of the number n (>0), 
+        // the second value is the sum of all odd-digits of the number n (>0).
+        // Example: n = 52012  max = 6
 	
         {
             int sum1 = 0;
@@ -100,13 +100,23 @@ namespace Task_07
             return max;
         }
 		
-	public static int Task6(int n)
+        public static int Task6(int n)
 	
-	// Find the smallest integer that can be obtained by rearranging the digits of number n (>0).
-	// Example: n = 31041   result = 1134
+        // Find the smallest integer that can be obtained by rearranging the digits of number n (>0).
+        // Example: n = 31041   result = 1134
 	
         {
             int result = int.Parse(new string(n.ToString().OrderBy(n => n).ToArray()));
+
+            return result;
+        }
+		
+        public static int Task7(int n)
+	
+        //Find the maximum integer, that can be obtained by numbers of an arbitrary three-digit positive integer n permutation (100<=n<=999).
+        //Example: n = 165   result =  651 
+        {
+            int result = int.Parse(new string(n.ToString().OrderByDescending(n => n).ToArray()));
 
             return result;
         }
