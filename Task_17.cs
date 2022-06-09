@@ -4,7 +4,7 @@ namespace ArrayObject
 {
     public static class ArrayTasks
     {
-        //In a given array of integers nums swap values of the first and the last array elements, the second and the penultimate etc., 
+        //In a given array of integers 'nums' swap values of the first and the last array elements, the second and the penultimate, etc., 
 		//if the two exchanged values are even
         //Example: {100, 2, 3, 45, 33, 8, 4, 54} => {54, 4, 3, 45, 33, 8, 2, 100}
         public static void ChangeElementsInArray(int[] nums)
@@ -21,8 +21,8 @@ namespace ArrayObject
             }
         }
 		
-       /* In a given array of integers nums calculate integer result value, 
-	    * that is equal to the distance between the first and the last entry of the maximum value in the array.
+       /* In a given array of integers 'nums' calculate the integer result value, 
+	    * which is equal to the distance between the first and the last entry of the maximum value in the array.
         * Example: 
         *			{4, 100!, 3, 4}         result = 0 
         *			{5, 50!, 50!, 4, 5}     result = 1 
