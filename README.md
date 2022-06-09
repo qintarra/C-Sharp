@@ -19,3 +19,5 @@ Task_13 Filling a two-dimensional array (with random numbers, from keyboard).
 Task_14 Calculations in two-dimensional arrays (sum/subtracting/product with conditions, rewriting elements)  
 Task_15 Calculations in two-dimensional arrays (arithmetic average, rewriting values to the new array)  
 Task_16 Calculations in two-dimensional arrays (with columns, rows, diagonals)  
+Task_17 Calculations in arrays(swap values, finding max elements, change values between diagonal)  
+
