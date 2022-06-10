@@ -122,5 +122,19 @@ namespace Notes_10.cs
             Console.WriteLine($"Area: {area}");
             Console.WriteLine($"Perimeter: {perimeter}");
         }
+		
+        //'In' forbids changing the parameter value in the method body
+
+        static void Sum(in int x, in int y)
+        {
+            Console.WriteLine($"The sum is {x + y}");
+        }
+
+        static void Main(string [] args)
+        {
+            int a = 5, b = 7;
+            //Sum(in a,in b);
+            Sum(a, b);
+        }
     }
 }
