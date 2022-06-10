@@ -31,7 +31,7 @@ namespace Notes_10.cs
             }
         }
 		
-		//10.2
+        //10.2
 		
         static void Hello(string name)
         {
@@ -43,7 +43,7 @@ namespace Notes_10.cs
               Hello("Maria");
         }
 		
-		//10.3
+        //10.3
 		
         static void Sum1(int x, int y)
         {
@@ -84,6 +84,24 @@ namespace Notes_10.cs
             int y = 15;
             Sum(ref x, y); //method call
             Console.WriteLine($"The value after method {x}");
+        }
+		
+        //10.5
+		
+        //Out modifier
+        //To make a parameter output, 'out' modifier is placed in front of it
+    
+        static void Sum(int x, int y, out int a)
+        {
+            a = x + y;
+        }
+
+        static void Main(string [] args)
+        {
+            int c = 11, d = 16;
+            int z;
+            Sum(c, d, out z);
+            Console.WriteLine(z);
         }
     }
 }
