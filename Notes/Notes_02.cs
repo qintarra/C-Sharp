@@ -89,7 +89,7 @@ namespace Notes_02
                     break;
             }
 			
-			//2.4
+            //2.4
             Console.WriteLine("Please enter a number");
             int z = int.Parse(Console.ReadLine());
             if (z % 2 == 0)
