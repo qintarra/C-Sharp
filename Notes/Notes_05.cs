@@ -6,7 +6,7 @@ namespace Notes_05
     {
         static void Main(string[] args)
         {
-			//Two-dimensional array
+            //Two-dimensional array
             int[,] array = { { 3, 6, 1},
                            {4, 2, 7 },
                            {9, 0, 8 }};
