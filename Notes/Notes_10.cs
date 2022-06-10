@@ -31,7 +31,8 @@ namespace Notes_10.cs
             }
         }
 		
-		static void Hello(string name)
+		//10.2
+        static void Hello(string name)
         {
             Console.WriteLine($"Hello, {name}!");
         }
@@ -39,6 +40,27 @@ namespace Notes_10.cs
         {
               Hello("Andy");
               Hello("Maria");
+        }
+		
+		//10.3
+        static void Sum1(int x, int y)
+        {
+            Console.WriteLine(x+y);
+        }
+
+        static int Sum2(int x, int y)
+        {
+            return x + y;
+        }
+
+        static void Main()
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            Sum1(a, b);
+
+            //int c = Sum2(a, b);
+            Console.WriteLine(Sum2(a,b));
         }
     }
 }
