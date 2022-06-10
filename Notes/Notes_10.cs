@@ -30,5 +30,15 @@ namespace Notes_10.cs
                 salary += 550;
             }
         }
+		
+		static void Hello(string name)
+        {
+            Console.WriteLine($"Hello, {name}!");
+        }
+        static void Main()
+        {
+              Hello("Andy");
+              Hello("Maria");
+        }
     }
 }
