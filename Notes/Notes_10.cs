@@ -103,5 +103,24 @@ namespace Notes_10.cs
             Sum(c, d, out z);
             Console.WriteLine(z);
         }
+		
+        //10.6
+		
+        //The advantage of using parameters:
+        //you can return several values from the method, not only one
+    
+        static void GetData(int x, int y, out int area, out int perim)
+        {
+            area = x * y;
+            perim = 2 * (x + y);
+        }
+
+        static void Main(string [] args)
+        {
+            int a = 12, b = 17;
+            GetData(a, b, out int area, out int perimeter);
+            Console.WriteLine($"Area: {area}");
+            Console.WriteLine($"Perimeter: {perimeter}");
+        }
     }
 }
