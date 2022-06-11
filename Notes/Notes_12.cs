@@ -12,7 +12,11 @@ namespace Notes_12.cs
             return max;
         }
 		
-		
+        static void DoubleElement(int[] m)
+        {
+            for (int i = 0; i < m.Length; i++)
+                m[i] *= 2;
+        }
 		
     }
 }
