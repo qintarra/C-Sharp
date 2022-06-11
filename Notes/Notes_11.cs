@@ -78,9 +78,31 @@ namespace Notes_11.cs
              * passed in the order in which these parameters were declared in the method.
              * But we can break his order by using named parameters
              */
-            //Optional parameter z uses a default value
+            //Optional parameter 'z' uses a default value
             int sum2 = Sum(y: 2, x: 1, s: 10);
             Console.WriteLine(sum2);
+        }
+		
+        //11.4
+		
+        //Using the params keyword you can pass undefined number of parameters
+        static void Sum(params int [] numbers)
+        {
+            int result = 0;
+            foreach (int x in numbers)
+            {
+                result += x;
+            }
+            Console.WriteLine(result);
+        }
+        static void Main(string [] args)
+        {
+            Sum(2, 5, 8, 2, 3);
+            Sum(5, 9);
+            Sum();
+
+            int [] array = { 3, 1, 6, 4 }; 
+            Sum(array);
         }
 
     }
