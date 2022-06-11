@@ -24,5 +24,13 @@ namespace Notes_12.cs
                 m[i] -= 2;
             return m;
         }
+		
+        static int SummDiag(int[,] m)
+        {
+            int sum = 0;
+            for (int i = 0; i < m.GetLength(0); i++)
+                sum += m[i, i];
+            return sum;
+        }
     }
 }
