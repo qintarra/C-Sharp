@@ -18,5 +18,11 @@ namespace Notes_12.cs
                 m[i] *= 2;
         }
 		
+        static int[] Minus2(int [] m)
+        {
+            for(int i = 0; i < m.Length; i++)
+                m[i] -= 2;
+            return m;
+        }
     }
 }
