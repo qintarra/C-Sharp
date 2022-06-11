@@ -32,5 +32,13 @@ namespace Notes_12.cs
                 sum += m[i, i];
             return sum;
         }
+		
+        static int[] DiagonalElements(int[,] m)
+        {
+            int d = m.GetLength(0);
+            int[] aa = new int[d];
+            for (int i = 0; i < aa.Length; i++)
+                aa[i] = m[i, i];
+            return aa;
     }
 }
