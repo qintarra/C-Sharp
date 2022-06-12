@@ -40,5 +40,30 @@ namespace Notes_12.cs
             for (int i = 0; i < aa.Length; i++)
                 aa[i] = m[i, i];
             return aa;
+        }
+		
+        static void Main(string [] args)
+        {
+            int[] array = { 2, 1, 3 };
+
+            Console.WriteLine("Source array");
+            foreach (int x in array)
+                Console.Write("{0} ", x);
+
+
+            Console.WriteLine();
+            int max = MaxElement(array);
+            Console.WriteLine("Maximum element = {0}", max);
+
+
+            DoubleElement(array);
+            Console.WriteLine("Multiply all elements of the array by 2:");
+			
+            foreach (int x in array)
+                Console.Write("{0} ", x);
+
+            
+        }
+
     }
 }
