@@ -74,9 +74,21 @@ namespace Notes_12.cs
             Console.WriteLine();
             foreach (int x in array2)
                 Console.Write("{0} ", x); //Remember about reference type of an arrays
+				
 
-            
+            int[,] arr = {{ 2, 3, 1 },
+                          { 3, 8, 4 },
+                          { 9, 7, 3 }};
+
+            Console.WriteLine();
+            Console.WriteLine("Sum of diagonal elements = {0}", SummDiag(arr));
+
+
+            Console.WriteLine("Diagonal elements: ");
+            foreach (int x in DiagonalElements(arr))
+                Console.Write("{0} ", x);
+
+            Console.WriteLine();
         }
-
     }
 }
