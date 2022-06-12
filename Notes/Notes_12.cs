@@ -61,6 +61,19 @@ namespace Notes_12.cs
 			
             foreach (int x in array)
                 Console.Write("{0} ", x);
+				
+				
+            int[] array2 = Minus2(array);
+
+            Console.WriteLine();
+            Console.WriteLine("Substract 2 from all elements of the array by 2:");
+
+            foreach (int x in array)
+                Console.Write("{0} ", x);
+
+            Console.WriteLine();
+            foreach (int x in array2)
+                Console.Write("{0} ", x); //Remember about reference type of an arrays
 
             
         }
