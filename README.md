@@ -20,4 +20,5 @@ Task_14 Calculations in two-dimensional arrays (sum/subtracting/product with con
 Task_15 Calculations in two-dimensional arrays (arithmetic average, rewriting values to the new array)  
 Task_16 Calculations in two-dimensional arrays (with columns, rows, diagonals)  
 Task_17 Calculations in arrays(swap values, finding max elements, change values between diagonal)  
-Task_18 Method to find the indexes of array elements.  
+Task_18 Method to find the indexes of array elements.   
+Task_19 Functions creating (sorting, replacing values, multiplications, sum of a progression in array).  
