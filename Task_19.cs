@@ -46,8 +46,8 @@ namespace Task_19
                     array[i] += i;
         }
 		
-       /* Create function MultArithmeticElements, which determines the multiplication of a given number 
-        * of first n elements of an arithmetic progression of real numbers with a given initial element of progression a(1) and progression step t. 
+       /* Create function 'MultArithmeticElements', which determines the multiplication of a given number 
+        * of first 'n' elements of an arithmetic progression of real numbers with a given initial element of progression 'a(1)' and progression step 't'. 
         * a(n) is calculated by the formula a(n+1) = a(n) + t.
         * Example: For a(1) = 5, t = 3, n = 4  multiplication equals to 5*8*11*14 = 6160 
         */
@@ -64,6 +64,21 @@ namespace Task_19
             return result;
         }
         
-        
+       /* Create function 'SumGeometricElements', determining the sum of the first elements of a decreasing geometric progression of real numbers 
+        * with a given initial element of a progression 'a(1)') and a given progression step 't', 
+        * while the last element must be greater than a given 'alim'. a(n) is calculated by the formula a(n+1) = a(n) * t, 0<t<1.
+        * Example: For a progression, where a(1) = 100, and t = 0.5, the sum of the first elements, grater than alim = 20, equals to 100+50+25 = 175  
+        */
+		
+        public static double SumGeometricElements (double a, double t, double alim)
+        {
+            double sum = 0;
+            while (alim < a)
+            {
+                sum += a;
+                a *= t;
+            }
+            return sum;
+        }
     }
 }
