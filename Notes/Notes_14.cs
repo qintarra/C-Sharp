@@ -144,7 +144,6 @@ class Person
         int age;
 
         //Constructor with threee parameters
-
         public Person (string firstname, string lastname, int age)
         {
             this.firstname = firstname;
@@ -195,5 +194,40 @@ class Person
             int age = int.Parse(Console.ReadLine());
             Person p4 = new Person(name, lastname, age);
             p4.AboutMe();
+        }
+    }
+
+//15.5
+class Person
+    {
+        string firstName;
+        string lastName;
+
+        public Person(string firstName = "Unknown", string lastName = "Unknown")
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public void Info()
+        {
+            Console.WriteLine($"Firstname: {firstName}\t Lastname: {lastName}");
+        }
+    }
+    class Program
+    {
+        static void Main (string[] args)
+        {
+            Person p1 = new Person("Irene", "Adler");
+            p1.Info();
+
+            Person p2 = new Person("Anna");
+            p2.Info();
+
+            Person p3 = new Person(lastName: "Weber");
+            p3.Info();
+
+            Person p4 = new Person();
+            p4.Info();
         }
     }
