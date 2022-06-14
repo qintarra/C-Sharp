@@ -73,3 +73,27 @@ class Person
         {
             return age;
         }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person p1 = new Person();
+            p1.SetFirstname("Stanislaw");
+            p1.SetLastname("Lem");
+            p1.SetAge(40);
+
+            //We display the name, surname, and age of a person
+
+            Console.WriteLine($"Firstname: {p1.GetFirstName()}\nLastname: {p1.GetLastName()}\nAge: {p1.GetAge()} years");
+
+            //A year has passed...
+
+            //The age of a person has changed
+            p1.SetAge(41);
+            //Once again, we display the name, surname, and age of a person
+            Console.WriteLine($"Firstname: {p1.GetFirstName()}\nLastname: {p1.GetLastName()}\nAge: {p1.GetAge()} years");
+
+
+        }
+    }
