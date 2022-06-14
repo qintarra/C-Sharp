@@ -120,3 +120,20 @@ class Person
         {
             Console.WriteLine($"My name is {firstname} {lastname} and I'm {age} years old");
         }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person p1 = new Person();
+            p1.AboutMe();
+
+            Person p2 = new Person();
+            p2.AboutMe();
+
+            Person p3 = new Person();
+            p3.AboutMe();
+
+
+        }
+    }
