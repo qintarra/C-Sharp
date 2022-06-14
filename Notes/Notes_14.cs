@@ -93,7 +93,30 @@ class Person
             p1.SetAge(41);
             //Once again, we display the name, surname, and age of a person
             Console.WriteLine($"Firstname: {p1.GetFirstName()}\nLastname: {p1.GetLastName()}\nAge: {p1.GetAge()} years");
-
-
         }
     }
+
+//14.3
+class Person
+    {
+        string firstname;
+        string lastname;
+        int age;
+
+        /* Constructor
+         * A constructor is a method whose name is the same as the name of its type
+         * Its method signature includes only the method name and its parameter list
+         * it doesn't include the return type
+         */
+        public Person()
+        {
+            firstname = "Stanislaw";
+            lastname = "Lem";
+            age = 40;
+        }
+
+        //Method for obtaining all information about a person
+        public void AboutMe()
+        {
+            Console.WriteLine($"My name is {firstname} {lastname} and I'm {age} years old");
+        }
