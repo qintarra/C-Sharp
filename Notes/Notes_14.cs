@@ -32,3 +32,44 @@ class Person
             }
         }
     }
+	
+//14.2
+class Person
+    {
+        private string firstname;
+        private string lastname;
+        private int age;
+
+        //Method of setting the value of the "firstname" field
+        public void SetFirstname (string firstname)
+        {
+            this.firstname = firstname;
+        }
+
+        //Method of getting the value of the "firstname" field
+        public string GetFirstName ()
+        {
+            return firstname;
+        }
+
+        public void SetLastname(string surname)
+        {
+            lastname = surname;
+        }
+
+        public string GetLastName ()
+        {
+            return lastname;
+        }
+
+        public void SetAge(int age)
+        {
+            if (age > 0)
+                this.age = age;
+            else Console.WriteLine("Wrong age");
+        }
+
+        public int GetAge()
+        {
+            return age;
+        }
