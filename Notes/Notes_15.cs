@@ -100,3 +100,24 @@ class Person
             Console.WriteLine($"Name: {p2.Name}\t Age: {p2.Age}");
         }
     }
+	
+//15.3
+class Person
+    {
+        private readonly string firstname;
+        private readonly string lastname;
+        private readonly int age;
+
+        public Person (string firstname, string lastname, int age)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+        }
+
+        public void SetFirstName(string firstname)
+        {
+            //this.firstname = firstname;
+        }
+
+    }
