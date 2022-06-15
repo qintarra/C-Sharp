@@ -50,4 +50,18 @@ class Person
             }
         }
     }
-    
+    class Program
+    {
+        static void Main (string[] args)
+        {
+            Person p = new Person("Willard", "Smith", 55);
+
+            Console.WriteLine($"Name: {p.FirstName}\t Age: {p.Age}");
+
+            p.Age = 56;
+            Console.WriteLine($"Name: {p.FirstName}\t Age: {p.Age}");
+
+            p.FirstName = "Will";
+            Console.WriteLine($"New name: {p.FirstName}");
+        }
+    }
