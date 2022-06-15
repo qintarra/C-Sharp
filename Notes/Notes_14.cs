@@ -1,5 +1,5 @@
-//14.1
-class Person
+    //14.1
+    class Person
     {
         public string firstname;
         public string lastname;
@@ -33,8 +33,8 @@ class Person
         }
     }
 	
-//14.2
-class Person
+    //14.2
+    class Person
     {
         private string firstname;
         private string lastname;
@@ -96,8 +96,8 @@ class Person
         }
     }
 
-//14.3
-class Person
+    //14.3
+    class Person
     {
         string firstname;
         string lastname;
@@ -136,8 +136,8 @@ class Person
         }
     }
 
-//14.4
-class Person
+    //14.4
+    class Person
     {
         string firstname;
         string lastname;
@@ -197,8 +197,8 @@ class Person
         }
     }
 
-//14.5
-class Person
+    //14.5
+    class Person
     {
         string firstName;
         string lastName;
