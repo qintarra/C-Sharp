@@ -38,6 +38,12 @@ namespace Class
         {
             return sideA;
         }
+		
+        //Define public method 'GetSideB' that returns value of B-side
+        public double GetSideB()
+        {
+            return sideB;
+        }
     }
     
 }
