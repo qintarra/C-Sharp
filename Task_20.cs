@@ -50,6 +50,12 @@ namespace Class
         {
             return sideA * sideB;
         }
+		
+		//Define public method 'Perimeter' that calculates and returns value of perimeter
+        public double Perimeter()
+        {
+            return 2 * (sideA + sideB);
+        }
     }
     
 }
