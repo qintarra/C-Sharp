@@ -23,7 +23,14 @@ namespace Class
         public Rectangle (double a)
         {
             sideA = a;
-            sideB = 5.0;
+            sideB = 5;
+        }
+		
+        //Define constructor without parameters. A-side of rectangle equals 4, B-side - 3
+        public Rectangle()
+        {
+            sideA = 4;
+            sideB = 3;
         }
     }
     
