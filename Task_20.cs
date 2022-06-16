@@ -32,6 +32,12 @@ namespace Class
             sideA = 4;
             sideB = 3;
         }
+		
+        //Define public method 'GetSideA' that returns value of A-side
+        public double GetSideA()
+        {
+            return sideA;
+        }
     }
     
 }
