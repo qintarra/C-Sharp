@@ -56,6 +56,12 @@ namespace Class
         {
             return 2 * (sideA + sideB);
         }
+		
+        //Define public method 'IsSquare' that checks if rectangle is a square. Returns true if it is a square, false if it's not.
+        public bool IsSquare()
+        {
+            return sideA == sideB;
+        }
     }
     
 }
