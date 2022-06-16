@@ -11,6 +11,14 @@ namespace Class
         private double sideA;
         private double sideB;
 		
+        //Define constructor with two double parameters: 'a', 'b'. Assign parameters to sides
+        public Rectangle(double a, double b)
+        {
+            sideA = a;
+            sideB = b;
+            return;
+        }
+		
     }
     
 }
