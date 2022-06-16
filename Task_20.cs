@@ -19,6 +19,12 @@ namespace Class
             return;
         }
 		
+        //Define constructor with double parameter: 'a'. Parameter sets side A of rectangle, and B-side always equals 5
+        public Rectangle (double a)
+        {
+            sideA = a;
+            sideB = 5.0;
+        }
     }
     
 }
