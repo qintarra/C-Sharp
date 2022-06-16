@@ -44,6 +44,12 @@ namespace Class
         {
             return sideB;
         }
+		
+		//Define public method 'Area' that calculates and returns value of area
+		public double Area()
+        {
+            return sideA * sideB;
+        }
     }
     
 }
