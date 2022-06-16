@@ -62,6 +62,12 @@ namespace Class
         {
             return sideA == sideB;
         }
+		
+        //Define public method 'ReplaceSides' that swaps values of rectangle sides
+        public void ReplaceSides()
+        {
+            (sideA, sideB) = (sideB, sideA);
+        }
     }
     
 }
