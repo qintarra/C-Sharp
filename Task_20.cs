@@ -86,5 +86,19 @@ namespace Class
         {
             rectangle_array = rectangles.ToArray();
         }
+		
+        //Define public method 'AddRectangle' that adds rectangle on the first empty place of array field. Returns true if array has empty space, if not
+        public bool AddRectangle(Rectangle rectangle)
+        {
+            for (int i = 0; i < rectangle_array.Length; i++)
+            {
+                if (rectangle_array[i] == null)
+                {
+                    rectangle_array[i] = rectangle;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
