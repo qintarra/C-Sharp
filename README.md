@@ -22,3 +22,4 @@ Task_16 Calculations in two-dimensional arrays (with columns, rows, diagonals)
 Task_17 Calculations in arrays(swap values, finding max elements, change values between diagonal)  
 Task_18 Method to find the indexes of array elements.   
 Task_19 Functions creating (sorting, replacing values, multiplications, sum of a progression in array).  
+Task_19 Classes creating (with methods and constructors).    
