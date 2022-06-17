@@ -132,5 +132,18 @@ namespace Class
 
             return minPerim;
         }
+		
+        //Define public method 'NumberSquare' that returns amount of squares in array of rectangles
+        public int NumberSquare()
+        {
+            int numSquare = 0;
+
+            foreach (var array in rectangle_array.Where(rectangle_array => rectangle_array.IsSquare()))
+            {
+                numSquare++;
+            }
+
+            return numSquare;
+        }
     }
 }
