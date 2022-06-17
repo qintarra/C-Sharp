@@ -116,5 +116,21 @@ namespace Class
 
             return maxArea;
         }
+		
+        //Define public method 'NumberMinPerimeter' that returns number of rectangle with min value of perimeter. Numbering starts from 0
+        public int NumberMinPerimeter()
+        {
+            int minPerim = 0;
+
+            for (int i = 1; i < rectangle_array.Length; i++)
+            {
+                if (rectangle_array[i].Perimeter() < rectangle_array[minPerim].Perimeter())
+                {
+                    minPerim = i;
+                }
+            }
+
+            return minPerim;
+        }
     }
 }
