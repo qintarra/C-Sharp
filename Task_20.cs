@@ -45,13 +45,13 @@ namespace Class
             return sideB;
         }
 		
-		//Define public method 'Area' that calculates and returns value of area
+        //Define public method 'Area' that calculates and returns value of area
 		public double Area()
         {
             return sideA * sideB;
         }
 		
-		//Define public method 'Perimeter' that calculates and returns value of perimeter
+        //Define public method 'Perimeter' that calculates and returns value of perimeter
         public double Perimeter()
         {
             return 2 * (sideA + sideB);
@@ -69,5 +69,10 @@ namespace Class
             (sideA, sideB) = (sideB, sideA);
         }
     }
-    
+    //Create public class ArrayRectangles 
+    class ArrayRectangles
+    {
+        //Define private field that is array of rectangles: 'rectangle_array'
+        private readonly Rectangle [] rectangle_array;
+    }
 }
