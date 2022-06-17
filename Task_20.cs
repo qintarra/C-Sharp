@@ -74,5 +74,11 @@ namespace Class
     {
         //Define private field that is array of rectangles: 'rectangle_array'
         private readonly Rectangle [] rectangle_array;
+		
+        //Define constructor with int parameter: 'n'. Constructor should create an empty array of rectangles with length of 'n'
+        public ArrayRectangles (int n)
+        {
+            rectangle_array = new Rectangle[n];
+        }
     }
 }
