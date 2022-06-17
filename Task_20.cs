@@ -80,5 +80,11 @@ namespace Class
         {
             rectangle_array = new Rectangle[n];
         }
+		
+        //Define constructor that gets enumerable or array of rectangles. Constructor should assign them to its field
+        public ArrayRectangles(IEnumerable<Rectangle> rectangles)
+        {
+            rectangle_array = rectangles.ToArray();
+        }
     }
 }
