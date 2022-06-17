@@ -100,5 +100,21 @@ namespace Class
             }
             return false;
         }
+		
+        //Define public method 'NumberMaxArea' that returns number of rectangle with max value of area. Numbering starts from 0
+        public int NumberMaxArea()
+        {
+            int maxArea = 0;
+
+            for (int i = 1; i < rectangle_array.Length; i++)
+            {
+                if (rectangle_array[i].Area() > rectangle_array[maxArea].Area())
+                {
+                    maxArea = i;
+                }
+            }
+
+            return maxArea;
+        }
     }
 }
