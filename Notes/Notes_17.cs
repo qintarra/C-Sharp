@@ -177,6 +177,17 @@ namespace OOP_7_5
             Console.WriteLine($"I'm {firstname} {lastname}, driver of {auto}.");
         }
     }
-   
+    class Programmer : Person
+    {
+        public string language;
+        public Programmer(string firstname, string lastname, string language) : base(firstname, lastname)
+        {
+            this.language = language;
+        }
+        public new void AboutMe()
+        {
+            Console.WriteLine($"I'm {firstname} {lastname}, programming in {language}.");
+        }
+    }
     
 }
