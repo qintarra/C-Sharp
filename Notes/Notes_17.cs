@@ -165,7 +165,18 @@ namespace OOP_7_5
             Console.WriteLine($"I'm {firstname} {lastname}, student of {university}.");
         }
     }
-    
+    class Driver : Person
+    {
+        public string auto;
+        public Driver(string firstname, string lastname, string auto) : base(firstname, lastname)
+        {
+            this.auto = auto;
+        }
+        public new void AboutMe()
+        {
+            Console.WriteLine($"I'm {firstname} {lastname}, driver of {auto}.");
+        }
+    }
    
     
 }
