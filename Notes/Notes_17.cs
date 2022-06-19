@@ -41,6 +41,7 @@ namespace Notes_17_1
 
 using System;
 using System.Collections.Generic;
+
 namespace Notes_17_2
 {
     class A
@@ -75,6 +76,7 @@ namespace Notes_17_2
 
 using System;
 using System.Collections.Generic;
+
 namespace Notes_17_3
 {
     class A
@@ -127,4 +129,29 @@ namespace Notes_17_3
             Console.WriteLine();
         }
     }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP_7_5
+{
+    class Person
+    {
+        protected string firstname;
+        protected string lastname;
+        public Person(string firstname, string lastname)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        public void AboutMe()
+        {
+            Console.WriteLine($"My name is {firstname} {lastname}.");
+        }
+    }
+    
 }
