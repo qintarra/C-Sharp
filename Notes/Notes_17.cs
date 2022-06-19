@@ -153,5 +153,19 @@ namespace OOP_7_5
             Console.WriteLine($"My name is {firstname} {lastname}.");
         }
     }
+    class Student : Person
+    {
+        private string university;
+        public Student(string firstname, string lastname, string university):base(firstname, lastname)
+        {
+            this.university = university;
+        }
+        public new void AboutMe()
+        {
+            Console.WriteLine($"I'm {firstname} {lastname}, student of {university}.");
+        }
+    }
+    
+   
     
 }
