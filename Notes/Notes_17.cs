@@ -189,5 +189,27 @@ namespace OOP_7_5
             Console.WriteLine($"I'm {firstname} {lastname}, programming in {language}.");
         }
     }
-    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student p1 = new Student("Sergey", "Brin", "Stanford");
+            Driver p2 = new Driver("Elon", "Musk", "Tesla");
+            Programmer p3 = new Programmer("Bill", "Gates", "C#");
+
+            p1.AboutMe();
+            p2.AboutMe();
+            p3.AboutMe();
+
+            Person[] persons = new Person[3];
+            persons[0] = new Student("Sergey", "Brin", "Stanford");
+            persons[1] = new Driver("Elon", "Musk", "Tesla");
+            persons[2] = new Programmer("Bill", "Gates", "C#");
+
+            foreach (Person p in persons)
+            {
+                p.AboutMe();
+            }
+        }
+    }
 }
