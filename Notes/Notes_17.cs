@@ -137,7 +137,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_7_5
+namespace Notes_17_4
 {
     class Person
     {
