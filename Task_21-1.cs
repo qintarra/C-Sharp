@@ -35,7 +35,15 @@ namespace InheritanceTask
             }
         }
 		
+        //Define constructor with two parameters: 'name'(string), 'salary'(decimal). Assign parameters to its fields
+        public Employee (string name, decimal salary)
+        {
+            this.name = name;
+            this.salary = salary;
+        }
+		
         
+
         
     }
 }
