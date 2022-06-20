@@ -42,7 +42,11 @@ namespace InheritanceTask
             this.salary = salary;
         }
 		
-        
+        //Define public virtual method 'SetBonus', that set value in 'bonus'
+        public virtual void SetBonus (decimal bonus)
+        {
+            this.bonus = bonus;
+        }
 
         
     }
