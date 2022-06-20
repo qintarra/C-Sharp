@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InheritanceTask
+namespace Task_21_1
 {
     //Create public class 'Employee' here
     public class Employee
@@ -48,7 +48,11 @@ namespace InheritanceTask
             this.bonus = bonus;
         }
 
-        
+        //Define public method 'ToPay', that returns sum of salary and bonus 
+        public decimal ToPay()
+        {
+            return salary + bonus;
+        }
     }
 }
 
