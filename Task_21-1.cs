@@ -19,6 +19,24 @@ namespace InheritanceTask
             }
         }
 		
+        //Define public property 'Salary' for getting and setting 'salary'
+        public decimal Salary
+        {
+            get
+            {
+                return salary;
+            }
+            set
+            {
+                if (value >= 0)
+                {
+                    salary = value;
+                }
+            }
+        }
+		
+        
+        
     }
 }
 
