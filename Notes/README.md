@@ -10,4 +10,4 @@ Notes_08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Mult-dimensional arrays.
 Notes_09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Enum type.  
 Notes_10-13	- Functions.  
 Notes_14-15 - Classes.  
-
+Notes_16-17 - Inheritance.  
