@@ -10,6 +10,12 @@ namespace Task_21_2
         //Define private integer field: 'percent'
         private readonly int percent;
 		
+        //Define constructor with three parameters: 'name'(string), 'salary'(decimal) and 'percent'(int). 
+        //Assign two first parameters to the base class.
+        public SalesPerson(string name, decimal salary, int percent) : base(name, salary)
+        {
+            this.percent = percent;
+        }
 		
     }
 }
