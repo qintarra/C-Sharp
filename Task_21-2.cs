@@ -18,8 +18,8 @@ namespace Task_21_2
         }
 		
         //Override public virtual method 'SetBonus', which increases bonus depending on percent.
-		//If the salesperson completed the plan more than 100%, his bonus is doubled (is multiplied by 2), 
-		//and if it more than 200% - the bonus is tripled (is multiplied by 3).
+        //If the salesperson completed the plan more than 100%, his bonus is doubled (is multiplied by 2), 
+        //and if it more than 200% - the bonus is tripled (is multiplied by 3).
         public override void SetBonus(decimal bonus)
         {
             if(percent > 200)
