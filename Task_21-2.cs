@@ -17,5 +17,18 @@ namespace Task_21_2
             this.percent = percent;
         }
 		
+        //Override public virtual method 'SetBonus', which increases bonus depending on percent
+        public override void SetBonus(decimal bonus)
+        {
+            if(percent > 200)
+            {
+                bonus *= 3;
+            }
+            else if(percent > 100)
+            {
+                bonus *= 2;
+            }
+            base.SetBonus(bonus);
+        }
     }
 }
