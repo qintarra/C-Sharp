@@ -26,5 +26,16 @@ namespace Task_21_4
             }
         }
 		
+        //Define public method 'TotalToPay', that returns the total amount of salary of all employees including awarded bonus.
+        public decimal TotalToPay(decimal salary)
+        {
+            decimal totalSalary = 0;
+            foreach (Employee employee in employees)
+            {
+                totalSalary += employee.ToPay();
+            }
+            return totalSalary;
+        }
+		
     }
 }
