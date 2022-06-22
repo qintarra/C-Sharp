@@ -17,6 +17,20 @@ namespace Task_21_3
             quantity = clientAmount;
         }
 		
+        //Override public virtual method 'SetBonus', which increases bonus depending on clients amount:
+        //if the manager served over 100 clients, his bonus is increased by 500, and if more than 150 clients – by 1000.
+        public override void SetBonus(decimal bonus)
+        {
+            if (quantity > 150)
+            {
+                bonus += 1000;
+            }
+            else if (quantity > 100)
+            {
+                bonus += 500;
+            }
+            base.SetBonus(bonus);
+        }
     }
 }
 
