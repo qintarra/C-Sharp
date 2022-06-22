@@ -37,5 +37,18 @@ namespace Task_21_4
             return totalSalary;
         }
 		
+        //Define public method 'NameMaxSalary', that returns employee last name, who received maximum salary including bonus.
+        public string NameMaxSalary()
+        {
+            int index = 0;
+
+            for (int i = 1; i < employees.Length; i++)
+            {
+                if (employees[index].ToPay() < employees[i].ToPay())
+                index = i;
+                
+            }
+            return employees[index].Name;
+        }
     }
 }
