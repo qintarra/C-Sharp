@@ -10,7 +10,13 @@ namespace Task_21_3
         //Define closed integer field: 'quantity' (number of clients, who were served by the manager during a month).
         private readonly int quantity;
 		
-        
+        //Define the constructor with three parameters: 'name'(employee last name), 'salary', and 'clientAmount'(number of served clients). 
+        //Assign two first parameters to the base class.
+        public Manager(string name, decimal salary, int clientAmount) : base(name, salary)
+        {
+            quantity = clientAmount;
+        }
+		
     }
 }
 
