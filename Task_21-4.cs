@@ -17,5 +17,14 @@ namespace Task_21_4
             this.employees = employees;
         }
 		
+        //Define public method 'GiveEverbodyBonus' with money parameter 'companyBonus', that sets the amount of basic bonus for each employee.
+        public void GiveEverybodyBonus(decimal companyBonus)
+        {
+            foreach (Employee employee in employees)
+            {
+                employee.SetBonus(companyBonus);
+            }
+        }
+		
     }
 }
