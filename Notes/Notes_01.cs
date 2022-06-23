@@ -8,6 +8,7 @@ namespace Notes_01
         {
             Console.WriteLine("Hello World!");
 			
+			//C# is a strongly typed language. Every variable and constant has a type.
             int number;
             number = 10;
             double ak = 5.45;
@@ -21,6 +22,7 @@ namespace Notes_01
             Console.WriteLine(t);
 			
 			
+			//Three options for line output.
             int g = 10;
             int f = 20;
             int n = g + f;
@@ -30,7 +32,7 @@ namespace Notes_01
             Console.WriteLine($"{g} + {f} = {n}");
 			
 			
-            // Two methods for converting a string to number
+            // Two methods for converting a string to number.
             int i = int.Parse(Console.ReadLine());
             int e = Convert.ToInt32(Console.ReadLine());
             int h = i + e; // Operators: +, -, *, /, %
@@ -39,7 +41,7 @@ namespace Notes_01
             Console.WriteLine($"{i} + {e} = {h}");
 			
 			
-            // Mathematical functions. Math class methods
+            // Mathematical functions. Math class methods.
             double k = double.Parse(Console.ReadLine());
             double l = Convert.ToDouble(Console.ReadLine());
 
@@ -50,8 +52,7 @@ namespace Notes_01
             Console.WriteLine("maximum = {0}",Math.Max(k, l));
 			
 			
-            //Conditional operator full form
-
+            //Conditional operator. Full form.
             int m = int.Parse(Console.ReadLine());
 
             if (m % 2 == 0)
@@ -64,8 +65,7 @@ namespace Notes_01
             }
 			
       
-            //Conditional operator short form
-
+            //Conditional operator.Short form.
             int p = int.Parse(Console.ReadLine());
 
             if (p % 2 == 0)
