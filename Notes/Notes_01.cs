@@ -13,12 +13,12 @@ namespace HelloWorld
             number = 10;
             double ak = 5.45;
             string s = "any text";
-            char r = 'k';
+            char o = 'k';
             bool t = true;
             Console.WriteLine(number);
             Console.WriteLine(ak);
             Console.WriteLine(s);
-            Console.WriteLine(r);
+            Console.WriteLine(o);
             Console.WriteLine(t);
 			
 			
@@ -104,6 +104,17 @@ namespace HelloWorld
                     Console.WriteLine("No solutions");
                 }
             }
+			
+			
+			int r = int.Parse(Console.ReadLine());
+            int z = r / 100;
+            int y = r / 10 % 10;
+            int w = r % 10;
+            int max = Math.Max(Math.Max(z, y), w);
+            int min = Math.Min(Math.Min(z, y), w);
+            int mid = z + y + w - max - min;
+
+            Console.WriteLine(Convert.ToInt32($"{max}{mid}{min}"));
         }
     }
 }
