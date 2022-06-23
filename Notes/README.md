@@ -2,7 +2,7 @@
 
 Notes from lessons and lectures.  
   
-Notes_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Intro. Linear calculations and conditional statements.  
+Notes_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Linear calculations and conditional statements.  
 Notes_02-03 - Loops.  
 Notes_04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- One-dimensional arrays.  
 Notes_05-07 - Two-dimensional arrays.  
