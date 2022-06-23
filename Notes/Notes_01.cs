@@ -1,6 +1,6 @@
 using System;
 
-namespace Notes_01
+namespace HelloWorld
 {
     internal class Program
     {
@@ -8,7 +8,7 @@ namespace Notes_01
         {
             Console.WriteLine("Hello World!");
 			
-			//C# is a strongly typed language. Every variable and constant has a type.
+            //C# is a strongly typed language. Every variable and constant has a type.
             int number;
             number = 10;
             double ak = 5.45;
@@ -22,7 +22,7 @@ namespace Notes_01
             Console.WriteLine(t);
 			
 			
-			//Three options for line output.
+            //Three options for line output.
             int g = 10;
             int f = 20;
             int n = g + f;
@@ -79,7 +79,8 @@ namespace Notes_01
             }
 
 
-
+            //Including a conditional statement in a conditional statement. 
+            //Program for solving a quadratic equation
             double a, b, c, d, x1, x2, x3;
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
@@ -106,8 +107,6 @@ namespace Notes_01
         }
     }
 }
-
-//branch
 
 		
 		
