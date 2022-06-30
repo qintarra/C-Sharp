@@ -71,5 +71,45 @@ namespace Collections_12
             return List[numberBest] as Student;
         }
     }
-    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StudentCollection group = new StudentCollection();
+            group.Add("Steve Jobs", 98);
+            group.Add("Larry Page", 89);
+            group.Add("Bill Gates", 93);
+            group.Add("Mark Zuckerberg", 99);
+            group.Add(new Student("Elon Musk", 87));
+            foreach (var c in group)
+            {
+                Console.WriteLine(c);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Best student {group.BestStudent()}");
+            Console.WriteLine();
+            for (int i = 0; i < group.Count; i++)
+            {
+                Console.WriteLine(group[i]);
+            }
+            group[2] = new Student("Sergey Brin", 60);
+            Console.WriteLine();
+            foreach (var c in group)
+            {
+                Console.WriteLine(c);
+            }
+            group.Remove(group[2]);
+            Console.WriteLine();
+            foreach (var c in group)
+            {
+                Console.WriteLine(c);
+            }
+            group.RemoveAt(1);
+            Console.WriteLine();
+            foreach (var c in group)
+            {
+                Console.WriteLine(c);
+            }
+        }
+    }
 }
