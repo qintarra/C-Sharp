@@ -1,7 +1,7 @@
 using System;
 namespace Enum_2
 {
-	//Enumeration type (enum type) is a value type defined by a set of named constants of the underlying integral type of constants
+    //Enumeration type (enum type) is a value type defined by a set of named constants of the underlying integral type of constants
     enum StaffPosition
     {
         Junior,
