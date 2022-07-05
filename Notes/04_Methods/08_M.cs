@@ -7,7 +7,7 @@ namespace Method_5_4
 {
     class Program
     {
-		static void Sum(int a, in int b, ref int c, out int d)
+        static void Sum(int a, in int b, ref int c, out int d)
         {
             Console.WriteLine($"The sum before change is {a + b + c}");
 
