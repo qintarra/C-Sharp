@@ -24,8 +24,6 @@ namespace Method_5_4
             a = 300;
 
             Console.WriteLine($"The sum after change is {a + b + c}");
-
-
         }
 
         static void Main(string [] args)
