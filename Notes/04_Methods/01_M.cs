@@ -1,13 +1,10 @@
 using System;
-
-namespace Notes_09
+namespace enum
 {
     public static class Program
     {
         static void Main(string [] args)
         {
-            //Enumeration type (enum type) is a value type defined by a set of named constants of the underlying integral type of constants
-
             DayOfWeek day = DateTime.Now.DayOfWeek;
             Console.WriteLine($"Today is {day}");
 			
