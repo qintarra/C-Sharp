@@ -17,6 +17,7 @@ namespace Event_1
                 Click();
         }
     }
+	
     class Program
     {
         // This is the button click event handler function.
