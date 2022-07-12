@@ -1,6 +1,6 @@
 # C-Sharp/Notes
 
-Notes from lessons and lectures.  
+## Notes from lessons and lectures.  
   
 Notes_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Linear calculations and conditional statements.  
 Notes_02-03 - Loops.  
