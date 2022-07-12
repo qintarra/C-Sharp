@@ -1,14 +1,6 @@
-    <!doctype html>
-    <html>
-        <head>
-            C-Sharp: Notes
-        </head>
-        <body>
-            <Notes from lessons and lectures.>
-        </body>
-    </html>
+# C-Sharp/Notes
 
-  
+Notes from lessons and lectures.  
   
 Notes_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Linear calculations and conditional statements.  
 Notes_02-03 - Loops.  
