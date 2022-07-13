@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task_21_1
+namespace Employee
 {
     //Create public class 'Employee' here
     public class Employee

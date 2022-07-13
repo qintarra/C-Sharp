@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace Task_21_4
+namespace Company
 {
     //Create public class 'Company' here.
     public class Company
