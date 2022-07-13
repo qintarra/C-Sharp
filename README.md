@@ -23,3 +23,4 @@ Task_17 Calculations in arrays(swap values, finding max elements, change values 
 Task_18 Method to find the indexes of array elements.   
 Task_19 Functions creating (sorting, replacing values, multiplications, sum of a progression in array).  
 Task_20 Classes creating (with methods and constructors).    
+Task_20(1-4) Inheritance (basic class and inheritors).  
