@@ -9,3 +9,12 @@ Create classes Employee, SalesPerson, Manager, and Company with predefined funct
 - Constructor with a parameters string **name** and **money** salary (last name and salary are set)
 - Virtual method **SetBonus** that sets bonuses to salary, the amount of which is delegated/conveyed as a bonus
 - Method **ToPay** that returns the value of summarized salary and bonus.
+
+2. Create class **SalesPerson** as class **Employee** inheritor and declare within it:
+
+- Closed integer field **percent** (percent of sales targets plan performance/execution)
+- Constructor with parameters: **name** – employee last name, **salary**, **percent** – percent of plan performance,  
+first two of which are passed to basic class constructor
+- Redefine the virtual method of parent class **SetBonus** in the following way:  
+if the sales person completed the plan more than 100%, his bonus is doubled (is multiplied by 2),  
+and if more than 200% – the bonus is tripled (is multiplied by 3)  
