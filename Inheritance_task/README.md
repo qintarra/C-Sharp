@@ -26,3 +26,11 @@ and if more than 200% – the bonus is tripled (is multiplied by 3)
 and integer **clientAmount** – number of served clients, first two of which are passed to basic class constructor.
 - Redefine the virtual method of parent class **SetBonus** in the following way: 
 if the manager served over 100 clients, his bonus is increased by 500, and if more than 150 clients – by 1000.
+
+4. Create class **Company** and declare within it:
+
+Closed field **employees** (staff) – an array of Employee type.
+Constructor that receives employee array of **Employee** type with arbitrary length
+Method **GiveEverybodyBonus** with money parameter **companyBonus** that sets the amount of basic bonus for each employee.
+Method **TotalToPay** that returns total amount of salary of all employees including awarded bonus
+Method **NameMaxSalary** that returns employee last name, who received maximum salary including bonus.
