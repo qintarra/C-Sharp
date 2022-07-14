@@ -1,6 +1,6 @@
 # Inheritance
 
-#### Create classes **Employee**, **SalesPerson**, **Manager**, and **Company** with predefined functionality.
+Create classes **Employee**, **SalesPerson**, **Manager**, and **Company** with predefined functionality.
 
 1. Create basic class **Employee** and declare the following content:
 - Three closed fields – text field **name** (employee last name), money fields – **salary** and **bonus**
