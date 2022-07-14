@@ -18,3 +18,11 @@ first two of which are passed to basic class constructor
 - Redefine the virtual method of parent class **SetBonus** in the following way:  
 if the sales person completed the plan more than 100%, his bonus is doubled (is multiplied by 2),  
 and if more than 200% – the bonus is tripled (is multiplied by 3)  
+
+3. Create class **Manager** as **Employee** class inheritor, and declare with it:
+
+- Closed integer field **quantity** (number of clients, who the manager served during a month)
+- Constructor with parameters string **name** – employee last name, **salary** 
+and integer **clientAmount** – number of served clients, first two of which are passed to basic class constructor.
+- Redefine the virtual method of parent class **SetBonus** in the following way: 
+if the manager served over 100 clients, his bonus is increased by 500, and if more than 150 clients – by 1000.
