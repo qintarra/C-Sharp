@@ -54,7 +54,8 @@ namespace Aggregation
             }
             return max;
 			
-			/* decimal max = deposits[0].Income();
+            /* using foreach:
+			decimal max = deposits[0].Income();
             foreach (Deposit x in deposits)
             {
                 if(x != null && max < x.Income())
