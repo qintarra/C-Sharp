@@ -1,4 +1,4 @@
-# Inheritance
+## Inheritance
 
 Create classes **Employee**, **SalesPerson**, **Manager**, and **Company** with predefined functionality.
 
