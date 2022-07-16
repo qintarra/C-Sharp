@@ -1,4 +1,7 @@
-namespace Aggregation
+using System;
+using System.Collections.Generic;
+using System.Text;
+namespace Deposits
 {
     //Define public class "SpecialDeposit" that inherits from "Deposit".
     public class SpecialDeposit : Deposit
@@ -19,6 +22,13 @@ namespace Aggregation
                 incomeAmount += incomeAmount / 100 * i;
             }
             return incomeAmount - Amount;
+        }
+		
+		//Implement interface "IProlongable" in class "SpecialDeposit".
+		//Interface's method should return true if deposited more than 1000 UAH.
+		public override bool CanToProlong()
+        {
+            return Amount > 1000;           
         }
     }
 }
