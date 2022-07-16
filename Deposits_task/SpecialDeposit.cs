@@ -24,9 +24,9 @@ namespace Deposits
             return incomeAmount - Amount;
         }
 		
-		//Implement interface "IProlongable" in class "SpecialDeposit".
-		//Interface's method should return true if deposited more than 1000 UAH.
-		public override bool CanToProlong()
+        //Implement interface "IProlongable" in class "SpecialDeposit".
+        //Interface's method should return true if deposited more than 1000 UAH.
+        public override bool CanToProlong()
         {
             return Amount > 1000;           
         }
