@@ -4,7 +4,7 @@ using System.Text;
 namespace Deposits
 {
     //Define public class "SpecialDeposit" that inherits from "Deposit".
-    public class SpecialDeposit : Deposit
+    public class SpecialDeposit : Deposit, Iprolongable
     {
         //Define a constructor that calls the constructor of a base class.
         public SpecialDeposit(decimal amount, int period) : base(amount, period)
