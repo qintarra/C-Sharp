@@ -13,8 +13,14 @@ Create classes **Deposit** (bank account), **BaseDeposit** (regular deposit), **
 3. For each inheritor class – to implement its own interest addition scheme and accordingly profit margin definitions, overriding abstract method **Income** in each class.
 
 **BaseDeposit** implies each month 5% of the interest from the current deposit sum. Each following month of income is calculated from the sum, which was received by adding to the current income sum of the previous month and is rounded to the hundredth.
-Example:
-Base amount – 1000,00
-In a month – 105,00; income amount – 50,00
-In two months – 1102,50; income amount – 102,50
-In three months – 1157,62; income amount – 157,62
+Example:  
+Base amount – 1000,00  
+In a month – 105,00; income amount – 50,00  
+In two months – 1102,50; income amount – 102,50  
+In three months – 1157,62; income amount – 157,62  
+
+**SpecialDeposit** implies income addition each month, the amount of which (in percent) equals to deposit expiration period. If during the first month 1% is added, during the second month – 2% from the sum obtained after the first month and so on.
+Example: Base amount – 1000,00  
+In a month – 1010,00; income amount – 10,00  
+In two months – 1030,20; income amount – 30,20  
+
