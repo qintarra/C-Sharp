@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Interface
 {
-	//Create interface: "IProlongable".
+    //Create interface: "IProlongable".
     interface IProlongable
     {
-		//Create a method "CanToProlong" signature that returns true or false.
+        //Create a method "CanToProlong" signature that returns true or false.
         bool CanToProlong();
     }
 }
