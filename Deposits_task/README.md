@@ -26,3 +26,11 @@ In a month – 1010,00; income amount – 10,00
 In two months – 1030,20; income amount – 30,20  
 
 **LongDeposit** implies that during the first 6 months, no percent is added to the client’s deposit, but starting from the 7th month, each month's percent addition is 15% from the current deposit sum, thus encouraging a client to make long-term deposits.
+
+4. Create class **Client** (bank client) and declare within it:
+- Private field **deposits** (client deposits) – objects array of type Deposit
+- Constructor without parameters, which creates empty array deposits consisting of 10 elements
+- Method **AddDeposit** with parameter **deposit** for adding regular, special, or long-term account into the array on the first empty spot and returning true, or returning false, if the accounts number limit is depleted (no empty space in the array).
+- Method **TotalIncome**, returning total income amount based on all client’s deposits upon deposit expiration.
+- Method **MaxIncome**, returning maximum deposit income of all client’s deposits upon deposits expiration.
+- Method **GetIncomeByNumber** with integer parameter **number** (deposit number, which equals its index in the array, increased by one), returning income from the deposit with such number. If a deposit with such number does not exist, the method returns a 0 value.
