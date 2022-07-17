@@ -1,7 +1,11 @@
-namespace Aggregation
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+namespace Deposit
 {
     //Define public class "Client".
-    public class Client
+    public class Client : IEnumerable<Deposit>
     {
         //Define private field "deposits" with the type of array of "Deposit".
         private readonly Deposit[] deposits;
@@ -76,6 +80,43 @@ namespace Aggregation
             {
                 return 0;
             }
+        }
+		
+        //Implement interface "IEnumerable<Deposit>" in class "Client".
+        public IEnumerator<Deposit> GetEnumerator()
+        {
+            foreach (Deposit deposit in deposits)
+            {
+                yield return deposit;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+		
+        //Create a public method "SortDeposits" that sorts an array of deposits by the general sum of money in descending order.
+        public void SortDeposits()
+        {
+            Array.Sort(deposits, (x, y) => Comparer<Deposit>.Default.Compare(y, x));
+			
+            /*other solution:
+            Array.Sort(deposits);
+            Array.Reverse(deposits);*/
+        }
+		
+        //Create a public method "CountPossibleToProlongDeposit" that returns the number of the current client's deposits that can be prolonged.
+        public int CountPossibleToProlongDeposit()
+        {
+            int count = 0;
+            foreach (Deposit deposit in deposits)
+            {
+                if ((deposit is IProlongable) && (deposit as IProlongable).CanToProlong())
+                {
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }
