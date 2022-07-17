@@ -33,4 +33,11 @@ In two months – 1030,20; income amount – 30,20
 - Method **AddDeposit** with parameter **deposit** for adding regular, special, or long-term account into the array on the first empty spot and returning true, or returning false, if the accounts number limit is depleted (no empty space in the array).
 - Method **TotalIncome**, returning total income amount based on all client’s deposits upon deposit expiration.
 - Method **MaxIncome**, returning maximum deposit income of all client’s deposits upon deposits expiration.
-- Method **GetIncomeByNumber** with integer parameter **number** (deposit number, which equals its index in the array, increased by one), returning income from the deposit with such number. If a deposit with such number does not exist, the method returns a 0 value.
+- Method **GetIncomeByNumber** with integer parameter **number** (deposit number, which equals its index in the array, increased by one), returning income from the deposit with such number. If a deposit with such number does not exist, the method returns a 0 value.  
+
+##Interfaces
+
+Add the following new functionalities to the project created in task Aggregation:
+
+1. Create interface **Iprolongable** (prolonging deposit) and declare within it method **CanToProlong** without parameters that return the logic value true or false, depending on whether this specific deposit can be prolonged or not.
+
