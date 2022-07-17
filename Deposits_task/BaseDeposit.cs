@@ -1,4 +1,7 @@
-namespace Aggregation
+using System;
+using System.Collections.Generic;
+using System.Text;
+namespace Deposit
 {
     //Define public class "BaseDeposit" that inherits from "Deposit".
     public class BaseDeposit : Deposit
