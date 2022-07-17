@@ -41,4 +41,7 @@ Add the following new functionalities to the project created in task Aggregation
 
 1. Create interface **Iprolongable** (prolonging deposit) and declare within it method **CanToProlong** without parameters that return the logic value true or false, depending on whether this specific deposit can be prolonged or not.
 
-2. Implement interface **IProlongable** in classes **SpecialDeposit** and **LongDeposit**.
+2. Implement interface **IProlongable** in classes **SpecialDeposit** and **LongDeposit**.  
+
+3. In addition, a special deposit (**SpecialDeposit**) can be prolonged only when more than 1000 UAH were deposited, and a long-term deposit (**LongDeposit**) can be prolonged if the period of deposit is no longer than 3 years.  
+
