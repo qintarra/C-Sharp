@@ -35,9 +35,10 @@ In two months – 1030,20; income amount – 30,20
 - Method **MaxIncome**, returning maximum deposit income of all client’s deposits upon deposits expiration.
 - Method **GetIncomeByNumber** with integer parameter **number** (deposit number, which equals its index in the array, increased by one), returning income from the deposit with such number. If a deposit with such number does not exist, the method returns a 0 value.  
 
-##Interfaces
+## Interfaces
 
 Add the following new functionalities to the project created in task Aggregation:
 
 1. Create interface **Iprolongable** (prolonging deposit) and declare within it method **CanToProlong** without parameters that return the logic value true or false, depending on whether this specific deposit can be prolonged or not.
 
+2. Implement interface **IProlongable** in classes **SpecialDeposit** and **LongDeposit**.
