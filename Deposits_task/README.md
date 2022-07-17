@@ -46,3 +46,8 @@ Add the following new functionalities to the project created in task Aggregation
 3. In addition, a special deposit (**SpecialDeposit**) can be prolonged only when more than 1000 UAH were deposited, and a long-term deposit (**LongDeposit**) can be prolonged if the period of deposit is no longer than 3 years.  
 
 4. Implement standard generic interface **IComparable** in abstract class **Deposit**. The total sum amount (sum deposited plus interest during the entire period) should be considered as comparison criteria for **Deposit** instances.
+
+5. Implement additionally in class **Client**:
+- interface **IEnumerable**.  
+- Method **SortDeposits**, which performs deposit sorting in array **deposits** in descending order of total sum amount on deposit upon deposit expiration.  
+- Method **CountPossibleToProlongDeposit**, which returns an integer – the amount of the current client’s deposits that can be prolonged.
