@@ -10,7 +10,7 @@ namespace ArrayObject
                  { 10 , 5, 3, 4}	           =>  {4, 5, 3, 10} 
                  {100, 2, 3, 4, 5}             => {100, 4, 3, 2, 5} 
                  {100, 2, 3, 45, 33, 8, 4, 54} => {54, 4, 3, 45, 33, 8, 2, 100} 
-		*/
+        */
         public static void ChangeElementsInArray(int[] nums)
         {
             int x;
