@@ -40,7 +40,6 @@ namespace Task_08
             Console.WriteLine("Even numbers amount: " + evenNumbersCount);
             Console.WriteLine("Odd numbers sum: " + oddNumberSum);
             Console.WriteLine("Even numbers sum: " + evenNumberSum);
-            Console.ReadLine();
         }
     }
 }
