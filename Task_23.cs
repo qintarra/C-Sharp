@@ -5,7 +5,7 @@ namespace Algorithms
 {
     class Program
     {
-        static String ReverseEachWord(String input)
+        static string ReverseEachWord(string input)
         {
             if (string.IsNullOrEmpty(input))
             {
@@ -13,7 +13,7 @@ namespace Algorithms
             }
 
             StringBuilder result = new StringBuilder();
-            String[] arr = input.Split(" ");
+            string[] arr = input.Split(" ");
             for (int i = 0; i < arr.Length; i++)
             {
                 result.Append(Reverse(arr[i]));
@@ -25,7 +25,7 @@ namespace Algorithms
             return result.ToString();
         }
 
-        static String Reverse(String input)
+        static string Reverse(string input)
         {
             if (string.IsNullOrEmpty(input))
             {
@@ -34,12 +34,12 @@ namespace Algorithms
 
             char[] arr = input.ToCharArray();
             Array.Reverse(arr);
-            return new String(arr);
+            return new string(arr);
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine(ReverseEachWord("Tom is a great worker"));
+            Console.WriteLine(ReverseEachWord("Tom Cruise is a great actor"));
             Console.WriteLine(ReverseEachWord(null));
             Console.WriteLine(ReverseEachWord("neveroddoreven"));
             Console.WriteLine(ReverseEachWord("what can I do today"));
