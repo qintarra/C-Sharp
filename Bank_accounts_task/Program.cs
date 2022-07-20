@@ -7,10 +7,10 @@ namespace ProgChallenge
         static void Main(string[] args)
         {
             // Create the Checking Account with initial balance
-            CheckingAcct checking = new CheckingAcct("John", "Doe", 2500.0m);
+            CheckingAccount checking = new CheckingAccount("John", "Wick", 2500.0m);
 
             // Create the Savings Account with interest and initial balance
-            SavingsAcct saving = new SavingsAcct("Jane", "Doe", 0.025m, 1000.0m);
+            SavingsAccount saving = new SavingsAccount("Jane", "Eyre", 0.025m, 1000.0m);
 
             // Check the balances
             // Expected output should be 2500 and 1000 at this point
