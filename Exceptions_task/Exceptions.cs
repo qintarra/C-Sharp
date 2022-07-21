@@ -26,7 +26,10 @@ namespace Exceptions
         /// <summary>
         /// Number of columns.
         /// </summary>
-        
+        public int Columns
+        {
+            get;
+        }
 
         /// <summary>
         /// An array of floating-point values that represents the elements of this Matrix.
