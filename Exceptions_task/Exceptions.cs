@@ -67,7 +67,17 @@ namespace Exceptions
         /// </summary>
         /// <param name="array">An array of floating-point values that represents the elements of this Matrix.</param>
         /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
-       
+        public Matrix(double[,] array)
+        {
+            if (array == null)
+            {
+                throw new ArgumentNullException("array");
+            }
+
+            Rows = array.GetLength(0);
+            Columns = array.GetLength(1);
+            Array = array;
+        }
 
         /// <summary>
         /// Allows instances of a <see cref="Matrix"/> to be indexed just like arrays.
