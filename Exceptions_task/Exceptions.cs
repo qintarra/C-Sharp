@@ -34,7 +34,10 @@ namespace Exceptions
         /// <summary>
         /// An array of floating-point values that represents the elements of this Matrix.
         /// </summary>
-        
+        public double[,] Array
+        {
+            get;
+        }
         
         /// <summary>
         /// Initializes a new instance of the <see cref="Matrix"/> class.
