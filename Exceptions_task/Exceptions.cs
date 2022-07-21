@@ -45,7 +45,22 @@ namespace Exceptions
         /// <param name="rows"></param>
         /// <param name="columns"></param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when row or column is zero or negative.</exception>
-        
+        public Matrix(int rows, int columns)
+        {
+            if (rows <= 0)
+            {
+                throw new ArgumentOutOfRangeException("rows");
+            }
+
+            if (columns <= 0)
+            {
+                throw new ArgumentOutOfRangeException("columns");
+            }
+
+            Array = new double[rows, columns];
+            Rows = rows;
+            Columns = columns;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Matrix"/> class with the specified elements.
