@@ -85,7 +85,37 @@ namespace Exceptions
         /// <param name="row"></param>
         /// <param name="column"></param>
         /// <exception cref="ArgumentException">Thrown when index is out of range.</exception>
-        
+        public double this[int row, int column]
+        {
+            get
+            {
+                if (row < 0 || row >= Rows)
+                {
+                    throw new ArgumentException("row");
+                }
+                    
+                if(column < 0 || column >= Columns)
+                {
+                    throw new ArgumentException("column");
+                }
+                    
+                return Array[row, column];
+            }
+            set
+            {
+                if (row < 0 || row >= Rows)
+                {
+                    throw new ArgumentException("row");
+                }
+
+                if (column < 0 || column >= Columns)
+                {
+                    throw new ArgumentException("column");
+                }
+
+                Array[row, column] = value;
+            }
+        }
 
         /// <summary>
         /// Adds <see cref="Matrix"/> to the current matrix.
