@@ -124,7 +124,31 @@ namespace Exceptions
         /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
         /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
         /// <returns><see cref="Matrix"/></returns>
-        
+        public Matrix Add(Matrix matrix)
+        {
+            if (matrix == null)
+            {
+                throw new ArgumentNullException("matrix");
+            }
+            else
+            {
+                if (Rows != matrix.Rows || Columns != matrix.Columns)
+                {
+                    throw new MatrixException();
+                }
+                else
+                {
+                    for (int i = 0; i < Rows; i++)
+                    {
+                        for (int j = 0; j < Columns; j++)
+                        {
+                            matrix[i, j] += Array[i, j];
+                        }
+                    }
+                    return matrix;
+                }
+            }
+        }
 
         /// <summary>
         /// Subtracts <see cref="Matrix"/> from the current matrix.
