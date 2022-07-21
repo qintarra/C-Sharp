@@ -18,7 +18,10 @@ namespace Exceptions
         /// <summary>
         /// Number of rows.
         /// </summary>
-        
+        public int Rows
+        {
+            get;
+        }
 
         /// <summary>
         /// Number of columns.
