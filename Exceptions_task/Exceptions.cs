@@ -191,6 +191,28 @@ namespace Exceptions
         /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
         /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
         /// <returns><see cref="Matrix"/></returns>
-       
+        public Matrix Multiply(Matrix matrix)
+        {
+            if (matrix == null)
+            {
+                throw new ArgumentNullException("matrix");
+            }
+            if (Columns != matrix.Rows)
+                {
+                    throw new MatrixException();
+                }
+            double[,] matrix3 = new double[Rows, matrix.Columns];
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < matrix.Columns; j++)
+                {
+                    for (int h = 0; h < Columns; h++)
+                    {
+                        matrix3[i, j] += Array[i, h] * matrix[h, j];
+                    }
+                }
+            }
+            return new Matrix(matrix3);
+        }
     }
 }
