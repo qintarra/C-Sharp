@@ -157,7 +157,32 @@ namespace Exceptions
         /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
         /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
         /// <returns><see cref="Matrix"/></returns>
-        
+        public Matrix Subtract(Matrix matrix)
+        {
+            if (matrix == null)
+            {
+                throw new ArgumentNullException("matrix");
+            }
+            else
+            {
+                if (Rows != matrix.Rows || Columns != matrix.Columns)
+                {
+                    throw new MatrixException();
+                }
+                else
+                {
+                    double[,] matrix2 = new double[Rows, Columns];
+                    for (int i = 0; i < Rows; i++)
+                    {
+                        for (int j = 0; j < Columns; j++)
+                        {
+                            matrix2[i, j] = Array[i, j] - matrix.Array[i,j];
+                        }
+                    }
+                    return new Matrix(matrix2);
+                }
+            }
+        }
 
         /// <summary>
         /// Multiplies <see cref="Matrix"/> on the current matrix.
@@ -166,6 +191,6 @@ namespace Exceptions
         /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
         /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
         /// <returns><see cref="Matrix"/></returns>
-        
+       
     }
 }
