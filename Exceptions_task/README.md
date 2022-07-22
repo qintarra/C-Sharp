@@ -8,3 +8,5 @@ Matrix is the cover for a two-dimensional array of real values, storing matrix v
 
 Real type values (double) can be in a matrix, specifying during creation, the number of array rows and columns, which will store these values. After creation, the number of rows and columns is not changed. Values to matrix elements can be set while creating a matrix, and later with the help of an indexer.  
 
+A matrix can provide information regarding the number of array rows and columns, receive array elements in form of a two-dimensional standard array, and add, deduct and multiply matrixes compatible by size. If a user is trying to perform operations with a matrix of incompatible sizes – user type exceptions MatrixException are thrown from operations. Other matrix methods also throw exceptions, if a user applies them incorrectly (conveys incorrect parameters into the constructor, in indexer – non-existing index, and so on)  
+
