@@ -13,4 +13,5 @@ A matrix can provide information regarding the number of array rows and columns,
 In **Matrix** it requires the implementation of the following functionality:  
 - Creating an empty matrix with a predetermined number of rows and columns (all values in the matrix equal 0).  
 - Creating of matrix based on an existing two-dimensional array.  
+- Receiving a number of matrix rows and columns.  
 
