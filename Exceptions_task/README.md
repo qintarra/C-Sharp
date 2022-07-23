@@ -10,4 +10,6 @@ Real type values (double) can be in a matrix, specifying during creation, the nu
 
 A matrix can provide information regarding the number of array rows and columns, receive array elements in a standard two-dimensional array, and add, deduct and multiply matrixes compatible by size. If a user is trying to perform operations with a matrix of incompatible sizes – user type exceptions **MatrixException** are thrown from operations. Other matrix methods also throw exceptions, if a user applies them incorrectly (conveys incorrect parameters into the constructor, in indexer – non-existing index, and so on)  
 
-In **Matrix** it requires the implementation of the following functionality:
+In **Matrix** it requires the implementation of the following functionality:  
+- Creating an empty matrix with a predetermined number of rows and columns (all values in the matrix equal 0).  
+
