@@ -16,4 +16,5 @@ In **Matrix** it requires the implementation of the following functionality:
 - Receiving a number of matrix rows and columns.  
 - Receiving of standard two-dimensional array out of the matrix.  
 - Access to recording and reading of elements via predetermined correct index (indexer).  
+- Method of matrices addition.  
 
