@@ -24,7 +24,7 @@ Task_18 Method to find the indexes of array elements.
 Task_19 Functions creating (sorting, replacing values, multiplications, sum of a progression in array).  
 Task_20 Classes creating (with methods and constructors).    
 Task_21 "Guess the number" game.  
-
+Task_22 Write a method that detects whether a string is a palindrome.   
 
 
 
