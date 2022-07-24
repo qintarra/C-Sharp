@@ -21,7 +21,7 @@ Task_15 Calculations in two-dimensional arrays (arithmetic average, rewriting va
 Task_16 Calculations in two-dimensional arrays (with columns, rows, diagonals)  
 Task_17 Calculations in arrays(swap values, finding max elements, change values between diagonal)  
 Task_18 Method to find the indexes of array elements.   
-Task_19 Functions creating (sorting, replacing values, multiplications, sum of a progression in array).  
+Task_19 Functions creating (sorting, replacing values, multiplications, the sum of a progression in an array).  
 Task_20 Classes creating (with methods and constructors).    
 Task_21 "Guess the number" game.  
 Task_22 Write a method that detects whether a string is a palindrome.   
