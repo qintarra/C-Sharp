@@ -18,4 +18,4 @@ In **Matrix** it requires the implementation of the following functionality:
 - Access to recording and reading of elements via predetermined correct index (indexer).  
 - Method of matrices addition.  
 - Method of matrices subtraction.  
-
+- Method of matrices multiplication.  
