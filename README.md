@@ -25,7 +25,7 @@ Task_19 Functions creating (sorting, replacing values, multiplications, sum of a
 Task_20 Classes creating (with methods and constructors).    
 Task_21 "Guess the number" game.  
 Task_22 Write a method that detects whether a string is a palindrome.   
-
+Task_23 Create an algorithm that reverses each word in a sentence.  
 
 
 
