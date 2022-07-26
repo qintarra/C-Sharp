@@ -74,7 +74,12 @@ namespace GenericsTask
             Console.ReadLine();
         }
 
-        
+        static bool FindFords(ClassicCar car)
+        {
+            if (car.m_Make == "Ford")
+                return true;
+            return false;
+        }
 
         
     }
