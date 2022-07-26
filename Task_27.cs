@@ -81,6 +81,25 @@ namespace GenericsTask
             return false;
         }
 
-        
+        static void PopulateData(List<ClassicCar> theList)
+        {
+            theList.Add(new ClassicCar("Alfa Romeo", "Spider Veloce", 1965, 15000));
+            theList.Add(new ClassicCar("Alfa Romeo", "1750 Berlina", 1970, 20000));
+            theList.Add(new ClassicCar("Alfa Romeo", "Giuletta", 1978, 45000));
+
+            theList.Add(new ClassicCar("Ford", "Thunderbird", 1971, 15000));
+            theList.Add(new ClassicCar("Ford", "Mustang", 1976, 15000));
+            theList.Add(new ClassicCar("Ford", "Corsair", 1970, 15000));
+            theList.Add(new ClassicCar("Ford", "LTD", 1969, 15000));
+
+            theList.Add(new ClassicCar("Chevrolet", "Camaro", 1979, 15000));
+            theList.Add(new ClassicCar("Chevrolet", "Corvette Stringray", 1966, 15000));
+            theList.Add(new ClassicCar("Chevrolet", "Monte Carlo", 1984, 15000));
+
+            theList.Add(new ClassicCar("Mercedes", "300SL Roadster", 1957, 15000));
+            theList.Add(new ClassicCar("Mercedes", "SSKL", 1930, 15000));
+            theList.Add(new ClassicCar("Mercedes", "130H", 1936, 15000));
+            theList.Add(new ClassicCar("Mercedes", "250SL", 1968, 15000));
+        }
     }
 }
