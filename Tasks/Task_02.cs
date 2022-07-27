@@ -1,7 +1,5 @@
 ﻿using System;
-
 namespace Task02
-
 {
     //Enter 3 numbers and display the value of the sum and product of these numbers
     internal class Program
@@ -29,7 +27,6 @@ namespace Task02
             Console.WriteLine("Sum of three numbers = " + sumResult);
 
             Console.WriteLine("Product of three numbers = " + prodResult);
-
         }
     }
 }
