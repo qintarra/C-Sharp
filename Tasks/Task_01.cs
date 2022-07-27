@@ -1,7 +1,5 @@
 ﻿using System;
-
 namespace Task01
-
 {
     //Calculate the arithmetic mean of two numbers
     internal class Program
@@ -21,7 +19,6 @@ namespace Task01
             double result = (firstValue + secondValue) / 2;
 
             Console.WriteLine("The arithmetic mean of your numbers is " + result);
-
         }
     }
 }
