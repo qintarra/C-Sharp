@@ -13,7 +13,7 @@ namespace Task_03
             Console.WriteLine($"Sum = {sum}, Product = {product}");  
         }  
 		
-        /*A three-digit number n is given. Find the sum and the product of its digits.  
+        /* A three-digit number n is given. Find the sum and the product of its digits.  
         Example: n = 450  =>  sum = 9,  product = 0  
                  n = 817  =>  sum = 16, product = 56 */ 		
         public static void Task2(int n)  
