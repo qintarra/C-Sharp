@@ -26,3 +26,4 @@ Task_23 Create an algorithm that reverses each word in a sentence.
 Task_24 Create an algorithm that deletes the 'K'-th node from the end of the list.  
 Task_25 Create an algorithm that detects a cycle within a linked list.  
 Task_26 Create a search algorithm that retrieves some data from a binary search tree.  
+Task_26 Working with generic collection classes to calculate information based upon a set of data records.  
