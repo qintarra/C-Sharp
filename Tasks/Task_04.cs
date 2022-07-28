@@ -2,7 +2,7 @@
 {
     public static class Tasks
     {   
-	    /* The rectangle's sides are a and b. Find its perimeter using the formula: P = 2×(a + b).
+        /* The rectangle's sides are a and b. Find its perimeter using the formula: P = 2×(a + b).
         Find its area following the formula: S = a × b
         Example: а = 5, b = 3,	 perimeter = 16,	 area = 15 */      
         public static void Task1(int a, int b)
@@ -21,14 +21,11 @@
 
             Console.WriteLine($"V = {volume}, S = {surfaceArea}");
         }
-
-        public static void Task3(int r)
-
+		
         /* Find the circumference L and the area of a circle S of a given radius 
-         * using the formula L = 2 × π × r ,  S = π × R², where π = 3.14.
-         * Example: r = 5   circumference = 31.4    area = 78.5
-         */
-
+        using the formula L = 2 × π × r ,  S = π × R², where π = 3.14.
+        Example: r = 5,   circumference = 31.4,    area = 78.5 */       
+        public static void Task3(int r)
         {
             double pi = 3.14, circumference = 2 * pi * r, area = pi * r * r;
 
