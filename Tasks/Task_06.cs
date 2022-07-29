@@ -59,15 +59,12 @@
             }
         }
 
-        public static (int a, int b, int c) Task4(int a, int b, int c)
-
         /* Given three real type values A, B, C. If their values are in ascending order (A < B< C) or descending (A > B> C) one, then double them; 
-         * otherwise, replace the value of each variable with the opposite one.
-         * Example: A = 10;  B = 20 ; C = 30 =>  A = 20;  B = 40 ; C = 60
-         *          A = -2;  B = -12 ; C = -32 =>  A = -4;  B = -24 ; C = -64
-         *          A = -25;  B = -12 ; C = -21 =>  A = 25;  B = 12 ; C = 21
-         */
-
+        otherwise, replace the value of each variable with the opposite one.
+        Example: A = 10;  B = 20 ; C = 30 =>  A = 20;  B = 40 ; C = 60
+                 A = -2;  B = -12 ; C = -32 =>  A = -4;  B = -24 ; C = -64
+                 A = -25;  B = -12 ; C = -21 =>  A = 25;  B = 12 ; C = 21 */        
+        public static (int a, int b, int c) Task4(int a, int b, int c)
         {
             if ((a < b && b < c) || (a > b && b > c))
             {
