@@ -28,8 +28,6 @@
             return result;
         }
 
-
-
         /* Given three real type values A, B, C. Rewrite the values of the variables so that A has the smaller of the values, and C has the larger one.
         Example: A = 10;  B = -15 ; C = 7 =>  A = -15;  B = -15 ; C = 10
                  A = -1;  B = 10 ; C = 5 =>  A = -1;  B = 10 ; C = 10
@@ -43,14 +41,12 @@
             return (a, b, c);
         }
 
-        public static (int a, int b, int c) Task3(int a, int b, int c)
-
         /* Given three real type values A, B, C. If their values are in ascending order (A < B< C), then double them; 
-         * otherwise, replace the value of each variable with the opposite one.
-         * Example: A = 8;  B = 17 ; C = 45 =>  A = 16;  B = 34 ; C = 90
-         *          A = -1;  B = 10 ; C = -5 =>  A = 1;  B = -10 ; C = 5
-         *          A = -25;  B = -23 ; C = -16 =>  A = -50;  B = -46 ; C = -32
-         */
+        otherwise, replace the value of each variable with the opposite one.
+        Example: A = 8;  B = 17 ; C = 45 =>  A = 16;  B = 34 ; C = 90
+                 A = -1;  B = 10 ; C = -5 =>  A = 1;  B = -10 ; C = 5
+                 A = -25;  B = -23 ; C = -16 =>  A = -50;  B = -46 ; C = -32 */         
+        public static (int a, int b, int c) Task3(int a, int b, int c)
 
         {
             if (a < b && b < c)
