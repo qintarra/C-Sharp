@@ -60,7 +60,8 @@
 
         /* Given three unequal numbers A, B, C. Find the smallest of them.
         Example: A = 8;  B = -2 ; C = 3 =>  Min = -2
-                 A = -24;  B = -3 ; C = 0 =>  Min = -24 */
+                 A = -24;  B = -3 ; C = 0 =>  Min = -24
+                 A = 21;  B = 100 ; C = 9 =>  Min = 9 */
         public static int Task4(int a, int b, int c)
         {
             var min = Math.Min(a, b);
