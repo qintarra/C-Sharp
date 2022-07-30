@@ -1,12 +1,10 @@
 namespace Task_07
 {
     public static class Tasks
-    {
-        public static int Task1(int n, int m)
-		
-        // Get the sum of even numbers in the interval from n to m including.
+    {       		
+        // Get the sum of even numbers in the interval from 'n' to 'm' including.
         // Example: n = 4, m = 9   sum = 18 
-		
+        public static int Task1(int n, int m)
         {
             int sum = 0;
 
@@ -21,7 +19,7 @@ namespace Task_07
 		
         public static int Task2(int n, int m)
 		
-        // Get the sum of odd numbers in the interval from n to m including.
+        // Get the sum of odd numbers in the interval from 'n' to 'm' including.
         // Example: n = 4, m = 10   sum = 21
 		
         {
