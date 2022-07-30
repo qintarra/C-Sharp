@@ -32,11 +32,10 @@ namespace Task_07
 
             return sum;
         }
-		
-        public static int Task3(int n)
-		
-        // Get the sum of the digits of the number n (>0)
+		        		
+        // Get the sum of the digits of the number 'n' (>0)
         // Example: n = 25041   sum = 12
+        public static int Task3(int n)
 		
         {
             int sum = 0;
