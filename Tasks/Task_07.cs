@@ -48,11 +48,10 @@ namespace Task_07
 
             return sum;
         }
-		
-        public static int Task4(int n)
 	
-        // Get the sum of the even-digits of the number n (>0).
+        // Get the sum of the even-digits of the number 'n' (>0).
         // Example: n = 215480   sum = 14
+        public static int Task4(int n)
 	
         {
             int sum = 0;
