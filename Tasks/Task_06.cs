@@ -96,13 +96,11 @@
 
             return result;
         }
-		
-        public static int NumberOfUnitsInBinaryRecord(int n)
-		
+			
         //For a positive integer n calculate the result value, which is equal to the sum of the “1” in the binary representation of n.
         //Example: n = 14(decimal)  = 1110(binary)       result =  3 
-        //         n = 128(decimal) = 1000 0000(binary)  result  =  1 
-		
+        //         n = 128(decimal) = 1000 0000(binary)  result  =  1  
+        public static int NumberOfUnitsInBinaryRecord(int n)		
         {
             int number = 0;
 
