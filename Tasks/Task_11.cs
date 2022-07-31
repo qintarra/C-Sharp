@@ -33,14 +33,12 @@ namespace Task_11
             }
             return result;
         }
-		
-		
+				
         //Calculate the sum of even array elements with even indices.
         //Example: array = { -24, -6, 8, 120 }  =>  result = -16
         public static int Task3(int[] array)
         {
             int result = 0;
-
             for (int i = 0; i < array.Length; i += 2)
             {
                 if (array[i] % 2 == 0)
@@ -48,7 +46,6 @@ namespace Task_11
                     result += array[i];
                 }
             }
-
             return result;
         }
 		
