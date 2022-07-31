@@ -102,10 +102,9 @@ namespace Task_07
             return result;
         }
 		
-        public static int Task7(int n)
-	
         //Find the maximum integer, that can be obtained by numbers of an arbitrary three-digit positive integer 'n' permutation (100<=n<=999).
         //Example: n = 165   result =  651 
+        public static int Task7(int n)
         {
             int a = n /100;
             int b = n / 10 % 10;
