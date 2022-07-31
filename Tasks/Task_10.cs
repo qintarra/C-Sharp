@@ -1,14 +1,12 @@
 ﻿using System;
 
 namespace Task_10
-
 {
+	// Fill an array from keyboard. Entering an array from the console.
     internal class Program
     {
         static void Main(string [] args)
-        {
-            // Fill an array from keyboard. Entering an array from the console.
-
+        {           
             Console.Write("Enter the number of array elements:\t");
 
             int elementsCount = int.Parse(Console.ReadLine());
