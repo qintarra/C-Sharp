@@ -1,12 +1,8 @@
 ﻿using System;
-
+// Simple calculator
 namespace Task_09
-
 {
     internal class Program
-	
-	// Simple calculator
-	
     {
         static void Main(string[] args)
         {
