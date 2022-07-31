@@ -16,13 +16,11 @@ namespace Task_11
                     result += array[i];
                 }
             }
-
             return result;
         }
 		
         //Calculate the sum of negative elements of the array.
-        //Example: array = { -25, -6, 59, 120 }  =>  result = -31
-		
+        //Example: array = { -25, -6, 59, 120 }  =>  result = -31		
         public static int Task2(int[] array)
         {
             int result = 0;
@@ -33,7 +31,6 @@ namespace Task_11
                     result += array[i];
                 }
             }
-
             return result;
         }
 		
