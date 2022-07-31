@@ -5,8 +5,7 @@ namespace Task_11
     public static class Tasks
     {
         //One-dimensional array consists of integer elements. Calculate the sum of array elements greater than a.
-        //Example: array = { 25, -6, 59, 120 }, a = 25  =>  result = 179
-		
+        //Example: array = { 25, -6, 59, 120 }, a = 25  =>  result = 179	
         public static int Task1(int[] array, int a)
         {
             int result = 0;
