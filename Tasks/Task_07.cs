@@ -67,13 +67,12 @@ namespace Task_07
 
             return sum;
         }
+		        	
+        // Choose the larger of the two values. The first value is the sum of all even-digits of the number 'n' (>0), 
+        // and the second value is the sum of all odd-digits of the number 'n' (>0).
+        // Example: n = 52012  max = 6
 		
         public static int Task5(int n)
-	
-        // Choose the larger of the two values. The first value is the sum of all even-digits of the number n (>0), 
-        // the second value is the sum of all odd-digits of the number n (>0).
-        // Example: n = 52012  max = 6
-	
         {
             int sum1 = 0;
             int sum2 = 0;
@@ -97,7 +96,7 @@ namespace Task_07
 		
         public static int Task6(int n)
 	
-        // Find the smallest integer that can be obtained by rearranging the digits of number n (>0).
+        // Find the smallest integer that can be obtained by rearranging the digits of the number 'n' (>0).
         // Example: n = 31041   result = 1134
 	
         {
@@ -108,7 +107,7 @@ namespace Task_07
 		
         public static int Task7(int n)
 	
-        //Find the maximum integer, that can be obtained by numbers of an arbitrary three-digit positive integer n permutation (100<=n<=999).
+        //Find the maximum integer, that can be obtained by numbers of an arbitrary three-digit positive integer 'n' permutation (100<=n<=999).
         //Example: n = 165   result =  651 
         {
             int a = n /100;
