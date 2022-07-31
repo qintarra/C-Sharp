@@ -53,8 +53,7 @@ namespace Task_11
         //Example: array = { 25, -6, 59, -37 }    =>  result = 2
         public static int Task4(int[] array)
         {
-            int result = 0;
-            
+            int result = 0;          
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] < 0)
@@ -62,7 +61,6 @@ namespace Task_11
                     result++;
                 }
             }
-
             return result;
         }
 		
