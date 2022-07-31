@@ -70,8 +70,7 @@ namespace Task_07
 		        	
         // Choose the larger of the two values. The first value is the sum of all even-digits of the number 'n' (>0), 
         // and the second value is the sum of all odd-digits of the number 'n' (>0).
-        // Example: n = 52012  max = 6
-		
+        // Example: n = 52012  max = 6	
         public static int Task5(int n)
         {
             int sum1 = 0;
@@ -94,11 +93,9 @@ namespace Task_07
             return max;
         }
 		
-        public static int Task6(int n)
-	
         // Find the smallest integer that can be obtained by rearranging the digits of the number 'n' (>0).
         // Example: n = 31041   result = 1134
-	
+        public static int Task6(int n)
         {
             int result = int.Parse(new string(n.ToString().OrderBy(n => n).ToArray()));
 
