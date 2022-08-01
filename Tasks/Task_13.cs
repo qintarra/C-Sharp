@@ -6,7 +6,7 @@ namespace Task_13
     {
         static void Main(string[] args)
         {
-            //Filling a two-dimensional array with random numbers
+            // Filling a two-dimensional array with random numbers
             int[,] myArray = new int[10, 6];
 
             Random random = new Random();
@@ -28,7 +28,7 @@ namespace Task_13
                 Console.WriteLine();
             }
 			
-            //Filling a two-dimensional array from the keyboard
+            // Filling a two-dimensional array from the keyboard
             int[,] array = new int[2, 3];
 
             Console.WriteLine("Enter an array elements:");
@@ -52,7 +52,7 @@ namespace Task_13
                 Console.WriteLine();
             }
 			
-            //Filling a two-dimensional array from the keyboard (typeof string)
+            // Filling a two-dimensional array from the keyboard (typeof string)
             string[,] arr = new string[2, 2];
 
             Console.WriteLine("Enter an array elements:");
