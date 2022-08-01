@@ -14,7 +14,8 @@ namespace Task_14
                          { 31, -22, 3 },
                          { -30, -5, 13 } }
 						 
-                sum = 55 */     
+                sum = 55 */   
+				
         public static int Task1(int[,] array)
         {
             int sum = 0;
@@ -38,6 +39,7 @@ namespace Task_14
                          { 9, -14 ,15 } }
 
                 sum = 19 */      
+				
         public static int Task2(int[,] matrix)
         {
             int sum = 0;
@@ -62,7 +64,8 @@ namespace Task_14
 
                 result:{ { 4, 5, -6 },
                          { 12, -16, 13 },
-                         { -2, 2 ,0 } } */      
+                         { -2, 2 ,0 } } */  
+						 
         public static void Task3(int[,] matrix)
         {
             for (int i = 1; i < matrix.GetLength(0); i++)
@@ -73,14 +76,14 @@ namespace Task_14
                 }
         }
 		
-        /*Calculate the product of positive elements greater than the value of 'a'.
+        /* Calculate the product of positive elements greater than the value of 'a'.
         Example:
                 array: { { -12, 3, 5 },
                          { 6, -22, 3 },
                          { -30, -5, 13 } }
 
-                product = 78
-        */
+                product = 78 */
+				
         public static int Task4(int[,] array, int a)
         {
             int product = 1;
