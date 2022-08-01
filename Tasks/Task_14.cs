@@ -31,14 +31,13 @@ namespace Task_14
             return sum;
         }
 		
-        /*Calculate the sum of positive elements of the array that are located above the main diagonal.
+        /* Calculate the sum of positive elements of the array that are located above the main diagonal.
         Example:
                 array: { { 21, 12, 7 },
                          { -3, -14, -52 },
                          { 9, -14 ,15 } }
 
-                sum = 19
-        */
+                sum = 19 */      
         public static int Task2(int[,] matrix)
         {
             int sum = 0;
@@ -48,7 +47,6 @@ namespace Task_14
                 for (int j = 0; j < i; j++)
 
                     if (matrix[i, j] > 0)
-
                     {
                         sum += matrix[j, i];
                     }
@@ -56,7 +54,7 @@ namespace Task_14
             return sum;
         }
 		
-        /*Rewrite the values of the elements, subtracting from them the value of the row number of the element.
+        /* Rewrite the values of the elements, subtracting from them the value of the row number of the element.
         Example:
                 array: { { 4, 5, -6 },
                          { 13, -15, 14 },
@@ -64,18 +62,15 @@ namespace Task_14
 
                 result:{ { 4, 5, -6 },
                          { 12, -16, 13 },
-                         { -2, 2 ,0 } }
-        */
+                         { -2, 2 ,0 } } */      
         public static void Task3(int[,] matrix)
         {
-
             for (int i = 1; i < matrix.GetLength(0); i++)
 
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     matrix[i, j] -= i;
                 }
-
         }
 		
         /*Calculate the product of positive elements greater than the value of 'a'.
