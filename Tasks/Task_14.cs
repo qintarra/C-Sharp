@@ -8,14 +8,13 @@ namespace Task_14
 {
     public static class Tasks
     {
-        /*Two-dimensional array consists of integer elements. Calculate the sum of positive elements of the array.
+        /* A two-dimensional array consists of integer elements. Calculate the sum of positive elements of the array.
         Example: 
                 array: { { -12, 3, 5 },
                          { 31, -22, 3 },
                          { -30, -5, 13 } }
 						 
-                sum = 55
-        */
+                sum = 55 */     
         public static int Task1(int[,] array)
         {
             int sum = 0;
