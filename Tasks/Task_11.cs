@@ -80,13 +80,12 @@ namespace Task_11
             return result;
         }
 		
-        /*Calculate the number of array elements whose values ​​are equal to their index.
+        /* Calculate the number of array elements whose values ​​are equal to their index.
         Example: array = { 0, -6, 2, 120, 4 }  =>  result = 3
                  array = { 4, 1, 2, 22 }       =>  result = 2 */
         public static int Task6(int[] array)
         {
             int result = 0;
-
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == i)
