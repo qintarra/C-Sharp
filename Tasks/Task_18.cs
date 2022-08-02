@@ -1,5 +1,4 @@
 using System;
-
 namespace Task_18
 {
     internal class Program
