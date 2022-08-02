@@ -1,5 +1,4 @@
 using System;
-
 namespace ArrayObject
 {
     public static class ArrayTasks
