@@ -105,7 +105,7 @@ namespace Task_15
             return minarray;
         }
 		
-        /*Write the minimum values of each line into the new array 'minarray'.
+        /* Write the minimum values of each line into the new array 'minarray'.
         Example:
                 array: { { 4, 5, -6 },
                          { 13, -15, 14 },
