@@ -62,7 +62,7 @@ namespace Task_15
             return amount;
         }
 		
-        /*Write the product of the elements of each line, greater than the arithmetic mean of the elements of the line into the new array 'minarray'.
+        /* Write the product of the elements of each line, greater than the arithmetic mean of the elements of the line into the new array 'minarray'.
         Example: 
                 array: { { 15, 20, 5 },
                          { 15, 3, 9 },
