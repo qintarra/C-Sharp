@@ -8,7 +8,7 @@ namespace Task_16
 {
     public static class Tasks
     {
-        /*Two-dimensional array consists of integer elements. Find the sum of the minimum elements of all columns.
+        /* Two-dimensional array consists of integer elements. Find the sum of the minimum elements of all columns.
         Example:
                 array: { { 21, 12, 7 },
                          { -3, -14, 3 },
@@ -38,7 +38,7 @@ namespace Task_16
             return sum;
         }
 		
-        /*Calculate the product of the elements of the main diagonal.
+        /* Calculate the product of the elements of the main diagonal.
         Example:
                 array: { { 5, 7, 50 },
                          { 10, 30, 305 },
@@ -57,7 +57,7 @@ namespace Task_16
             return product;
         }
 		
-        /*Write the sum of the elements of each column into the new array 'sumarray'.
+        /* Write the sum of the elements of each column into the new array 'sumarray'.
         Example:
                 array: { { 0, 90, 90 },
                          { 7, 3, 3 },
@@ -81,7 +81,7 @@ namespace Task_16
             return sumarray;
         }
 		
-        /*Find the maximum value among the arithmetic means of the strings.
+        /* Find the maximum value among the arithmetic means of the strings.
         Example:
                 array: { { 2, 4, 4 },
                        { 1, 0, 3 },
