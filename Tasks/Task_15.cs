@@ -15,8 +15,8 @@ namespace Task_15
                          { 30, 55, 66 } }
 						 
                 a = 5	 
-                average = 3
-        */
+                average = 3 */
+        
         public static double Task1(int[,] array, int a)
         {
             double average = 0;
