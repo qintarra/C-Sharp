@@ -113,7 +113,6 @@ namespace Class
                     maxArea = i;
                 }
             }
-
             return maxArea;
         }
 		
@@ -129,7 +128,6 @@ namespace Class
                     minPerim = i;
                 }
             }
-
             return minPerim;
         }
 		
@@ -142,7 +140,6 @@ namespace Class
             {
                 numSquare++;
             }
-
             return numSquare;
         }
     }
