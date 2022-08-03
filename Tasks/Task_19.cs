@@ -44,11 +44,9 @@ namespace Task_19
         }
 		
        /* Create function 'MultArithmeticElements', which determines the multiplication of a given number 
-        * of first 'n' elements of an arithmetic progression of real numbers with a given initial element of progression 'a(1)' and progression step 't'. 
-        * a(n) is calculated by the formula a(n+1) = a(n) + t.
-        * Example: For a(1) = 5, t = 3, n = 4  multiplication equals to 5*8*11*14 = 6160 
-        */
-		
+        of first 'n' elements of an arithmetic progression of real numbers with a given initial element of progression 'a(1)' and progression step 't'. 
+        a(n) is calculated by the formula a(n+1) = a(n) + t.
+        Example: For a(1) = 5, t = 3, n = 4  multiplication equals to 5*8*11*14 = 6160 */       		
         public static double MultArithmeticElements(double a, double t, int n)
         {
             double result = 1.0;
