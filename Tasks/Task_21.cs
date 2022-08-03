@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace GuessTheNumber
 {
     class Program
