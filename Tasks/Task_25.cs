@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    // In order to determine if a linked list has a cycle, we need to use the next pointers of the linked list
-    // A given next pointer cannot point to a node we've already seen in the list
+    // In order to determine if a linked list has a cycle, we need to use the next pointers of the linked list.
+    // A given next pointer cannot point to a node we've already seen in the list.
     class CustomLinkedList
     {
         Node head;
@@ -24,21 +24,21 @@ namespace Algorithms
         // It should return 'true' if there is a cycle in a list. Otherwise should return 'false'.
         public Boolean HasCycle()
         {
-            // Store nodes that we have already see in the list
+            // Store nodes that we have already see in the list.
             HashSet<Node> nodes = new HashSet<Node>();
 
             // Keep track of where we are on a list as we iterate through.
             Node current = head;
 
-            // For each node -> check if it is in the HashSet
+            // For each node -> check if it is in the HashSet.
             while (current != null)
             {
-                // If it is in a set -> list must have a cycle               
+                // If it is in a set -> list must have a cycle.           
                 if (nodes.Contains(current))
                 {                    
                     return true;
                 }
-                // If it is not on the set -> add it to the set
+                // If it is not on the set -> add it to the set.
                 else
                 {                    
                     nodes.Add(current);
