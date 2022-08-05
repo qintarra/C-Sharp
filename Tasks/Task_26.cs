@@ -32,6 +32,7 @@ namespace Algorithms
                     return true;
                 }
             }
+			
             public static Node Insert(Node root, int value)
             {
                 if (root == null)
@@ -51,6 +52,7 @@ namespace Algorithms
                 return root;
             }
         }
+		
         static void Main(string[] args)
         {
             Node rootNode = new Node();
