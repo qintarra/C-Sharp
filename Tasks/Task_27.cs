@@ -47,7 +47,6 @@ namespace GenericsTask
             Console.WriteLine("The most valuable car is a {0} {1} {2} at ${3}\n",
                 mostValCar.m_Year, mostValCar.m_Make, mostValCar.m_Model, mostValCar.m_Value);
 
-
             // What is the entire collection worth?
             int totalValue = 0;
             foreach (ClassicCar c in carList)
