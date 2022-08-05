@@ -1,6 +1,6 @@
 using System;
 
-namespace ProgChallenge
+namespace BankAccount
 {
     public class CheckingAccount : BankAccount
     {
