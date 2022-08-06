@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Manager
+namespace Inheritance
 {
     //Create public class 'Manager' here, which inherits from the 'Employee' class.
     public class Manager : Employee
