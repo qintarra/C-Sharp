@@ -33,4 +33,4 @@ if the manager served over 100 clients, his bonus is increased by 500, and if mo
 - Constructor that receives employee array of **Employee** type with arbitrary length
 - Method **GiveEverybodyBonus** with money parameter **companyBonus** that sets the amount of basic bonus for each employee.
 - Method **TotalToPay** that returns total amount of salary of all employees including awarded bonus
-- Method **NameMaxSalary** that returns employee last name, who received maximum salary including bonus.
+- Method **NameMaxSalary** that returns employee last name, who received maximum salary including bonus.  
