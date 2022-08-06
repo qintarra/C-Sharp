@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Employee
+namespace Inheritance
 {
     //Create public class 'Employee' here
     public class Employee
