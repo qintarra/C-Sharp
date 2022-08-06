@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-
-namespace Company
+namespace Inheritance
 {
     //Create public class 'Company' here.
     public class Company
