@@ -50,4 +50,4 @@ Add the following new functionalities to the project created in task Aggregation
 5. Implement additionally in class **Client**:
 - interface **IEnumerable**.  
 - Method **SortDeposits**, which performs deposit sorting in array **deposits** in descending order of total sum amount on deposit upon deposit expiration.  
-- Method **CountPossibleToProlongDeposit**, which returns an integer – the amount of the current client’s deposits that can be prolonged.
+- Method **CountPossibleToProlongDeposit**, which returns an integer – the amount of the current client’s deposits that can be prolonged.  
