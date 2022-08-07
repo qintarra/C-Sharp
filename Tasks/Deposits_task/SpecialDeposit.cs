@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace Deposits
 {
     //Define public class "SpecialDeposit" that inherits from "Deposit".
