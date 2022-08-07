@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace Deposit
 {
     //Define public class "LongDeposit" that inherits from "Deposit".
