@@ -7,6 +7,15 @@ namespace CustomArray
 {
     public class CustomArray<T> 
     {
+        /// <summary>
+        /// Should return first index of array
+        /// </summary>
+        public int First
+        {
+            get;
+            private set;
+        }
+
 
     }
 }
