@@ -20,3 +20,4 @@ In **Matrix** it requires the implementation of the following functionality:
 - Method of matrices subtraction.  
 - Method of matrices multiplication.  
 - Raise exceptions specified in XML comments to class methods (standard and user).  
+  
