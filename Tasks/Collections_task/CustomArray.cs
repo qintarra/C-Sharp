@@ -16,6 +16,19 @@ namespace CustomArray
             private set;
         }
 
+        /// <summary>
+        /// Should return last index of array
+        /// </summary>
+        public int Last
+        {
+            get
+            {
+                return First + Length - 1;
+            }
+        }
+
+
+        
 
     }
 }
