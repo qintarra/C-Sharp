@@ -64,6 +64,24 @@ namespace CustomArray
             Array = new T[length];
         }
 
+        /// <summary>
+        /// Constructor with first index and collection  
+        /// </summary>
+        /// <param name="first">First Index</param>
+        /// <param name="list">Collection</param>
+        ///  <exception cref="NullReferenceException">Thrown when list is null</exception>
+        /// <exception cref="ArgumentException">Thrown when count is smaler than 0</exception>       
+        public CustomArray(int first, IEnumerable<T> list)
+        {
+            if (list == null)
+                throw new NullReferenceException("NullReferenceException");
+            if (list.ToArray().Length <= 0)
+                throw new ArgumentException("ArgumentException");
+
+            First = first;
+            Array = list.ToArray();
+        }
+
 
 
         
