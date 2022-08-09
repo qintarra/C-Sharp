@@ -50,6 +50,22 @@ namespace CustomArray
         public T[] Array
         {
             get;
-        }   
+        }
+
+        /// <summary>
+        /// Constructor with first index and length
+        /// </summary>
+        /// <param name="first">First Index</param>
+        /// <param name="length">Length</param>      
+        public CustomArray(int first, int length)
+        {
+            First = first;
+            Length = length;
+            Array = new T[length];
+        }
+
+
+
+        
     }
 }
