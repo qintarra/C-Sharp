@@ -44,7 +44,12 @@ namespace CustomArray
             }
         }
 
-        
-
+        /// <summary>
+        /// Should return array 
+        /// </summary>
+        public T[] Array
+        {
+            get;
+        }   
     }
 }
