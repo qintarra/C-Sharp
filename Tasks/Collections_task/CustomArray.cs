@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CustomArray
 {
-    public class CustomArray<T>
+    public class CustomArray<T> 
     {
         /// <summary>
         /// Should return first index of array
@@ -101,6 +101,30 @@ namespace CustomArray
             Length = list.Length;
         }
 
+        /// <summary>
+        /// Indexer with get and set  
+        /// </summary>
+        /// <param name="item">Int index</param>        
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Thrown when index out of array range</exception>  
+        /// <exception cref="ArgumentNullException">Thrown in set  when value passed in indexer is null</exception>       
+        public T this[int item]
+        {
+            get
+            {
+                if (item < First || item > Last)
+                    throw new ArgumentException("Index out of array range");
+                return Array[item - First];
+            }
+            set
+            {
+                if (item < First || item > Last)
+                    throw new ArgumentException("ArgumentException");
+                if (Array[item - First] == null)
+                    throw new ArgumentNullException(nameof(item), "index cannot be null");
+                Array[item - First] = value;
+            }
+        }
 
 
         
