@@ -126,6 +126,13 @@ namespace CustomArray
             }
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            foreach (T item in Array)
+            {
+                yield return item;
+            }
+        }
 
         
     }
