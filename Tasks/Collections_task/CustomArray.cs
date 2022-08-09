@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CustomArray
 {
-    public class CustomArray<T> 
+    public class CustomArray<T>
     {
         /// <summary>
         /// Should return first index of array
@@ -80,6 +80,25 @@ namespace CustomArray
 
             First = first;
             Array = list.ToArray();
+        }
+
+        /// <summary>
+        /// Constructor with first index and params
+        /// </summary>
+        /// <param name="first">First Index</param>
+        /// <param name="list">Params</param>
+        ///  <exception cref="ArgumentNullException">Thrown when list is null</exception>
+        /// <exception cref="ArgumentException">Thrown when list without elements </exception>
+        public CustomArray(int first, params T[] list)
+        {
+
+            if (list == null)
+                throw new ArgumentNullException(nameof(list), "list is null");
+            if (list.Length <= 0)
+                throw new ArgumentException("ArgumentException");
+            First = first;
+            Array = list;
+            Length = list.Length;
         }
 
 
