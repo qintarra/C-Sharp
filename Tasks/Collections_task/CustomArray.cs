@@ -134,6 +134,9 @@ namespace CustomArray
             }
         }
 
-        
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
