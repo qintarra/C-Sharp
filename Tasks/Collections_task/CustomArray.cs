@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CustomArray
 {
-    public class CustomArray<T> 
+    public class CustomArray<T> : IEnumerable<T>
     {
         /// <summary>
         /// Should return first index of array
