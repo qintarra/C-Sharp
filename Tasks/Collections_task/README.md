@@ -12,5 +12,6 @@ Example 2: an array of 10 elements length, array values – objects of class Ani
 
 Values of random type can be located in the array, custom first index and the number of elements in the array should be specified while creating. The length and range of indexes cannot be changed after creating. Values of array elements can be set while creating the array and later with the help of the indexer.  
 
-Initial and finite index, array length, and array elements in the form of a standard array Array that starts with 0 can be obtained from the array.  
+Initial and finite index, array length, and array elements in a standard array Array that starts with 0 can be obtained from the array.
 
+CustomArray should be able to use operator 'foreach' and other constructions that are oriented to the presence of a numerator in class.
