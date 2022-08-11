@@ -20,3 +20,4 @@ In **CustomArray** implementation of the following functionality is required:
 - Creating of empty user array with a specified first index and a specified number of elements.  
 - Creating of user array based on a standard existing array or other collection.  
 - Creating an array with the specified first index based on the values of the array params.  
+- Receiving first, last indexes, length, and values in form of a standard array with first index 0.  
