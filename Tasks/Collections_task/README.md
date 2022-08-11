@@ -22,3 +22,4 @@ In **CustomArray** implementation of the following functionality is required:
 - Creating an array with the specified first index based on the values of the array params.  
 - Receiving first, last indexes, length, and values in form of a standard array with first index 0.  
 - Access to writing and reading element based on a predetermined correct index.  
+- Generating exceptions, specified in XML comments to class methods.  
