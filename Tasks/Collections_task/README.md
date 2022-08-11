@@ -15,3 +15,6 @@ Values of random type can be located in the array, custom first index and the nu
 Initial and finite index, array length, and array elements in a standard array Array that starts with 0 can be obtained from the array.
 
 CustomArray should be able to use operator 'foreach' and other constructions that are oriented to the presence of a numerator in class.
+
+In **CustomArray** implementation of the following functionality is required:  
+- Creating of empty user array with a specified first index and a specified number of elements.  
