@@ -18,3 +18,4 @@ CustomArray should be able to use operator 'foreach' and other constructions tha
 
 In **CustomArray** implementation of the following functionality is required:  
 - Creating of empty user array with a specified first index and a specified number of elements.  
+- Creating of user array based on a standard existing array or other collection.  
