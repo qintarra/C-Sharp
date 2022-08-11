@@ -23,3 +23,4 @@ In **CustomArray** implementation of the following functionality is required:
 - Receiving first, last indexes, length, and values in form of a standard array with first index 0.  
 - Access to writing and reading element based on a predetermined correct index.  
 - Generating exceptions, specified in XML comments to class methods.  
+- Receiving numerator from an array for operator 'foreach'.
