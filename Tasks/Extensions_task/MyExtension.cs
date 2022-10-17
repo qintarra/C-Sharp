@@ -29,21 +29,14 @@ namespace Extension
         /// </summary>
         /// <param name="n">Element parameter</param>
         /// <returns>Ulong value</returns>
-        public static ulong SummaWithReverse(this uint n)
-        {
-            uint nReverse = uint.Parse(n.ToString().Reverse().ToArray());
-            return n + nReverse;
-        }
+
        
         /// <summary>
         /// Method that count amount of elements in string , which are not letters of the latin alphabet.
         /// </summary>
         /// <param name="str">String parameter</param>
         /// <returns>Integer value</returns>
-        public static int CountNotLetter(this string str)
-        {
-            return Regex.Matches(str, "[^a-zA-Z]").Count;
-        }
+
 
       
         /// <summary>
@@ -51,15 +44,7 @@ namespace Extension
         /// </summary>
         /// <param name="day">DayOfWeek parameter</param>
         /// <returns>Bool value</returns>
-        public static bool IsDayOff(this DayOfWeek day)
-        {
-            return day switch
-            {
-                DayOfWeek.Saturday => true,
-                DayOfWeek.Sunday => true,
-                _ => false,
-            };
-        }
+
 
        
         /// <summary>
@@ -67,13 +52,6 @@ namespace Extension
         /// </summary>
         /// <param name="numbers">Collection of elements</param>
         /// <returns>IEnumerable -int collection  </returns>
-        public static IEnumerable<int> EvenPositiveElements(this IEnumerable<int> numbers)
-        {
-            foreach (int x in numbers)
-            {
-                if (x > 0 && x % 2 == 0)
-                    yield return x;
-            }
-        }
+
     }
 }
