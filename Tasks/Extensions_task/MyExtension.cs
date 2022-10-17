@@ -51,7 +51,15 @@ namespace Extension
         /// </summary>
         /// <param name="day">DayOfWeek parameter</param>
         /// <returns>Bool value</returns>
-
+        public static bool IsDayOff(this DayOfWeek day)
+        {
+            return day switch
+            {
+                DayOfWeek.Saturday => true,
+                DayOfWeek.Sunday => true,
+                _ => false,
+            };
+        }
 
        
         /// <summary>
