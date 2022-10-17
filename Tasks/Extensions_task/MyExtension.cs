@@ -40,7 +40,10 @@ namespace Extension
         /// </summary>
         /// <param name="str">String parameter</param>
         /// <returns>Integer value</returns>
-
+        public static int CountNotLetter(this string str)
+        {
+            return Regex.Matches(str, "[^a-zA-Z]").Count;
+        }
 
       
         /// <summary>
