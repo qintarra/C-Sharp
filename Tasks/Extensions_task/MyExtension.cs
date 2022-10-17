@@ -8,7 +8,7 @@ namespace Extension
     public static class MyExtension
     {
         /// <summary>
-        /// Mehod that return sum of  'n' digit
+        /// Mehod that return sum of 'n' digit
         /// </summary>        
         /// <param name="n">Element parameter</param>
         /// <returns>Integer value</returns>
@@ -36,7 +36,7 @@ namespace Extension
         }
        
         /// <summary>
-        /// Method that count amount of elements in string , which are not letters of the latin alphabet.
+        /// Method that count amount of elements in string, which are not letters of the latin alphabet.
         /// </summary>
         /// <param name="str">String parameter</param>
         /// <returns>Integer value</returns>
@@ -63,10 +63,17 @@ namespace Extension
 
        
         /// <summary>
-        /// Method that return positive ,even  element from collection 
+        /// Method that return positive, even element from collection 
         /// </summary>
         /// <param name="numbers">Collection of elements</param>
-        /// <returns>IEnumerable -int collection  </returns>
-
+        /// <returns>IEnumerable -int collection</returns>
+        public static IEnumerable<int> EvenPositiveElements(this IEnumerable<int> numbers)
+        {
+            foreach (int x in numbers)
+            {
+                if (x > 0 && x % 2 == 0)
+                    yield return x;
+            }
+        }
     }
 }
