@@ -29,7 +29,11 @@ namespace Extension
         /// </summary>
         /// <param name="n">Element parameter</param>
         /// <returns>Ulong value</returns>
-
+        public static ulong SummaWithReverse(this uint n)
+        {
+            uint nReverse = uint.Parse(n.ToString().Reverse().ToArray());
+            return n + nReverse;
+        }
        
         /// <summary>
         /// Method that count amount of elements in string , which are not letters of the latin alphabet.
