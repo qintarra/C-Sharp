@@ -10,4 +10,5 @@ Develop a **MyExtension** class, which declares the following extension methods:
 
 - the **CountNotLetter** method, which extends the String type and returns the number of characters in the string that are not Latin letters. 
 
+- the **IsDayOff** method, which extends the DayOfWeek type and returns the boolean value true if it is a weekend (Saturday or Sunday) or the boolean value false if it is a weekday. 
 
