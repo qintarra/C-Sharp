@@ -8,5 +8,6 @@ Develop a **MyExtension** class, which declares the following extension methods:
 
 - the **SummaWithReverse** method, which extends the UInt32 type and returns the sum of the original positive integer with the number obtained from the original by rearranging all digits in reverse order 
 
+- the **CountNotLetter** method, which extends the String type and returns the number of characters in the string that are not Latin letters. 
 
 
