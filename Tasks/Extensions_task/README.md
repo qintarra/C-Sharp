@@ -12,3 +12,4 @@ Develop a **MyExtension** class, which declares the following extension methods:
 
 - the **IsDayOff** method, which extends the DayOfWeek type and returns the boolean value true if it is a weekend (Saturday or Sunday) or the boolean value false if it is a weekday. 
 
+- the **EvenPositiveElements** method, which extends the IEnumerable <int> type and returns only even positive numbers from a set of integers 
