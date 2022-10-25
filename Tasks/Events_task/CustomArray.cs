@@ -40,6 +40,10 @@ namespace ArrayEvent
             }
         }
 
+        /// <summary>
+        /// Should return length of array
+        /// <exception cref="ArgumentException">Thrown when value was smaller than 0</exception>
+        /// </summary>
         public int Length
         {
             get
@@ -53,7 +57,9 @@ namespace ArrayEvent
             }
         }
 
-
+        /// <summary>
+        /// Should return array 
+        /// </summary>
         public T[] Array
         {
             get;
