@@ -7,12 +7,17 @@ namespace ArrayEvent
 {  
     public class CustomArray<T> : IEnumerable<T>
     {
-
+        /// <param name="sender">CustomArray parameter </param>
+        /// <param name="e">ArrayEventArgs parameter</param>
         public delegate void ArrayHandler(object sender, ArrayEventArgs<T> e);
-
+        /// <summary>
+        /// Event that invokes when array element was changed 
+        /// </summary>
         public event ArrayHandler OnChangeElement;
 
-
+        /// <summary>
+        /// Event that invokes when index of changed element equal to value 
+        /// </summary>
         public event ArrayHandler OnChangeEqualElement;
 
         public int First
