@@ -20,13 +20,18 @@ namespace ArrayEvent
         /// </summary>
         public event ArrayHandler OnChangeEqualElement;
 
+        /// <summary>
+        /// Should return first index of array
+        /// </summary>
         public int First
         {
             get;
             private set;
         }
 
-
+        /// <summary>
+        /// Should return last index of array
+        /// </summary>
         public int Last
         {
             get
