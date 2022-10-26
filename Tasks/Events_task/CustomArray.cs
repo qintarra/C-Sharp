@@ -7,7 +7,7 @@ namespace ArrayEvent
 {  
     public class CustomArray<T> : IEnumerable<T>
     {
-        /// <param name="sender">CustomArray parameter </param>
+        /// <param name="sender">CustomArray parameter</param>
         /// <param name="e">ArrayEventArgs parameter</param>
         public delegate void ArrayHandler(object sender, ArrayEventArgs<T> e);
         /// <summary>
@@ -65,7 +65,6 @@ namespace ArrayEvent
             get;
         }
 
-
         /// <summary>
         /// Constructor with first index and length
         /// </summary>
@@ -83,7 +82,7 @@ namespace ArrayEvent
         /// <param name="first">First Index</param>
         /// <param name="list">Collection</param>
         ///  <exception cref="ArgumentException">Thrown when list is null</exception>
-        /// <exception cref="NullReferenceException">Thrown when count is smaler than 0</exception>
+        /// <exception cref="NullReferenceException">Thrown when count is smaller than 0</exception>
         public CustomArray(int first, IEnumerable<T> list)
         {
             if (list == null)
@@ -117,7 +116,7 @@ namespace ArrayEvent
         /// <param name="item">Int index</param>        
         /// <returns></returns>
         /// <exception cref="ArgumentException">Thrown when index out of array range</exception>
-        /// <exception cref="ArgumentNullException">Thrown in set  when value passed in indexer is null</exception>
+        /// <exception cref="ArgumentNullException">Thrown in set when a value passed in indexer is null</exception>
         public T this[int item]
         {
             get
@@ -140,7 +139,9 @@ namespace ArrayEvent
                 Array[item - First] = value;
             }
         }
-           
+        /// <summary>
+        /// Returns an enumerator that iterates through the CustomArray.
+        /// </summary>        
         public IEnumerator<T> GetEnumerator()
         {
             foreach (T item in Array)
