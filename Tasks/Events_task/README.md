@@ -31,3 +31,9 @@ In **CustomArray** implementation of the following functionality is required:
 
 </details>
 
+## Task Delegates and events
+Add the following new functionalities to the project created in task Collections: 
+
+
+
+ 
