@@ -36,6 +36,7 @@ Add the following new functionalities to the project created in task Collections
 
 Include two events in the **CustomArray** type: 
 
+- The **OnChangeElement** event occurs when the indexer changes the element value (if the old and new element values match, the event is not raised) 
 
 
  
