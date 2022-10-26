@@ -39,5 +39,6 @@ Include two events in the **CustomArray** type:
 - The **OnChangeElement** event occurs when the indexer changes the element value (if the old and new element values match, the event is not raised) 
 
 - The **OnChangeEqualElement** event occurs if a value equal to the index of the changed element is written to the element (if the old and new values of the element match, the event is not raised) 
-
+ 
+Use the **ArrayHandler** delegate to create the event. 
  
