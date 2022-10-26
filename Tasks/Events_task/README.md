@@ -31,7 +31,8 @@ In **CustomArray** implementation of the following functionality is required:
 
 </details>
 
-## Task Delegates and events
+## Task Events
+
 Add the following new functionalities to the project created in task Collections: 
 
 Include two events in the **CustomArray** type: 
@@ -41,4 +42,5 @@ Include two events in the **CustomArray** type:
 - The **OnChangeEqualElement** event occurs if a value equal to the index of the changed element is written to the element (if the old and new values of the element match, the event is not raised) 
  
 Use the **ArrayHandler** delegate to create the event. 
- 
+
+The event handler takes two parameters: an object **sender** - a reference to the **CustomArray** instance that generated the event, and an event argument **ArrayEventArgs <T> e**. In the event argument, write in the **Id** field the index by which the user changes the element of the **CustomArray** array, in the **Value** field - the new value of the element by the Id index, in the **Message** field - an arbitrary string message. 
