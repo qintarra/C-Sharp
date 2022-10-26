@@ -77,7 +77,13 @@ namespace ArrayEvent
             Length = length;
             Array = new T[length];
         }
-
+        /// <summary>
+        /// Constructor with first index and collection  
+        /// </summary>
+        /// <param name="first">First Index</param>
+        /// <param name="list">Collection</param>
+        ///  <exception cref="ArgumentException">Thrown when list is null</exception>
+        /// <exception cref="NullReferenceException">Thrown when count is smaler than 0</exception>
         public CustomArray(int first, IEnumerable<T> list)
         {
             if (list == null)
@@ -122,7 +128,7 @@ namespace ArrayEvent
                 Array[item - First] = value;
             }
         }
-              
+           
         public IEnumerator<T> GetEnumerator()
         {
             foreach (T item in Array)
