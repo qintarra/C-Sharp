@@ -111,7 +111,13 @@ namespace ArrayEvent
             Array = list;
             Length = list.Length;
         }
-
+        /// <summary>
+        /// Indexer with get and set  
+        /// </summary>
+        /// <param name="item">Int index</param>        
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Thrown when index out of array range</exception>
+        /// <exception cref="ArgumentNullException">Thrown in set  when value passed in indexer is null</exception>
         public T this[int item]
         {
             get
