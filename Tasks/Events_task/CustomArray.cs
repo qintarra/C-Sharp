@@ -94,7 +94,13 @@ namespace ArrayEvent
             First = first;
             Array = list.ToArray();
         }
-
+        /// <summary>
+        /// Constructor with first index and params
+        /// </summary>
+        /// <param name="first">First Index</param>
+        /// <param name="list">Params</param>
+        ///  <exception cref="ArgumentNullException">Thrown when list is null</exception>
+        /// <exception cref="ArgumentException">Thrown when list without elements </exception>
         public CustomArray(int first, params T[] list)
         {
             if (list == null)
