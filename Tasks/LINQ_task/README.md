@@ -26,3 +26,8 @@ corresponding string in the **stringList** sequence.
 A positive integer **K** and a sequence of non-empty strings **stringList** are given. Strings of the
 sequence contain only numbers and capital letters of the Latin alphabet.
 Get from **stringList** all strings of length **K** ending in a digit and sort them in ascending order.
+
+### Task 5
+A sequence of positive integer values **integerList** is given.
+Get sequence of string representations of only odd **integerList** values and sort in ascending
+order.
