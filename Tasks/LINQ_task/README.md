@@ -1,7 +1,7 @@
 # LINQ
 
 Write LINQ queries using extension methods. Each task must be solved with
-one LINQ query. Put LINQ expression in the return statement (Look at the template on the end of the task before solving the problem)
+one LINQ query. Put LINQ expression in the return statement (Look at the template at the end of the task before solving the problem)
 
 ## Part Low 
 
@@ -24,10 +24,29 @@ corresponding string in the **stringList** sequence.
 
 ### Task 4
 A positive integer **K** and a sequence of non-empty strings **stringList** are given. Strings of the
-sequence contain only numbers and capital letters of the Latin alphabet.
+sequence contains only numbers and capital letters of the Latin alphabet.
 Get from **stringList** all strings of length **K** ending in a digit and sort them in ascending order.
 
 ### Task 5
 A sequence of positive integer values **integerList** is given.
-Get sequence of string representations of only odd **integerList** values and sort in ascending
+Get a sequence of string representations of only odd **integerList** values and sort in ascending
 order.
+
+
+## An example of solving a LINQ task
+
+**Task** 
+
+Given a sequence of non-empty strings **stringList**. Get a new 
+string by concatenating all strings from **stringList**.
+
+Consider that the values have already been set for **stringList**, and the
+assignment of new values is an error.
+Return the result of solving the problem via the function.
+
+```
+public static string LinqSample(IEnumerable<string> stringList)
+{
+        return stringList.Aggregate<string>((x, y) => x + y);
+}
+```
