@@ -12,3 +12,7 @@ The character **C** and a sequence of non-empty strings **stringList** are given
 Get a new sequence of strings with more than one character from the **stringList**, starting and
 ending with C.
 
+### Task 2
+A sequence of non-empty strings **stringList** is given.
+Get a sequence of ascending sorted integer values equal to the lengths of the strings included
+in the **stringList** sequence.
