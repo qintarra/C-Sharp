@@ -22,3 +22,7 @@ A sequence of non-empty strings **stringList** is given.
 Get a new sequence of strings, where each string consists of the first and last characters of the
 corresponding string in the **stringList** sequence.
 
+### Task 4
+A positive integer **K** and a sequence of non-empty strings **stringList** are given. Strings of the
+sequence contain only numbers and capital letters of the Latin alphabet.
+Get from **stringList** all strings of length **K** ending in a digit and sort them in ascending order.
