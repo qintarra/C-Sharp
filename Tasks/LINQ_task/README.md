@@ -32,6 +32,69 @@ A sequence of positive integer values **integerList** is given.
 Get a sequence of string representations of only odd **integerList** values and sort in ascending
 order.
 
+## Part Middle
+
+At the Middle level, you need to solve the following five tasks:
+
+### Task 6
+
+A sequence of positive integers **numbers** and a sequence of strings **stringList** are given.
+Get a new sequence of strings according to the following rule: for each value **n** from sequence
+**numbers**, select a string from the sequence **stringList** that starts with a digit and has length **n**. If
+there are several required strings in the **stringList** sequence, return the first; if there are none,
+then return the string "Not found" (To handle the situation related to the absence of required
+strings, use the ?? operation)
+
+### Task 7
+You are given a positive integer **K** and a sequence of integers **integerList**.
+Calculate the difference between two subsets of integer values: the first subset is even
+**integerList** values, the second subset is the integerList values excluding the first **K** elements.
+In the resulting difference, replace the order with the reversed.
+
+### Task 8
+A positive integer **K**, an integer **D**, and a sequence of integers **integerList** are given.
+Compute the union of two subsets of integers: the first subset is all **integerList** values up to
+and excluding the first element greater than **D**, and the second subset is the **integerList** values
+starting with the element with ordinal number **K** inclusive (**integerList** element numbering
+starts at 0). Sort the resulting sequence in descending order.
+
+### Task 9
+A sequence of non-empty strings **stringList** is given, containing only uppercase letters of the
+Latin alphabet.
+For all strings starting with the same letter, determine their total length and obtain a sequence
+of strings of the form "S-C", where **S** is the total length of all strings from stringList that begin
+with the character **C**. Order the resulting sequence in descending order of the numerical values
+of the sums, and for equal values of the sums, in ascending order of the **C** character codes.
+
+### Task 10
+A sequence of non-empty strings of Latin alphabet characters **stringList** is given.
+Among all strings of the same length, sorted in ascending order, select the last character from
+each string, converting it to uppercase, and from the received characters, compose a string.
+Arrange the resulting sequence of strings in descending order of their lengths.
+
+## Part Advanced
+
+At the Advanced level, you need to solve the following tasks:
+
+### Task 11
+A sequence of data about applicants _nameList_ of type _Entrant_ is given. Each element of the
+sequence includes the fields _School number_, _Year of entering_, _Last name_.
+Get data (list of _YearSchoolStat_ values) about the number of different schools that applicants
+graduated from for each year present in the source data. The _YearSchoolStat_ type includes the
+_Year of entering_, _Number of Schools_ fields. The list of _YearSchoolStat_ values must be
+sorted in ascending order of the number of schools, and for matching values, in ascending order
+of the year number.
+
+### Task 12
+A sequence of data about applicants _nameList_ of type _Entrant_ and a sequence of integers
+_yearList_ representing years are given. Each element of the nameList sequence includes the
+fields _School number_, _Year of entering_, _Last name_.
+Get data (a list of _YearSchoolStat_ values) about the number of different schools that applicants
+graduated from, for each year from the _yearList_. _YearSchoolStat_ includes _Year of entering_,
+_Number of Schools_ fields. If in the given year of admission there are no applicants from the
+listed schools, indicate zero in the field _Number of schools_. The _YearSchoolStat_ list must be
+sorted in ascending order by the number of schools, and for matching values, in ascending
+order by the year number.
 
 ## An example of solving a LINQ task
 
