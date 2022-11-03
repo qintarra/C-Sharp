@@ -17,3 +17,7 @@ A sequence of non-empty strings **stringList** is given.
 Get a sequence of ascending sorted integer values equal to the lengths of the strings included
 in the **stringList** sequence.
 
+### Task 3
+A sequence of non-empty strings **stringList** is given.
+Get a new sequence of strings, where each string consists of the first and last characters of the
+corresponding string in the **stringList** sequence.
