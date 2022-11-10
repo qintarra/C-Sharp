@@ -29,6 +29,11 @@ namespace Linq
             return stringList.Select(s => s.First().ToString() + s.Last().ToString());
         }
 
+        public static IEnumerable<string> Task4(int k, IEnumerable<string> stringList)
+        {
+            return stringList.Where(s => s.Length == k && char.IsDigit(s.Last())).OrderBy(s => s);
+        }
+
 
 
         #endregion
