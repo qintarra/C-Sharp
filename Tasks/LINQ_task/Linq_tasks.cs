@@ -19,6 +19,11 @@ namespace Linq
             return stringList.Where(s => s.Length > 1 && s.First().Equals(c) && s.Last().Equals(c));
         }
 
+        public static IEnumerable<int> Task2(IEnumerable<string> stringList)
+        {
+            return stringList.Select(s => s.Length).OrderBy(s => s);
+        }
+
 
 
         #endregion
