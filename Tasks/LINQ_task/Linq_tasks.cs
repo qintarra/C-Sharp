@@ -24,6 +24,11 @@ namespace Linq
             return stringList.Select(s => s.Length).OrderBy(s => s);
         }
 
+        public static IEnumerable<string> Task3(IEnumerable<string> stringList)
+        {
+            return stringList.Select(s => s.First().ToString() + s.Last().ToString());
+        }
+
 
 
         #endregion
