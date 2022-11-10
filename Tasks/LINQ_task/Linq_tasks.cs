@@ -34,7 +34,10 @@ namespace Linq
             return stringList.Where(s => s.Length == k && char.IsDigit(s.Last())).OrderBy(s => s);
         }
 
-
+        public static IEnumerable<string> Task5(IEnumerable<int> integerList)
+        {
+            return integerList.Where(i => i % 2 == 1).OrderBy(i => i).Select(i => i.ToString());
+        }
 
         #endregion
 
