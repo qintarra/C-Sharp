@@ -32,6 +32,19 @@ A sequence of positive integer values **integerList** is given.
 Get a sequence of string representations of only odd **integerList** values and sort in ascending
 order.
 
+## Part Middle
+
+At the Middle level, you need to solve the following five tasks:
+
+### Task 6
+
+A sequence of positive integers **numbers** and a sequence of strings **stringList** are given.
+Get a new sequence of strings according to the following rule: for each value **n** from sequence
+**numbers**, select a string from the sequence **stringList** that starts with a digit and has length **n**. If
+there are several required strings in the **stringList** sequence, return the first; if there are none,
+then return the string "Not found" (To handle the situation related to the absence of required
+strings, use the ?? operation)
+
 
 ## An example of solving a LINQ task
 
