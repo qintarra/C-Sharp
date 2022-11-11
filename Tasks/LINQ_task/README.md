@@ -66,6 +66,12 @@ of strings of the form "S-C", where **S** is the total length of all strings fro
 with the character **C**. Order the resulting sequence in descending order of the numerical values
 of the sums, and for equal values of the sums, in ascending order of the **C** character codes.
 
+### Task 10
+A sequence of non-empty strings of Latin alphabet characters **stringList** is given.
+Among all strings of the same length, sorted in ascending order, select the last character from
+each string, converting it to uppercase, and from the received characters, compose a string.
+Arrange the resulting sequence of strings in descending order of their lengths.
+
 
 ## An example of solving a LINQ task
 
