@@ -58,6 +58,14 @@ and excluding the first element greater than **D**, and the second subset is the
 starting with the element with ordinal number **K** inclusive (**integerList** element numbering
 starts at 0). Sort the resulting sequence in descending order.
 
+### Task 9
+A sequence of non-empty strings **stringList** is given, containing only uppercase letters of the
+Latin alphabet.
+For all strings starting with the same letter, determine their total length and obtain a sequence
+of strings of the form "S-C", where **S** is the total length of all strings from stringList that begin
+with the character **C**. Order the resulting sequence in descending order of the numerical values
+of the sums, and for equal values of the sums, in ascending order of the **C** character codes.
+
 
 ## An example of solving a LINQ task
 
