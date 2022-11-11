@@ -52,6 +52,11 @@ namespace Linq
         {
             return integerList.Where(i => i % 2 == 0).Except(integerList.Skip(k)).Reverse();
         }
+        
+        public static IEnumerable<int> Task8(int k, int d, IEnumerable<int> integerList)
+        {
+            return integerList.TakeWhile(i => i <= d).Union(integerList.Skip(k)).OrderByDescending(i => i);
+        }
 
         #endregion
 
