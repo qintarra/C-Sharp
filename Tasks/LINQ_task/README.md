@@ -45,6 +45,11 @@ there are several required strings in the **stringList** sequence, return the fi
 then return the string "Not found" (To handle the situation related to the absence of required
 strings, use the ?? operation)
 
+### Task 7
+You are given a positive integer **K** and a sequence of integers **integerList**.
+Calculate the difference between two subsets of integer values: the first subset is even
+**integerList** values, the second subset is the integerList values excluding the first **K** elements.
+In the resulting difference, replace the order with the reversed.
 
 ## An example of solving a LINQ task
 
