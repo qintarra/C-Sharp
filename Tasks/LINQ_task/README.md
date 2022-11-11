@@ -51,6 +51,14 @@ Calculate the difference between two subsets of integer values: the first subset
 **integerList** values, the second subset is the integerList values excluding the first **K** elements.
 In the resulting difference, replace the order with the reversed.
 
+### Task 8
+A positive integer **K**, an integer **D**, and a sequence of integers **integerList** are given.
+Compute the union of two subsets of integers: the first subset is all **integerList** values up to
+and excluding the first element greater than **D**, and the second subset is the **integerList** values
+starting with the element with ordinal number **K** inclusive (**integerList** element numbering
+starts at 0). Sort the resulting sequence in descending order.
+
+
 ## An example of solving a LINQ task
 
 **Task** 
