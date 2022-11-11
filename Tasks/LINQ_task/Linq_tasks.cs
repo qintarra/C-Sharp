@@ -48,6 +48,11 @@ namespace Linq
             return numbers.Select(x => stringList.FirstOrDefault(i => i.Count() == x && i.Any() && char.IsDigit(i[0])) ?? "Not found");
         }
 
+        public static IEnumerable<int> Task7(int k, IEnumerable<int> integerList)
+        {
+            return integerList.Where(i => i % 2 == 0).Except(integerList.Skip(k)).Reverse();
+        }
+
         #endregion
 
     }
