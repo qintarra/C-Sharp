@@ -63,6 +63,11 @@ namespace Linq
             return stringList.GroupBy(i => i.First()).Select(x => x.Aggregate((a, b) => a + b)).OrderByDescending(i => i.Count()).ThenBy(i => i.First()).Select(i => $"{i.Count()}-{i.First()}");
         }
 
+        public static IEnumerable<string> Task10(IEnumerable<string> stringList)
+        {
+            return stringList.OrderBy(i => i).GroupBy(i => i.Count()).Select(i => i.Aggregate("", (a, b) => (a + b[^1]).ToUpper())).OrderByDescending(i => i.Count());
+        }
+
         #endregion
 
     }
