@@ -41,5 +41,14 @@ namespace Linq
 
         #endregion
 
+        #region Middle
+
+        public static IEnumerable<string> Task6(IEnumerable<int> numbers, IEnumerable<string> stringList)
+        {
+            return numbers.Select(x => stringList.FirstOrDefault(i => i.Count() == x && i.Any() && char.IsDigit(i[0])) ?? "Not found");
+        }
+
+        #endregion
+
     }
 }
