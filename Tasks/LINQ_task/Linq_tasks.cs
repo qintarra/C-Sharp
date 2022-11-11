@@ -58,6 +58,11 @@ namespace Linq
             return integerList.TakeWhile(i => i <= d).Union(integerList.Skip(k)).OrderByDescending(i => i);
         }
 
+        public static IEnumerable<string> Task9(IEnumerable<string> stringList)
+        {
+            return stringList.GroupBy(i => i.First()).Select(x => x.Aggregate((a, b) => a + b)).OrderByDescending(i => i.Count()).ThenBy(i => i.First()).Select(i => $"{i.Count()}-{i.First()}");
+        }
+
         #endregion
 
     }
