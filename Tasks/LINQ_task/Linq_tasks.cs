@@ -77,6 +77,11 @@ namespace Linq
             return nameList.GroupBy(y => y.Year).Select(n => new YearSchoolStat { Year = n.Key, NumberOfSchools = n.Select(s => s.SchoolNumber).Distinct().Count() }).OrderBy(n => n.NumberOfSchools).ThenBy(y => y.Year);
         }
 
+        public static IEnumerable<YearSchoolStat> Task12(IEnumerable<Entrant> nameList, IEnumerable<int> yearList)
+        {
+            return yearList.Select(n => new YearSchoolStat { Year = n, NumberOfSchools = nameList.Where(y => y.Year == n).Select(s => s.SchoolNumber).Distinct().Count()}).OrderBy(n => n.NumberOfSchools).ThenBy(y => y.Year);
+        }
+
         #endregion
 
     }
