@@ -85,6 +85,17 @@ _Year of entering_, _Number of Schools_ fields. The list of _YearSchoolStat_ val
 sorted in ascending order of the number of schools, and for matching values, in ascending order
 of the year number.
 
+### Task 12
+A sequence of data about applicants _nameList_ of type _Entrant_ and a sequence of integers
+_yearList_ representing years are given. Each element of the nameList sequence includes the
+fields _School number_, _Year of entering_, _Last name_.
+Get data (a list of _YearSchoolStat_ values) about the number of different schools that applicants
+graduated from, for each year from the _yearList_. _YearSchoolStat_ includes _Year of entering_,
+_Number of Schools_ fields. If in the given year of admission there are no applicants from the
+listed schools, indicate zero in the field _Number of schools_. The _YearSchoolStat_ list must be
+sorted in ascending order by the number of schools, and for matching values, in ascending
+order by the year number.
+
 ## An example of solving a LINQ task
 
 **Task** 
