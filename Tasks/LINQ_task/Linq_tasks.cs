@@ -70,5 +70,11 @@ namespace Linq
 
         #endregion
 
+        #region Advance
+
+
+
+        #endregion
+
     }
 }
