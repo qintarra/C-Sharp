@@ -76,6 +76,15 @@ Arrange the resulting sequence of strings in descending order of their lengths.
 
 At the Advanced level, you need to solve the following tasks:
 
+### Task 11
+A sequence of data about applicants _nameList_ of type _Entrant_ is given. Each element of the
+sequence includes the fields _School number_, _Year of entering_, _Last name_.
+Get data (list of _YearSchoolStat_ values) about the number of different schools that applicants
+graduated from for each year present in the source data. The _YearSchoolStat_ type includes the
+_Year of entering_, _Number of Schools_ fields. The list of _YearSchoolStat_ values must be
+sorted in ascending order of the number of schools, and for matching values, in ascending order
+of the year number.
+
 ## An example of solving a LINQ task
 
 **Task** 
