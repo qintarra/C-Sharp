@@ -72,6 +72,9 @@ Among all strings of the same length, sorted in ascending order, select the last
 each string, converting it to uppercase, and from the received characters, compose a string.
 Arrange the resulting sequence of strings in descending order of their lengths.
 
+## Part Advanced
+
+At the Advanced level, you need to solve the following tasks:
 
 ## An example of solving a LINQ task
 
