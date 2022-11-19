@@ -72,7 +72,10 @@ namespace Linq
 
         #region Advance
 
-
+        public static IEnumerable<YearSchoolStat> Task11(IEnumerable<Entrant> nameList)
+        {
+            return nameList.GroupBy(y => y.Year).Select(n => new YearSchoolStat { Year = n.Key, NumberOfSchools = n.Select(s => s.SchoolNumber).Distinct().Count() }).OrderBy(n => n.NumberOfSchools).ThenBy(y => y.Year);
+        }
 
         #endregion
 
