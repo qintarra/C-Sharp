@@ -9,3 +9,4 @@ Create a test, add another, make them pass.
 
 Add an interface  
 Use a test with a mock  
+Testing without a databaase  
