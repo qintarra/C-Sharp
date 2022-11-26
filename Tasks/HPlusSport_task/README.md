@@ -7,3 +7,4 @@ Start with parts of the shopping cart
 
 Create a test, add another, make them pass.
 
+Add an interface  
