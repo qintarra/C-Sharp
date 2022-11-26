@@ -10,3 +10,4 @@ Create a test, add another, make them pass.
 Add an interface  
 Use a test with a mock  
 Testing without a databaase  
+Testing ASP.Net Core applications, when they're using MVC (Access the controllers, instantiate the controllers, run the action methods. If there any arguments that need to provide it to those action methods, supply them as well and then check the results)  
