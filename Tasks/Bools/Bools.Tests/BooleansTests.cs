@@ -11,7 +11,8 @@ namespace Bools.Tests
             // Act
             var actualResult = Bools.Booleans.ReturnTrue();
 
-
+            // Assert
+            Assert.IsTrue(actualResult);
         }
 
         [Test]
@@ -20,7 +21,8 @@ namespace Bools.Tests
             // Act
             var actualResult = Bools.Booleans.ReturnFalse();
 
-            
+            // Assert
+            Assert.IsFalse(actualResult);
         }
     }
 }
