@@ -8,5 +8,11 @@
             return b1 && b2;
         }
 
+        public static bool LogicalAnd2(bool b1, bool b2, bool b3)
+        {
+            // Return the result of logical AND for b1, b2 and b3 parameters.
+            return b1 && b2 && b3;
+        }
+
     }
 }
