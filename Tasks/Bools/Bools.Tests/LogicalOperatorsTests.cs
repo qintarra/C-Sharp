@@ -132,6 +132,11 @@
             return LogicalOperators.LogicalXor3(b1, b2, b3, b4);
         }
 
-
+        [TestCase(false, ExpectedResult = true)]
+        [TestCase(true, ExpectedResult = false)]
+        public static bool Negate_ReturnBool(bool b)
+        {
+            return LogicalOperators.Negate(b);
+        }
     }
 }
