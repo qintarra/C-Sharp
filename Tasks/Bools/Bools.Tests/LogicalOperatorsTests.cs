@@ -25,6 +25,27 @@
             return LogicalOperators.LogicalAnd2(b1, b2, b3);
         }
 
+        [TestCase(false, false, false, false, ExpectedResult = false)]
+        [TestCase(true, false, false, false, ExpectedResult = false)]
+        [TestCase(false, true, false, false, ExpectedResult = false)]
+        [TestCase(false, false, true, false, ExpectedResult = false)]
+        [TestCase(true, true, false, false, ExpectedResult = false)]
+        [TestCase(true, false, true, false, ExpectedResult = false)]
+        [TestCase(false, true, true, false, ExpectedResult = false)]
+        [TestCase(true, true, true, false, ExpectedResult = false)]
+        [TestCase(false, false, false, true, ExpectedResult = false)]
+        [TestCase(true, false, false, true, ExpectedResult = false)]
+        [TestCase(false, true, false, true, ExpectedResult = false)]
+        [TestCase(false, false, true, true, ExpectedResult = false)]
+        [TestCase(true, true, false, true, ExpectedResult = false)]
+        [TestCase(true, false, true, true, ExpectedResult = false)]
+        [TestCase(false, true, true, true, ExpectedResult = false)]
+        [TestCase(true, true, true, true, ExpectedResult = true)]
+        public static bool LogicalAnd3_ReturnBool(bool b1, bool b2, bool b3, bool b4)
+        {
+            return LogicalOperators.LogicalAnd3(b1, b2, b3, b4);
+        }
+
 
 
     }
