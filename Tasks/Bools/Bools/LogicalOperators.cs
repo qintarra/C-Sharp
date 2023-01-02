@@ -56,6 +56,10 @@
             return b1 ^ b2 ^ b3 ^ b4;
         }
 
-
+        public static bool Negate(bool b)
+        {
+            // Return the result of logical negation b parameter.
+            return !b;
+        }
     }
 }
