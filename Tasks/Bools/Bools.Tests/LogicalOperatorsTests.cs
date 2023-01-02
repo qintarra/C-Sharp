@@ -46,6 +46,15 @@
             return LogicalOperators.LogicalAnd3(b1, b2, b3, b4);
         }
 
+        [TestCase(false, false, ExpectedResult = false)]
+        [TestCase(true, false, ExpectedResult = true)]
+        [TestCase(false, true, ExpectedResult = true)]
+        [TestCase(true, true, ExpectedResult = true)]
+        public static bool LogicalOr1_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalOperators.LogicalOr1(b1, b2);
+        }
+
 
 
     }
