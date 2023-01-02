@@ -68,6 +68,28 @@
             return LogicalOperators.LogicalOr2(b1, b2, b3);
         }
 
+        [TestCase(false, false, false, false, ExpectedResult = false)]
+        [TestCase(true, false, false, false, ExpectedResult = true)]
+        [TestCase(false, true, false, false, ExpectedResult = true)]
+        [TestCase(false, false, true, false, ExpectedResult = true)]
+        [TestCase(true, true, false, false, ExpectedResult = true)]
+        [TestCase(true, false, true, false, ExpectedResult = true)]
+        [TestCase(false, true, true, false, ExpectedResult = true)]
+        [TestCase(true, true, true, false, ExpectedResult = true)]
+        [TestCase(false, false, false, true, ExpectedResult = true)]
+        [TestCase(true, false, false, true, ExpectedResult = true)]
+        [TestCase(false, true, false, true, ExpectedResult = true)]
+        [TestCase(false, false, true, true, ExpectedResult = true)]
+        [TestCase(true, true, false, true, ExpectedResult = true)]
+        [TestCase(true, false, true, true, ExpectedResult = true)]
+        [TestCase(false, true, true, true, ExpectedResult = true)]
+        [TestCase(true, true, true, true, ExpectedResult = true)]
+        public static bool LogicalOr3_ReturnBool(bool b1, bool b2, bool b3, bool b4)
+        {
+            return LogicalOperators.LogicalOr3(b1, b2, b3, b4);
+        }
+
+
 
     }
 }
