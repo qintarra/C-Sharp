@@ -20,5 +20,11 @@
             return b1 && b2 && b3 && b4;
         }
 
+        public static bool LogicalOr1(bool b1, bool b2)
+        {
+            // Return the result of logical OR for b1 and b2 parameters.
+            return b1 || b2;
+        }
+
     }
 }
