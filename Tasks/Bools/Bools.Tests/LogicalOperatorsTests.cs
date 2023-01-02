@@ -98,6 +98,19 @@
             return LogicalOperators.LogicalXor1(b1, b2);
         }
 
+        [TestCase(false, false, false, ExpectedResult = false)]
+        [TestCase(true, false, false, ExpectedResult = true)]
+        [TestCase(false, true, false, ExpectedResult = true)]
+        [TestCase(false, false, true, ExpectedResult = true)]
+        [TestCase(true, true, false, ExpectedResult = false)]
+        [TestCase(true, false, true, ExpectedResult = false)]
+        [TestCase(false, true, true, ExpectedResult = false)]
+        [TestCase(true, true, true, ExpectedResult = true)]
+        public static bool LogicalXor2_ReturnBool(bool b1, bool b2, bool b3)
+        {
+            return LogicalOperators.LogicalXor2(b1, b2, b3);
+        }
+
 
 
     }
