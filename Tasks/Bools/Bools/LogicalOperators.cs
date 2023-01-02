@@ -50,6 +50,12 @@
             return b1 ^ b2 ^ b3;
         }
 
+        public static bool LogicalXor3(bool b1, bool b2, bool b3, bool b4)
+        {
+            // Return the result of logical AND for b1, b2, b3 and b4 parameters.
+            return b1 ^ b2 ^ b3 ^ b4;
+        }
+
 
     }
 }
