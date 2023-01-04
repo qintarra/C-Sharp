@@ -12,5 +12,14 @@
             return LogicalPuzzles.Puzzle1(b1, b2);
         }
 
+        [TestCase(false, false, ExpectedResult = false)]
+        [TestCase(true, false, ExpectedResult = false)]
+        [TestCase(false, true, ExpectedResult = true)]
+        [TestCase(true, true, ExpectedResult = false)]
+        public bool Puzzle2_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalPuzzles.Puzzle2(b1, b2);
+        }
+
     }
 }
