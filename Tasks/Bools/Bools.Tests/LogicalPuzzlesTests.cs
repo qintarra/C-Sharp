@@ -57,5 +57,13 @@
             return LogicalPuzzles.Puzzle6(b1, b2);
         }
 
+        [TestCase(false, false, ExpectedResult = true)]
+        [TestCase(true, false, ExpectedResult = false)]
+        [TestCase(false, true, ExpectedResult = false)]
+        [TestCase(true, true, ExpectedResult = true)]
+        public bool Puzzle7_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalPuzzles.Puzzle7(b1, b2);
+        }
     }
 }
