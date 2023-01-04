@@ -21,5 +21,23 @@
             return LogicalPuzzles.Puzzle2(b1, b2);
         }
 
+        [TestCase(false, false, ExpectedResult = true)]
+        [TestCase(true, false, ExpectedResult = true)]
+        [TestCase(false, true, ExpectedResult = false)]
+        [TestCase(true, true, ExpectedResult = true)]
+        public bool Puzzle3_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalPuzzles.Puzzle3(b1, b2);
+        }
+
+        [TestCase(false, false, ExpectedResult = false)]
+        [TestCase(true, false, ExpectedResult = true)]
+        [TestCase(false, true, ExpectedResult = false)]
+        [TestCase(true, true, ExpectedResult = false)]
+        public bool Puzzle4_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalPuzzles.Puzzle4(b1, b2);
+        }
+
     }
 }
