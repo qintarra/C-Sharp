@@ -48,5 +48,14 @@
             return LogicalPuzzles.Puzzle5(b1, b2);
         }
 
+        [TestCase(false, false, ExpectedResult = true)]
+        [TestCase(true, false, ExpectedResult = true)]
+        [TestCase(false, true, ExpectedResult = true)]
+        [TestCase(true, true, ExpectedResult = false)]
+        public bool Puzzle6_ReturnBool(bool b1, bool b2)
+        {
+            return LogicalPuzzles.Puzzle6(b1, b2);
+        }
+
     }
 }
