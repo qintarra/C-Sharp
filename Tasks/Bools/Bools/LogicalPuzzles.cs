@@ -24,5 +24,10 @@
             return b1 && !b2;
         }
 
+        public static bool Puzzle5(bool b1, bool b2)
+        {
+            return !b1 && !b2;
+        }
+
     }
 }
