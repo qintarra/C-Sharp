@@ -29,7 +29,6 @@ Open the *LogicalOperators.cs* file, and implement all methods by applying a log
 | Negate      | Logical negation     | !        |
 
 
-
 Create the [truth table](https://en.wikipedia.org/wiki/Truth_table) for _logical AND (conjunction)_ for the _b1_ and _b2_ parameters.
 
 | b1    | b2    | b1 && b2 |
@@ -91,6 +90,8 @@ public static bool Puzzle1(bool b1, bool b2)
 }
 ```
 
+Now the method produces correct expected results for all tests cases for the _Puzzle1_ReturnBool_ unit test.
 
+Implement the other logical puzzles in the same way. Some puzzles assume using parentheses to change the order of [operand evaluation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/#operand-evaluation).
 
 
