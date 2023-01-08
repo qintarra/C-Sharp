@@ -42,6 +42,20 @@ Create the [truth table](https://en.wikipedia.org/wiki/Truth_table) for _logical
 Implement the other methods and create the truth tables for them.
 
 
+### Logical Puzzles
+
+In this section you have to use the logical operators to solve the logical puzzles in the *LogicalPuzzles.cs* file. You can combine the logical operators together to get the expected result of a logical function. Start with creating a _truth table_ for a logical function you work with, then analyze it and reconstruct a logical function to satisfy the truth table criteria.  
+
+Take a look at the list of test cases for the *Puzzle1_ReturnBool* unit test and create an expected truth table for the operation you have to implement in the _Puzzle1_ method.
+
+| b1    | b2    | Expected Result |
+|-------|-------|-----------------|
+| false | false | true            |
+| true  | false | false           |
+| false | true  | true            |
+| true  | true  | true            |
+
+
 
 
 
