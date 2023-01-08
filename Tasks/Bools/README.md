@@ -30,5 +30,18 @@ Open the *LogicalOperators.cs* file, and implement all methods by applying a log
 
 
 
+Create the [truth table](https://en.wikipedia.org/wiki/Truth_table) for _logical AND (conjunction)_ for the _b1_ and _b2_ parameters.
+
+| b1    | b2    | b1 && b2 |
+|-------|-------|----------|
+| false | false | false    |
+| true  | false | false    |
+| false | true  | false    |
+| true  | true  | true     |
+
+Implement the other methods and create the truth tables for them.
+
+
+
 
 
