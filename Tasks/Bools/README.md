@@ -84,6 +84,12 @@ Now, the _Puzzle1_ truth table is similar to the expected truth table except for
 
 That means a logical negation should be applied to the _b1_ parameter.
 
+```cs
+public static bool Puzzle1(bool b1, bool b2)
+{
+    return !b1 || b2;
+}
+```
 
 
 
