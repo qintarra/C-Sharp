@@ -66,6 +66,13 @@ Compare this truth table with the [truth table for logical OR operation](https:/
 
 Apply _operator ||_ to _b1_ and _b2_ parameters.
 
+```cs
+public static bool Puzzle1(bool b1, bool b2)
+{
+    return b1 || b2;
+}
+```
+
 
 
 
