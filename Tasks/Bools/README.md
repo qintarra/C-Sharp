@@ -73,6 +73,17 @@ public static bool Puzzle1(bool b1, bool b2)
 }
 ```
 
+Now, the _Puzzle1_ truth table is similar to the expected truth table except for the case when _b2_ parameter is false.
+
+| b1    | b2    | Actual Result | Expected Result |
+|-------|-------|---------------|-----------------|
+| false | false | **false**     | **true**        |
+| true  | false | **true**      | **false**       |
+| false | true  | true          | true            |
+| true  | true  | true          | true            |
+
+That means a logical negation should be applied to the _b1_ parameter.
+
 
 
 
