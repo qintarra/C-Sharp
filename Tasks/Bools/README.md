@@ -55,6 +55,17 @@ Take a look at the list of test cases for the *Puzzle1_ReturnBool* unit test and
 | false | true  | true            |
 | true  | true  | true            |
 
+Compare this truth table with the [truth table for logical OR operation](https://en.wikipedia.org/wiki/Truth_table#Logical_disjunction_(OR)) - you will find that they are very similar.
+
+| b1    | b2    | Logical OR      |
+|-------|-------|-----------------|
+| false | false | false           |
+| true  | false | true            |
+| false | true  | true            |
+| true  | true  | true            |
+
+Apply _operator ||_ to _b1_ and _b2_ parameters.
+
 
 
 
