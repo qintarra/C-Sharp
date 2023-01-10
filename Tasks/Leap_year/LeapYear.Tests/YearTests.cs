@@ -15,6 +15,10 @@ namespace LeapYearTask.Tests
             Assert.False(Year.IsLeapYear(year));
         }
 
+        [TestCase(1996)]
+        [TestCase(2000)]
+        [TestCase(2020)]
+        [TestCase(2008)]
         public void IsLeapYear_ReturnTrue(int year)
         {
             Assert.True(Year.IsLeapYear(year));
