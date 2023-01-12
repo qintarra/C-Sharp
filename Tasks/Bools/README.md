@@ -13,7 +13,7 @@ There are only two possible literals for the _bool_ data type - _true_ and _fals
 
 ### Logical Operators
 
-Open the *LogicalOperators.cs* file, and implement all methods by applying a logical operation to method parameters.
+Open the *LogicalOperators.cs* file, and implement all methods by applying a logical operator to method parameters.
 
 | Method Name | Logical Operation    | Operator |
 |-------------|----------------------|----------|
@@ -43,7 +43,7 @@ Implement the other methods and create the truth tables for them.
 
 ### Logical Puzzles
 
-In this section you have to use the logical operators to solve the logical puzzles in the *LogicalPuzzles.cs* file. You can combine the logical operators together to get the expected result of a logical function. Start with creating a _truth table_ for a logical function you work with, then analyze it and reconstruct a logical function to satisfy the truth table criteria.  
+In this section, you have to use the logical operators to solve the logical puzzles in the *LogicalPuzzles.cs* file. You can combine the logical operators together to get the expected result of a logical function. Start with creating a _truth table_ for a logical function you work with, then analyze it and reconstruct a logical function to satisfy the truth table criteria.  
 
 Take a look at the list of test cases for the *Puzzle1_ReturnBool* unit test and create an expected truth table for the operation you have to implement in the _Puzzle1_ method.
 
@@ -72,7 +72,7 @@ public static bool Puzzle1(bool b1, bool b2)
 }
 ```
 
-Now, the _Puzzle1_ truth table is similar to the expected truth table except for the case when _b2_ parameter is false.
+Now, the _Puzzle1_ truth table is similar to the expected truth table except for the case when the _b2_ parameter is false.
 
 | b1    | b2    | Actual Result | Expected Result |
 |-------|-------|---------------|-----------------|
@@ -90,7 +90,7 @@ public static bool Puzzle1(bool b1, bool b2)
 }
 ```
 
-Now the method produces correct expected results for all tests cases for the _Puzzle1_ReturnBool_ unit test.
+Now the method produces correct expected results for all test cases for the _Puzzle1_ReturnBool_ unit test.
 
 Implement the other logical puzzles in the same way. Some puzzles assume using parentheses to change the order of [operand evaluation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/#operand-evaluation).
 
