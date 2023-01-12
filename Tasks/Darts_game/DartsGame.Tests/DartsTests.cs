@@ -41,6 +41,10 @@ namespace DartsGame.Tests
             Assert.AreEqual(10, Darts.GetScore(0, -1));
         }
 
-
+        [Test]
+        public void GetScore_DartLandsInTheInnerCircle_Return_10()
+        {
+            Assert.AreEqual(10, Darts.GetScore(-0.1, -0.1));
+        }
     }
 }
