@@ -29,5 +29,11 @@ namespace DartsGame.Tests
             Assert.AreEqual(5, Darts.GetScore(5, 0));
         }
 
+        [Test]
+        public void GetScore_DartLandsInTheMiddleCircle_Return_5()
+        {
+            Assert.AreEqual(5, Darts.GetScore(0.8, -0.8));
+        }
+
     }
 }
