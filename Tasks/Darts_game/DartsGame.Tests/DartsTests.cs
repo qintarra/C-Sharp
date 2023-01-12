@@ -35,5 +35,12 @@ namespace DartsGame.Tests
             Assert.AreEqual(5, Darts.GetScore(0.8, -0.8));
         }
 
+        [Test]
+        public void GetScore_DartLandsInTheBorderBetweenMiddleAndInnerCircles_Return_10()
+        {
+            Assert.AreEqual(10, Darts.GetScore(0, -1));
+        }
+
+
     }
 }
