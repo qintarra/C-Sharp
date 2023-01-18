@@ -93,3 +93,34 @@ Add the code to test if an _l_ argument is in the allowable range, and throw an 
 
 There is no need to test if an _l_ argument is less than zero because _l_ is of unsigned data type.  
 
+#### Subtask 1-3
+
+Add the code to test if both _i_ and _d_ arguments are in the allowable ranges, and throw the _ArgumentOutOfRangeException_ when any of the method arguments are outside the allowable range.
+
+| Parameter | Interval        | Allowable Range | Exception                   | Error Message                        |
+|-----------|-----------------|-----------------|-----------------------------|--------------------------------------|
+| i         | (-&infin; 0)    | No              |                             |                                      |
+| i         | [0, 5)          | Yes             |                             |                                      |
+| i         | [5, &infin;)    | No              | ArgumentOutOfRangeException | i should be in [0, 5) interval.      |
+| d         | (-&infin; -1.0) | No              | ArgumentOutOfRangeException | d should be in [-1.0, 1.0] interval. |
+| d         | [-1.0, 1.0]     | Yes             |                             |                                      |
+| d         | (1.0, &infin;)  | No              | ArgumentOutOfRangeException | d should be in [-1.0, 1.0] interval. |
+
+Open the [ArgumentOutOfRangeException Constructors](https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception.-ctor) documentation page, and find a constructor with two string parameters.
+
+```cs
+public ArgumentOutOfRangeException (string? paramName, string? message);
+```
+
+The constructor description says:
+
+_Initializes a new instance of the ArgumentOutOfRangeException class with the name of the parameter that causes this exception and a **specified error message**._
+
+Add error messages to the constructor calls:
+
+```cs
+throw new ArgumentOutOfRangeException(nameof(i), "i should be in [0, 5) interval.");
+
+throw new ArgumentOutOfRangeException(nameof(d), "d should be in [-1.0, 1.0] interval.");
+```
+
