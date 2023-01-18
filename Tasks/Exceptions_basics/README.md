@@ -79,3 +79,17 @@ public static bool CheckParameterAndThrowException1(int i)
 
     return true;
 }
+```
+
+#### Subtask 1-2
+
+Add the code to test if an _l_ argument is in the allowable range, and throw an _ArgumentOutOfRangeException_ when the argument is outside the allowable range.
+
+| l Interval    | Allowable Range | Exception                   |
+|---------------|-----------------|-----------------------------|
+| (-&infin; 0)  | No              |                             |
+| [0, 7]        | Yes             |                             |
+| (7, &infin;)  | No              | ArgumentOutOfRangeException |
+
+There is no need to test if an _l_ argument is less than zero because _l_ is of unsigned data type.  
+
