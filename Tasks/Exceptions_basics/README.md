@@ -170,3 +170,16 @@ public static bool CheckParameterAndThrowException1(object o)
 
     return true;
 }
+
+#### Subtask 2-2
+
+Open the *ThrowingArgumentNull.cs* file.
+
+Add the _if_ statement to test if _o1_ or _o2_ arguments are _null_, and throw the _ArgumentNullException_ when any of the method arguments is null.
+
+The _ArgumentNullException_ class has a [constructor with two string parameters](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception.-ctor?view=net-6.0#system-argumentnullexception-ctor(system-string-system-string)) that allows to specify an error message:
+
+```cs
+public ArgumentNullException (string? paramName, string? message);
+```
+
