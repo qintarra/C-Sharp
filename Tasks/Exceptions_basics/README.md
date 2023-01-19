@@ -157,3 +157,16 @@ public static bool CheckParameterAndThrowException1(object o)
     return true;
 }
 ```
+
+Beginning with C# 7.0, you can use a [constant pattern](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns#constant-pattern) to check for _null_.
+
+```cs
+public static bool CheckParameterAndThrowException1(object o)
+{
+    if (o is null)
+    {
+        throw new ArgumentNullException(nameof(o));
+    }
+
+    return true;
+}
