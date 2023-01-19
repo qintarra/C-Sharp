@@ -188,4 +188,21 @@ Usually having an error message is not needed for an _ArgumentNullException_, be
 
 #### Subtask 2-3
 
-Add the code to test if the method argument (_integers_, _longs_ and _floats_) is _null_, and throw an _ArgumentNullException_ when any of the method arguments is null.
+Add the code to test if the method argument (_integers_, _longs_ and _floats_) is _null_, and throw an _ArgumentNullException_ when any of the method arguments is null.  
+
+#### Subtask 2-4
+
+Add the code to test if a string argument is null, and throw the _ArugmentNullException_ when the argument is null.
+
+```cs
+public static int CheckParameterAndThrowException4(string s)
+{
+    if (s is null)
+    {
+        throw new ArgumentNullException(nameof(s));
+    }
+
+    return s.Length;
+}
+```
+
