@@ -139,3 +139,21 @@ Add the code to test if both _l_ and _f_ arguments are in the allowable ranges, 
 | f         | (-0.3, 0.3)     | Yes             |                             |                                              |
 | f         | [0.3, &infin;)  | No              | ArgumentOutOfRangeException | f should be in the (-0.3, 0.3) interval.     |
 
+
+### ArgumentNullException
+
+#### Subtask 2-1
+
+Add the _if_ statement to test if an _o_ argument is _null_, and throw the _ArgumentNullException_ when the argument is null.
+
+```cs
+public static bool CheckParameterAndThrowException1(object o)
+{
+    if (o == null)
+    {
+        throw new ArgumentNullException(nameof(o));
+    }
+
+    return true;
+}
+```
