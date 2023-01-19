@@ -209,3 +209,7 @@ public static int CheckParameterAndThrowException4(string s)
 #### Subtask 2-5
 
 Add the code to throw the _ArgumentNullException_ when any of the method arguments are null.
+
+#### Subtask 2-6
+
+Add the code to throw the _ArgumentNullException_ when any of the method arguments are null.
