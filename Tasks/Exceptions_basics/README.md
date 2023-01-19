@@ -170,6 +170,7 @@ public static bool CheckParameterAndThrowException1(object o)
 
     return true;
 }
+```
 
 #### Subtask 2-2
 
@@ -183,3 +184,8 @@ The _ArgumentNullException_ class has a [constructor with two string parameters]
 public ArgumentNullException (string? paramName, string? message);
 ```
 
+Usually having an error message is not needed for an _ArgumentNullException_, because the issue is described by the exception type. In this task you don't have to specify an error message for an _ArgumentNullException_.
+
+#### Subtask 2-3
+
+Add the code to test if the method argument (_integers_, _longs_ and _floats_) is _null_, and throw an _ArgumentNullException_ when any of the method arguments is null.
