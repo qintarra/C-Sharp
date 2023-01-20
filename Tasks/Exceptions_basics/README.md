@@ -258,3 +258,7 @@ public static int CheckParameterAndThrowException7(int[] integers)
     return integersCount;
 }
 ```
+
+#### Subtask 2-8
+
+Add the code to throw the _ArgumentNullException_ when any of the method arguments are null.
