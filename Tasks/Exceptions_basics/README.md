@@ -232,3 +232,16 @@ public static int CheckParameterAndThrowException7(int[] integers)
     return integersCount;
 }
 ```
+
+2. Add the null-coalescing operator to throw the _ArgumentNullException_ when an _integers_ argument is null.
+
+```cs
+public static int CheckParameterAndThrowException7(int[] integers)
+{
+    int integersCount;
+
+    integersCount = (integers ?? throw new ArgumentNullException()).Length;
+
+    return integersCount;
+}
+```
