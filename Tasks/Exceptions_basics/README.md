@@ -220,3 +220,15 @@ Add the code to throw the _ArgumentNullException_ when any of the method argumen
 
 Add the code to throw the _ArgumentNullException_ when an _integers_ argument is null.  
 
+1. Add the parenthesis around the _integer_ parameter.
+
+```cs
+public static int CheckParameterAndThrowException7(int[] integers)
+{
+    int integersCount;
+
+    integersCount = (integers).Length;
+
+    return integersCount;
+}
+```
