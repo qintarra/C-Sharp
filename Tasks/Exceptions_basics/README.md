@@ -245,3 +245,16 @@ public static int CheckParameterAndThrowException7(int[] integers)
     return integersCount;
 }
 ```
+
+3. Use the _nameof_ expression to specify the _integers_ parameter name.
+
+```cs
+public static int CheckParameterAndThrowException7(int[] integers)
+{
+    int integersCount;
+
+    integersCount = (integers ?? throw new ArgumentNullException(nameof(integers))).Length;
+
+    return integersCount;
+}
+```
