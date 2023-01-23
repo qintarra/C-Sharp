@@ -308,3 +308,12 @@ Add the code to initialize the _s_ parameter with the default value when the _s_
 | s         | "Hello, world!" |
 
 The string parameters are initialized in the same way as the object and the array parameters:
+
+```cs
+public static string CheckParameterAndThrowException3(string s)
+{
+    s ??= "Hello, world!";
+
+    return s;
+}
+```
