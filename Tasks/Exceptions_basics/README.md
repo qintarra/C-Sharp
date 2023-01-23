@@ -290,3 +290,11 @@ public static object CheckParameterAndThrowException7(object o)
     return o;
 }
 ```
+
+#### Subtask 3-2
+
+Add the code to initialize the _integers_ parameter with the default value when the _integers_ argument is null.
+
+| Parameter | Default Value   |
+|-----------|-----------------|
+| integers  | new int[] { 0 } |
