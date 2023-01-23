@@ -345,3 +345,17 @@ Add the code to initialize the method parameters with the default values when an
 Open the ThrowingArgument.cs file.
 
 Add the code block to throw the _ArgumentException_ when the _i_ argument is odd. The exception's error message should be "i should not be odd.".
+
+1. Add the _if_ statement that tests if an _i_ is odd.
+
+```cs
+public static int CheckParameterAndThrowException1(int i)
+{
+    if (i % 2 != 0)
+    {
+    }
+
+    return i;
+}
+```
+
