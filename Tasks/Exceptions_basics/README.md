@@ -359,3 +359,17 @@ public static int CheckParameterAndThrowException1(int i)
 }
 ```
 
+2. Add the _throw_ expression to throw the _ArgumentOutOfRangeException_.
+
+```cs
+public static int CheckParameterAndThrowException1(int i)
+{
+    if (i % 2 != 0)
+    {
+        throw new ArgumentException();
+    }
+
+    return i;
+}
+```
+
