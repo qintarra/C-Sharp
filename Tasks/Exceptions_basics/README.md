@@ -317,3 +317,12 @@ public static string CheckParameterAndThrowException3(string s)
     return s;
 }
 ```
+
+#### Subtask 3-4
+
+Add the code to initialize the _s1_ and _s2_ parameters with the default values when the _s1_ or _s2_ argument is null.
+
+| Parameter | Default Value   |
+|-----------|-----------------|
+| s1        | "Hello"         |
+| s2        | "world"         |
