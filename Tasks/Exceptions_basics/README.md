@@ -336,3 +336,12 @@ Add the code to initialize the method parameters with the default values when an
 | s1        | "abc"                 |
 | integers  | new int[] { 1, 2, 3 } |
 | s2        | "123"                 |
+
+
+### ArgumentException
+
+#### Subtask 4-1
+
+Open the ThrowingArgument.cs file.
+
+Add the code block to throw the _ArgumentException_ when the _i_ argument is odd. The exception's error message should be "i should not be odd.".
