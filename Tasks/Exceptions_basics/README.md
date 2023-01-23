@@ -269,3 +269,24 @@ Add the code to throw the _ArgumentNullException_ when any of the method argumen
 
 
 ### The Null-coalescing Assignment Operator ??=  
+
+#### Subtask 3-1
+
+Open the *NullCoalescingAssignment.cs* file.
+
+Add the code to initialize the _o_ parameter with the default value when the _o_ argument is null.
+
+| Parameter | Default Value |
+|-----------|---------------|
+| o         | new object()  |
+
+Use the [null-coalescing assignment operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator):
+
+```cs
+public static object CheckParameterAndThrowException7(object o)
+{
+    o ??= new object();
+
+    return o;
+}
+```
