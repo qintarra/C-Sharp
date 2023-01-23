@@ -326,3 +326,13 @@ Add the code to initialize the _s1_ and _s2_ parameters with the default values 
 |-----------|-----------------|
 | s1        | "Hello"         |
 | s2        | "world"         |
+
+#### Subtask 3-5
+
+Add the code to initialize the method parameters with the default values when any argument is null.
+
+| Parameter | Default Value         |
+|-----------|-----------------------|
+| s1        | "abc"                 |
+| integers  | new int[] { 1, 2, 3 } |
+| s2        | "123"                 |
