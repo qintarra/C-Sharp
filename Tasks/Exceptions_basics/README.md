@@ -298,3 +298,13 @@ Add the code to initialize the _integers_ parameter with the default value when 
 | Parameter | Default Value   |
 |-----------|-----------------|
 | integers  | new int[] { 0 } |
+
+#### Subtask 3-3
+
+Add the code to initialize the _s_ parameter with the default value when the _s_ argument is null.
+
+| Parameter | Default Value   |
+|-----------|-----------------|
+| s         | "Hello, world!" |
+
+The string parameters are initialized in the same way as the object and the array parameters:
