@@ -373,3 +373,17 @@ public static int CheckParameterAndThrowException1(int i)
 }
 ```
 
+3. Specify the error message.
+
+```cs
+public static int CheckParameterAndThrowException1(int i)
+{
+    if (i % 2 != 0)
+    {
+        throw new ArgumentException("i should not be odd.");
+    }
+
+    return i;
+}
+```
+
