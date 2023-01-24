@@ -409,4 +409,8 @@ public ArgumentException(string? message, string? paramName);
 
 #### Subtask 4-2
 
-Add the code to throw the _ArgumentException_ when _s_ argument equals zero. The error message should be "s should not equals zero.".
+Add the code to throw the _ArgumentException_ when _s_ argument equals zero. The error message should be "s should not equals zero.".  
+
+#### Subtask 4-3
+
+Add the code to throw the _ArgumentException_ when _l_ argument is even. The error message should be "l should not be even.".
