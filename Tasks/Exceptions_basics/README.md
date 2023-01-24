@@ -414,3 +414,7 @@ Add the code to throw the _ArgumentException_ when _s_ argument equals zero. The
 #### Subtask 4-3
 
 Add the code to throw the _ArgumentException_ when _l_ argument is even. The error message should be "l should not be even.".
+
+#### Subtask 4-4
+
+Add the code to throw the _ArgumentException_ when the _floats_ array has no elements. The error message should be "floats array has no elements.".
