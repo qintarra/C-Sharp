@@ -387,3 +387,17 @@ public static int CheckParameterAndThrowException1(int i)
 }
 ```
 
+4. Use the _nameof_ expression to specify the _i_ parameter name.
+
+```cs
+public static int CheckParameterAndThrowException1(int i)
+{
+    if (i % 2 != 0)
+    {
+        throw new ArgumentException("i should not be odd.", nameof(i));
+    }
+
+    return i;
+}
+```
+
