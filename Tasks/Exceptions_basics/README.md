@@ -418,3 +418,16 @@ Add the code to throw the _ArgumentException_ when _l_ argument is even. The err
 #### Subtask 4-4
 
 Add the code to throw the _ArgumentException_ when the _floats_ array has no elements. The error message should be "floats array has no elements.".
+
+1. Add an _if_ statement that tests if the _floats_ array is empty.
+
+```cs
+public static int CheckParameterAndThrowException4(float[] floats)
+{
+    if (floats.Length == 0)
+    {
+    }
+
+    return floats.Length;
+}
+```
