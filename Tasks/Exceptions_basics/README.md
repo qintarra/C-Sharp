@@ -401,3 +401,8 @@ public static int CheckParameterAndThrowException1(int i)
 }
 ```
 
+Pay attention that the error message parameter goes first in the [ArgumentException constructors](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception.-ctor).
+
+```cs
+public ArgumentException(string? message, string? paramName);
+```
