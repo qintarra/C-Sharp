@@ -431,3 +431,17 @@ public static int CheckParameterAndThrowException4(float[] floats)
     return floats.Length;
 }
 ```
+
+2. Add an _throw_ expression to throw the _ArgumentException_ when the _floats_ array is empty. Specify the error message and the parameter name in the exception constructor.
+
+```cs
+public static int CheckParameterAndThrowException4(float[] floats)
+{
+    if (floats.Length == 0)
+    {
+        throw new ArgumentException("floats array has no elements.", nameof(floats));
+    }
+
+    return floats.Length;
+}
+```
