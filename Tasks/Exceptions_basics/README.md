@@ -406,3 +406,7 @@ Pay attention that the error message parameter goes first in the [ArgumentExcept
 ```cs
 public ArgumentException(string? message, string? paramName);
 ```
+
+#### Subtask 4-2
+
+Add the code to throw the _ArgumentException_ when _s_ argument equals zero. The error message should be "s should not equals zero.".
