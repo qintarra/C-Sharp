@@ -583,3 +583,10 @@ Add the code to return the "P456" string when an _ArgumentNullException_ is thro
 |-----------------------------|--------|
 | ArgumentException           | P456   |
 
+#### Subtask 5-4
+
+Add the code to return the "A732" string when an _ArgumentNullException_ is thrown. Assign the _errorMessage_ parameter to the exception error message.
+
+| Exception Type To Catch     | Return | errorMessage Parameter                |
+|-----------------------------|--------|---------------------------------------|
+| ArgumentNullException       | A732   | Assign to the exception error message.|
