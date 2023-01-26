@@ -512,3 +512,11 @@ public static bool CatchArgumentOutOfRangeException1(int i, Func<int, bool> foo)
     }
 }
 ```
+
+#### Subtask 5-2
+
+Add the code to return the "K139" string when an _ArgumentOutOfRangeException_ is thrown. Assign the _errorMessage_ parameter to the exception error message.
+
+| Exception Type To Catch     | Return | errorMessage Parameter                |
+|-----------------------------|--------|---------------------------------------|
+| ArgumentOutOfRangeException | K139   | Assign to the exception error message.|
