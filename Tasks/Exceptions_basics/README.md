@@ -497,4 +497,18 @@ public static bool CatchArgumentOutOfRangeException1(int i, Func<int, bool> foo)
 }
 ```
 
+2. Add a return statement to return _false_.
 
+```cs
+public static bool CatchArgumentOutOfRangeException1(int i, Func<int, bool> foo)
+{
+    try
+    {
+        return foo(i);
+    }
+    catch (ArgumentOutOfRangeException)
+    {
+        return false;
+    }
+}
+```
