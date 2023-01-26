@@ -538,3 +538,21 @@ public static string CatchArgumentOutOfRangeException2(int i, object o, string s
 }
 ```
 
+2. Add a return statement to return the "K139" string.
+
+```cs
+public static string CatchArgumentOutOfRangeException2(int i, object o, string s, out string errorMessage)
+{
+    errorMessage = null;
+
+    try
+    {
+        return DoSomething(i, o, s);
+    }
+    catch (ArgumentOutOfRangeException)
+    {
+        return "K139";
+    }
+}
+```
+
