@@ -556,3 +556,22 @@ public static string CatchArgumentOutOfRangeException2(int i, object o, string s
 }
 ```
 
+3. Assign an [exception error message](https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception.message) to the _errorMessage_ parameter.
+
+```cs
+public static string CatchArgumentOutOfRangeException2(int i, object o, string s, out string errorMessage)
+{
+    errorMessage = null;
+
+    try
+    {
+        return DoSomething(i, o, s);
+    }
+    catch (ArgumentOutOfRangeException e)
+    {
+        errorMessage = e.Message;
+        return "K139";
+    }
+}
+```
+
