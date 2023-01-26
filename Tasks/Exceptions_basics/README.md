@@ -519,4 +519,22 @@ Add the code to return the "K139" string when an _ArgumentOutOfRangeException_ i
 
 | Exception Type To Catch     | Return | errorMessage Parameter                |
 |-----------------------------|--------|---------------------------------------|
-| ArgumentOutOfRangeException | K139   | Assign to the exception error message.|
+| ArgumentOutOfRangeException | K139   | Assign to the exception error message.|  
+
+1. Add a try-catch statement to catch the _ArgumentOutOfRangeException_.
+
+```cs
+public static string CatchArgumentOutOfRangeException2(int i, object o, string s, out string errorMessage)
+{
+    errorMessage = null;
+
+    try
+    {
+        return DoSomething(i, o, s);
+    }
+    catch (ArgumentOutOfRangeException)
+    {
+    }
+}
+```
+
