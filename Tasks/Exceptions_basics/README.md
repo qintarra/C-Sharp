@@ -465,3 +465,8 @@ public static int CheckParameterAndThrowException4(float[] floats)
 }
 ```
 
+#### Subtask 4-5
+
+Add the code to throw the _ArgumentException_ when the _s_ string is empty. The error message should be "s string is empty.". Also, add the code to throw an _ArgumentNullException_ when _s_ argument is _null_.  
+
+
