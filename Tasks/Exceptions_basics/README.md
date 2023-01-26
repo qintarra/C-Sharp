@@ -575,3 +575,11 @@ public static string CatchArgumentOutOfRangeException2(int i, object o, string s
 }
 ```
 
+#### Subtask 5-3
+
+Add the code to return the "P456" string when an _ArgumentNullException_ is thrown.
+
+| Exception Type To Catch     | Return |
+|-----------------------------|--------|
+| ArgumentException           | P456   |
+
