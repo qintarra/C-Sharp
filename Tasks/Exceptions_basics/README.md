@@ -445,3 +445,23 @@ public static int CheckParameterAndThrowException4(float[] floats)
     return floats.Length;
 }
 ```
+
+3. In such cases it makes sense to add an additional check for testing an argument for _null_. Add an _if_ statement that throws the _ArgumentNullException_ when the _floats_ argument is _null_.
+
+```cs
+public static int CheckParameterAndThrowException4(float[] floats)
+{
+    if (floats is null)
+    {
+        throw new ArgumentNullException(nameof(floats));
+    }
+
+    if (floats.Length == 0)
+    {
+        throw new ArgumentException("floats array has no elements.", nameof(floats));
+    }
+
+    return floats.Length;
+}
+```
+
