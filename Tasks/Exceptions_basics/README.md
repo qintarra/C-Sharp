@@ -589,4 +589,12 @@ Add the code to return the "A732" string when an _ArgumentNullException_ is thro
 
 | Exception Type To Catch     | Return | errorMessage Parameter                |
 |-----------------------------|--------|---------------------------------------|
-| ArgumentNullException       | A732   | Assign to the exception error message.|
+| ArgumentNullException       | A732   | Assign to the exception error message.| 
+
+#### Subtask 5-5
+
+Add the code to return the "0" value when an _ArgumentException_ is thrown.
+
+| Exception Type To Catch     | Return |
+|-----------------------------|--------|
+| ArgumentException           | 0      |
