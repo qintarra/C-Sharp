@@ -473,3 +473,28 @@ Add the code to throw the _ArgumentException_ when the _s_ string is empty. The 
 ### Handling Exceptions with try..catch
 
 #### Subtask 5-1
+
+Open the *HandlingExceptions.cs* file.
+
+Add the code to return the _false_ when an _ArgumentOutOfRangeException_ is thrown.
+
+| Exception Type To Catch     | Return |
+|-----------------------------|--------|
+| ArgumentOutOfRangeException | false  |
+
+1. Add the try-catch statement to catch the _ArgumentOutOfRangeException_.
+
+```cs
+public static bool CatchArgumentOutOfRangeException1(int i, Func<int, bool> foo)
+{
+    try
+    {
+        return foo(i);
+    }
+    catch (ArgumentOutOfRangeException)
+    {
+    }
+}
+```
+
+
