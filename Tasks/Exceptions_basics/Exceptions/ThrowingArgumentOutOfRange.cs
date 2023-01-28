@@ -12,6 +12,16 @@
             return true;
         }
 
+        public static bool CheckParameterAndThrowException2(ulong l)
+        {
+            if (l > 7)
+            {
+                throw new ArgumentOutOfRangeException(nameof(l));
+            }
+
+            return true;
+        }
+
         }
     }
 }
