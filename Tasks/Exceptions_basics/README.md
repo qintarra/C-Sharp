@@ -606,3 +606,13 @@ Add the code to return the "D948" string when an _ArgumentException_ is thrown. 
 | Exception Type To Catch     | Return | errorMessage Parameter                |
 |-----------------------------|--------|---------------------------------------|
 | ArgumentException           | D948   | Assign to the exception error message.|
+
+#### Subtask 5-7
+
+Add a try-catch statement to catch three exception types - ArgumentException, ArgumentNullException, and ArgumentOutOfRangeException.
+
+| Exception Type To Catch     | Return | errorMessage Parameter                |
+|-----------------------------|--------|---------------------------------------|
+| ArgumentException           | J954   | Assign to an exception error message. |
+| ArgumentNullException       | W694   | Assign to an exception error message. |
+| ArgumentOutOfRangeException | Z029   | Assign to an exception error message. |
