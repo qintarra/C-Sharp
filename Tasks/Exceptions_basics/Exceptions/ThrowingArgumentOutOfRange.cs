@@ -42,7 +42,7 @@
 
         public static bool CheckParametersAndThrowException4(long l, float f)
         {
-			// 1-4. Add the code to throw the ArgumentOutOfRangeException if the l and f arguments are outside the allowable range
+            // 1-4. Add the code to throw the ArgumentOutOfRangeException if the l and f arguments are outside the allowable range
             if (l < -9 || (l >= -3 && l < 3) || l >= 9)
             {
                 throw new ArgumentOutOfRangeException(nameof(l), "l should be in [-9, -3) or [3, 9) intervals.");
