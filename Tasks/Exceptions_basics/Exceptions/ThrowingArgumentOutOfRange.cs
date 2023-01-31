@@ -40,6 +40,19 @@
             return true;
         }
 
+        public static bool CheckParametersAndThrowException4(long l, float f)
+        {
+            if (l < -9 || (l >= -3 && l < 3) || l >= 9)
+            {
+                throw new ArgumentOutOfRangeException(nameof(l), "l should be in [-9, -3) or [3, 9) intervals.");
+            }
 
+            if (f < -0.3 || f > 0.3)
+            {
+                throw new ArgumentOutOfRangeException(nameof(f), "f should be in the (-0.3, 0.3) interval.");
+            }
+
+            return true;
+        }
     }
 }
