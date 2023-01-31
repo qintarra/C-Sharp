@@ -26,7 +26,7 @@
 
         public static bool CheckParametersAndThrowException3(uint i, double d)
         {
-            
+            // 1-3. Add the code to throw the ArgumentOutOfRangeException if the i and d arguments are outside the allowable range.
             if (i >= 5)
             {
                 throw new ArgumentOutOfRangeException(nameof(i), "i should be in [0, 5) interval.");
