@@ -15,7 +15,7 @@
 
         public static bool CheckParameterAndThrowException2(ulong l)
         {
-            
+            // 1-2. Add the code to throw the ArgumentOutOfRangeException if the l argument is outside the allowable range.
             if (l > 7)
             {
                 throw new ArgumentOutOfRangeException(nameof(l));
