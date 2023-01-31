@@ -4,7 +4,7 @@
     {
         public static bool CheckParameterAndThrowException1(int i)
         {
-            
+            // 1-1. Add the code to throw the ArgumentOutOfRangeException if the i argument is outside the allowable range.
             if (i <= -5 || i >= 5)
             {
                 throw new ArgumentOutOfRangeException(nameof(i));
