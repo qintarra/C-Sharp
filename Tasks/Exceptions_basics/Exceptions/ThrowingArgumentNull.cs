@@ -50,5 +50,16 @@
             return integers.Length + longs.Length + floats.Length;
         }
 
+        public static int CheckParameterAndThrowException4(string s)
+        {
+            // 2-4. Add the code to throw the ArgumentNullException if the s argument is null.
+            if (s is null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+            return s.Length;
+        }
+
     }
 }
