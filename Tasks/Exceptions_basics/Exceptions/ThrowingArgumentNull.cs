@@ -61,5 +61,22 @@
             return s.Length;
         }
 
+        public static int CheckParametersAndThrowException5(string s1, string s2)
+        {
+            // 2-5. Add the code to throw the ArgumentNullException if the s1 or s2 argument is null.
+            if (s1 is null)
+            {
+                throw new ArgumentNullException(nameof(s1));
+            }
+
+            if (s2 is null)
+            {
+                throw new ArgumentNullException(nameof(s2));
+            }
+
+            return s1.Length + s2.Length;
+        }
+
+
     }
 }
