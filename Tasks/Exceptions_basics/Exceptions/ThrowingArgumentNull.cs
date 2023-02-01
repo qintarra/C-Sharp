@@ -29,5 +29,26 @@
             return true;
         }
 
+        public static int CheckParametersAndThrowException3(int[] integers, long[] longs, float[] floats)
+        {
+            // 2-3. Add the code to throw the ArgumentNullException if the integers, longs or floats argument is null.
+            if (integers is null)
+            {
+                throw new ArgumentNullException(nameof(integers));
+            }
+
+            if (longs is null)
+            {
+                throw new ArgumentNullException(nameof(longs));
+            }
+
+            if (floats is null)
+            {
+                throw new ArgumentNullException(nameof(floats));
+            }
+
+            return integers.Length + longs.Length + floats.Length;
+        }
+
     }
 }
