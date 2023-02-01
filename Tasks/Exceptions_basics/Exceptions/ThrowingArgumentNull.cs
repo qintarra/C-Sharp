@@ -108,5 +108,16 @@
             return integersCount;
         }
 
+        public static int CheckParametersAndThrowException8(int[] integers, string s)
+        {
+            int integersCount, stringLength;
+
+            // 2.8 Add the null-coalescing operator to throw the ArgumentNullException if the integers or s argument is null.
+            integersCount = (integers ?? throw new ArgumentNullException(nameof(integers))).Length;
+            stringLength = (s ?? throw new ArgumentNullException(nameof(s))).Length;
+
+            return integersCount + stringLength;
+        }
+
     }
 }
