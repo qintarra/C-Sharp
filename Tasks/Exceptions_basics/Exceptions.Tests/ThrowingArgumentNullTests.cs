@@ -74,5 +74,24 @@
             Assert.IsTrue(actualResult);
         }
 
+        [TestCase(null, new long[] { }, new float[] { }, "integers")]
+        [TestCase(new int[] { }, null, new float[] { }, "longs")]
+        [TestCase(new int[] { }, new long[] { }, null, "floats")]
+        public void CheckParametersAndThrowException3_ArgumentIsNull_ThrowsArgumentNullException(int[] integers, long[] longs, float[] floats, string paramName)
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException3(integers, longs, floats);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual(paramName, e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
