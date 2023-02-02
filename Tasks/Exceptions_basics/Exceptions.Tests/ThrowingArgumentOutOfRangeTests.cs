@@ -51,5 +51,24 @@ namespace Exceptions.Tests
             Assert.IsTrue(actualResult);
         }
 
+        [TestCase(8u)]
+        [TestCase(9u)]
+        [TestCase(10u)]
+        public void CheckParameterAndThrowException2_ThrowsArgumentOutOfRangeException(ulong l)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentOutOfRange.CheckParameterAndThrowException2(l);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Assert.AreEqual(nameof(l), e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
