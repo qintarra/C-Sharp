@@ -70,5 +70,22 @@ namespace Exceptions.Tests
             });
         }
 
+        [TestCase(0uL)]
+        [TestCase(1uL)]
+        [TestCase(2uL)]
+        [TestCase(3uL)]
+        [TestCase(4uL)]
+        [TestCase(5uL)]
+        [TestCase(6uL)]
+        [TestCase(7uL)]
+        public void CheckParameterAndThrowException2_ReturnsTrue(ulong l)
+        {
+            // Act
+            bool actualResult = ThrowingArgumentOutOfRange.CheckParameterAndThrowException2(l);
+
+            // Assert
+            Assert.IsTrue(actualResult);
+        }
+
     }
 }
