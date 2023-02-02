@@ -119,5 +119,17 @@
             return integersCount + stringLength;
         }
 
+        public static int CheckParametersAndThrowException9(float[] floats, string s1, double[] doubles, string s2)
+        {
+            int floatsCount, s1Length, doublesCount, s2Length;
+
+            // 2.9 Add the null-coalescing operator to throw the ArgumentNullException if the any method argument is null.
+            floatsCount = (floats ?? throw new ArgumentNullException(nameof(floats))).Length;
+            doublesCount = (doubles ?? throw new ArgumentNullException(nameof(doubles))).Length;
+            s1Length = (s1 ?? throw new ArgumentNullException(nameof(s1))).Length;
+            s2Length = (s2 ?? throw new ArgumentNullException(nameof(s2))).Length;
+
+            return floatsCount + s1Length + doublesCount + s2Length;
+        }
     }
 }
