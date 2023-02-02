@@ -33,5 +33,23 @@ namespace Exceptions.Tests
             });
         }
 
+        [TestCase(0)]
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        [TestCase(-1)]
+        [TestCase(-2)]
+        [TestCase(-3)]
+        [TestCase(-4)]
+        public void CheckParameterAndThrowException1_ReturnsTrue(int i)
+        {
+            // Act
+            bool actualResult = ThrowingArgumentOutOfRange.CheckParameterAndThrowException1(i);
+
+            // Assert
+            Assert.IsTrue(actualResult);
+        }
+
     }
 }
