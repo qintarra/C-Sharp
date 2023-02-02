@@ -137,5 +137,29 @@ namespace Exceptions.Tests
             });
         }
 
+        [TestCase(0u, 0.0)]
+        [TestCase(1u, 0.0)]
+        [TestCase(2u, 0.0)]
+        [TestCase(3u, 0.0)]
+        [TestCase(4u, 0.0)]
+        [TestCase(0u, 0.9999)]
+        [TestCase(1u, 0.9999)]
+        [TestCase(2u, 0.9999)]
+        [TestCase(3u, 0.9999)]
+        [TestCase(4u, 0.9999)]
+        [TestCase(0u, -0.9999)]
+        [TestCase(1u, -0.9999)]
+        [TestCase(2u, -0.9999)]
+        [TestCase(3u, -0.9999)]
+        [TestCase(4u, -0.9999)]
+        public void CheckParameterAndThrowException3_ReturnsTrue(uint i, double d)
+        {
+            // Act
+            bool actualResult = ThrowingArgumentOutOfRange.CheckParametersAndThrowException3(i, d);
+
+            // Assert
+            Assert.IsTrue(actualResult);
+        }
+
     }
 }
