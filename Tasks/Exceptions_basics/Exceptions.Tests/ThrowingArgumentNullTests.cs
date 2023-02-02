@@ -30,5 +30,22 @@
             Assert.IsTrue(actualResult);
         }
 
+        [Test]
+        public void CheckParametersAndThrowException2_O1_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException2(null, new object());
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("o1", e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
