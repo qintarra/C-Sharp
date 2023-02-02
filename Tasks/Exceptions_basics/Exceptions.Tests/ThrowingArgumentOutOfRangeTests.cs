@@ -161,5 +161,61 @@ namespace Exceptions.Tests
             Assert.IsTrue(actualResult);
         }
 
+        [TestCase(0L, 0.0f)]
+        [TestCase(1L, 0.0f)]
+        [TestCase(2L, 0.0f)]
+        [TestCase(9L, 0.0f)]
+        [TestCase(10L, 0.0f)]
+        [TestCase(-1L, 0.0f)]
+        [TestCase(-2L, 0.0f)]
+        [TestCase(-3L, 0.0f)]
+        [TestCase(-10L, 0.0f)]
+        public void CheckParametersAndThrowException4_L_OutOfRange_ThrowsArgumentOutOfRange(long l, float f)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentOutOfRange.CheckParametersAndThrowException4(l, f);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Assert.AreEqual(nameof(l), e.ParamName);
+                    Assert.AreEqual("l should be in [-9, -3) or [3, 9) intervals. (Parameter 'l')", e.Message);
+                    throw;
+                }
+            });
+        }
+
+        [TestCase(3L, -0.3f)]
+        [TestCase(4L, -0.3f)]
+        [TestCase(5L, -0.3f)]
+        [TestCase(6L, -0.3f)]
+        [TestCase(-4L, -0.3f)]
+        [TestCase(-5L, -0.3f)]
+        [TestCase(-6L, -0.3f)]
+        [TestCase(3L, 0.3f)]
+        [TestCase(4L, 0.3f)]
+        [TestCase(5L, 0.3f)]
+        [TestCase(-4L, 0.3f)]
+        [TestCase(-5L, 0.3f)]
+        [TestCase(-6L, 0.3f)]
+        public void CheckParametersAndThrowException4_F_OutOfRange_ThrowsArgumentOutOfRange(long l, float f)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentOutOfRange.CheckParametersAndThrowException4(l, f);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Assert.AreEqual(nameof(f), e.ParamName);
+                    Assert.AreEqual("f should be in the (-0.3, 0.3) interval. (Parameter 'f')", e.Message);
+                    throw;
+                }
+            });
+        }
+
     }
 }
