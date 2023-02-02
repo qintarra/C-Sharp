@@ -228,5 +228,40 @@ namespace Exceptions.Tests
             });
         }
 
+        [TestCase(3L, 0.0f)]
+        [TestCase(4L, 0.0f)]
+        [TestCase(5L, 0.0f)]
+        [TestCase(6L, 0.0f)]
+        [TestCase(7L, 0.0f)]
+        [TestCase(-4L, 0.0f)]
+        [TestCase(-5L, 0.0f)]
+        [TestCase(-6L, 0.0f)]
+        [TestCase(-7L, 0.0f)]
+        [TestCase(-8L, 0.0f)]
+        [TestCase(3L, -0.2999f)]
+        [TestCase(4L, -0.2999f)]
+        [TestCase(5L, -0.2999f)]
+        [TestCase(6L, -0.2999f)]
+        [TestCase(7L, -0.2999f)]
+        [TestCase(-4L, -0.2999f)]
+        [TestCase(-5L, -0.2999f)]
+        [TestCase(-6L, -0.2999f)]
+        [TestCase(-7L, -0.2999f)]
+        [TestCase(3L, 0.2999f)]
+        [TestCase(4L, 0.2999f)]
+        [TestCase(5L, 0.2999f)]
+        [TestCase(6L, 0.2999f)]
+        [TestCase(-4L, 0.2999f)]
+        [TestCase(-5L, 0.2999f)]
+        [TestCase(-6L, 0.2999f)]
+        [TestCase(-7L, 0.2999f)]
+        public void CheckParameterAndThrowException4_ReturnsTrue(long l, float f)
+        {
+            // Act
+            bool actualResult = ThrowingArgumentOutOfRange.CheckParametersAndThrowException4(l, f);
+
+            // Assert
+            Assert.IsTrue(actualResult);
+        }
     }
 }
