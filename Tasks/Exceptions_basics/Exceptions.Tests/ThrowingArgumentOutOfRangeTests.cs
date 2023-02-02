@@ -87,5 +87,28 @@ namespace Exceptions.Tests
             Assert.IsTrue(actualResult);
         }
 
+        [TestCase(5u, 0.0)]
+        [TestCase(6u, 0.0)]
+        [TestCase(7u, 0.0)]
+        [TestCase(8u, 0.0)]
+        [TestCase(9u, 0.0)]
+        [TestCase(10u, 0.0)]
+        public void CheckParameterAndThrowException3_I_IsOutOfRange_ThrowsArgumentOutOfRangeException(uint i, double d)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentOutOfRange.CheckParametersAndThrowException3(i, d);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Assert.AreEqual(nameof(i), e.ParamName);
+                    Assert.AreEqual("i should be in [0, 5) interval. (Parameter 'i')", e.Message);
+                    throw;
+                }
+            });
+        }
+
     }
 }
