@@ -110,5 +110,32 @@ namespace Exceptions.Tests
             });
         }
 
+        [TestCase(0u, 1.0001)]
+        [TestCase(1u, 1.0001)]
+        [TestCase(2u, 1.0001)]
+        [TestCase(3u, 1.0001)]
+        [TestCase(4u, 1.0001)]
+        [TestCase(0u, -1.0001)]
+        [TestCase(1u, -1.0001)]
+        [TestCase(2u, -1.0001)]
+        [TestCase(3u, -1.0001)]
+        [TestCase(4u, -1.0001)]
+        public void CheckParameterAndThrowException3_D_IsOutOfRange_ThrowsArgumentOutOfRangeException(uint i, double d)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentOutOfRange.CheckParametersAndThrowException3(i, d);
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    Assert.AreEqual(nameof(d), e.ParamName);
+                    Assert.AreEqual("d should be in [-1.0, 1.0] interval. (Parameter 'd')", e.Message);
+                    throw;
+                }
+            });
+        }
+
     }
 }
