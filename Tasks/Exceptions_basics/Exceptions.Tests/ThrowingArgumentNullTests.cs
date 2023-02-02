@@ -47,5 +47,22 @@
             });
         }
 
+        [Test]
+        public void CheckParametersAndThrowException2_O2_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException2(new object(), null);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("o2", e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
