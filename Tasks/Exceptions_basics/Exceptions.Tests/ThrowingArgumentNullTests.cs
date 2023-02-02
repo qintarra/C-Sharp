@@ -64,5 +64,15 @@
             });
         }
 
+        [Test]
+        public void CheckParametersAndThrowException2_ArgumentsAreNotNull_ReturnsTrue()
+        {
+            // Act
+            bool actualResult = ThrowingArgumentNull.CheckParametersAndThrowException2(new object(), new object());
+
+            // Assert
+            Assert.IsTrue(actualResult);
+        }
+
     }
 }
