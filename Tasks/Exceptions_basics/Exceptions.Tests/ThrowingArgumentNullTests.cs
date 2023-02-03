@@ -93,5 +93,18 @@
             });
         }
 
+        [TestCase(new int[] { }, new long[] { }, new float[] { }, ExpectedResult = 0)]
+        [TestCase(new int[] { 1 }, new long[] { }, new float[] { }, ExpectedResult = 1)]
+        [TestCase(new int[] { }, new long[] { 1L }, new float[] { }, ExpectedResult = 1)]
+        [TestCase(new int[] { }, new long[] { }, new float[] { 1.1f }, ExpectedResult = 1)]
+        [TestCase(new int[] { 1 }, new long[] { 1L }, new float[] { 1.1f }, ExpectedResult = 3)]
+        [TestCase(new int[] { 1, 2, 3 }, new long[] { 1L, 2L, 3L }, new float[] { 1.1f, 2.2f, 3.3f }, ExpectedResult = 9)]
+        public int CheckParametersAndThrowException3_ArgumentsAreNotNull_ReturnsTrue(int[] integers, long[] longs, float[] floats)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParametersAndThrowException3(integers, longs, floats);
+
+            return actualResult;
+        }
+
     }
 }
