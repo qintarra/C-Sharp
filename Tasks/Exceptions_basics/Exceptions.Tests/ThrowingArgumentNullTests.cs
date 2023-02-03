@@ -135,5 +135,23 @@
             return actualResult;
         }
 
+        [TestCase(null, "abc", "s1")]
+        [TestCase("abc", null, "s2")]
+        public void CheckParametersAndThrowException5_ArgumentIsNull_ThrowsArgumentNullException(string s1, string s2, string paramName)
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException5(s1, s2);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual(paramName, e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
