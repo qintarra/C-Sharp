@@ -153,5 +153,17 @@
             });
         }
 
+        [TestCase("", "abc", ExpectedResult = 3)]
+        [TestCase("abc", "", ExpectedResult = 3)]
+        [TestCase("a", "a", ExpectedResult = 2)]
+        [TestCase("ab", "ab", ExpectedResult = 4)]
+        [TestCase("abc", "abc", ExpectedResult = 6)]
+        public int CheckParametersAndThrowException5_ArgumentsAreNotNull_ReturnsString(string s1, string s2)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParametersAndThrowException5(s1, s2);
+
+            return actualResult;
+        }
+
     }
 }
