@@ -184,5 +184,19 @@
             });
         }
 
+        [TestCase("", new int[] { 1, 2, 3 }, new string[] { "a", "b", "c" }, ExpectedResult = 6)]
+        [TestCase("abc", new int[] { }, new string[] { "a", "b", "c" }, ExpectedResult = 6)]
+        [TestCase("abc", new int[] { 1, 2, 3 }, new string[] { }, ExpectedResult = 6)]
+        [TestCase("a", new int[] { 1 }, new string[] { "a" }, ExpectedResult = 3)]
+        [TestCase("ab", new int[] { 1, 2 }, new string[] { "a", "b" }, ExpectedResult = 6)]
+        [TestCase("abc", new int[] { 1, 2, 3 }, new string[] { "a", "b", "c" }, ExpectedResult = 9)]
+        public int CheckParametersAndThrowException6_ArgumentsAreNotNull_ReturnsString(string s, int[] integers, string[] strings)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParametersAndThrowException6(s, integers, strings);
+
+            return actualResult;
+        }
+
+
     }
 }
