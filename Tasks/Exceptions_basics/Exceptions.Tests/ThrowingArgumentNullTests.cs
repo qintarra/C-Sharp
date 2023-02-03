@@ -106,5 +106,22 @@
             return actualResult;
         }
 
+        [Test]
+        public void CheckParameterAndThrowException4_S_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParameterAndThrowException4(null);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("s", e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
