@@ -256,5 +256,25 @@
             return actualResult;
         }
 
+        [TestCase(null, "", new double[] { }, "", "floats")]
+        [TestCase(new float[] { }, null, new double[] { }, "", "s1")]
+        [TestCase(new float[] { }, "", null, "", "doubles")]
+        [TestCase(new float[] { }, "", new double[] { }, null, "s2")]
+        public void CheckParametersAndThrowException9_ArgumentIsNull_ThrowsArgumentNullException(float[] floats, string s1, double[] doubles, string s2, string paramName)
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException9(floats, s1, doubles, s2);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual(paramName, e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
