@@ -27,7 +27,8 @@
         }
 
         public static string CheckParametersAndThrowException4(string s1, string s2)
-        {s.
+        {
+            // 3-4. Use the null-coalescing assignment operator to initialize the s1 and s2 parameters with the default values.
             s1 ??= "Hello";
             s2 ??= "world";
 
