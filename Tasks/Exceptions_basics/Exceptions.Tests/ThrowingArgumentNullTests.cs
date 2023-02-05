@@ -243,5 +243,18 @@
             });
         }
 
+        [TestCase(new int[] { }, "", ExpectedResult = 0)]
+        [TestCase(new int[] { 1 }, "a", ExpectedResult = 2)]
+        [TestCase(new int[] { 1, 1 }, "ab", ExpectedResult = 4)]
+        [TestCase(new int[] { 1, 1, 1 }, "", ExpectedResult = 3)]
+        [TestCase(new int[] { }, "abc", ExpectedResult = 3)]
+        [TestCase(new int[] { 1, 1, 1 }, "abc", ExpectedResult = 6)]
+        public int CheckParametersAndThrowException8_ArgumentsAreNotNull_ReturnsArrayLength(int[] integers, string s)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParametersAndThrowException8(integers, s);
+
+            return actualResult;
+        }
+
     }
 }
