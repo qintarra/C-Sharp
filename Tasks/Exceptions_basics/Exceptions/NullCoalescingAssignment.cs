@@ -12,6 +12,7 @@
 
         public static int[] CheckParameterAndThrowException2(int[] integers)
         {
+            // 3-2. Use the null-coalescing assignment operator to initialize the integers parameter with the default value.
             integers ??= new int[] { 0 };
 
             return integers;
