@@ -16,5 +16,12 @@
             return integers;
         }
 
+        public static string CheckParameterAndThrowException3(string s)
+        {
+            s ??= "Hello, world!";
+
+            return s;
+        }
+
     }
 }
