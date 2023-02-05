@@ -276,5 +276,17 @@
             });
         }
 
+        [TestCase(new float[] { }, "", new double[] { }, "", ExpectedResult = 0)]
+        [TestCase(new float[] { 0.0f }, "a", new double[] { 0.0 }, "1", ExpectedResult = 4)]
+        [TestCase(new float[] { 0.0f }, "", new double[] { 0.0 }, "", ExpectedResult = 2)]
+        [TestCase(new float[] { }, "a", new double[] { }, "1", ExpectedResult = 2)]
+        [TestCase(new float[] { 0.0f, 0.0f }, "ab", new double[] { 0.0, 0.0 }, "12", ExpectedResult = 8)]
+        [TestCase(new float[] { 0.0f, 0.0f, 0.0f }, "abc", new double[] { 0.0, 0.0, 0.0 }, "123", ExpectedResult = 12)]
+        public int CheckParametersAndThrowException9_IntegersAndLongIntegersAreNotNull_ReturnsArrayLength(float[] floats, string s1, double[] doubles, string s2)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParametersAndThrowException9(floats, s1, doubles, s2);
+
+            return actualResult;
+        }
     }
 }
