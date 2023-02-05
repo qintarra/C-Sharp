@@ -37,6 +37,7 @@
 
         public static string CheckParametersAndThrowException5(string s1, int[] integers, string s2)
         {
+            // 3-5. Use the null-coalescing assignment operator to initialize the method parameters with the default values.
             s1 ??= "abc";
             integers ??= new int[] { 1, 2, 3 };
             s2 ??= "123";
