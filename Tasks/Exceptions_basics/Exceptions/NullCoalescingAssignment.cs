@@ -4,6 +4,7 @@
     {
         public static object CheckParameterAndThrowException1(object o)
         {
+            // 3-1. Use the null-coalescing assignment operator to initialize the o parameter with the default value.
             o ??= new object();
 
             return o;
