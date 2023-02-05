@@ -214,5 +214,16 @@
             });
         }
 
+        [TestCase(new int[] { }, ExpectedResult = 0)]
+        [TestCase(new int[] { 1 }, ExpectedResult = 1)]
+        [TestCase(new int[] { 1, 1 }, ExpectedResult = 2)]
+        [TestCase(new int[] { 1, 1, 1 }, ExpectedResult = 3)]
+        public int CheckParameterAndThrowException7_IntegersIsNotNull_ReturnsArrayLength(int[] integers)
+        {
+            int actualResult = ThrowingArgumentNull.CheckParameterAndThrowException7(integers);
+
+            return actualResult;
+        }
+
     }
 }
