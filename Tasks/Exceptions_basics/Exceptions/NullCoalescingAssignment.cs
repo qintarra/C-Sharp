@@ -31,5 +31,13 @@
             return $"{s1}, {s2}!";
         }
 
+        public static string CheckParametersAndThrowException5(string s1, int[] integers, string s2)
+        {
+            s1 ??= "abc";
+            integers ??= new int[] { 1, 2, 3 };
+            s2 ??= "123";
+
+            return $"{s1}{integers.Length}{s2}";
+        }
     }
 }
