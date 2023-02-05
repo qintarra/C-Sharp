@@ -225,5 +225,23 @@
             return actualResult;
         }
 
+        [TestCase(null, "", "integers")]
+        [TestCase(new int[] { }, null, "s")]
+        public void CheckParametersAndThrowException8_ArgumentIsNull_ThrowsArgumentNullException(int[] integers, string s, string paramName)
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParametersAndThrowException8(integers, s);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual(paramName, e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
