@@ -197,6 +197,22 @@
             return actualResult;
         }
 
+        [Test]
+        public void CheckParameterAndThrowException7_IntegersIsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgumentNull.CheckParameterAndThrowException7(null);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("integers", e.ParamName);
+                    throw;
+                }
+            });
+        }
 
     }
 }
