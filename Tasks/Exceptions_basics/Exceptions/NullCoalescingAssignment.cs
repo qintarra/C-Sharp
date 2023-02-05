@@ -9,5 +9,12 @@
             return o;
         }
 
+        public static int[] CheckParameterAndThrowException2(int[] integers)
+        {
+            integers ??= new int[] { 0 };
+
+            return integers;
+        }
+
     }
 }
