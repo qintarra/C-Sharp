@@ -23,5 +23,13 @@
             return s;
         }
 
+        public static string CheckParametersAndThrowException4(string s1, string s2)
+        {s.
+            s1 ??= "Hello";
+            s2 ??= "world";
+
+            return $"{s1}, {s2}!";
+        }
+
     }
 }
