@@ -20,6 +20,7 @@
 
         public static string CheckParameterAndThrowException3(string s)
         {
+            // 3-3. Use the null-coalescing assignment operator to initialize the s parameter with the default value.
             s ??= "Hello, world!";
 
             return s;
