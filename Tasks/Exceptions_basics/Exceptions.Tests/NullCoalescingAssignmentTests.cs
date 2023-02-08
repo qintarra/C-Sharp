@@ -12,5 +12,19 @@
             Assert.IsNotNull(actualResult);
         }
 
+        [Test]
+        public void CheckParameterAndThrowException1_O_IsNotNull_ReturnsObject()
+        {
+            // Arrange
+            object o = new object();
+
+            // Act
+            object actualResult = NullCoalescingAssignment.CheckParameterAndThrowException1(o);
+
+            // Assert
+            Assert.IsNotNull(actualResult);
+            Assert.AreSame(o, actualResult);
+        }
+
     }
 }
