@@ -63,5 +63,16 @@
             return actualResult;
         }
 
+        [TestCase(null, null, ExpectedResult = "Hello, world!")]
+        [TestCase(null, "", ExpectedResult = "Hello, !")]
+        [TestCase("", null, ExpectedResult = ", world!")]
+        [TestCase("Hi", "Joe", ExpectedResult = "Hi, Joe!")]
+        public string CheckParametersAndThrowException4_ReturnsString(string s1, string s2)
+        {
+            string actualResult = NullCoalescingAssignment.CheckParametersAndThrowException4(s1, s2);
+
+            return actualResult;
+        }
+
     }
 }
