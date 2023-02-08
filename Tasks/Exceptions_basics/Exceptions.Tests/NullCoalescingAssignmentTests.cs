@@ -37,5 +37,19 @@
             Assert.AreEqual(new int[] { 0 }, actualResult);
         }
 
+        [Test]
+        public void CheckParameterAndThrowException2_IntegersIsNotNull_ReturnsArray()
+        {
+            // Arrange
+            int[] integers = new int[] { 1, 2, 3 };
+
+            // Act
+            int[] actualResult = NullCoalescingAssignment.CheckParameterAndThrowException2(integers);
+
+            // Assert
+            Assert.IsNotNull(actualResult);
+            Assert.AreSame(integers, actualResult);
+        }
+
     }
 }
