@@ -51,5 +51,17 @@
             Assert.AreSame(integers, actualResult);
         }
 
+        [TestCase(null, ExpectedResult = "Hello, world!")]
+        [TestCase("", ExpectedResult = "")]
+        [TestCase("a", ExpectedResult = "a")]
+        [TestCase("ab", ExpectedResult = "ab")]
+        [TestCase("abc", ExpectedResult = "abc")]
+        public string CheckParameterAndThrowException3_ReturnsString(string s)
+        {
+            string actualResult = NullCoalescingAssignment.CheckParameterAndThrowException3(s);
+
+            return actualResult;
+        }
+
     }
 }
