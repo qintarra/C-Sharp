@@ -74,5 +74,25 @@
             return actualResult;
         }
 
+        [TestCase(null, null, null, ExpectedResult = "abc3123")]
+        [TestCase(null, new int[] { }, "", ExpectedResult = "abc0")]
+        [TestCase(null, null, "", ExpectedResult = "abc3")]
+        [TestCase(null, new int[] { }, null, ExpectedResult = "abc0123")]
+        [TestCase("", null, null, ExpectedResult = "3123")]
+        [TestCase("", null, "", ExpectedResult = "3")]
+        [TestCase("", new int[] { }, null, ExpectedResult = "0123")]
+        [TestCase("", new int[] { }, "", ExpectedResult = "0")]
+        [TestCase("", new int[] { 0 }, "", ExpectedResult = "1")]
+        [TestCase("a", new int[] { 0, 1 }, "", ExpectedResult = "a2")]
+        [TestCase("", new int[] { }, "1", ExpectedResult = "01")]
+        [TestCase("", new int[] { 0 }, "1", ExpectedResult = "11")]
+        [TestCase("a", new int[] { 0, 1 }, "1", ExpectedResult = "a21")]
+        [TestCase("ab", new int[] { 0, 1 }, "12", ExpectedResult = "ab212")]
+        public string CheckParametersAndThrowException5_ReturnsString(string s1, int[] integers, string s3)
+        {
+            string actualResult = NullCoalescingAssignment.CheckParametersAndThrowException5(s1, integers, s3);
+
+            return actualResult;
+        }
     }
 }
