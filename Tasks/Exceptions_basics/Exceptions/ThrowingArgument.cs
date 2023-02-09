@@ -12,5 +12,15 @@
             return i;
         }
 
+        public static ushort CheckParameterAndThrowException2(ushort s)
+        {
+            if (s == 0)
+            {
+                throw new ArgumentException("s should not equals zero.", nameof(s));
+            }
+
+            return s;
+        }
+
     }
 }
