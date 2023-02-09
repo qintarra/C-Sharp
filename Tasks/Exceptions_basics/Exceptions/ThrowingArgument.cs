@@ -32,5 +32,20 @@
             return l;
         }
 
+        public static int CheckParameterAndThrowException4(float[] floats)
+        {
+            if (floats is null)
+            {
+                throw new ArgumentNullException(nameof(floats));
+            }
+
+            if (floats.Length == 0)
+            {
+                throw new ArgumentException("floats array has no elements.", nameof(floats));
+            }
+
+            return floats.Length;
+        }
+
     }
 }
