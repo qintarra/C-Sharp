@@ -22,5 +22,15 @@
             return s;
         }
 
+        public static long CheckParameterAndThrowException3(long l)
+        {
+            if (l % 2 == 0)
+            {
+                throw new ArgumentException("l should not be even.", nameof(l));
+            }
+
+            return l;
+        }
+
     }
 }
