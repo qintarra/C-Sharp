@@ -47,5 +47,19 @@
             return floats.Length;
         }
 
+        public static int CheckParameterAndThrowException5(string s)
+        {
+            if (s is null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+            if (s.Length == 0)
+            {
+                throw new ArgumentException("s string is empty.", nameof(s));
+            }
+
+            return s.Length;
+        }
     }
 }
