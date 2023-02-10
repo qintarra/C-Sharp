@@ -68,5 +68,22 @@
             });
         }
 
+        [TestCase(1u)]
+        [TestCase(2u)]
+        [TestCase(3u)]
+        [TestCase(4u)]
+        [TestCase(5u)]
+        [TestCase(6u)]
+        [TestCase(7u)]
+        [TestCase(8u)]
+        [TestCase(9u)]
+        [TestCase(10u)]
+        public void CheckParameterAndThrowException2_S_IsNotZero_ReturnsInteger(uint s)
+        {
+            int actualResult = ThrowingArgument.CheckParameterAndThrowException2((ushort)s);
+
+            Assert.AreEqual(s, actualResult);
+        }
+
     }
 }
