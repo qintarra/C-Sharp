@@ -131,5 +131,22 @@
             Assert.AreEqual(l, actualResult);
         }
 
+        [Test]
+        public void CheckParameterAndThrowException4_FloatsIsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException4(null);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("floats", e.ParamName);
+                    throw;
+                }
+            });
+        }
+
     }
 }
