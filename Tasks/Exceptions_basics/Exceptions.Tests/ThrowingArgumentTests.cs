@@ -113,5 +113,23 @@
             });
         }
 
+        [TestCase(1L)]
+        [TestCase(3L)]
+        [TestCase(5L)]
+        [TestCase(7L)]
+        [TestCase(9L)]
+        [TestCase(11L)]
+        [TestCase(-1L)]
+        [TestCase(-3L)]
+        [TestCase(-5L)]
+        [TestCase(-9L)]
+        [TestCase(-11L)]
+        public void CheckParameterAndThrowException3_I_IsOdd_ReturnsInteger(long l)
+        {
+            long actualResult = ThrowingArgument.CheckParameterAndThrowException3(l);
+
+            Assert.AreEqual(l, actualResult);
+        }
+
     }
 }
