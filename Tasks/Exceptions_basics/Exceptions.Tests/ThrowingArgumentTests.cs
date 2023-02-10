@@ -32,5 +32,23 @@
             });
         }
 
+        [TestCase(0)]
+        [TestCase(2)]
+        [TestCase(4)]
+        [TestCase(6)]
+        [TestCase(8)]
+        [TestCase(10)]
+        [TestCase(-2)]
+        [TestCase(-4)]
+        [TestCase(-6)]
+        [TestCase(-8)]
+        [TestCase(-10)]
+        public void CheckParameterAndThrowException1_I_IsEven_ReturnsInteger(int i)
+        {
+            int actualResult = ThrowingArgument.CheckParameterAndThrowException1(i);
+
+            Assert.AreEqual(i, actualResult);
+        }
+
     }
 }
