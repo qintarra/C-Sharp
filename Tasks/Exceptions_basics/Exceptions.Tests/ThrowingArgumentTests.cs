@@ -85,5 +85,33 @@
             Assert.AreEqual(s, actualResult);
         }
 
+        [TestCase(0L)]
+        [TestCase(2L)]
+        [TestCase(4L)]
+        [TestCase(6L)]
+        [TestCase(8L)]
+        [TestCase(10L)]
+        [TestCase(-2L)]
+        [TestCase(-4L)]
+        [TestCase(-6L)]
+        [TestCase(-8L)]
+        [TestCase(-10L)]
+        public void CheckParameterAndThrowException3_I_IsEven_ThrowsArgumentException(long l)
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException3(l);
+                }
+                catch (ArgumentException e)
+                {
+                    Assert.AreEqual(nameof(l), e.ParamName);
+                    Assert.AreEqual("l should not be even. (Parameter 'l')", e.Message);
+                    throw;
+                }
+            });
+        }
+
     }
 }
