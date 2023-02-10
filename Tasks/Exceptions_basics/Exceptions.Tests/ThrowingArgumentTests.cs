@@ -50,5 +50,23 @@
             Assert.AreEqual(i, actualResult);
         }
 
+        [Test]
+        public void CheckParameterAndThrowException2_I_IsZero_ThrowsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException2(0);
+                }
+                catch (ArgumentException e)
+                {
+                    Assert.AreEqual("s", e.ParamName);
+                    Assert.AreEqual("s should not equals zero. (Parameter 's')", e.Message);
+                    throw;
+                }
+            });
+        }
+
     }
 }
