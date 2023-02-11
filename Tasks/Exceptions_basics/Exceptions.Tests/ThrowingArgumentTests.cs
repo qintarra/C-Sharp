@@ -166,4 +166,12 @@
             });
         }
 
+        [TestCase(new float[] { 1 }, ExpectedResult = 1)]
+        [TestCase(new float[] { 1, 2 }, ExpectedResult = 2)]
+        [TestCase(new float[] { 1, 2, 3 }, ExpectedResult = 3)]
+        public int CheckParameterAndThrowException4_ArrayWithOneElement_ReturnsArrayLength(float[] floats)
+        {
+            return ThrowingArgument.CheckParameterAndThrowException4(floats);
+        }
+
 }
