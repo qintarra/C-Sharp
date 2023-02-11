@@ -209,4 +209,12 @@
             });
         }
 
+        [TestCase("a", ExpectedResult = 1)]
+        [TestCase("ab", ExpectedResult = 2)]
+        [TestCase("abc", ExpectedResult = 3)]
+        public int CheckParameterAndThrowException5_ArrayWithOneElement_ReturnsStringLength(string s)
+        {
+            return ThrowingArgument.CheckParameterAndThrowException5(s);
+        }
+    }
 }
