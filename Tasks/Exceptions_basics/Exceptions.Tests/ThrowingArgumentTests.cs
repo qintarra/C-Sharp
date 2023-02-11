@@ -148,5 +148,22 @@
             });
         }
 
-    }
+        [Test]
+        public void CheckParameterAndThrowException4_FloatsIsEmpty_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException4(Array.Empty<float>());
+                }
+                catch (ArgumentException e)
+                {
+                    Assert.AreEqual("floats", e.ParamName);
+                    Assert.AreEqual("floats array has no elements. (Parameter 'floats')", e.Message);
+                    throw;
+                }
+            });
+        }
+
 }
