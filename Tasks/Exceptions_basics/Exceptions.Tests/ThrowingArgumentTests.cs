@@ -174,4 +174,21 @@
             return ThrowingArgument.CheckParameterAndThrowException4(floats);
         }
 
+        [Test]
+        public void CheckParameterAndThrowException5_S_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException5(null);
+                }
+                catch (ArgumentNullException e)
+                {
+                    Assert.AreEqual("s", e.ParamName);
+                    throw;
+                }
+            });
+        }
+
 }
