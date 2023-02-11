@@ -191,4 +191,22 @@
             });
         }
 
+        [Test]
+        public void CheckParameterAndThrowException4_S_IsEmpty_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+            {
+                try
+                {
+                    ThrowingArgument.CheckParameterAndThrowException5(string.Empty);
+                }
+                catch (ArgumentException e)
+                {
+                    Assert.AreEqual("s", e.ParamName);
+                    Assert.AreEqual("s string is empty. (Parameter 's')", e.Message);
+                    throw;
+                }
+            });
+        }
+
 }
