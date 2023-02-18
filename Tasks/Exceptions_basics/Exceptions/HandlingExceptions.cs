@@ -15,5 +15,21 @@
             }
         }
 
+        public static string CatchArgumentOutOfRangeException2(int i, object o, string s, out string errorMessage)
+        {
+            errorMessage = null;
+
+            // 5-2. Add the try-catch statement to catch an exception of ArgumentOutOfRangeException type. If an ArgumentOutOfRangeException is thrown, assign errorMessage parameter to the exception's error message and return "K139".
+            try
+            {
+                return DoSomething(i, o, s);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                errorMessage = e.Message;
+                return "K139";
+            }
+        }
+
     }
 }
