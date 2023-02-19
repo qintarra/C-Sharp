@@ -89,5 +89,31 @@
             }
         }
 
+        public static string CatchArgumentException7(int i, object o, string s, out string errorMessage)
+        {
+            errorMessage = null;
+
+            // 5-7. Add the try-catch statement to catch three exception types - ArgumentException, ArgumentNullException and ArgumentOutOfRangeException. See README.md for details.
+            try
+            {
+                return DoSomething(i, o, s);
+            }
+            catch (ArgumentOutOfRangeException r)
+            {
+                errorMessage = r.Message;
+                return "Z029";
+            }
+            catch (ArgumentNullException n)
+            {
+                errorMessage = n.Message;
+                return "W694";
+            }
+            catch (ArgumentException e)
+            {
+                errorMessage = e.Message;
+                return "J954";
+            }
+        }
+
     }
 }
