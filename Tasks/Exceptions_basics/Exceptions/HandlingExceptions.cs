@@ -44,5 +44,21 @@
             }
         }
 
+        public static string CatchArgumentNullException4(int i, object o, string s, out string errorMessage)
+        {
+            errorMessage = null;
+
+            // 5-4. Add the try-catch statement to catch an exception of ArgumentNullException type. If an ArgumentNullException is thrown, assign errorMessage parameter to the exception's error message and return "A732".
+            try
+            {
+                return DoSomething(i, o, s);
+            }
+            catch (ArgumentNullException e)
+            {
+                errorMessage = e.Message;
+                return "A732";
+            }
+        }
+
     }
 }
