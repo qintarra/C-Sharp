@@ -73,5 +73,21 @@
             }
         }
 
+        public static string CatchArgumentException6(int i, object o, string s, out string errorMessage)
+        {
+            errorMessage = null;
+
+            // 5-6. Add the try-catch statement to catch an exception of ArgumentException type. If an ArgumentException is thrown, assign errorMessage parameter to the exception's error message and return "D948".
+            try
+            {
+                return DoSomething(i, o, s);
+            }
+            catch (ArgumentException e)
+            {
+                errorMessage = e.Message;
+                return "D948";
+            }
+        }
+
     }
 }
