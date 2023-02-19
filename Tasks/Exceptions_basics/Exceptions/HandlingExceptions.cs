@@ -60,5 +60,18 @@
             }
         }
 
+        public static int CatchArgumentException5(int[] integers, Func<int[], int> foo)
+        {
+            // 5-5. Add the try-catch statement here to catch an exception of ArgumentException type. The method should return "0" value if an exception is thrown.
+            try
+            {
+                return foo(integers);
+            }
+            catch (ArgumentException)
+            {
+                return 0;
+            }
+        }
+
     }
 }
