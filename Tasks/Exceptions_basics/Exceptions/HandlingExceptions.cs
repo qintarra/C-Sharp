@@ -115,5 +115,29 @@
             }
         }
 
+        public static string DoSomething(int i, object o, string s)
+        {
+            if (i < -10 || i > 10)
+            {
+                throw new ArgumentOutOfRangeException(nameof(i), "i should be in [-10, 10] interval.");
+            }
+
+            if (o is null)
+            {
+                throw new ArgumentNullException(nameof(o), "o is null.");
+            }
+
+            if (s is null)
+            {
+                throw new ArgumentNullException(nameof(s), "s is null.");
+            }
+
+            if (s.Length == 0)
+            {
+                throw new ArgumentException("s string is empty.", nameof(s));
+            }
+
+            return $"{i}{o}{s}";
+        }
     }
 }
