@@ -31,5 +31,18 @@
             }
         }
 
+        public static string CatchArgumentNullException3(object o, Func<object, string> foo)
+        {
+            // 5-3. Add the try-catch statement here to catch an exception of ArgumentNullException type. The method should return "P456" string if an exception is thrown.
+            try
+            {
+                return foo(o);
+            }
+            catch (ArgumentNullException)
+            {
+                return "P456";
+            }
+        }
+
     }
 }
