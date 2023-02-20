@@ -28,5 +28,15 @@
             Assert.AreEqual(true, actualResult);
         }
 
+        [TestCase(-11)]
+        [TestCase(11)]
+        public void CatchArgumentOutOfRangeException2_ArgumentOutOfRangeException(int i)
+        {
+            string actualResult = HandlingExceptions.CatchArgumentOutOfRangeException2(i, "ABC", "123", out string errorMessage);
+
+            Assert.AreEqual("K139", actualResult);
+            Assert.IsTrue(errorMessage.Contains("i should be in [-10, 10] interval.", StringComparison.InvariantCulture));
+        }
+
     }
 }
