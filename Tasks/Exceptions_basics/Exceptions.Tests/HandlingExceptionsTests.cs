@@ -12,5 +12,13 @@
             });
         }
 
+        [Test]
+        public void CatchArgumentOutOfRangeException1_ArgumentOutOfRangeExceptionIsThrown_ThrowsException()
+        {
+            bool actualResult = HandlingExceptions.CatchArgumentOutOfRangeException1(-1, TestArgumentOutOfRangeException);
+
+            Assert.AreEqual(false, actualResult);
+        }
+
     }
 }
