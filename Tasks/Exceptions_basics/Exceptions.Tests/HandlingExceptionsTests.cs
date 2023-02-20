@@ -20,5 +20,13 @@
             Assert.AreEqual(false, actualResult);
         }
 
+        [Test]
+        public void CatchArgumentOutOfRangeException1_I_IsValid_ReturnsNumber()
+        {
+            bool actualResult = HandlingExceptions.CatchArgumentOutOfRangeException1(0, TestArgumentOutOfRangeException);
+
+            Assert.AreEqual(true, actualResult);
+        }
+
     }
 }
