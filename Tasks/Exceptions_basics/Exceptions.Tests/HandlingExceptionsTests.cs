@@ -65,5 +65,15 @@
             });
         }
 
+        [TestCase(-10, ExpectedResult = "-10ABC123")]
+        [TestCase(10, ExpectedResult = "10ABC123")]
+        public string CatchArgumentOutOfRangeException2_ReturnsString(int i)
+        {
+            string actualResult = HandlingExceptions.CatchArgumentOutOfRangeException2(i, "ABC", "123", out string errorMessage);
+
+            Assert.IsTrue(errorMessage is null);
+            return actualResult;
+        }
+
     }
 }
