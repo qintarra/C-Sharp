@@ -47,5 +47,14 @@
             });
         }
 
+        [Test]
+        public void CatchArgumentOutOfRangeException2_S_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                HandlingExceptions.CatchArgumentOutOfRangeException2(0, "ABC", null, out string errorMessage);
+            });
+        }
+
     }
 }
