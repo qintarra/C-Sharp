@@ -38,5 +38,14 @@
             Assert.IsTrue(errorMessage.Contains("i should be in [-10, 10] interval.", StringComparison.InvariantCulture));
         }
 
+        [Test]
+        public void CatchArgumentOutOfRangeException2_O_IsNull_ThrowsArgumentNullException()
+        {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                HandlingExceptions.CatchArgumentOutOfRangeException2(0, null, "123", out string errorMessage);
+            });
+        }
+
     }
 }
