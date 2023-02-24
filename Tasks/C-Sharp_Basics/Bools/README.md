@@ -1,5 +1,9 @@
 # Bools and Logic Operators
 
+### Task Description
+
+The task has three sections with small sub-tasks in the code files. Each sub-task is a small coding exercise.  
+
 ### Bools
 
 Open the *Booleans.cs* file, and implement all methods by returning a Boolean value.
