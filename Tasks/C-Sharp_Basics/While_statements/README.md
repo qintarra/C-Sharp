@@ -14,11 +14,11 @@ An *arithmetic sequence* is an ordered set of terms (numbers) that have a common
 
 The arithmetic sequence formula is given as,
 
-$`a_{n} = a+(n-1)*d`$
+$a_{n} = a+(n-1)*d$
 
 where,
-- $`a_{n}`$ is the nth term,
-- $`a`$ is the first term, and
+- $a_{n}$ is the nth term,
+- $a$ is the first term, and
 - d is the *common difference*
 
 #### Sub-task 1
@@ -27,9 +27,9 @@ Open the [ArithmeticSequences.cs](WhileStatements/ArithmeticSequences.cs) file.
 
 Implement the method that returns sum of an arithmetic sequence terms if the common difference is 1.
 
-$`\sum_{i=1}^{n} a+(i-1)*1=\sum_{i=0}^{n-1} a+i`$
+$$\sum_{i=1}^{n} a+(i-1)*1=\sum_{i=0}^{n-1} a+i$$
 
-For the arithmetic sequence $`{5, 6, 7, 8, 9, ...}`$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
+For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is $35 (5 + 6 + 7 + 8 + 9)$.
 
 The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a _while_ statement, therefore a decision block is used it.
 
@@ -43,7 +43,7 @@ Open the [ArithmeticSequences.cs](WhileStatements/ArithmeticSequences.cs) file.
 
 Implement the method that returns the sum of an arithmetic sequence elements when the first term is 17 and the common difference is 33.
 
-$`\sum_{i=1}^{n} 17+(i-1)*33=\sum_{i=0}^{n-1} 17+i*33`$
+$$\sum_{i=1}^{n} 17+(i-1)*33=\sum_{i=0}^{n-1} 17+i*33$$
 
 Beginner programmers often put number literals in their code like this:
 
@@ -88,10 +88,11 @@ public static int SumArithmeticSequenceTerms2(int n)
 
 Implement the method that returns the sum of an arithmetic sequence elements when the common difference is 3.
 
-$`\sum_{i=1}^{n} a+(i-1)*3=\sum_{i=0}^{n-1} a+i*3`$
+$$\sum_{i=1}^{n} a+(i-1)*3=\sum_{i=0}^{n-1} a+i*3$$
 
 Introduce a constant to avoid magic numbers in your code.
 
 #### Sub-task 4
 
 Implement the method that returns the sum of an arithmetic sequence elements.
+
