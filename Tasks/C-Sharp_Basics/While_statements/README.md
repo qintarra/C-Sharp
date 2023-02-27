@@ -109,3 +109,16 @@ where,
 * $a_{n}$ is the nth term, and
 * $a$, $b$ and $c$ are constants.
 
+#### Sub-task 5
+
+Open the [QuadraticSequences.cs](WhileStatements/QuadraticSequences.cs) file.
+
+Implement the method that returns sum of a quadratic sequence terms that are less than _maxTerm_.
+
+The quadratic sequence with nth term $a_{n}=3*n^2+5*n+7$ is $\{ 15, 29, 49, 75, 107, 145, ...\}$.
+
+If _maxTerm_ is 29, the sum is 44 (15 + 29 = 44). If _maxTerm_ is 107, the sum is 275 (15 + 29 + 49 + 75 + 107 = 275).
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Quadratic Sequence 1 Diagram](images/qs-1.png)
