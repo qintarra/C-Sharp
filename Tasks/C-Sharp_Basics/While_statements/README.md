@@ -20,3 +20,19 @@ where,
 - $`a_{n}`$ is the nth term,
 - $`a`$ is the first term, and
 - d is the *common difference*
+
+#### Sub-task 1
+
+Open the [ArithmeticSequences.cs](WhileStatements/ArithmeticSequences.cs) file.
+
+Implement the method that returns sum of an arithmetic sequence terms if the common difference is 1.
+
+$`\sum_{i=1}^{n} a+(i-1)*1=\sum_{i=0}^{n-1} a+i`$
+
+For the arithmetic sequence $`{5, 6, 7, 8, 9, ...}`$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
+
+The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a _while_ statement, therefore a decision block is used it.
+
+![Arithmetic Sequence 1 Diagram](images/as-1.png)
+
+Read and analyze the diagram, add the code to the _SumArithmeticSequenceTerms1_ method. 
