@@ -29,7 +29,7 @@ Implement the method that returns sum of an arithmetic sequence terms if the com
 
 $$\sum_{i=1}^{n} a+(i-1)*1=\sum_{i=0}^{n-1} a+i$$
 
-For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is $35 (5 + 6 + 7 + 8 + 9)$.
+For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
 
 The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a _while_ statement, therefore a decision block is used it.
 
@@ -95,4 +95,17 @@ Introduce a constant to avoid magic numbers in your code.
 #### Sub-task 4
 
 Implement the method that returns the sum of an arithmetic sequence elements.
+
+
+### Quadratic Sequences
+
+A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25, ...$.
+
+The quadratic sequence formula is:
+
+$a_{n} = a*n^2+b*n+c$
+
+where,
+* $a_{n}$ is the nth term, and
+* $a$, $b$ and $c$ are constants.
 
