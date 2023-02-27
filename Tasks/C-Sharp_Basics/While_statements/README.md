@@ -122,3 +122,9 @@ If _maxTerm_ is 29, the sum is 44 (15 + 29 = 44). If _maxTerm_ is 107, the sum i
 The algorithm you have to implement is shown on the flowchart diagram below.
 
 ![Quadratic Sequence 1 Diagram](images/qs-1.png)
+
+#### Sub-task 6
+
+Implement the method that returns the sum of _count_ quadratic sequence terms starting with the _startN_ term.
+
+For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the sum is 44 (15 + 29 = 44), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the sum is 153 (29 + 49 + 75 = 153).
