@@ -91,3 +91,7 @@ Implement the method that returns the sum of an arithmetic sequence elements whe
 $`\sum_{i=1}^{n} a+(i-1)*3=\sum_{i=0}^{n-1} a+i*3`$
 
 Introduce a constant to avoid magic numbers in your code.
+
+#### Sub-task 4
+
+Implement the method that returns the sum of an arithmetic sequence elements.
