@@ -12,11 +12,11 @@ Use the only *while* and *if-else* statements in this task. Using *for* or *do-w
 
 An *arithmetic sequence* is an ordered set of terms (numbers) that have a common difference between each consecutive term.
 
-The arithmetic sequence formula is given as,
+The arithmetic sequence formula is given as  
 
-$a_{n} = a+(n-1)*d$
+$a_{n} = a+(n-1)*d$   
 
-where,
+where   
 - $a_{n}$ is the nth term,
 - $a$ is the first term, and
 - d is the *common difference*
@@ -99,13 +99,13 @@ Implement the method that returns the sum of an arithmetic sequence elements.
 
 ### Quadratic Sequences
 
-A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25, ...$.
+A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25,$ ...
 
 The quadratic sequence formula is:
-
-$a_{n} = a*n^2+b*n+c$
-
-where,
+```math
+a_{n} = a*n^2+b*n+c 
+```
+where
 * $a_{n}$ is the nth term, and
 * $a$, $b$ and $c$ are constants.
 
@@ -115,7 +115,11 @@ Open the [QuadraticSequences.cs](WhileStatements/QuadraticSequences.cs) file.
 
 Implement the method that returns sum of a quadratic sequence terms that are less than _maxTerm_.
 
-The quadratic sequence with nth term $a_{n}=3*n^2+5*n+7$ is $\{ 15, 29, 49, 75, 107, 145, ...\}$.
+The quadratic sequence with nth term  
+```math
+a_{n}=3*n^2+5*n+7
+``` 
+is $\{ 15, 29, 49, 75, 107, 145, ...\}$
 
 If _maxTerm_ is 29, the sum is 44 (15 + 29 = 44). If _maxTerm_ is 107, the sum is 275 (15 + 29 + 49 + 75 + 107 = 275).
 
@@ -128,3 +132,4 @@ The algorithm you have to implement is shown on the flowchart diagram below.
 Implement the method that returns the sum of _count_ quadratic sequence terms starting with the _startN_ term.
 
 For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the sum is 44 (15 + 29 = 44), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the sum is 153 (29 + 49 + 75 = 153).
+
