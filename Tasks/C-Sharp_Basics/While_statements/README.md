@@ -133,3 +133,16 @@ Implement the method that returns the sum of _count_ quadratic sequence terms st
 
 For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the sum is 44 (15 + 29 = 44), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the sum is 153 (29 + 49 + 75 = 153).
 
+
+### Geometric Sequences
+
+A *geometric sequence* is a sequence of terms in which the ratio between consecutive terms is constant.
+
+The geometric sequence formula is given as,
+
+$a_{n} = a*r^n$
+
+where,
+* $a_{n}$ is the nth term,
+* $a$ is the first term, and
+* r is the common ratio
