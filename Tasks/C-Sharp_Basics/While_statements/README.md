@@ -173,13 +173,13 @@ Introduce a constant to avoid magic numbers in your code.
 
 Implement the method that counts terms in a geometric sequence that are less than or equal to _maxTerm_.
 
-If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 ($\{3\}$). If  _maxTerm_ is 24 the count equals to 4 ($\{3, 6, 12, 24\}$).
+If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 $(\{3\})$. If  _maxTerm_ is 24 the count equals to 4 $(\{3, 6, 12, 24\})$.
 
 #### Sub-task 10
 
 Implement the method that counts terms in a geometric sequence that are greater than or equal to a _minTerm_.
 
-For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ the count equals to 4 ($\{192, 384, 768, 1536\}$) when _n_ is 10 and the _minTerm_ is 192 . If _minTerm_ is 768 the count equals to 2 ($\{768, 1536\}$).
+For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ the count equals to 4 $(\{192, 384, 768, 1536\})$ when _n_ is 10 and the _minTerm_ is 192 . If _minTerm_ is 768 the count equals to 2 $(\{768, 1536\})$.
 
 
 ### Digits Of a Number
@@ -189,3 +189,8 @@ For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ 
 Open the [Digits.cs](WhileStatements/Digits.cs) file.
 
 Implement the method that finds the sum of the digits of an _n_ number. For the number 123 the sum of the digits is 6 (1 + 2 + 3).  
+
+#### Sub-task 12
+
+Implement the method that finds product of the digits of an _n_ number. For the number 123 the product of the digits is 6 (1 * 2 * 3).
+
