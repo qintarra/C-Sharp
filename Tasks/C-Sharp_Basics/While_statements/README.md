@@ -146,3 +146,17 @@ where,
 * $a_{n}$ is the nth term,
 * $a$ is the first term, and
 * r is the common ratio
+
+#### Sub-task 7
+
+Open the [GeometricSequences.cs](WhileStatements/GeometricSequences.cs) file.
+
+Implement the method that returns the sum of a geometric sequence terms.
+
+$$\sum_{i=1}^{n}a*r^{i-1}=\sum_{i=0}^{n-1}a*r^{i}=a+a*r^1+a*r^2+a*r^3+...+a*r^{n-1}$$
+
+Use an additional _while_ statement to raise an _r_ number to the power of _n_.
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 1 Diagram](images/gs-1.png)
