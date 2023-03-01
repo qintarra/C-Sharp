@@ -168,3 +168,9 @@ Implement the method that returns the sum of a geometric sequence terms when the
 $$\sum_{i=1}^{n}a*r^{i-1}=\sum_{i=0}^{n-1} 13*3^{i}=13+13*3^1+13*3^2+13*3^3+...+13*3^{n-1}$$
 
 Introduce a constant to avoid magic numbers in your code.
+
+#### Sub-task 9
+
+Implement the method that counts terms in a geometric sequence that are less than or equal to _maxTerm_.
+
+If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 ($\{3\}$). If  _maxTerm_ is 24 the count equals to 4 ($\{3, 6, 12, 24\}$).
