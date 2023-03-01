@@ -29,7 +29,7 @@ Implement the method that returns sum of an arithmetic sequence terms if the com
 
 $$\sum_{i=1}^{n} a+(i-1)*1=\sum_{i=0}^{n-1} a+i$$
 
-For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
+For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is 35 $(5 + 6 + 7 + 8 + 9)$.
 
 The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a _while_ statement, therefore a decision block is used it.
 
@@ -121,7 +121,7 @@ a_{n}=3*n^2+5*n+7
 ``` 
 is $\{ 15, 29, 49, 75, 107, 145, ...\}$
 
-If _maxTerm_ is 29, the sum is 44 (15 + 29 = 44). If _maxTerm_ is 107, the sum is 275 (15 + 29 + 49 + 75 + 107 = 275).
+If _maxTerm_ is 29, the sum is 44 $(15 + 29 = 44)$. If _maxTerm_ is 107, the sum is 275 $(15 + 29 + 49 + 75 + 107 = 275)$.
 
 The algorithm you have to implement is shown on the flowchart diagram below.
 
@@ -131,7 +131,7 @@ The algorithm you have to implement is shown on the flowchart diagram below.
 
 Implement the method that returns the sum of _count_ quadratic sequence terms starting with the _startN_ term.
 
-For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the sum is 44 (15 + 29 = 44), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the sum is 153 (29 + 49 + 75 = 153).
+For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the sum is 44 $(15 + 29 = 44)$, if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the sum is 153 $(29 + 49 + 75 = 153)$.
 
 
 ### Geometric Sequences
@@ -206,3 +206,7 @@ Implement the method that returns true when _n_ is a prime number; otherwise the
 #### Sub-task 14
 
 Implement the method that returns the latest prime number in the (0, n] interval.  
+
+#### Sub-task 15
+
+Implement the method that returns the sum of the latest _count_ prime numbers in the (0, n] interval.  
