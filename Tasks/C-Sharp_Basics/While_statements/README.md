@@ -188,9 +188,19 @@ For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ 
 
 Open the [Digits.cs](WhileStatements/Digits.cs) file.
 
-Implement the method that finds the sum of the digits of an _n_ number. For the number 123 the sum of the digits is 6 (1 + 2 + 3).  
+Implement the method that finds the sum of the digits of an _n_ number. For the number 123 the sum of the digits is 6 $(1 + 2 + 3)$.  
 
 #### Sub-task 12
 
-Implement the method that finds product of the digits of an _n_ number. For the number 123 the product of the digits is 6 (1 * 2 * 3).
+Implement the method that finds product of the digits of an _n_ number. For the number 123 the product of the digits is 6 $(1 * 2 * 3)$.
+
+
+### Prime Numbers
+
+#### Sub-task 13
+
+Open the [PrimeNumbers.cs](WhileStatements/PrimeNumbers.cs) file.
+
+Implement the method that returns true when _n_ is a prime number; otherwise the method returns false.
+
 
