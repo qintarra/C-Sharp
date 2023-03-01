@@ -180,3 +180,12 @@ If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. 
 Implement the method that counts terms in a geometric sequence that are greater than or equal to a _minTerm_.
 
 For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ the count equals to 4 ($\{192, 384, 768, 1536\}$) when _n_ is 10 and the _minTerm_ is 192 . If _minTerm_ is 768 the count equals to 2 ($\{768, 1536\}$).
+
+
+### Digits Of a Number
+
+#### Sub-task 11
+
+Open the [Digits.cs](WhileStatements/Digits.cs) file.
+
+Implement the method that finds the sum of the digits of an _n_ number. For the number 123 the sum of the digits is 6 (1 + 2 + 3).  
