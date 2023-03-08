@@ -47,5 +47,18 @@
             return sum;
         }
 
+        public static int SumArithmeticSequenceTerms4(int a, int d, int n)
+        {
+			// 1-4. Implement the method that returns sum of an arithmetic sequence terms.
+            int sum = 0, i = 0;
+
+            while (i < n)
+            {
+                sum += a + (i * d);
+                i++;
+            }
+
+            return sum;
+        }
     }
 }
