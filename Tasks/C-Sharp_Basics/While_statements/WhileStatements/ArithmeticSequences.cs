@@ -32,5 +32,20 @@
             return sum;
         }
 
+        public static int SumArithmeticSequenceTerms3(int a, int n)
+        {
+            // 1-3. Implement the method that returns sum of an arithmetic sequence terms.
+            const int commonDifference = 3;
+            int sum = 0, i = 0;
+
+            while (i < n)
+            {
+                sum += a + (i * commonDifference);
+                i++;
+            }
+
+            return sum;
+        }
+
     }
 }
