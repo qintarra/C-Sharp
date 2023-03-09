@@ -24,5 +24,29 @@
             return sum;
         }
 
+        public static uint SumGeometricSequenceTerms2(uint n)
+        {
+            // 3-2. Implement the method that returns sum of a geometric sequence terms.
+            const uint firstTerm = 13;
+            const uint commonRatio = 3;
+            uint sum = 0, i = 0;
+
+            while (i < n)
+            {
+                uint j = 0, rpow = 1;
+
+                while (j < i)
+                {
+                    rpow *= commonRatio;
+                    j++;
+                }
+
+                sum += firstTerm * rpow;
+                i++;
+            }
+
+            return sum;
+        }
+
     }
 }
