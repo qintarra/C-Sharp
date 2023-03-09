@@ -23,7 +23,18 @@
 
         public static long SumQuadraticSequenceTerms2(long a, long b, long c, long startN, long count)
         {
+            // 2-2. Implement the method that returns sum of count quadratic sequence terms.
+            long sum = 0;
+            long n = startN;
 
+            while (n < startN + count)
+            {
+                long term = (a * n * n) + (b * n) + c;
+                sum += term;
+                n++;
+            }
+
+            return sum;
         }
     }
 }
