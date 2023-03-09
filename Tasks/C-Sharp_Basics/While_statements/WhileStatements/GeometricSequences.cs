@@ -74,5 +74,24 @@
             return j;
         }
 
+        public static uint CountGeometricSequenceTerms4(uint a, uint r, uint n, uint minTerm)
+        {
+            // 3-4. Implement the method that returns count of a geometric sequence terms.
+            uint count = 0, i = 0;
+            uint term = a;
+
+            while (i < n)
+            {
+                if (term >= minTerm)
+                {
+                    count++;
+                }
+
+                term *= r;
+                i++;
+            }
+
+            return count;
+        }
     }
 }
