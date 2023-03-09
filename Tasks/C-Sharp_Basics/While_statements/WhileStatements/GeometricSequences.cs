@@ -48,5 +48,31 @@
             return sum;
         }
 
+        public static uint CountGeometricSequenceTerms3(uint a, uint r, uint maxTerm)
+        {
+            // 3-3. Implement the method that returns count of a geometric sequence terms.
+            uint i = 0, j = 0, rpow = 1, term = 0;
+
+            if (maxTerm < a)
+            {
+                return term;
+            }
+
+            while (term <= maxTerm)
+            {
+                term = a * r * rpow;
+
+                while (j <= i)
+                {
+                    rpow *= r;
+                    j++;
+                }
+
+                i++;
+            }
+
+            return j;
+        }
+
     }
 }
