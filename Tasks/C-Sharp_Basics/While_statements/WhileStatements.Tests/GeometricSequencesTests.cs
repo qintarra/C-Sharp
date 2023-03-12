@@ -53,5 +53,22 @@
             return GeometricSequences.SumGeometricSequenceTerms2(n);
         }
 
+        [TestCase(3u, 2u, 2u, ExpectedResult = 0u)]
+        [TestCase(3u, 2u, 3u, ExpectedResult = 1u)]
+        [TestCase(3u, 2u, 6u, ExpectedResult = 2u)]
+        [TestCase(3u, 2u, 12u, ExpectedResult = 3u)]
+        [TestCase(3u, 2u, 24u, ExpectedResult = 4u)]
+        [TestCase(3u, 2u, 48u, ExpectedResult = 5u)]
+        [TestCase(3u, 2u, 96u, ExpectedResult = 6u)]
+        [TestCase(3u, 2u, 192u, ExpectedResult = 7u)]
+        [TestCase(3u, 2u, 384u, ExpectedResult = 8u)]
+        [TestCase(3u, 2u, 768u, ExpectedResult = 9u)]
+        [TestCase(3u, 2u, 1536u, ExpectedResult = 10u)]
+        [TestCase(3u, 2u, 3072u, ExpectedResult = 11u)]
+        public uint CountGeometricSequenceTerms3_ReturnsTermCount(uint a, uint r, uint maxTerm)
+        {
+            return GeometricSequences.CountGeometricSequenceTerms3(a, r, maxTerm);
+        }
+
     }
 }
