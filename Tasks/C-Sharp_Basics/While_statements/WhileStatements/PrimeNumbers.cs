@@ -25,5 +25,21 @@
             return true;
         }
 
+        public static uint GetLastPrimeNumber(uint n)
+        {
+            // 5-2. Implement the method that returns the latest prime number is (0, n] interval.
+            while (n >= 2)
+            {
+                if (IsPrimeNumber(n))
+                {
+                    return n;
+                }
+
+                n--;
+            }
+
+            return 0;
+        }
+
     }
 }
