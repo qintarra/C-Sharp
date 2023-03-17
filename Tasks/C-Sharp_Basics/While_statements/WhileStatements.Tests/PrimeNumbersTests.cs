@@ -39,5 +39,53 @@
             return PrimeNumbers.IsPrimeNumber(n);
         }
 
+        [TestCase(0u, ExpectedResult = 0u)]
+        [TestCase(1u, ExpectedResult = 0u)]
+        [TestCase(2u, ExpectedResult = 2u)]
+        [TestCase(3u, ExpectedResult = 3u)]
+        [TestCase(4u, ExpectedResult = 3u)]
+        [TestCase(5u, ExpectedResult = 5u)]
+        [TestCase(6u, ExpectedResult = 5u)]
+        [TestCase(7u, ExpectedResult = 7u)]
+        [TestCase(8u, ExpectedResult = 7u)]
+        [TestCase(9u, ExpectedResult = 7u)]
+        [TestCase(10u, ExpectedResult = 7u)]
+        [TestCase(11u, ExpectedResult = 11u)]
+        [TestCase(12u, ExpectedResult = 11u)]
+        [TestCase(13u, ExpectedResult = 13u)]
+        [TestCase(14u, ExpectedResult = 13u)]
+        [TestCase(15u, ExpectedResult = 13u)]
+        [TestCase(16u, ExpectedResult = 13u)]
+        [TestCase(17u, ExpectedResult = 17u)]
+        [TestCase(18u, ExpectedResult = 17u)]
+        [TestCase(19u, ExpectedResult = 19u)]
+        [TestCase(20u, ExpectedResult = 19u)]
+        [TestCase(21u, ExpectedResult = 19u)]
+        [TestCase(22u, ExpectedResult = 19u)]
+        [TestCase(23u, ExpectedResult = 23u)]
+        [TestCase(23u, ExpectedResult = 23u)]
+        [TestCase(24u, ExpectedResult = 23u)]
+        [TestCase(25u, ExpectedResult = 23u)]
+        [TestCase(26u, ExpectedResult = 23u)]
+        [TestCase(27u, ExpectedResult = 23u)]
+        [TestCase(28u, ExpectedResult = 23u)]
+        [TestCase(29u, ExpectedResult = 29u)]
+        [TestCase(30u, ExpectedResult = 29u)]
+        [TestCase(31u, ExpectedResult = 31u)]
+        [TestCase(32u, ExpectedResult = 31u)]
+        [TestCase(37u, ExpectedResult = 37u)]
+        [TestCase(40u, ExpectedResult = 37u)]
+        [TestCase(41u, ExpectedResult = 41u)]
+        [TestCase(42u, ExpectedResult = 41u)]
+        [TestCase(43u, ExpectedResult = 43u)]
+        [TestCase(46u, ExpectedResult = 43u)]
+        [TestCase(47u, ExpectedResult = 47u)]
+        [TestCase(52u, ExpectedResult = 47u)]
+        [TestCase(53u, ExpectedResult = 53u)]
+        public uint GetLastPrimeNumber(uint n)
+        {
+            return PrimeNumbers.GetLastPrimeNumber(n);
+        }
+
     }
 }
