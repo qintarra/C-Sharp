@@ -12,7 +12,7 @@ If you have issues with running test cases for huge _n_ numbers, check your code
 
 #### Sub-task 1
 
-Implement the method to sum the sequence elements $`^1/_1+^1/_2+^1/_3+...+^1/_n`$:
+Implement the method to sum the sequence elements $^1/_1+^1/_2+^1/_3+...+^1/_n$:
 
 $\sum_{i=1}^{n}\frac{1}{i}$
 
@@ -21,7 +21,7 @@ $\sum_{i=1}^{n}\frac{1}{i}$
 
 #### Sub-task 2
 
-Implement the method to sum the sequence elements $^1/_{1\cdot 2}-^1/_{2\cdot 3}+^1/_{3\cdot 4}-...+^{(-1)^{n+1}}/_{n\cdot (n+1)}$:
+Implement the method to sum the sequence elements $^1/_{1\cdot 2}-^1/ _{2\cdot 3}+^1/ _{3\cdot 4}-...+^{(-1)^{n+1}}/ _{n\cdot (n+1)}$:
 
 $\sum_{i=1}^{n}\frac{(-1)^{i+1}}{i\cdot (i+1)}$
 
@@ -32,7 +32,7 @@ To raise a number to the required power use a _while_ statement. Don't use the _
 
 #### Sub-task 3
 
-Implement the method to sum the sequence elements $^1/_{1^5}+^1/_{2^5}+^1/_{3^5}+...+^1/_{n^5}$:
+Implement the method to sum the sequence elements $^1/_{1^5}+^1/ _{2^5}+^1/ _{3^5}+...+^1/ _{n^5}$:
 
 $\sum_{i=1}^{n}\frac{1}{i^5}$
 
@@ -41,7 +41,7 @@ $\sum_{i=1}^{n}\frac{1}{i^5}$
 
 #### Sub-task 4
 
-Implement the method to sum the sequence elements $^1/_{3^2}+^1/_{5^2}+^1/_{7^2}+...+^1/_{(2\cdot n+1)^2}$:
+Implement the method to sum the sequence elements $^1/_{3^2}+^1/ _{5^2}+^1/ _{7^2}+...+^1/ _{(2\cdot n+1)^2}$:
 
 $\sum_{i=1}^{n}\frac{1}{(2\cdot i+1)^2}$
 
@@ -52,7 +52,7 @@ Use a _while_ statement to raise a number to the required power. Don't use _Math
 
 #### Sub-task 5
 
-Implement the method to get the product of the sequence $(1+^1/_{1^2})\cdot(1+^1/_{2^2})\cdot(1+^1/_{3^2})\cdot...\cdot(1+^1/_{n^2})$:
+Implement the method to get the product of the sequence $(1+^1/ _{1^2})\cdot(1+^1/ _{2^2})\cdot(1+^1/ _{3^2})\cdot...\cdot(1+^1/ _{n^2})$:
 
 $\prod_{i=1}^{n} 1+\frac{1}{i^2}$
 
@@ -61,7 +61,7 @@ $\prod_{i=1}^{n} 1+\frac{1}{i^2}$
 
 #### Sub-task 6
 
-Implement the method to sum the sequence elements $^{-1}/_3+^1/_5+^{-1}/_{7}+...+^{(-1)^n}/_{(2\cdot n+1)}$
+Implement the method to sum the sequence elements $^{-1}/_3+^1/_5+^{-1}/ _{7}+...+^{(-1)^n}/ _{(2\cdot n+1)}$
 
 $\sum_{i=1}^{n}\frac{(-1)^i}{2\cdot i + 1}$
 
