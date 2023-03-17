@@ -37,3 +37,14 @@ Implement the method to sum the sequence elements $^1/_{1^5}+^1/_{2^5}+^1/_{3^5}
 $\sum_{i=1}^{n}\frac{1}{i^5}$
 
 , where _n_ > 0.
+
+
+#### Sub-task 4
+
+Implement the method to sum the sequence elements $^1/_{3^2}+^1/_{5^2}+^1/_{7^2}+...+^1/_{(2\cdot n+1)^2}$:
+
+$\sum_{i=1}^{n}\frac{1}{(2\cdot i+1)^2}$
+
+, where _n_ > 0.
+
+Use a _while_ statement to raise a number to the required power. Don't use _Math.Pow_ method. 
