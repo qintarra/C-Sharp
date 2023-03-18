@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Interfaces
 {
-    public class Client
+    public class Client : IEnumerable<Deposit>
     {
         private readonly Deposit[] deposits;
         public Client()
@@ -59,7 +59,32 @@ namespace Interfaces
                 return 0;
             }
         }
-
+        public IEnumerator<Deposit> GetEnumerator()
+        {
+            foreach (Deposit deposit in deposits)
+            {
+                yield return deposit;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+        public void SortDeposits()
+        {
+            Array.Sort(deposits, (x, y) => Comparer<Deposit>.Default.Compare(y, x));
+        }
+        public int CountPossibleToProlongDeposit()
+        {
+            int amount = 0;
+            foreach (Deposit deposit in deposits)
+            {
+                if (deposit is IProlongable p && p.CanToProlong())
+                {
+                    amount++;
+                }
+            }
+            return amount;
         }
     }
 }
