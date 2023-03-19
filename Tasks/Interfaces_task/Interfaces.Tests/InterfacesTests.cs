@@ -20,5 +20,12 @@ namespace Interfaces.Tests
             }
         }
 
+        private Type GetCustomType(string name, string message)
+        {
+            var type = Type.GetType($"{AssemblyName}.{name}, {AssemblyName}");
+            AssertFailIfNull(type, message);
+            return type;
+        }
+
     }
 }
