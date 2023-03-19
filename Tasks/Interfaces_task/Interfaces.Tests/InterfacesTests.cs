@@ -99,5 +99,27 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Deposit", "Income", typeof(decimal))]
+        [TestCase("BaseDeposit", "Income", typeof(decimal))]
+        [TestCase("SpecialDeposit", "Income", typeof(decimal))]
+        [TestCase("LongDeposit", "Income", typeof(decimal))]
+        [TestCase("Client", "AddDeposit", typeof(bool))]
+        [TestCase("Client", "TotalIncome", typeof(decimal))]
+        [TestCase("Client", "MaxIncome", typeof(decimal))]
+        [TestCase("Client", "GetIncomeByNumber", typeof(decimal))]
+        public void Class_HasMethodsWithCorrectSignatures(string className, string methodName, Type returnType)
+        {
+            var classType = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+            AssertFailIfNull(classType, $"Class '{className}'");
+
+            var methodType = classType.GetMethod(methodName);
+            AssertFailIfNull(methodType, $"Method '{methodName}'");
+
+            if (methodType.ReturnType != returnType)
+            {
+                Assert.Fail($"Class '{className}' doesn't have method with name '{methodName}' that returns '{returnType}'.");
+            }
+        }
+
     }
 }
