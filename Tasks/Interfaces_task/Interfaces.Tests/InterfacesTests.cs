@@ -82,5 +82,22 @@ namespace Interfaces.Tests
             AssertFailIfNull(type, $"Class '{className}'");
         }
 
+        [TestCase("Deposit", "BaseDeposit")]
+        [TestCase("Deposit", "SpecialDeposit")]
+        [TestCase("Deposit", "LongDeposit")]
+        public void Class_IsClassInheritsFromClass(string parentClassName, string childClassName)
+        {
+            var parentType = Type.GetType($"{AssemblyName}.{parentClassName}, {AssemblyName}");
+            var childType = Type.GetType($"{AssemblyName}.{childClassName}, {AssemblyName}");
+
+            AssertFailIfNull(parentType, $"Class '{parentClassName}'");
+            AssertFailIfNull(childType, $"Class '{childClassName}'");
+
+            if (!parentType.IsAbstract && !childType.IsSubclassOf(parentType))
+            {
+                Assert.Fail($"Class '{childType}' doesn't inherit from '{parentType}'");
+            }
+        }
+
     }
 }
