@@ -57,5 +57,18 @@ namespace Interfaces.Tests
             }
         }
 
+        [Test]
+        public void Deposit_IsAbstractClassOrExists()
+        {
+            var type = Type.GetType($"{AssemblyName}.Deposit, {AssemblyName}");
+
+            AssertFailIfNull(type, "Class 'Deposit'");
+
+            if (!type.IsAbstract)
+            {
+                Assert.Fail("Class 'Deposit' is not abstract.");
+            }
+        }
+
     }
 }
