@@ -70,5 +70,17 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Deposit")]
+        [TestCase("BaseDeposit")]
+        [TestCase("SpecialDeposit")]
+        [TestCase("LongDeposit")]
+        [TestCase("Client")]
+        public void Class_IsClassExists(string className)
+        {
+            var type = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+
+            AssertFailIfNull(type, $"Class '{className}'");
+        }
+
     }
 }
