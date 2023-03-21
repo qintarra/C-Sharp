@@ -30,5 +30,18 @@
             return sum;
         }
 
+        public static int SumArithmeticSequenceTerms3(int a, int n)
+        {
+            // Task 3. Implement the method that returns sum of an arithmetic sequence terms.
+            int commonDifference = 5;
+            int sum = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += a + (i * commonDifference);
+            }
+
+            return sum;
+        }
     }
 }
