@@ -42,5 +42,18 @@
             return product;
         }
 
+        public static ulong GetQuadraticSequenceProduct2(long a, long b, long c, long startN, long count)
+        {
+            // Task 8. Implement the method that returns the product of count quadratic sequence terms starting with the startN term.
+            ulong product = 1;
+
+            for (long n = startN; n < startN + count; n++)
+            {
+                long term = (a * n * n) + (b * n) + c;
+                product *= (ulong)term;
+            }
+
+            return product;
+        }
     }
 }
