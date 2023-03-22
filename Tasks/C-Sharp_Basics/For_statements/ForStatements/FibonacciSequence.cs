@@ -4,7 +4,7 @@
     {
         public static int GetFibonacciNumber(int n)
         {
-            // Task 9. Implement the method that returns a Fibonacci sequence number.
+            // Task 9. Implement the method that returns a Fibonacci sequence number.  
             int current = 0;
             int next = 1;
 
@@ -20,7 +20,7 @@
 
         public static ulong GetProductOfFibonacciNumberDigits(ulong n)
         {
-            // Task 10. Implement the method that returns the product of digits of the Fibonacci sequence number.
+            // Task 10. Implement the method that returns the product of digits of the Fibonacci sequence number.  
             int fibonacci = GetFibonacciNumber((int)n);
             int product = 1;
 
