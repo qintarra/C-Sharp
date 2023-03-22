@@ -41,5 +41,21 @@ namespace ForStatements.Tests
             return ArithmeticSequences.SumArithmeticSequenceTerms1(a, n);
         }
 
+        [TestCase(0, ExpectedResult = 0)]
+        [TestCase(1, ExpectedResult = 47)]
+        [TestCase(2, ExpectedResult = 107)]
+        [TestCase(3, ExpectedResult = 180)]
+        [TestCase(4, ExpectedResult = 266)]
+        [TestCase(5, ExpectedResult = 365)]
+        [TestCase(6, ExpectedResult = 477)]
+        [TestCase(7, ExpectedResult = 602)]
+        [TestCase(8, ExpectedResult = 740)]
+        [TestCase(9, ExpectedResult = 891)]
+        [TestCase(10, ExpectedResult = 1055)]
+        public int SumArithmeticSequenceTerms2_ReturnsSum(int n)
+        {
+            return ArithmeticSequences.SumArithmeticSequenceTerms2(n);
+        }
+
     }
 }
