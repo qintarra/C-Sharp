@@ -28,5 +28,19 @@
             return count;
         }
 
+        public static ulong GetQuadraticSequenceTermsProduct1(uint count)
+        {
+            // Task 7. Implement the method that returns the product of the first count quadratic sequence terms.
+            ulong product = 1;
+
+            for (uint n = 1; n <= count; n++)
+            {
+                ulong term = (7 * n * n) + (4 * n) + 2;
+                product *= term;
+            }
+
+            return product;
+        }
+
     }
 }
