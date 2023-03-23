@@ -35,5 +35,34 @@
         {
             return QuadraticSequences.GetQuadraticSequenceTermsProduct1(count);
         }
+
+        [TestCase(3, 5, 7, 1, 1, ExpectedResult = 15ul)]
+        [TestCase(3, 5, 7, 1, 2, ExpectedResult = 435ul)]
+        [TestCase(3, 5, 7, 1, 3, ExpectedResult = 21_315ul)]
+        [TestCase(3, 5, 7, 1, 4, ExpectedResult = 1_598_625ul)]
+        [TestCase(3, 5, 7, 1, 5, ExpectedResult = 171_052_875ul)]
+        [TestCase(3, 5, 7, 1, 6, ExpectedResult = 24_802_666_875ul)]
+        [TestCase(3, 5, 7, 1, 7, ExpectedResult = 4_687_704_039_375ul)]
+        [TestCase(3, 5, 7, 1, 8, ExpectedResult = 1_120_361_265_410_625ul)]
+        [TestCase(3, 5, 7, 1, 9, ExpectedResult = 330_506_573_296_134_375ul)]
+        [TestCase(3, 5, 7, 2, 1, ExpectedResult = 29ul)]
+        [TestCase(3, 5, 7, 2, 2, ExpectedResult = 1_421ul)]
+        [TestCase(3, 5, 7, 2, 3, ExpectedResult = 106_575ul)]
+        [TestCase(3, 5, 7, 2, 4, ExpectedResult = 11_403_525ul)]
+        [TestCase(3, 5, 7, 2, 5, ExpectedResult = 1_653_511_125ul)]
+        [TestCase(3, 5, 7, 2, 6, ExpectedResult = 312_513_602_625ul)]
+        [TestCase(3, 5, 7, 2, 7, ExpectedResult = 74_690_751_027_375ul)]
+        [TestCase(3, 5, 7, 2, 8, ExpectedResult = 22_033_771_553_075_625ul)]
+        [TestCase(3, 5, 7, 2, 9, ExpectedResult = 7_866_056_444_447_998_125ul)]
+        [TestCase(3, 5, 7, 8, 1, ExpectedResult = 239ul)]
+        [TestCase(3, 5, 7, 8, 2, ExpectedResult = 70_505ul)]
+        [TestCase(3, 5, 7, 8, 3, ExpectedResult = 25_170_285ul)]
+        [TestCase(3, 5, 7, 9, 1, ExpectedResult = 295ul)]
+        [TestCase(3, 5, 7, 9, 2, ExpectedResult = 105_315ul)]
+        [TestCase(3, 5, 7, 10, 1, ExpectedResult = 357)]
+        public ulong GetQuadraticSequenceProduct2_ReturnsSum(long a, long b, long c, long startN, long count)
+        {
+            return QuadraticSequences.GetQuadraticSequenceProduct2(a, b, c, startN, count);
+        }
     }
 }
