@@ -22,5 +22,18 @@
         {
             return QuadraticSequences.CountQuadraticSequenceTerms(a, b, c, maxTerm);
         }
+
+        [TestCase(1u, ExpectedResult = 13ul)]
+        [TestCase(2u, ExpectedResult = 494ul)]
+        [TestCase(3u, ExpectedResult = 38_038ul)]
+        [TestCase(4u, ExpectedResult = 4_944_940ul)]
+        [TestCase(5u, ExpectedResult = 974_153_180ul)]
+        [TestCase(6u, ExpectedResult = 270_814_584_040ul)]
+        [TestCase(7u, ExpectedResult = 101_013_839_846_920ul)]
+        [TestCase(8u, ExpectedResult = 48_688_670_806_215_440ul)]
+        public ulong GetQuadraticSequenceTermsProduct1_ReturnsProduct(uint count)
+        {
+            return QuadraticSequences.GetQuadraticSequenceTermsProduct1(count);
+        }
     }
 }
