@@ -22,5 +22,27 @@
             return product;
         }
 
+        public static ulong SumGeometricSequenceTerms(uint n)
+        {
+            // Task 12. Implement the method that returns sum of a geometric sequence terms when the first term is 5 and the common ratio is 3.
+            const uint firstTerm = 5;
+            const uint commonRatio = 3;
+            uint sum = 0;
+
+            for (uint i = 0; i < n; i++)
+            {
+                uint rpow = 1;
+
+                for (uint j = 0; j < i; j++)
+                {
+                    rpow *= commonRatio;
+                }
+
+                sum += firstTerm * rpow;
+            }
+
+            return sum;
+        }
+
     }
 }
