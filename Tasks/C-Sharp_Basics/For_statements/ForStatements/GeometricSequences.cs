@@ -65,5 +65,37 @@
             return j;
         }
 
+        public static ulong CountGeometricSequenceTerms2(uint a, uint r, uint n, uint minTerm)
+        {
+            // Task 14. Implement the method that counts terms in a geometric sequence that are greater than or equal to a minTerm.
+            uint i = n - 1;
+            uint rpow = 1;
+
+            for (uint j = 0; j < i; j++)
+            {
+                rpow *= r;
+            }
+
+            uint term = a * rpow;
+
+            if (term < minTerm && i == n - 1)
+            {
+                return 0;
+            }
+
+            for (; ;)
+            {
+                if (term <= minTerm || i == 0)
+                {
+                    break;
+                }
+
+                i--;
+                rpow /= r;
+                term = a * rpow;
+            }
+
+            return n - i;
+        }
     }
 }
