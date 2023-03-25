@@ -70,5 +70,32 @@
             return GeometricSequences.CountGeometricSequenceTerms1(a, r, maxTerm);
         }
 
+        [TestCase(3u, 2u, 10u, 1537u, ExpectedResult = 0ul)]
+        [TestCase(3u, 2u, 10u, 1536u, ExpectedResult = 1ul)]
+        [TestCase(3u, 2u, 10u, 768u, ExpectedResult = 2ul)]
+        [TestCase(3u, 2u, 10u, 384u, ExpectedResult = 3ul)]
+        [TestCase(3u, 2u, 10u, 192u, ExpectedResult = 4ul)]
+        [TestCase(3u, 2u, 10u, 96u, ExpectedResult = 5ul)]
+        [TestCase(3u, 2u, 10u, 48u, ExpectedResult = 6ul)]
+        [TestCase(3u, 2u, 10u, 24u, ExpectedResult = 7ul)]
+        [TestCase(3u, 2u, 10u, 12u, ExpectedResult = 8ul)]
+        [TestCase(3u, 2u, 10u, 6u, ExpectedResult = 9ul)]
+        [TestCase(3u, 2u, 10u, 3u, ExpectedResult = 10ul)]
+        [TestCase(3u, 2u, 10u, 0u, ExpectedResult = 10ul)]
+        [TestCase(3u, 2u, 9u, 769u, ExpectedResult = 0ul)]
+        [TestCase(3u, 2u, 9u, 768u, ExpectedResult = 1ul)]
+        [TestCase(3u, 2u, 9u, 384u, ExpectedResult = 2ul)]
+        [TestCase(3u, 2u, 9u, 192u, ExpectedResult = 3ul)]
+        [TestCase(3u, 2u, 9u, 96u, ExpectedResult = 4ul)]
+        [TestCase(3u, 2u, 9u, 48u, ExpectedResult = 5ul)]
+        [TestCase(3u, 2u, 9u, 24u, ExpectedResult = 6ul)]
+        [TestCase(3u, 2u, 9u, 12u, ExpectedResult = 7ul)]
+        [TestCase(3u, 2u, 9u, 6u, ExpectedResult = 8ul)]
+        [TestCase(3u, 2u, 9u, 3u, ExpectedResult = 9ul)]
+        [TestCase(3u, 2u, 9u, 0u, ExpectedResult = 9ul)]
+        public ulong CountGeometricSequenceTerms4_ReturnsTermCount(uint a, uint r, uint n, uint minTerm)
+        {
+            return GeometricSequences.CountGeometricSequenceTerms2(a, r, n, minTerm);
+        }
     }
 }
