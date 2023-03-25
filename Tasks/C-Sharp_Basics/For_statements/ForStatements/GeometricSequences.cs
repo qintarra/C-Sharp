@@ -44,5 +44,26 @@
             return sum;
         }
 
+        public static ulong CountGeometricSequenceTerms1(uint a, uint r, uint maxTerm)
+        {
+            // Task 13. Implement the method that counts terms in a geometric sequence that are less than or equal to the maxTerm.
+            uint term = a;
+            uint rpow = 1;
+            uint j = 0;
+            ulong i = 0;
+            for (; term <= maxTerm;)
+            {
+                for (; j < i; j++)
+                {
+                    rpow *= r;
+                }
+
+                term = a * rpow;
+                i++;
+            }
+
+            return j;
+        }
+
     }
 }
