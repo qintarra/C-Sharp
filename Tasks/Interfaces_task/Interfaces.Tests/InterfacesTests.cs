@@ -175,5 +175,36 @@ namespace Interfaces.Tests
             }
         }
 
+        [Test]
+        public void Client_ConstructorCreatesArrayOfDepositsWithSize10()
+        {
+            var client = GetCustomType("Client", "Class 'Client'");
+            var deposit = GetCustomType("Deposit", "Class 'Deposit'");
+
+            var fieldType = client.GetField("deposits", BindingFlags.NonPublic | BindingFlags.Instance);
+            AssertFailIfNull(fieldType, "Field 'deposits'");
+
+            var constructor = client.GetConstructor(Type.EmptyTypes);
+            AssertFailIfNull(constructor, "Constructor of 'Client'");
+
+            var invokedConstructor = constructor.Invoke(Type.EmptyTypes);
+            var depositsField = (Array)fieldType.GetValue(invokedConstructor);
+            AssertFailIfNull(depositsField, "Field 'deposits'");
+            var arrayOfDeposits = Array.CreateInstance(deposit, 10);
+
+            if (depositsField.Length != 10)
+            {
+                Assert.Fail("Property 'deposits' must be of type array of deposits with length 10.");
+            }
+
+            for (int i = 0; i < depositsField.Length; i++)
+            {
+                if (depositsField.GetValue(i) != arrayOfDeposits.GetValue(i))
+                {
+                    Assert.Fail("Constructor in class 'Client' works incorrectly.");
+                }
+            }
+        }
+
     }
 }
