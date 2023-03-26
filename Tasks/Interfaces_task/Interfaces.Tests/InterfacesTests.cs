@@ -327,5 +327,47 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("BaseDeposit", 1000, 1, 50 * 5)]
+        [TestCase("LongDeposit", 1000, 7, 150 * 5)]
+        [TestCase("SpecialDeposit", 1000, 1, 10 * 5)]
+        public void Client_TotalIncome_ReturnsSumOfIncomeOfAllDeposits(string className, decimal amount, int period,
+            decimal expectedIncome)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", "Class 'Client'");
+            var deposit = GetCustomType(className, $"Class '{className}'");
+
+            var clientObject = Activator.CreateInstance(clientType);
+            var depositObject = Activator.CreateInstance(deposit, amount, period);
+
+            var AddDepositMethod = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(AddDepositMethod, "Method 'AddDeposit'");
+
+            //act
+            for (int i = 0; i < 5; i++)
+            {
+                AddDepositMethod.Invoke(clientObject, new object[] {depositObject});
+            }
+
+            var TotalIncomeMethod = clientType.GetMethod("TotalIncome");
+            AssertFailIfNull(TotalIncomeMethod, "Method 'TotalIncome'");
+
+            decimal result = 0;
+
+            try
+            {
+                result = (decimal) TotalIncomeMethod.Invoke(clientObject, Type.EmptyTypes);
+            }
+            catch
+            {
+                Assert.Fail("Method 'TotalIncome' should check if the element in 'deposits' is null");
+            }
+
+            if (expectedIncome != result)
+            {
+                Assert.Fail();
+            }
+        }
+
     }
 }
