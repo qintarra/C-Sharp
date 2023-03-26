@@ -224,6 +224,51 @@ namespace Interfaces.Tests
                 Assert.Fail($"Class {className} has invalid constructor.");
             }
         }
+        
+        [TestCase(1, "BaseDeposit", typeof(decimal), typeof(int))]
+        [TestCase(5, "LongDeposit", typeof(decimal), typeof(int))]
+        [TestCase(7, "SpecialDeposit", typeof(decimal), typeof(int))]
+        [TestCase(0, "BaseDeposit", typeof(decimal), typeof(int))]
+        public void Client_AddDeposit_AddsObjectToFirstFreePlace(int addCount, string className, params Type[] parameters)
+        {
+            var clientType = GetCustomType("Client", "Class 'Client'");
+            var deposit = GetCustomType(className, $"Class '{className}'");
+
+            var clientObject = Activator.CreateInstance(clientType);
+            
+            var constructor = deposit.GetConstructor(parameters);
+            AssertFailIfNull(constructor, $"Constructor in class '{className}'");
+
+            if (constructor == null && !constructor.IsPublic)
+            {
+                Assert.Fail($"Constructor of class '{className}' doesn't exist.");
+            }
+            var depositObject = Activator.CreateInstance(deposit, 1000m, 1);
+
+            var depositField = clientType.GetField("deposits", BindingFlags.NonPublic | BindingFlags.Instance);
+            AssertFailIfNull(depositField, "Field 'deposits'");
+
+            var method = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(method, "Method 'AddDeposit'");
+
+            for (int i = 0; i < addCount; i++)
+            {
+                method.Invoke(clientObject, new object[] {depositObject});
+            }
+
+            var objArray = (Array) depositField.GetValue(clientObject);
+            var array = Array.CreateInstance(deposit, 10);
+            Array.Copy(objArray, array, 10);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if ((i < addCount && array.GetValue(i) == null)
+                    || (i > addCount && array.GetValue(i) != null))
+                {
+                    Assert.Fail("Method 'AddDeposit' in class 'Client' works incorrectly.");
+                }
+            }
+        }
 
     }
 }
