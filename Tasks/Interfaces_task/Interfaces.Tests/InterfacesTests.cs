@@ -270,5 +270,31 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("BaseDeposit")]
+        [TestCase("LongDeposit")]
+        [TestCase("SpecialDeposit")]
+        [TestCase("BaseDeposit")]
+        public void Client_AddDeposit_ReturnsTrueIfArrayHasFreePlace(string className)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", "Class 'Client'");
+            var deposit = GetCustomType(className, $"Class '{className}'");
+
+            var clientObject = Activator.CreateInstance(clientType);
+            var depositObject = Activator.CreateInstance(deposit, 1000m, 1);
+
+            var method = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(method, "Method 'AddDeposit'");
+
+            //act
+            var hasFreePlace = (bool) method.Invoke(clientObject, new object[] {depositObject});
+
+            //assert
+            if (!hasFreePlace)
+            {
+                Assert.Fail("Method 'AddDeposit' in class 'Client' works incorrectly.");
+            }
+        }
+
     }
 }
