@@ -369,5 +369,40 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase(
+            "BaseDeposit", 1000, 1,
+            "LongDeposit", 1000, 7,
+            "SpecialDeposit", 1000, 1,
+            150)]
+        public void Client_MaxIncome_ReturnsMaxIncomeOfAllDeposits(string className1, decimal amount1, int period1,
+            string className2, decimal amount2, int period2, string className3, decimal amount3, int period3,
+            decimal expectedMaxIncome)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", "Class 'Client'");
+            var deposit1 = GetCustomType(className1, $"Class '{className1}'");
+            var deposit2 = GetCustomType(className2, $"Class '{className2}'");
+            var deposit3 = GetCustomType(className3, $"Class '{className3}'");
+
+            var clientObject = Activator.CreateInstance(clientType);
+            var depositObject1 = Activator.CreateInstance(deposit1, amount1, period1);
+            var depositObject2 = Activator.CreateInstance(deposit2, amount2, period2);
+            var depositObject3 = Activator.CreateInstance(deposit3, amount3, period3);
+
+            var AddDepositMethod = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(AddDepositMethod, "Method 'AddDeposit'");
+
+            for (int i = 0; i < 3; i++)
+            {
+                AddDepositMethod.Invoke(clientObject, new object[] {depositObject1});
+                AddDepositMethod.Invoke(clientObject, new object[] {depositObject2});
+                AddDepositMethod.Invoke(clientObject, new object[] {depositObject3});
+            }
+
+            var MaxIncomeMethod = clientType.GetMethod("MaxIncome");
+            AssertFailIfNull(MaxIncomeMethod, "Method 'MaxIncome'");
+            
+            decimal result = 0;
+
     }
 }
