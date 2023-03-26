@@ -121,5 +121,20 @@ namespace Interfaces.Tests
             }
         }
 
+        [Test]
+        public void Deposit_HasAbstractMethodIncome()
+        {
+            var classType = Type.GetType($"{AssemblyName}.Deposit, {AssemblyName}");
+            AssertFailIfNull(classType, $"Class 'Deposit'");
+
+            var methodType = classType.GetMethod("Income");
+            AssertFailIfNull(methodType, $"Method 'Income'");
+
+            if (!methodType.IsAbstract)
+            {
+                Assert.Fail("Method 'Income' is not abstract.");
+            }
+        }
+
     }
 }
