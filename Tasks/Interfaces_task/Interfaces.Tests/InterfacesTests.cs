@@ -158,5 +158,22 @@ namespace Interfaces.Tests
             }
         }
 
+        [Test]
+        public void Client_HasPrivatePropertyDeposits()
+        {
+            var client = GetCustomType("Client", "Class 'Client'");
+            var deposit = GetCustomType("Deposit", "Class 'Deposit'");
+
+            var fieldType = client.GetField("deposits", BindingFlags.NonPublic | BindingFlags.Instance);
+            AssertFailIfNull(fieldType, "Field 'deposits'");
+
+            var arrayOfDeposits = Array.CreateInstance(deposit, 10).GetType();
+
+            if (!fieldType.IsPrivate && fieldType.FieldType != arrayOfDeposits)
+            {
+                Assert.Fail("Property 'deposits' in class 'Client' is incorrect.");
+            }
+        }
+
     }
 }
