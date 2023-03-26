@@ -404,5 +404,20 @@ namespace Interfaces.Tests
             
             decimal result = 0;
 
+            try
+            {
+                result = (decimal) MaxIncomeMethod.Invoke(clientObject, Type.EmptyTypes);
+            }
+            catch
+            {
+                Assert.Fail("Method 'MaxIncome' should check if the element in 'deposits' is null");
+            }
+
+            if (expectedMaxIncome != result)
+            {
+                Assert.Fail("Method 'MaxIncome' in class 'Client' works incorrectly.");
+            }
+        }
+
     }
 }
