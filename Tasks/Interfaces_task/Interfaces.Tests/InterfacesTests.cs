@@ -136,5 +136,27 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Deposit", "Amount", typeof(decimal))]
+        [TestCase("BaseDeposit", "Amount", typeof(decimal))]
+        [TestCase("SpecialDeposit", "Amount", typeof(decimal))]
+        [TestCase("LongDeposit", "Amount", typeof(decimal))]
+        [TestCase("Deposit", "Period", typeof(int))]
+        [TestCase("BaseDeposit", "Period", typeof(int))]
+        [TestCase("SpecialDeposit", "Period", typeof(int))]
+        [TestCase("LongDeposit", "Period", typeof(int))]
+        public void Class_HasPublicReadonlyFieldWithType(string className, string fieldName, Type returnType)
+        {
+            var classType = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+            AssertFailIfNull(classType, $"Class {className}");
+
+            var propertyInfo = classType.GetProperty(fieldName, BindingFlags.Public | BindingFlags.Instance);
+            AssertFailIfNull(propertyInfo, $"Field '{fieldName}'");
+
+            if (!propertyInfo.CanRead && propertyInfo.CanWrite && propertyInfo.PropertyType != returnType)
+            {
+                Assert.Fail($"{className} doesn't have public readonly property {fieldName} with {returnType} return type.");
+            }
+        }
+
     }
 }
