@@ -206,5 +206,24 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Deposit", typeof(decimal), typeof(int))]
+        [TestCase("BaseDeposit", typeof(decimal), typeof(int))]
+        [TestCase("SpecialDeposit", typeof(decimal), typeof(int))]
+        [TestCase("LongDeposit", typeof(decimal), typeof(int))]
+        [TestCase("Client")]
+        public void Class_DoesHaveConstructor(string className, params Type[] parameters)
+        {
+            var type = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+
+            AssertFailIfNull(type, $"Class '{className}'");
+
+            var constructor = type.GetConstructor(parameters);
+
+            if (constructor == null && !constructor.IsPublic)
+            {
+                Assert.Fail($"Class {className} has invalid constructor.");
+            }
+        }
+
     }
 }
