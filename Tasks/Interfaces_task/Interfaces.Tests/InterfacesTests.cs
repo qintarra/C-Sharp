@@ -549,5 +549,25 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Client", "SortDeposits", typeof(void))]
+        [TestCase("Client", "CountPossibleToProlongDeposit", typeof(int))]
+        [TestCase("IProlongable", "CanToProlong", typeof(bool))]
+        public void Type_HasMethod(string typeName, string methodName, Type returnType,
+            params Type[] parameters)
+        {
+            var type = Type.GetType($"{AssemblyName}.{typeName}, {AssemblyName}");
+
+            if (type == null)
+            {
+                Assert.Fail($"Type '{typeName}' doesn't exist.");
+            }
+
+            var method = type.GetMethod(methodName, parameters);
+
+            if (method == null || method.ReturnType != returnType)
+                Assert.Fail(
+                    $"Type '{typeName}' doesn't have method with name '{methodName}' that returns {returnType}.");
+        }
+
     }
 }
