@@ -486,6 +486,19 @@ namespace Interfaces.Tests
                 Assert.Fail("Method 'GetIncomeByNumber' in class 'Client' works incorrectly.");
             }
         }
+        
+        ////////////////////////////////////////////////
+
+        [TestCase("IProlongable")]
+        public void Interface_Exists(string name)
+        {
+            var type = Type.GetType($"{AssemblyName}.{name}, {AssemblyName}");
+
+            if (type == null || !type.IsInterface)
+            {
+                Assert.Fail($"Interface '{name} doesn't exist'.");
+            }
+        }
 
     }
 }
