@@ -523,5 +523,31 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("Deposit", typeof(IComparable<>), "Deposit")]
+        [TestCase("Client", typeof(IEnumerable<>), "Deposit")]
+        public void Class_ImplementsLibraryGenericInterface(string className, Type interfaceType,
+            string genericClassName)
+        {
+            var classType = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+            var genericType = Type.GetType($"{AssemblyName}.{genericClassName}, {AssemblyName}");
+
+            if (classType == null || !classType.IsClass)
+            {
+                Assert.Fail($"Class '{className}' doesn't exist");
+            }
+
+            if (genericType == null || !classType.IsClass)
+            {
+                Assert.Fail($"Class '{genericClassName}' doesn't exist");
+            }
+
+            var genericInterfaceType = interfaceType.MakeGenericType(genericType);
+
+            if (!classType.GetInterfaces().Contains(genericInterfaceType))
+            {
+                Assert.Fail($"Class '{className}' doesn't implement interface '{genericInterfaceType.Name}'.");
+            }
+        }
+
     }
 }
