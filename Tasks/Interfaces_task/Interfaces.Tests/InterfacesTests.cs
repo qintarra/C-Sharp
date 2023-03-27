@@ -595,5 +595,61 @@ namespace Interfaces.Tests
                 Assert.Fail($"Method 'CanToProlong' in class '{className}' works incorrectly.");
         }
 
+        [TestCase("BaseDeposit", "BaseDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("BaseDeposit", "BaseDeposit", 1000, 2, 1000, 2, 0)]
+        [TestCase("BaseDeposit", "BaseDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("BaseDeposit", "LongDeposit", 1000, 10, 1000, 10, -1)]
+        [TestCase("BaseDeposit", "LongDeposit", 10000, 0, 1000, 0, 1)]
+        [TestCase("BaseDeposit", "LongDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("BaseDeposit", "SpecialDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("BaseDeposit", "SpecialDeposit", 1000, 0, 10000, 0, -1)]
+        [TestCase("BaseDeposit", "SpecialDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("LongDeposit", "BaseDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("LongDeposit", "BaseDeposit", 1000, 0, 1000, 0, 0)]
+        [TestCase("LongDeposit", "BaseDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("LongDeposit", "LongDeposit", 1000, 10, 1000, 10, 0)]
+        [TestCase("LongDeposit", "LongDeposit", 1000, 0, 10000, 0, -1)]
+        [TestCase("LongDeposit", "LongDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("LongDeposit", "SpecialDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("LongDeposit", "SpecialDeposit", 10000, 0, 1000, 0, 1)]
+        [TestCase("LongDeposit", "SpecialDeposit", 1000, 5, 1000, 10, -1)]
+        [TestCase("SpecialDeposit", "BaseDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("SpecialDeposit", "BaseDeposit", 1000, 0, 1000, 0, 0)]
+        [TestCase("SpecialDeposit", "BaseDeposit", 1000, 10, 1000, 10, 1)]
+        [TestCase("SpecialDeposit", "LongDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("SpecialDeposit", "LongDeposit", 10000, 0, 1000, 10, 1)]
+        [TestCase("SpecialDeposit", "LongDeposit", 1000, 10, 1000, 10, -1)]
+        [TestCase("SpecialDeposit", "SpecialDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("SpecialDeposit", "SpecialDeposit", 1000, 10, 10000, 0, -1)]
+        [TestCase("SpecialDeposit", "SpecialDeposit", 10000, 0, 1000, 10, 1)]
+        public void Deposit_CompareTo_ComparesByGeneralSum(string className1, string className2,
+            decimal amount1, int period1, decimal amount2, int period2, int expected)
+        {
+            //arrange
+            var classType1 = GetCustomType(className1, $"Class '{className1}'");
+            var classType2 = GetCustomType(className2, $"Class '{className2}'");
+
+            var genericType = GetCustomType("Deposit", "Class 'Deposit'");
+            var genericInterfaceType = typeof(IComparable<>).MakeGenericType(genericType);
+
+            if (!classType1.GetInterfaces().Contains(genericInterfaceType))
+            {
+                Assert.Fail($"Class '{className1}' doesn't implement interface 'IComparable<Deposit>'");
+            }
+
+            var CompareTo = classType1.GetMethod("CompareTo");
+
+            var classInstance1 = Activator.CreateInstance(classType1, amount1, period1);
+            var classInstance2 = Activator.CreateInstance(classType2, amount2, period2);
+
+            //act
+            var actual = (int)CompareTo.Invoke(classInstance1, new object[] { classInstance2 });
+
+            //assert
+            //If actual and expected are both less or both higher than zero, that counts
+            if (actual * expected < 0 && actual != expected)
+                Assert.Fail($"Method 'CompareTo' in class '{className1}' works incorrectly.");
+        }
+
     }
 }
