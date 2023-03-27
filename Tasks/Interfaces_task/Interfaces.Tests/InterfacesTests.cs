@@ -702,5 +702,59 @@ namespace Interfaces.Tests
             Assert.AreEqual(depositsArrayExpected, depositsArrayActual, "Method 'GetEnumerator' in class 'Client' works incorrectly.");
         }
 
+        [TestCase("SpecialDeposit")]
+        [TestCase("LongDeposit")]
+        [TestCase("BaseDeposit")]
+        public void Client_SortDeposits_SortInDescendingOrder(string depositChildName)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", $"Class 'Client'");
+
+            var depositChildType = GetCustomType(depositChildName, $"Class '{depositChildName}'");
+
+            var depositType = GetCustomType("Deposit", "Class 'Deposit'");
+
+            var depositsFieldInfo = clientType.GetField("deposits", BindingFlags.NonPublic | BindingFlags.Instance);
+            AssertFailIfNull(depositsFieldInfo, "Field 'deposits'");
+
+            var AddDeposit = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(AddDeposit, "Method 'AddDeposit'");
+
+            var SortDeposits = clientType.GetMethod("SortDeposits");
+            AssertFailIfNull(SortDeposits, "Method 'SortDeposits'");
+
+            var depositsArrayExpected = Array.CreateInstance(depositType, 10);
+
+            for (int i = 0; i < depositsArrayExpected.Length - 1; i++)
+            {
+                var deposit = Activator.CreateInstance(depositChildType, 10000m, 15 - i);
+                depositsArrayExpected.SetValue(deposit, i);
+            }
+
+            var clientInstance = Activator.CreateInstance(clientType);
+
+            //fake mixing
+            for (int i = 0; i < depositsArrayExpected.Length / 2; i++)
+            {
+                AddDeposit.Invoke(clientInstance, new object[] { depositsArrayExpected.GetValue(i) });
+                AddDeposit.Invoke(clientInstance, new object[] { depositsArrayExpected.GetValue(9 - i) });
+            }
+
+            //act
+            SortDeposits.Invoke(clientInstance, null);
+
+            var depositsArrayActual = (Array)depositsFieldInfo.GetValue(clientInstance);
+
+            //assert
+            Assert.AreEqual(depositsArrayExpected, depositsArrayActual, "Method 'SortDeposits' in class 'Client' works incorrectly.");
+        }
+
+        static object CountPossibleToProlongDeposit_TestCases = new object[]
+        {
+            new object[] { new decimal[] {500m, 1000m, 2000m}, new int[] {12, 24, 36},  4 },
+            new object[] { new decimal[] {2000m, 4000m, 2000m}, new int[] {12, 24, 6},  6 },
+            new object[] { new decimal[] {500m, 20m, 200m}, new int[] {60, 120, 37},  0 }
+        };
+
     }
 }
