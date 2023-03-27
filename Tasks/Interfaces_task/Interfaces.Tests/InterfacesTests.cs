@@ -500,5 +500,28 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase("SpecialDeposit", "IProlongable")]
+        [TestCase("LongDeposit", "IProlongable")]
+        public void Class_ImplementsCustomInterface(string className, string interfaceName)
+        {
+            var classType = Type.GetType($"{AssemblyName}.{className}, {AssemblyName}");
+            var interfaceType = Type.GetType($"{AssemblyName}.{interfaceName}, {AssemblyName}");
+
+            if (classType == null || !classType.IsClass)
+            {
+                Assert.Fail($"Class '{className}' doesn't exist");
+            }
+
+            if (interfaceType == null || !interfaceType.IsInterface)
+            {
+                Assert.Fail($"Interface '{interfaceName}' doesn't exist");
+            }
+
+            if (!classType.GetInterfaces().Contains(interfaceType))
+            {
+                Assert.Fail($"Class '{className}' doesn't implement interface '{interfaceName}'.");
+            }
+        }
+
     }
 }
