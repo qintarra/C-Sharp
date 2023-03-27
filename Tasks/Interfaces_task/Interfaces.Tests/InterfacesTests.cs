@@ -569,5 +569,31 @@ namespace Interfaces.Tests
                     $"Type '{typeName}' doesn't have method with name '{methodName}' that returns {returnType}.");
         }
 
+        [TestCase("LongDeposit", 40, 120, false)]
+        [TestCase("LongDeposit", 40, 37, false)]
+        [TestCase("LongDeposit", 40, 22, true)]
+        [TestCase("LongDeposit", 40, 0, true)]
+        [TestCase("SpecialDeposit", 40, 2, false)]
+        [TestCase("SpecialDeposit", 1000, 2, false)]
+        [TestCase("SpecialDeposit", 1020, 2, true)]
+        [TestCase("SpecialDeposit", 2000, 2, true)]
+        public void CanToProlong_ImplementedInClass_ReturnsCorrectValue(string className, decimal amount, int period, bool expected)
+        {
+            //arrange
+            var classType = GetCustomType(className, $"Class '{className}'");
+
+            var CanToProlong = classType.GetMethod("CanToProlong");
+            AssertFailIfNull(CanToProlong, "Method 'CanToProlong'");
+
+            var classInstance = Activator.CreateInstance(classType, amount, period);
+
+            //act
+            var actual = (bool)CanToProlong.Invoke(classInstance, null);
+
+            //assert
+            if (actual != expected)
+                Assert.Fail($"Method 'CanToProlong' in class '{className}' works incorrectly.");
+        }
+
     }
 }
