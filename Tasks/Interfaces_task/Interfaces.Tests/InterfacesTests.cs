@@ -651,5 +651,56 @@ namespace Interfaces.Tests
                 Assert.Fail($"Method 'CompareTo' in class '{className1}' works incorrectly.");
         }
 
+        [TestCase("SpecialDeposit")]
+        [TestCase("LongDeposit")]
+        [TestCase("BaseDeposit")]
+        public void Client_GetEnumerator_ReturnsDepositsInRightOrder(string depositChildName)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", $"Class 'Client'");
+
+            var depositChildType = GetCustomType(depositChildName, $"Class '{depositChildName}'");
+
+            var depositType = GetCustomType("Deposit", "Class 'Deposit'");
+
+            var genericInterfaceType = typeof(IEnumerable<>).MakeGenericType(depositType);
+
+            if (!clientType.GetInterfaces().Contains(genericInterfaceType))
+            {
+                Assert.Fail($"Class '{clientType}' doesn't implement interface 'IEnumerable<Deposit>'");
+            }
+
+            var depositsFieldInfo = clientType.GetField("deposits", BindingFlags.NonPublic | BindingFlags.Instance);
+            AssertFailIfNull(depositsFieldInfo, "Field 'deposits'");
+
+            var depositsArrayExpected = Array.CreateInstance(depositType, 10);
+
+
+
+            for (int i = 0; i < depositsArrayExpected.Length; i++)
+            {
+                var deposit = Activator.CreateInstance(depositChildType, 1000m * i, i);
+                depositsArrayExpected.SetValue(deposit, i);
+            }
+
+            var clientInstance = Activator.CreateInstance(clientType);
+
+            Array.Copy(depositsArrayExpected, (Array)depositsFieldInfo.GetValue(clientInstance), depositsArrayExpected.Length);
+
+            //act
+            var depositsArrayActual = Array.CreateInstance(depositType, 10);
+
+            IEnumerable enumerable = (IEnumerable)clientInstance;
+
+            int index = 0;
+            foreach (var deposit in enumerable)
+            {
+                depositsArrayActual.SetValue(deposit, index++);
+            }
+
+            //assert
+            Assert.AreEqual(depositsArrayExpected, depositsArrayActual, "Method 'GetEnumerator' in class 'Client' works incorrectly.");
+        }
+
     }
 }
