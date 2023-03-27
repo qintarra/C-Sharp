@@ -470,5 +470,22 @@ namespace Interfaces.Tests
             }
         }
 
+        [TestCase(1)]
+        [TestCase(2)]
+        public void Client_GetIncomeByNumber_Returns0IfDepositIsNull(int number)
+        {
+            var clientType = GetCustomType("Client", "Class 'Client'");
+            var clientObject = Activator.CreateInstance(clientType);
+            var GetIncomeByNumber = clientType.GetMethod("GetIncomeByNumber");
+            AssertFailIfNull(GetIncomeByNumber, "Method 'GetIncomeByNumber'");
+
+            var result = (decimal) GetIncomeByNumber.Invoke(clientObject, new object[] {number});
+             
+            if (result != 0)
+            {
+                Assert.Fail("Method 'GetIncomeByNumber' in class 'Client' works incorrectly.");
+            }
+        }
+
     }
 }
