@@ -756,5 +756,47 @@ namespace Interfaces.Tests
             new object[] { new decimal[] {500m, 20m, 200m}, new int[] {60, 120, 37},  0 }
         };
 
+        [TestCaseSource(nameof(CountPossibleToProlongDeposit_TestCases))]
+        public void Client_CountPossibleToProlongDeposit_ReturnsCorrectValue(decimal[] amountsForSpecialDeposits, int[] periodsForLongDeposits, int expected)
+        {
+            //arrange
+            var clientType = GetCustomType("Client", $"Class 'Client'");
+
+            var baseDepositType = GetCustomType("BaseDeposit", $"Class 'BaseDeposit'");
+            var specialDepositType = GetCustomType("SpecialDeposit", $"Class 'SpecialDeposit'");
+            var longDepositType = GetCustomType("LongDeposit", $"Class 'LongDeposit'");
+
+            var AddDeposit = clientType.GetMethod("AddDeposit");
+            AssertFailIfNull(AddDeposit, "Method 'AddDeposit'");
+
+            var CountPossibleToProlongDeposit = clientType.GetMethod("CountPossibleToProlongDeposit");
+            AssertFailIfNull(CountPossibleToProlongDeposit, "Method 'CountPossibleToProlongDeposit'");
+
+            var client = Activator.CreateInstance(clientType);
+            
+            //Filling field with different deposits
+            for (int i = 0; i < 3; i++)
+            {
+                AddDeposit.Invoke(client,
+                    new object[] { Activator.CreateInstance(baseDepositType, 1000m, 1) });
+            }
+            for (int i = 0; i < amountsForSpecialDeposits.Length; i++)
+            {
+                AddDeposit.Invoke(client,
+                    new object[] { Activator.CreateInstance(specialDepositType, amountsForSpecialDeposits[i], 1) });
+            }
+            for (int i = 0; i < periodsForLongDeposits.Length; i++)
+            {
+                AddDeposit.Invoke(client,
+                    new object[] { Activator.CreateInstance(longDepositType, 1000m, periodsForLongDeposits[i]) });
+            }
+
+            //act
+            var actual = (int) CountPossibleToProlongDeposit.Invoke(client, null);
+
+            //assert
+            if (actual != expected)
+                Assert.Fail("Method 'CountPossibleToProlongDeposit' in class 'Client' works incorrectly.");
+        }
     }
 }
