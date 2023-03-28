@@ -39,5 +39,41 @@
             return PrimeNumbers.IsPrimeNumber(n);
         }
 
+        [TestCase(0, 0, ExpectedResult = 0ul)]
+        [TestCase(0, 1, ExpectedResult = 0ul)]
+        [TestCase(0, 2, ExpectedResult = 2ul)]
+        [TestCase(0, 3, ExpectedResult = 5ul)]
+        [TestCase(0, 4, ExpectedResult = 5ul)]
+        [TestCase(0, 5, ExpectedResult = 10ul)]
+        [TestCase(0, 6, ExpectedResult = 10ul)]
+        [TestCase(0, 7, ExpectedResult = 17ul)]
+        [TestCase(0, 8, ExpectedResult = 17ul)]
+        [TestCase(0, 9, ExpectedResult = 17ul)]
+        [TestCase(0, 10, ExpectedResult = 17ul)]
+        [TestCase(0, 11, ExpectedResult = 19ul)]
+        [TestCase(0, 12, ExpectedResult = 19ul)]
+        [TestCase(0, 13, ExpectedResult = 23ul)]
+        [TestCase(0, 14, ExpectedResult = 23ul)]
+        [TestCase(0, 15, ExpectedResult = 23ul)]
+        [TestCase(0, 16, ExpectedResult = 23ul)]
+        [TestCase(0, 17, ExpectedResult = 31ul)]
+        [TestCase(0, 18, ExpectedResult = 31ul)]
+        [TestCase(0, 19, ExpectedResult = 41ul)]
+        [TestCase(0, 20, ExpectedResult = 41ul)]
+        [TestCase(10, 10, ExpectedResult = 0ul)]
+        [TestCase(10, 11, ExpectedResult = 2ul)]
+        [TestCase(10, 12, ExpectedResult = 2ul)]
+        [TestCase(10, 13, ExpectedResult = 6ul)]
+        [TestCase(10, 14, ExpectedResult = 6ul)]
+        [TestCase(10, 15, ExpectedResult = 6ul)]
+        [TestCase(10, 16, ExpectedResult = 6ul)]
+        [TestCase(10, 17, ExpectedResult = 14ul)]
+        [TestCase(10, 18, ExpectedResult = 14ul)]
+        [TestCase(10, 19, ExpectedResult = 24ul)]
+        [TestCase(10, 20, ExpectedResult = 24ul)]
+        public ulong SumDigitsOfPrimeNumbers(int start, int end)
+        {
+            return PrimeNumbers.SumDigitsOfPrimeNumbers(start, end);
+        }
     }
 }
