@@ -32,3 +32,16 @@ For the arithmetic sequence $`{5, 6, 7, 8, 9, ...}`$ the sum of the first five e
 The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a `for` statement, therefore a decision block is used in the diagram.
 
 ![Arithmetic Sequence 1 Diagram](images/as-1.png)
+
+Read and analyze the diagram, add the code to the _SumArithmeticSequenceTerms1_ method. 
+
+1. Declare and initialize the _sum_ and the _i_ variables. Add the *return* statement  
+
+```cs
+public static int SumArithmeticSequenceTerms1(int a, int n)
+{
+    int sum = 0;
+
+    return sum;
+}
+```
