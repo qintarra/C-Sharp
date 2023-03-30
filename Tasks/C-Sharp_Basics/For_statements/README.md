@@ -12,12 +12,12 @@ Use the only `for` and `if-else` statements in this task. Using `while` or `do-w
 
 The arithmetic sequence formula is given as,
 
-$`a_{n} = a+(n-1)\cdot{d}`$
+$a_{n} = a+(n-1)\cdot{d}$
 
 where,
-* $`a_{n}`$ is the nth term,
-* $`a`$ is the first term, and
-* d is the common difference.
+* $a_{n}$ is the nth term,
+* $a$ is the first term, and
+* $d$ is the common difference.
 
 #### Task 1
 
@@ -25,9 +25,9 @@ Open the [ArithmeticSequences.cs](ForStatements/ArithmeticSequences.cs) file.
 
 Implement the method that returns sum of an arithmetic sequence terms if the common difference is 1.
 
-$`\sum_{i=1}^{n} a+(i-1)\cdot{1}=\sum_{i=0}^{n-1} a+i`$
+$\sum_{i=1}^{n} a+(i-1)\cdot{1}=\sum_{i=0}^{n-1} a+i$
 
-For the arithmetic sequence $`{5, 6, 7, 8, 9, ...}`$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
+For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
 
 The algorithm you have to implement is shown on the flowchart diagram below. The flowchart notation has no special symbol for a `for` statement, therefore a decision block is used in the diagram.
 
