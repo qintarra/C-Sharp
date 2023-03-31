@@ -77,3 +77,19 @@ public static int SumArithmeticSequenceTerms1(int a, int n)
     return sum;
 }
 ```
+
+4. Replace the assignment with addition assignment operator *+=*
+
+```cs
+public static int SumArithmeticSequenceTerms1(int a, int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i = i + 1)
+    {
+        sum += a + i;
+    }
+
+    return sum;
+}
+```
