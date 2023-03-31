@@ -61,3 +61,19 @@ public static int SumArithmeticSequenceTerms1(int a, int n)
 }
 ```
 ![Arithmetic Sequence 2 Diagram](images/as-2.png)
+
+3. Add the sum calculation.
+
+```cs
+public static int SumArithmeticSequenceTerms1(int a, int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i = i + 1)
+    {
+        sum = sum + a + i;
+    }
+
+    return sum;
+}
+```
