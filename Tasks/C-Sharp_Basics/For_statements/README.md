@@ -109,3 +109,25 @@ public static int SumArithmeticSequenceTerms1(int a1, int n)
     return sum;
 }
 ```
+
+#### Task 2
+
+Implement the method that returns the sum of an arithmetic sequence elements when the first term is 47 and the common difference is 13.
+
+$$\sum_{i=1}^{n} 47+(i-1)\cdot{13}=\sum_{i=0}^{n-1} 47+i\cdot{13}$$
+
+Beginner programmers often put number literals in their code like this:
+
+```cs
+public static int SumArithmeticSequenceTerms2(int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        sum += 47 + (i * 13);
+    }
+
+    return sum;
+}
+```
