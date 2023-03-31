@@ -25,7 +25,7 @@ Open the [ArithmeticSequences.cs](ForStatements/ArithmeticSequences.cs) file.
 
 Implement the method that returns sum of an arithmetic sequence terms if the common difference is 1.
 
-$\sum_{i=1}^{n} a+(i-1)\cdot{1}=\sum_{i=0}^{n-1} a+i$
+$$\sum_{i=1}^{n} a+(i-1)\cdot{1}=\sum_{i=0}^{n-1} a+i$$
 
 For the arithmetic sequence ${5, 6, 7, 8, 9, ...}$ the sum of the first five elements is 35 (5 + 6 + 7 + 8 + 9).
 
@@ -41,6 +41,21 @@ Read and analyze the diagram, add the code to the _SumArithmeticSequenceTerms1_ 
 public static int SumArithmeticSequenceTerms1(int a, int n)
 {
     int sum = 0;
+
+    return sum;
+}
+```
+
+2. Add the [for statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement) that iterates until _i_ is less than _n_. The `for` statement has three elements - _initializer_, _condition_ and _iterator_ sections.
+
+```cs
+public static int SumArithmeticSequenceTerms1(int a, int n)
+{
+    int sum = 0;
+
+    for (int i = 0; i < n; i = i + 1)
+    {
+    }
 
     return sum;
 }
