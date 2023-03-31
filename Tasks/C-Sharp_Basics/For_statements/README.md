@@ -60,3 +60,4 @@ public static int SumArithmeticSequenceTerms1(int a, int n)
     return sum;
 }
 ```
+![Arithmetic Sequence 2 Diagram](images/as-2.png)
