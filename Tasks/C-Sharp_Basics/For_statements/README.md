@@ -131,3 +131,24 @@ public static int SumArithmeticSequenceTerms2(int n)
     return sum;
 }
 ```
+
+Experienced programmers consider using number literals with unexplained meaning as a *bad practice*. They call such literals [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)).
+
+If you have a magic number in your code, [replace it with a symbolic constant](https://refactoring.guru/replace-magic-number-with-symbolic-constant):
+
+```cs
+public static int SumArithmeticSequenceTerms2(int n)
+{
+    const int firstTerm = 47;
+    const int commonDifference = 13;
+
+    int sum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        sum += firstTerm + (i * commonDifference);
+    }
+
+    return sum;
+}
+```
