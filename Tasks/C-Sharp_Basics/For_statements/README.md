@@ -160,3 +160,10 @@ Implement the method that returns the sum of an arithmetic sequence elements whe
 $$\sum_{i=1}^{n} a+(i-1)\cdot{5}=\sum_{i=0}^{n-1} a+i\cdot{5}$$
 
 Introduce a constant to avoid magic numbers in your code.
+
+
+### Factorial
+
+The *factorial* of a non-negative integer $`n`$, denoted by $`n!`$, is the product of all positive integers less than or equal to $`n`$.
+
+$$n!=\prod_{i=1}^{n}i=1\cdot...\cdot(n-1)\cdot{n}$$
