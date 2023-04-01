@@ -173,3 +173,22 @@ $$n!=\prod_{i=1}^{n}i=1\cdot...\cdot(n-1)\cdot{n}$$
 Open the [Factorial.cs](ForStatements/Factorial.cs) file.
 
 Implement the method that returns the factorial of the number $`n!`$ using the `for` statement.
+
+#### Task 5
+
+Implement the method that calculates the factorial of the number $`n!`$ and returns the sum of its digits using the `for` statement.
+
+$$10!=1\cdot{2}\cdot{3}\cdot{4}\cdot{5}\cdot{6}\cdot{7}\cdot{8}\cdot{9}\cdot{10}=3628800$$
+
+The sum of digits of 3,628,800 is 27 (3+6+2+8+8).
+
+Use the remainder operator `%` to get the last digit of factorial of a number.
+
+The expression in the condition section may use any variable, not only variables mentioned in the initializer or iterator sections.
+
+```cs
+for (int sum = 0; product > 0; product = product / 10)
+{
+    sum += product % 10;
+}
+```
