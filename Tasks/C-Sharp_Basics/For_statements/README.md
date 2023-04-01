@@ -167,3 +167,9 @@ Introduce a constant to avoid magic numbers in your code.
 The *factorial* of a non-negative integer $`n`$, denoted by $`n!`$, is the product of all positive integers less than or equal to $`n`$.
 
 $$n!=\prod_{i=1}^{n}i=1\cdot...\cdot(n-1)\cdot{n}$$
+
+#### Task 4
+
+Open the [Factorial.cs](ForStatements/Factorial.cs) file.
+
+Implement the method that returns the factorial of the number $`n!`$ using the `for` statement.
