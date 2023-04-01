@@ -201,3 +201,16 @@ for (int sum = 0; product > 0; product /= 10)
     sum += product % 10;
 }
 ```
+
+You can leave any section empty if this makes sense for your algorithm:
+
+```cs
+int sum = 0;
+
+for (; product > 0; product /= 10)
+{
+    sum += product % 10;
+}
+
+return sum;
+```
