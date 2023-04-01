@@ -214,3 +214,16 @@ for (; product > 0; product /= 10)
 
 return sum;
 ```
+
+
+### Quadratic Sequences
+
+A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25, ...$.
+
+The quadratic sequence formula is:
+
+$a_{n} = a\cdot{n^2}+b\cdot{n}+c$
+
+where,
+* $a_{n}$ is the nth term, and
+* $a$, $b$ and $c$ are constants.
