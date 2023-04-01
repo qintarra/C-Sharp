@@ -164,7 +164,7 @@ Introduce a constant to avoid magic numbers in your code.
 
 ### Factorial
 
-The *factorial* of a non-negative integer $`n`$, denoted by $`n!`$, is the product of all positive integers less than or equal to $`n`$.
+The *factorial* of a non-negative integer $n$, denoted by $n!$, is the product of all positive integers less than or equal to $n$.
 
 $$n!=\prod_{i=1}^{n}i=1\cdot...\cdot(n-1)\cdot{n}$$
 
@@ -172,11 +172,11 @@ $$n!=\prod_{i=1}^{n}i=1\cdot...\cdot(n-1)\cdot{n}$$
 
 Open the [Factorial.cs](ForStatements/Factorial.cs) file.
 
-Implement the method that returns the factorial of the number $`n!`$ using the `for` statement.
+Implement the method that returns the factorial of the number $n!$ using the `for` statement.
 
 #### Task 5
 
-Implement the method that calculates the factorial of the number $`n!`$ and returns the sum of its digits using the `for` statement.
+Implement the method that calculates the factorial of the number $n!$ and returns the sum of its digits using the `for` statement.
 
 $$10!=1\cdot{2}\cdot{3}\cdot{4}\cdot{5}\cdot{6}\cdot{7}\cdot{8}\cdot{9}\cdot{10}=3628800$$
 
@@ -188,6 +188,15 @@ The expression in the condition section may use any variable, not only variables
 
 ```cs
 for (int sum = 0; product > 0; product = product / 10)
+{
+    sum += product % 10;
+}
+```
+
+Use the *compound assignment expression* instead of the division operator.
+
+```cs
+for (int sum = 0; product > 0; product /= 10)
 {
     sum += product % 10;
 }
