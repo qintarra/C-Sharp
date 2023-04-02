@@ -241,3 +241,11 @@ If _maxTerm_ is 29, the number of terms is 2 (15 and 29 terms). If _maxTerm_ is 
 The algorithm you have to implement is shown on the flowchart diagram below.
 
 ![Quadratic Sequence 1 Diagram](images/qs-1.png)
+
+#### Task 7
+
+Implement the method that returns the product of the first _count_ quadratic sequence terms.
+
+The quadratic sequence with nth term $a_{n}=7\cdot{n^2}+4\cdot{n}+2$ is $\{ 13, 38, 77, 130, ...\}$.
+
+If the _count_ is 2, the product is 494 (13 * 38 = 494). If the _count_ is 3, the product is 38038 (13 * 38 * 77 = 38038).
