@@ -255,3 +255,19 @@ If the _count_ is 2, the product is 494 (13 * 38 = 494). If the _count_ is 3, th
 Implement the method that returns the product of _count_ quadratic sequence terms starting with the _startN_ term.
 
 For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the product is 435 (15 * 29 = 435), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the product is 106575 (29 * 49 * 75 = 106575).
+
+
+### Fibonacci Sequence
+
+The *Fibonacci sequence* is the series of numbers:
+
+$\{ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... \}$
+
+The sequence rule is:
+
+$x_{n}=x_{n-1}+x_{n-2}$
+
+where,
+* $x_{n}$ is term number "n",
+* $x_{n-1}$ is the previous term (n-1),
+* $x_{n-2}$ is the term before that (n-2).
