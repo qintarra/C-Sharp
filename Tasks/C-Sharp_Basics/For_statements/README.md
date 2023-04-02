@@ -277,3 +277,9 @@ where,
 Open the [FibonacciSequence.cs](ForStatements/FibonacciSequence.cs) file.
 
 Implement the method that returns the Fibonacci sequence number using the `for` statement.
+
+#### Task 10  
+
+Implement the method that returns the product of digits of the Fibonacci sequence number using the `for` statement. Use the remainder operator `%` to get the last digit of factorial of a number.
+
+If $n$ is 10, the $n$-th Fibonacci sequence number is 55 and the product of the number digits is 25 (5 * 5).
