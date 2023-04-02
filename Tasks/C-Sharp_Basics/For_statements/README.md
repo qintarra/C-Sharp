@@ -237,3 +237,7 @@ Implement the method that returns the number of the quadratic sequence terms tha
 The quadratic sequence with nth term $a_{n}=3\cdot{n^2}+5\cdot{n}+7$ is $\{ 15, 29, 49, 75, 107, 145, ...\}$.
 
 If _maxTerm_ is 29, the number of terms is 2 (15 and 29 terms). If _maxTerm_ is 107, the number of terms is 5 (15, 29, 49, 75 and 107 terms).
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Quadratic Sequence 1 Diagram](images/qs-1.png)
