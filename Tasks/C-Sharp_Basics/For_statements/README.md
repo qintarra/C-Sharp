@@ -249,3 +249,9 @@ Implement the method that returns the product of the first _count_ quadratic seq
 The quadratic sequence with nth term $a_{n}=7\cdot{n^2}+4\cdot{n}+2$ is $\{ 13, 38, 77, 130, ...\}$.
 
 If the _count_ is 2, the product is 494 (13 * 38 = 494). If the _count_ is 3, the product is 38038 (13 * 38 * 77 = 38038).
+
+#### Task 8
+
+Implement the method that returns the product of _count_ quadratic sequence terms starting with the _startN_ term.
+
+For the quadratic sequence $\{ 15, 29, 49, 75, ...\}$ the product is 435 (15 * 29 = 435), if the _startN_ is 1 and _count_ is 2. If _startN_ is 2 and _count_ is 3, the product is 106575 (29 * 49 * 75 = 106575).
