@@ -178,7 +178,7 @@ Implement the method that returns the factorial of the number $n!$ using the `fo
 
 Implement the method that calculates the factorial of the number $n!$ and returns the sum of its digits using the `for` statement.
 
-$$10!=1\cdot{2}\cdot{3}\cdot{4}\cdot{5}\cdot{6}\cdot{7}\cdot{8}\cdot{9}\cdot{10}=3628800$$
+$10!=1\cdot{2}\cdot{3}\cdot{4}\cdot{5}\cdot{6}\cdot{7}\cdot{8}\cdot{9}\cdot{10}=3628800$
 
 The sum of digits of 3,628,800 is 27 (3+6+2+8+8).
 
@@ -218,7 +218,7 @@ return sum;
 
 ### Quadratic Sequences
 
-A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25, ...$.
+A *quadratic sequence* is an ordered set of terms that follows a rule based on the sequence $n^2=1, 4, 9, 16, 25,$ ...
 
 The quadratic sequence formula is:
 
@@ -227,3 +227,13 @@ $a_{n} = a\cdot{n^2}+b\cdot{n}+c$
 where,
 * $a_{n}$ is the nth term, and
 * $a$, $b$ and $c$ are constants.
+
+#### Task 6
+
+Open the [QuadraticSequences.cs](ForStatements/QuadraticSequences.cs) file.  
+
+Implement the method that returns the number of the quadratic sequence terms that are less than or equals to the _maxTerm_.
+
+The quadratic sequence with nth term $a_{n}=3\cdot{n^2}+5\cdot{n}+7$ is $\{ 15, 29, 49, 75, 107, 145, ...\}$.
+
+If _maxTerm_ is 29, the number of terms is 2 (15 and 29 terms). If _maxTerm_ is 107, the number of terms is 5 (15, 29, 49, 75 and 107 terms).
