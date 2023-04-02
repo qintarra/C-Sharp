@@ -271,3 +271,9 @@ where,
 * $x_{n}$ is term number "n",
 * $x_{n-1}$ is the previous term (n-1),
 * $x_{n-2}$ is the term before that (n-2).
+
+#### Task 9
+
+Open the [FibonacciSequence.cs](ForStatements/FibonacciSequence.cs) file.
+
+Implement the method that returns the Fibonacci sequence number using the `for` statement.
