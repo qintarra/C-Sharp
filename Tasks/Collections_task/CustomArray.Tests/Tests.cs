@@ -68,6 +68,19 @@ namespace CustomArray.Tests
             //Assert
             Assert.AreEqual(first, custom.First, message: "First get property works incorrectly ");
         }
+		
+        [TestCase(-8, 4, -5)]
+        [TestCase(0, 8, 7)]
+        [TestCase(3, 5, 7)]
+        public void Last_Get_ShouldReturnCorrectValue(int first, int length, int last)
+        {
+            //Act
+            var custom = new CustomArray<bool>(first, length);
+
+            //Assert
+            Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly ");
+
+        }
 
     }
 }
