@@ -33,5 +33,18 @@ namespace CustomArray.Tests
 
         }
 
+        [TestCase(-4, 5, -3, 10)]
+        [TestCase(1, 7, 2, 4)]
+        [TestCase(0, 3, 2, 9)]
+        public void Indexer_GetElementAtPosition_ShouldReturnValue(int first, int length, int n, int element)
+        {
+            //Act
+            var custom = new CustomArray<int>(first, length);
+            custom[n] = element;
+            //Assert
+            Assert.AreEqual(element, custom[n], message: "Index get property works incorrectly");
+
+        }
+
     }
 }
