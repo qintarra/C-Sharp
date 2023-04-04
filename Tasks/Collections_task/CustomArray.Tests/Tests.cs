@@ -45,6 +45,17 @@ namespace CustomArray.Tests
             Assert.AreEqual(element, custom[n], message: "Index get property works incorrectly");
 
         }
+		
+        [TestCase(-1, 6)]
+        [TestCase(0, 7)]
+        [TestCase(5, 2)]
+        public void Length_Get_ShouldReturnCorrectValue(int first, int length)
+        {
+            // Act
+            var custom = new CustomArray<string>(first, length);
+            //Assert
+            Assert.AreEqual(length, custom.Length, message: "Length get  property works incorrectly ");
+        }
 
     }
 }
