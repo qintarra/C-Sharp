@@ -98,6 +98,21 @@ namespace CustomArray.Tests
             Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly");
 
         }
+           
+        [Test]
+        public void CreateCustomArray_WithNullArray_ShoulThrowArgumentNullException()
+        {
+            //arrange
+            int first = 1;
+            int[] array = null;
+            var expectedEx = typeof(ArgumentNullException);
+            //act
+            var actEx = Assert.Catch(() => new CustomArray<int>(first, array));
+            //assert
+            Assert.AreEqual(expectedEx, actEx.GetType(),
+                message: "CustomArray can't be created with null array");
 
+        }
+    
     }
 }
