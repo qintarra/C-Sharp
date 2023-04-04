@@ -56,6 +56,18 @@ namespace CustomArray.Tests
             //Assert
             Assert.AreEqual(length, custom.Length, message: "Length get  property works incorrectly ");
         }
+		
+        [TestCase(-1, 5)]
+        [TestCase(0, 11)]
+        [TestCase(7, 3)]
+        public void First_Get_ShouldReturnCorrectValue(int first, int length)
+        {
+            // Act
+            var custom = new CustomArray<int>(first, length);
+
+            //Assert
+            Assert.AreEqual(first, custom.First, message: "First get property works incorrectly ");
+        }
 
     }
 }
