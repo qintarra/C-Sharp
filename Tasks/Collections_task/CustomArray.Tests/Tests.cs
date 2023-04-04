@@ -7,8 +7,7 @@ namespace CustomArray.Tests
 {
     [TestFixture]
     public class Tests
-    {
-        
+    {       
         [Test()]
         public void Array_Get_ShouldReturnSameReference()
         {
@@ -21,6 +20,18 @@ namespace CustomArray.Tests
             Assert.AreSame(array, custom.Array, message: "Array property works incorrectly");
         }
 
-  
+        [Test]
+        public void Array_Get_WithListShouldRetrurnSameReference()
+        {
+            var expected_list = new List<int>() { 6, 2, -8, 0 };
+            int first = 4;
+
+            var custom = new CustomArray<int>(first, expected_list);
+            var actual_array = custom.Array;
+
+            Assert.AreEqual(expected_list, actual_array, message: "Array property or constructor works incorrectly");
+
+        }
+
     }
 }
