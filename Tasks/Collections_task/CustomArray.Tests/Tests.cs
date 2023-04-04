@@ -81,6 +81,23 @@ namespace CustomArray.Tests
             Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly ");
 
         }
+		
+        [Test]
+        public void CustomArrayProperties_Get_ShouldReturnCorrectValues()
+        {
+            //Arrange
+            int first = 4;
+            int length = 4;
+            int last = 7;
+
+            //Act
+            var custom = new CustomArray<int>(first, 5, 7, 3, 7);
+            //Assert
+            Assert.AreEqual(first, custom.First, message: "First get property works incorrectly");
+            Assert.AreEqual(length, custom.Length, message: "Length get property works incorrectly");
+            Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly");
+
+        }
 
     }
 }
