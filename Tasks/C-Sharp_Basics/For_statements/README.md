@@ -319,3 +319,11 @@ for (int j = 0; j < i; j++)
 The algorithm you have to implement is shown on the flowchart diagram below.
 
 ![Geometric Sequence 1 Diagram](images/gs-1.png)
+
+#### Task 12  
+
+Implement the method that returns the sum of a geometric sequence terms when the first term is 5 and the common ratio is 3.
+
+$$\sum_{i=1}^{n}a\cdot{r^{i-1}}=\sum_{i=0}^{n-1} 5\cdot{3^{i}}=5+5\cdot{3^1}+5\cdot{3^2}+5\cdot{3^3}+...+5\cdot{3^{n-1}}$$
+
+Introduce a constant to avoid magic numbers in your code.
