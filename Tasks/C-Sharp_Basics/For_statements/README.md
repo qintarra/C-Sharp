@@ -283,3 +283,17 @@ Implement the method that returns the Fibonacci sequence number using the `for` 
 Implement the method that returns the product of digits of the Fibonacci sequence number using the `for` statement. Use the remainder operator `%` to get the last digit of factorial of a number.
 
 If $n$ is 10, the $n$-th Fibonacci sequence number is 55 and the product of the number digits is 25 (5 * 5).
+
+
+### Geometric Sequences
+
+A *geometric sequence* is a sequence of terms in which the ratio between consecutive terms is constant.
+
+The geometric sequence formula is given as,
+
+$a_{n} = a\cdot{r^n}$
+
+where,
+* $a_{n}$ is the nth term,
+* $a$ is the first term, and
+* $r$ is the common ratio
