@@ -335,3 +335,5 @@ Implement the method that counts terms in a geometric sequence that are less tha
 If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 ($\{3\}$). If  _maxTerm_ is 24 the count equals to 4 ($\{3, 6, 12, 24\}$).
 
 The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 2 Diagram](images/gs-2.png)
