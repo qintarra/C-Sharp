@@ -327,3 +327,11 @@ Implement the method that returns the sum of a geometric sequence terms when the
 $$\sum_{i=1}^{n}a\cdot{r^{i-1}}=\sum_{i=0}^{n-1} 5\cdot{3^{i}}=5+5\cdot{3^1}+5\cdot{3^2}+5\cdot{3^3}+...+5\cdot{3^{n-1}}$$
 
 Introduce a constant to avoid magic numbers in your code.
+
+#### Task 13  
+
+Implement the method that counts terms in a geometric sequence that are less than or equal to the _maxTerm_.
+
+If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 ($\{3\}$). If  _maxTerm_ is 24 the count equals to 4 ($\{3, 6, 12, 24\}$).
+
+The algorithm you have to implement is shown on the flowchart diagram below.
