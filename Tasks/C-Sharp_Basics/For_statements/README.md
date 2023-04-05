@@ -297,3 +297,23 @@ where,
 * $a_{n}$ is the nth term,
 * $a$ is the first term, and
 * $r$ is the common ratio
+
+#### Task 11
+
+Open the [GeometricSequences.cs](ForStatements/GeometricSequences.cs) file.
+
+Implement the method that returns the product of geometric sequence terms.
+
+$$\prod_{i=1}^{n}a\cdot{r^{i-1}}=\prod_{i=0}^{n-1}a\cdot{r^{i}}=(a\cdot{1})\cdot(a\cdot{r^1})\cdot(a\cdot{r^2})\cdot(a\cdot{r^3})\cdot...\cdot(a\cdot{r^{n-1}})$$
+
+Use a nested `for` loop to raise an _r_ number to a power. The [.NET BCL](https://docs.microsoft.com/en-us/dotnet/standard/glossary) has a special [Math.Pow](https://docs.microsoft.com/en-us/dotnet/api/system.math.pow) method for raising a number to a power, but since you in this you practice loops use the `for` loop instead of the _Math.Pow_ method.
+
+```cs
+uint rpow = 1;
+for (int j = 0; j < i; j++)
+{
+    rpow *= r;
+}
+```
+
+The algorithm you have to implement is shown on the flowchart diagram below.
