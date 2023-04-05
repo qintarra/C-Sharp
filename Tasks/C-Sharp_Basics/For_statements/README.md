@@ -317,3 +317,5 @@ for (int j = 0; j < i; j++)
 ```
 
 The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 1 Diagram](images/gs-1.png)
