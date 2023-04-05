@@ -337,3 +337,15 @@ If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. 
 The algorithm you have to implement is shown on the flowchart diagram below.
 
 ![Geometric Sequence 2 Diagram](images/gs-2.png)
+
+To implement this algorithm, leave the iterator section in the `for` statement empty and increment the _i_ variable in the loop body:
+
+```cs
+ulong i = 0;
+
+for (; term <= maxTerm;)
+{
+    i++;
+    // ...
+}
+```
