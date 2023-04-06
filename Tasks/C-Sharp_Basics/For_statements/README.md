@@ -359,3 +359,5 @@ Implement the method that counts terms in a geometric sequence that are greater 
 For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ the count equals to 4 ($\{192, 384, 768, 1536\}$) when _n_ is 10 and the _minTerm_ is 192 . If _minTerm_ is 768 the count equals to 2 (768 and 1536).
 
 The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 3 Diagram](images/gs-3.png)
