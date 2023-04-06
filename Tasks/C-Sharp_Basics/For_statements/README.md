@@ -401,3 +401,12 @@ return n - i;
 ```
 
 Logical errors in loop design or loop conditions often leads to [infinite loops](https://en.wikipedia.org/wiki/Infinite_loop). These are hard-to-find kind of issues, especially in a production environment.
+
+
+### Prime Numbers
+
+#### Sub-task 15
+
+Open the [PrimeNumbers.cs](ForStatements/PrimeNumbers.cs) file.
+
+Implement the method that returns true when $`n`$ is a prime number; otherwise the method returns false.
