@@ -410,3 +410,9 @@ Logical errors in loop design or loop conditions often leads to [infinite loops]
 Open the [PrimeNumbers.cs](ForStatements/PrimeNumbers.cs) file.
 
 Implement the method that returns true when $`n`$ is a prime number; otherwise the method returns false.
+
+#### Sub-task 16
+
+Implement the method that returns the sum of digits of all prime numbers in the [start, end] interval.
+
+The prime numbers in the [10, 20] interval are 11, 13, 17 and 19. The sum of the digits in all these numbers is 24 (1 + 1 + 1 + 3 + 1 + 7 + 1 + 9). Use the [break](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-break-statement) and [continue](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-continue-statement) statements to make your algorithm more efficient.
