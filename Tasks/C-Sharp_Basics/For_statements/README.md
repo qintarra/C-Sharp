@@ -361,3 +361,43 @@ For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ 
 The algorithm you have to implement is shown on the flowchart diagram below.
 
 ![Geometric Sequence 3 Diagram](images/gs-3.png)
+
+To implement this algorithm, leave the iterator, condition and increment sections empty.
+
+```cs
+for (; ;)
+{
+    // ...
+}
+```
+
+The `for` statement with empty sections is fully equivalent to the `while` statement with the condition that is always evaluates to `true`:
+
+```cs
+while (true)
+{
+    // ...
+}
+```
+
+These language constructions can be used interchangeably.
+
+Use the [break statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-break-statement) to terminate the loop execution, and return the expected value.
+
+```cs
+for (; ;)
+{
+    // ...
+
+    if (term <= minTerm || i == 0)
+    {
+        break;
+    }
+
+    // ...
+}
+
+return n - i;
+```
+
+Logical errors in loop design or loop conditions often leads to [infinite loops](https://en.wikipedia.org/wiki/Infinite_loop). These are hard-to-find kind of issues, especially in a production environment.
