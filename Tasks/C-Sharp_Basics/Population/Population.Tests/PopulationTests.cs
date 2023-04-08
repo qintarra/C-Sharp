@@ -23,5 +23,15 @@ namespace PopulationTask.Tests
                 message: "Initial population cannot be less or equals zero.");
         }
 
+        [TestCase(1500, 101, 100, 5000)]
+        [TestCase(1500, -1, 100, 5000)]
+        public void GetYears_PercentOutOfRange_ThrowArgumentOutOfRangeException(
+            int initialPopulation, double percent, int visitors, int currentPopulation)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => Population.GetYears(initialPopulation, percent, visitors, currentPopulation),
+                message: "Value of percents cannot be less then 0% or more then 100%.");
+        }
+
     }
 }
