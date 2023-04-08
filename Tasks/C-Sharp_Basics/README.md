@@ -6,3 +6,4 @@ Beginner-level tasks for practicing
 **Darts Game**, **Leap Year** – `if` statement.  
 **While statements**, **While practice** - `while` statements.  
 **For statements**, **Population** - `for` statements.  
+**Array** - loops, branches and arrays.
