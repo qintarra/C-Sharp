@@ -1,6 +1,8 @@
 # C# Basics
 
-**Bools** – beginner level task for practicing Boolean values and logic operators.  
-**Darts Game**, **Leap Year** – beginner level task to practice the `if` statement.  
-**While statements**, **While practice** - beginner level task for practicing `while` statements.  
-**For statements**, **Population** - beginner level task for practicing `for` statements.  
+Beginner-level tasks for practicing
+
+**Bools** – Boolean values and logic operators.  
+**Darts Game**, **Leap Year** – `if` statement.  
+**While statements**, **While practice** - `while` statements.  
+**For statements**, **Population** - `for` statements.  
