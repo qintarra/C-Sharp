@@ -33,5 +33,15 @@ namespace PopulationTask.Tests
                 message: "Value of percents cannot be less then 0% or more then 100%.");
         }
 
+        [TestCase(1500, 5, -100, 5000)]
+        [TestCase(1500, 1, -5, 5000)]
+        public void GetYears_Visitors_LessZero_ThrowArgumentException(
+            int initialPopulation, double percent, int visitors, int currentPopulation)
+        {
+            Assert.Throws<ArgumentException>(
+                () => Population.GetYears(initialPopulation, percent, visitors, currentPopulation),
+                message: "Count of visitors cannot be less zero.");
+        }
+
     }
 }
