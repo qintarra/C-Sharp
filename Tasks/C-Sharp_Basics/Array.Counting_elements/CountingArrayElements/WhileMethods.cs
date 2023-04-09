@@ -12,7 +12,25 @@ namespace CountingArrayElements
         public static int GetEmptyStringCount(string[]? arrayToSearch)
         {
             // 4. Analyze the implementation of "GetEmptyStringCountRecursive" method, and implement the method using the "while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int count = 0;
+            int index = 0;
+
+            while (index < arrayToSearch.Length)
+            {
+                if (string.IsNullOrEmpty(arrayToSearch[index]))
+                {
+                    count++;
+                }
+
+                index++;
+            }
+
+            return count;
         }
 
         /// <summary>
