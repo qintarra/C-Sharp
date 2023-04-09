@@ -12,7 +12,21 @@ namespace CountingArrayElements
         public static int GetNegativeIntegerCount(int[]? arrayToSearch)
         {
             // 1. Analyze the implementation of "GetNegativeIntegerCountRecursive" methods, and implement the method using the "for" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int count = 0;
+            for (int i = 0; i < arrayToSearch.Length; i++)
+            {
+                if (arrayToSearch[i] < 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         /// <summary>
