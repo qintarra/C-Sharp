@@ -37,7 +37,21 @@ namespace CountingArrayElements
         public static int GetEvenNumberCount(float[]? arrayToSearch)
         {
             // 2. Analyze the implementation of "GetEvenNumberCountRecursive" methods, and implement the method using the "for" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int count = 0;
+            for (int i = 0; i < arrayToSearch.Length; i++)
+            {
+                if (arrayToSearch[i] % 2 == 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         /// <summary>
