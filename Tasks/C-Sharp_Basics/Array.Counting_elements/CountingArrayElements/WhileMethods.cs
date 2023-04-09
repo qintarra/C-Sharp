@@ -71,7 +71,24 @@ namespace CountingArrayElements
         public static int GetNullObjectCount(object[]? arrayToSearch)
         {
             // 6. Analyze the implementation of "GetNullObjectCountRecursive" method, and implement the method using the "while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int count = 0;
+            int index = 0;
+            while (index < arrayToSearch.Length)
+            {
+                if (arrayToSearch[index] is null)
+                {
+                    count++;
+                }
+
+                index++;
+            }
+
+            return count;
         }
 
         /// <summary>
