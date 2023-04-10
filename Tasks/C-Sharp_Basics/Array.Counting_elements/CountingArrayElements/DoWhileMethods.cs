@@ -72,7 +72,29 @@ namespace CountingArrayElements
         public static int GetRoundedToEvenCount(double[]? arrayToSearch)
         {
             // 9. Analyze the implementation of "GetRoundedToEvenCountRecursive" methods, and implement the method using the "do..while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int count = 0;
+            int i = 0;
+
+            do
+            {
+                double currentElement = arrayToSearch[i];
+                bool isElementNearEvenNumber = (Math.Round(currentElement, MidpointRounding.ToEven) % 2) == 0;
+
+                if (isElementNearEvenNumber)
+                {
+                    count++;
+                }
+
+                i++;
+            }
+            while (i < arrayToSearch.Length);
+
+            return count;
         }
 
         /// <summary>
