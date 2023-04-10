@@ -42,7 +42,26 @@ namespace CountingArrayElements
         public static int GetZeroDecimalCount(decimal[]? arrayToSearch)
         {
             // 8. Analyze the implementation of "GetZeroDecimalCountRecursive" methods, and implement the method using the "do..while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int index = 0;
+            int count = 0;
+
+            do
+            {
+                if (arrayToSearch[index] == decimal.Zero)
+                {
+                    count++;
+                }
+
+                index++;
+            }
+            while (index < arrayToSearch.Length);
+
+            return count;
         }
 
         /// <summary>
