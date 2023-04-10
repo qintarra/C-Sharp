@@ -22,5 +22,12 @@ namespace CountingArrayElements.Tests
             return ForMethods.GetNegativeIntegerCount(arrayToSearch);
         }
 
+        [Test]
+        public void GetNegativeIntegerCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => ForMethods.GetNegativeIntegerCountRecursive(null));
+        }
+
     }
 }
