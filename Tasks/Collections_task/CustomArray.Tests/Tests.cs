@@ -129,5 +129,21 @@ namespace CustomArray.Tests
 
         }
 
+        [TestCase(0)]
+        [TestCase(-8)]
+        [TestCase(-4)]
+        public void Length_SetElementLessThan0_ShouldThrowArgumentException(int length)
+        {
+            //Arrange
+            int first = 3;
+            var expectedEx = typeof(ArgumentException);
+            //Act
+            var actEx = Assert.Catch(() => { var custom = new CustomArray<int>(first, length); });
+            //Assert
+            Assert.AreEqual(expectedEx, actEx.GetType(),
+                message: "Set property in Length should throw ArgumentException in case of length parameter smaller or equal 0  ");
+
+        }
+
     }
 }
