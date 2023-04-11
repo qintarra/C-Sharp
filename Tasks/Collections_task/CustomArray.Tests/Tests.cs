@@ -145,5 +145,21 @@ namespace CustomArray.Tests
 
         }
 
+        [TestCase(4, 6, 3)]
+        [TestCase(0, 11, 11)]
+        [TestCase(-8, 3, -5)]
+        public void Indexer_SetElementOutOfRange_ShouldThrowArgumentException(int first, int length, int index)
+        {
+            //Arrange
+            int value = -5;
+            //Act
+            var custom = new CustomArray<int>(first, length);
+
+            //Assert
+            Assert.Throws<ArgumentException>(() => custom[index] = value, message: "Indexer  should throw ArgumentException ,if index parameter  out of array range");
+
+
+        }
+
     }
 }
