@@ -174,5 +174,19 @@ namespace CustomArray.Tests
 
         }
 
+        [Test]
+        public void Indexer_WithNullValue_ShouldThrowArgumentNullException()
+        {
+            //arrange
+            int first = 1;
+            int length = 7;
+            string value = null;
+            int index = 5;
+            var custom = new CustomArray<string>(first, length);
+
+            //act &assert 
+            Assert.Throws<ArgumentNullException>(() => custom[index] = value, message: "Indexer set not throw exception if value is null ");
+        }
+
     }
 }
