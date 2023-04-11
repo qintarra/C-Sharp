@@ -188,5 +188,20 @@ namespace CustomArray.Tests
             Assert.Throws<ArgumentNullException>(() => custom[index] = value, message: "Indexer set not throw exception if value is null ");
         }
 
+        [Test]
+        public void CreateCustomArray_WithListWithoutParams_ShouldThrowArgumentException()
+        {
+            //Arrange
+            int first = 4;
+            List<int> list = new List<int>();
+            var expectedEx = typeof(ArgumentException);
+            //Act
+            var actEx = Assert.Catch(() => { var custom = new CustomArray<int>(first, list); });
+            //Arrange
+            Assert.AreEqual(expectedEx, actEx.GetType(),
+                message: "CustomArray can't be created with list without elements ");
+
+        }
+
     }
 }
