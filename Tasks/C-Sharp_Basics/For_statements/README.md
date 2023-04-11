@@ -283,3 +283,136 @@ Implement the method that returns the Fibonacci sequence number using the `for` 
 Implement the method that returns the product of digits of the Fibonacci sequence number using the `for` statement. Use the remainder operator `%` to get the last digit of factorial of a number.
 
 If $n$ is 10, the $n$-th Fibonacci sequence number is 55 and the product of the number digits is 25 (5 * 5).
+
+
+### Geometric Sequences
+
+A *geometric sequence* is a sequence of terms in which the ratio between consecutive terms is constant.
+
+The geometric sequence formula is given as,
+
+$a_{n} = a\cdot{r^n}$
+
+where,
+* $a_{n}$ is the nth term,
+* $a$ is the first term, and
+* $r$ is the common ratio
+
+#### Task 11
+
+Open the [GeometricSequences.cs](ForStatements/GeometricSequences.cs) file.
+
+Implement the method that returns the product of geometric sequence terms.
+
+$$\prod_{i=1}^{n}a\cdot{r^{i-1}}=\prod_{i=0}^{n-1}a\cdot{r^{i}}=(a\cdot{1})\cdot(a\cdot{r^1})\cdot(a\cdot{r^2})\cdot(a\cdot{r^3})\cdot...\cdot(a\cdot{r^{n-1}})$$
+
+Use a nested `for` loop to raise an _r_ number to a power. The [.NET BCL](https://docs.microsoft.com/en-us/dotnet/standard/glossary) has a special [Math.Pow](https://docs.microsoft.com/en-us/dotnet/api/system.math.pow) method for raising a number to a power, but since you in this you practice loops use the `for` loop instead of the _Math.Pow_ method.
+
+```cs
+uint rpow = 1;
+for (int j = 0; j < i; j++)
+{
+    rpow *= r;
+}
+```
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 1 Diagram](images/gs-1.png)
+
+#### Task 12  
+
+Implement the method that returns the sum of a geometric sequence terms when the first term is 5 and the common ratio is 3.
+
+$$\sum_{i=1}^{n}a\cdot{r^{i-1}}=\sum_{i=0}^{n-1} 5\cdot{3^{i}}=5+5\cdot{3^1}+5\cdot{3^2}+5\cdot{3^3}+...+5\cdot{3^{n-1}}$$
+
+Introduce a constant to avoid magic numbers in your code.
+
+#### Task 13  
+
+Implement the method that counts terms in a geometric sequence that are less than or equal to the _maxTerm_.
+
+If _a_ is 3 and _r_ is 2 the geometric sequence is $\{3, 6, 12, 24, 48, ...\}$. If _maxTerm_ is 3 the count equals to 1 ($\{3\}$). If  _maxTerm_ is 24 the count equals to 4 ($\{3, 6, 12, 24\}$).
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 2 Diagram](images/gs-2.png)
+
+To implement this algorithm, leave the iterator section in the `for` statement empty and increment the _i_ variable in the loop body:
+
+```cs
+ulong i = 0;
+
+for (; term <= maxTerm;)
+{
+    i++;
+    // ...
+}
+```
+
+#### Task 14
+
+Open the [GeometricSequences.cs](ForStatements/GeometricSequences.cs) file.
+
+Implement the method that counts terms in a geometric sequence that are greater than or equal to a _minTerm_.
+
+For the geometric sequence $\{3, 6, 12, 24, 48, 96, 192, 384, 768, 1536, ...\}$ the count equals to 4 ($\{192, 384, 768, 1536\}$) when _n_ is 10 and the _minTerm_ is 192 . If _minTerm_ is 768 the count equals to 2 (768 and 1536).
+
+The algorithm you have to implement is shown on the flowchart diagram below.
+
+![Geometric Sequence 3 Diagram](images/gs-3.png)
+
+To implement this algorithm, leave the iterator, condition and increment sections empty.
+
+```cs
+for (; ;)
+{
+    // ...
+}
+```
+
+The `for` statement with empty sections is fully equivalent to the `while` statement with the condition that is always evaluates to `true`:
+
+```cs
+while (true)
+{
+    // ...
+}
+```
+
+These language constructions can be used interchangeably.
+
+Use the [break statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-break-statement) to terminate the loop execution, and return the expected value.
+
+```cs
+for (; ;)
+{
+    // ...
+
+    if (term <= minTerm || i == 0)
+    {
+        break;
+    }
+
+    // ...
+}
+
+return n - i;
+```
+
+Logical errors in loop design or loop conditions often leads to [infinite loops](https://en.wikipedia.org/wiki/Infinite_loop). These are hard-to-find kind of issues, especially in a production environment.
+
+
+### Prime Numbers
+
+#### Sub-task 15
+
+Open the [PrimeNumbers.cs](ForStatements/PrimeNumbers.cs) file.
+
+Implement the method that returns true when $`n`$ is a prime number; otherwise the method returns false.
+
+#### Sub-task 16
+
+Implement the method that returns the sum of digits of all prime numbers in the [start, end] interval.
+
+The prime numbers in the [10, 20] interval are 11, 13, 17 and 19. The sum of the digits in all these numbers is 24 (1 + 1 + 1 + 3 + 1 + 7 + 1 + 9). Use the [break](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-break-statement) and [continue](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements#the-continue-statement) statements to make your algorithm more efficient.
