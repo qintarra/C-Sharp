@@ -113,6 +113,21 @@ namespace CustomArray.Tests
                 message: "CustomArray can't be created with null array");
 
         }
-    
+
+        [Test]
+        public void CreateCustomArray_WithEmptyArray_ShoulThrowArgumentException()
+        {
+            //arrange
+            int first = 1;
+            int[] array = new int[] { };
+            var expectedEx = typeof(ArgumentException);
+            //act
+            var actEx = Assert.Catch(() => new CustomArray<int>(first, array));
+            //assert
+            Assert.AreEqual(expectedEx, actEx.GetType(),
+                message: "CustomArray can't be created with null array");
+
+        }
+
     }
 }
