@@ -161,5 +161,18 @@ namespace CustomArray.Tests
 
         }
 
+        [TestCase(-6, 4, -9)]
+        [TestCase(0, 3, 7)]
+        [TestCase(9, 17, 5)]
+        public void Indexer_GetElementOutOfRange_ShouldThrowArgumentException(int first, int length, int index)
+        {
+            //Arrange
+            var custom = new CustomArray<int>(first, length);
+            int result = 0;
+            //Act -Assert 
+            var actEx = Assert.Throws<ArgumentException>(() => result = custom[index], message: "Set indexer works incorrect");
+
+        }
+
     }
 }
