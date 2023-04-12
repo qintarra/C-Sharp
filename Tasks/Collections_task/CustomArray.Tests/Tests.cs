@@ -228,5 +228,27 @@ namespace CustomArray.Tests
             }
         }
 
+        [Test]
+        public void GetEnumerator_UsingIEnumerableExplicitlyOfListAndCustomArray_ShouldHaveEqualElements()
+        {
+            //Arrange
+            List<int> expected_list = new List<int>()
+            {
+                5,10,14
+            };
+            int first = 7;
+            List<int> actual = new List<int>();
+
+            //Act
+            CustomArray<int> array = new CustomArray<int>(first, expected_list);
+            IEnumerable enumerable = array;
+
+            //Assert
+            foreach (var item in enumerable)
+            {
+                actual.Add((int)item);
+            }
+            Assert.AreEqual(expected_list, actual);
+        }     
     }
 }
