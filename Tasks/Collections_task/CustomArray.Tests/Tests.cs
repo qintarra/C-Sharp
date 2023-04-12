@@ -192,5 +192,19 @@ namespace CustomArray.Tests
                 message: "CustomArray can't be created with list without elements ");
         }
 
+        [Test]
+        public void CreateCustomArray_WithListNull_ShouldThrowNullReferenceException()
+        {
+            //Arrange
+            int first = 1;
+            List<int> list = null;
+            var expectedEx = typeof(NullReferenceException);
+            //Act
+            var actEx = Assert.Catch(() => { var custom = new CustomArray<int>(first, list); });
+            //Arrange
+            Assert.AreEqual(expectedEx, actEx.GetType(),
+                message: "CustomArray can't be created with null list ");
+        }
+
     }
 }
