@@ -30,7 +30,6 @@ namespace CustomArray.Tests
             var actual_array = custom.Array;
 
             Assert.AreEqual(expected_list, actual_array, message: "Array property or constructor works incorrectly");
-
         }
 
         [TestCase(-4, 5, -3, 10)]
@@ -43,7 +42,6 @@ namespace CustomArray.Tests
             custom[n] = element;
             //Assert
             Assert.AreEqual(element, custom[n], message: "Index get property works incorrectly");
-
         }
 		
         [TestCase(-1, 6)]
@@ -79,7 +77,6 @@ namespace CustomArray.Tests
 
             //Assert
             Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly ");
-
         }
 		
         [Test]
@@ -96,7 +93,6 @@ namespace CustomArray.Tests
             Assert.AreEqual(first, custom.First, message: "First get property works incorrectly");
             Assert.AreEqual(length, custom.Length, message: "Length get property works incorrectly");
             Assert.AreEqual(last, custom.Last, message: "Last get property works incorrectly");
-
         }
            
         [Test]
@@ -111,7 +107,6 @@ namespace CustomArray.Tests
             //assert
             Assert.AreEqual(expectedEx, actEx.GetType(),
                 message: "CustomArray can't be created with null array");
-
         }
 
         [Test]
@@ -126,7 +121,6 @@ namespace CustomArray.Tests
             //assert
             Assert.AreEqual(expectedEx, actEx.GetType(),
                 message: "CustomArray can't be created with null array");
-
         }
 
         [TestCase(0)]
@@ -142,7 +136,6 @@ namespace CustomArray.Tests
             //Assert
             Assert.AreEqual(expectedEx, actEx.GetType(),
                 message: "Set property in Length should throw ArgumentException in case of length parameter smaller or equal 0  ");
-
         }
 
         [TestCase(4, 6, 3)]
@@ -157,8 +150,6 @@ namespace CustomArray.Tests
 
             //Assert
             Assert.Throws<ArgumentException>(() => custom[index] = value, message: "Indexer  should throw ArgumentException ,if index parameter  out of array range");
-
-
         }
 
         [TestCase(-6, 4, -9)]
@@ -171,7 +162,6 @@ namespace CustomArray.Tests
             int result = 0;
             //Act -Assert 
             var actEx = Assert.Throws<ArgumentException>(() => result = custom[index], message: "Set indexer works incorrect");
-
         }
 
         [Test]
@@ -200,7 +190,6 @@ namespace CustomArray.Tests
             //Arrange
             Assert.AreEqual(expectedEx, actEx.GetType(),
                 message: "CustomArray can't be created with list without elements ");
-
         }
 
     }
