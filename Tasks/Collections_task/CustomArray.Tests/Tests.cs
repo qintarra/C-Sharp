@@ -206,5 +206,27 @@ namespace CustomArray.Tests
                 message: "CustomArray can't be created with null list ");
         }
 
+        [Test]
+        public void GetEnumerator_OfListAndCustomArray_ShouldHaveEqualElements()
+        {
+            List<int> list = new List<int>()
+            {
+                5,10,14
+            };
+
+            int first = 7;
+            CustomArray<int> array = new CustomArray<int>(first, list);
+
+            var en2 = list.GetEnumerator();
+            var en = array.GetEnumerator();
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (en.MoveNext() && en2.MoveNext())
+                {
+                    Assert.AreEqual(en.Current, en2.Current, message: "GetEnumerator works incorretly ");
+                }
+            }
+        }
+
     }
 }
