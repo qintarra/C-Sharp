@@ -89,5 +89,20 @@ namespace CountingArrayElements.Tests
             return ForMethods.GetByteWithBitsInHighNibbleCount(arrayToSearch);
         }
 
+        [Test]
+        public void GetByteWithBitsInHighNibbleCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => ForMethods.GetByteWithBitsInHighNibbleCountRecursive(null));
+        }
+
+        [TestCase(new byte[] { 0xF1, 0x0F, 0x1F, 0x01, 0x40, 0x04 }, ExpectedResult = 3)]
+        [TestCase(new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05 }, ExpectedResult = 0)]
+        [TestCase(new byte[] { 0x1F, 0x2F, 0x3F, 0x4F }, ExpectedResult = 4)]
+        public int GetByteWithBitsInHighNibbleCountRecursive_ParametersAreValid_ReturnsResult(byte[] arrayToSearch)
+        {
+            // Act
+            return ForMethods.GetByteWithBitsInHighNibbleCountRecursive(arrayToSearch);
+        }
     }
 }
