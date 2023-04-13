@@ -56,5 +56,22 @@ namespace CountingArrayElements.Tests
             return ForMethods.GetEvenNumberCount(arrayToSearch);
         }
 
+        [Test]
+        public void GetEvenNumberCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => ForMethods.GetEvenNumberCountRecursive(null));
+        }
+
+        [TestCase(new[] { -9f, -8f, -7f, -6f, -5f, -4f, -3f, -2f, -1f, 0, 1f, 2f, 3f, 4f, 5f, 6f, 7f, 8f, 9f }, ExpectedResult = 9)]
+        [TestCase(new[] { -9f, -7f, -5f, -3f, -1f, 1f, 3f, 5f, 7f, 9f }, ExpectedResult = 0)]
+        [TestCase(new[] { -9f, -7f, -5f, -3f, -1f, 0, 1f, 3f, 5f, 7f, 9f }, ExpectedResult = 1)]
+        [TestCase(new[] { -6f, -4f, -2f, 0, 2f, 4f, 6f }, ExpectedResult = 7)]
+        public int GetEvenNumberCountRecursive_ParametersAreValid_ReturnsResult(float[] arrayToSearch)
+        {
+            // Act
+            return ForMethods.GetEvenNumberCountRecursive(arrayToSearch);
+        }
+
     }
 }
