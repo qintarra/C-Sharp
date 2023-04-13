@@ -14,5 +14,13 @@ namespace CountingArrayElements.Tests
             new object[] { new[] { "ab", string.Empty, "cd", "ef", "gh", "ij", "kl", "mn", string.Empty }, 2 },
         };
 
+        private static readonly object[][] GetNullObjectCountData =
+        {
+            new object[] { new[] { null, new object(), new object(), null, null, new object(), null }, 4 },
+            new object[] { new[] { new object(), new object(), new object(), new object() }, 0 },
+            new object[] { new object?[] { null, null, null, null, null }, 5 },
+            new object[] { new[] { new object(), new object(), null, new object(), new object() }, 1 },
+        };
+
     }
 }
