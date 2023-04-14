@@ -56,5 +56,12 @@ namespace CountingArrayElements.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetMinOrMaxLongCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => WhileMethods.GetMinOrMaxLongCount(null));
+        }
+
     }
 }
