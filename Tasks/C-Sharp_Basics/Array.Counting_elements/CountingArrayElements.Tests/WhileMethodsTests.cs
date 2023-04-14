@@ -22,5 +22,12 @@ namespace CountingArrayElements.Tests
             new object[] { new[] { new object(), new object(), null, new object(), new object() }, 1 },
         };
 
+        [Test]
+        public void GetEmptyStringCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => WhileMethods.GetEmptyStringCount(null));
+        }
+
     }
 }
