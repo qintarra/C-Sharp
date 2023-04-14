@@ -39,5 +39,12 @@ namespace CountingArrayElements.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetEmptyStringCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => WhileMethods.GetEmptyStringCountRecursive(null));
+        }
+
     }
 }
