@@ -29,5 +29,15 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => WhileMethods.GetEmptyStringCount(null));
         }
 
+        [TestCaseSource(nameof(GetEmptyStringCountData))]
+        public void GetEmptyStringCount_ParametersAreValid_ReturnsResult(string[] arrayToSearch, int expectedResult)
+        {
+            // Act
+            int actualResult = WhileMethods.GetEmptyStringCount(arrayToSearch);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
