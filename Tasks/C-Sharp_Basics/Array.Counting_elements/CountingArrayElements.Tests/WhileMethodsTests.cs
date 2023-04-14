@@ -46,5 +46,15 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => WhileMethods.GetEmptyStringCountRecursive(null));
         }
 
+        [TestCaseSource(nameof(GetEmptyStringCountData))]
+        public void GetEmptyStringCountRecursive_ArrayOfStrings1_ReturnsResult(string[] arrayToSearch, int expectedResult)
+        {
+            // Act
+            int actualResult = WhileMethods.GetEmptyStringCountRecursive(arrayToSearch);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
