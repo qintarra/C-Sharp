@@ -90,5 +90,12 @@ namespace CountingArrayElements.Tests
             return WhileMethods.GetMinOrMaxLongCountRecursive(arrayToSearch);
         }
 
+        [Test]
+        public void GetNullObjectCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => WhileMethods.GetNullObjectCount(null));
+        }
+
     }
 }
