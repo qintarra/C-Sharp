@@ -119,5 +119,19 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => WhileMethods.GetNullObjectCountRecursive(null));
         }
 
+        [TestCaseSource(nameof(GetNullObjectCountData))]
+        [SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "data parameter should not be null.")]
+        public void GetNullObjectCountRecursive_ParametersAreValid_ReturnsResult(object[] data)
+        {
+            // Arrange
+            object[] arrayToSearch = (object[])data[0];
+            int expectedResult = (int)data[1];
+
+            // Act
+            int actualResult = WhileMethods.GetNullObjectCountRecursive(arrayToSearch);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
