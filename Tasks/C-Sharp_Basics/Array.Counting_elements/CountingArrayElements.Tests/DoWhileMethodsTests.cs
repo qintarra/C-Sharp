@@ -22,5 +22,16 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetFalseValueCount(null));
         }
 
+        [TestCase(new[] { false, true, true, false, false, false, true, false }, ExpectedResult = 5)]
+        [TestCase(new[] { true, true, true, true, true, true, true, true }, ExpectedResult = 0)]
+        [TestCase(new[] { false, true, true, true, true, true, true, false }, ExpectedResult = 2)]
+        [TestCase(new[] { false, false, true, true, true, false, false, true }, ExpectedResult = 4)]
+        [TestCase(new[] { false, true, false, false, true, true, true, false, false, true, true, false, false, false, true, false }, ExpectedResult = 9)]
+        public int GetFalseValueCount_ParametersAreValid_ReturnResult(bool[] arrayToSearch)
+        {
+            // Act
+            return DoWhileMethods.GetFalseValueCount(arrayToSearch);
+        }
+
     }
 }
