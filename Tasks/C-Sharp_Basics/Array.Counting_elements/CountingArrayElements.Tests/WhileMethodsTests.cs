@@ -80,5 +80,15 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => WhileMethods.GetMinOrMaxLongCountRecursive(null));
         }
 
+        [TestCase(new long[] { 0, 1, long.MaxValue, 3, long.MaxValue, 4, long.MinValue, 5, long.MinValue, 6 }, ExpectedResult = 4)]
+        [TestCase(new long[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 }, ExpectedResult = 0)]
+        [TestCase(new long[] { long.MinValue, long.MaxValue, long.MinValue, long.MaxValue, long.MinValue }, ExpectedResult = 5)]
+        [TestCase(new long[] { long.MinValue, 0, 1, 2, 3, 4, 5, 6, 7, 8, long.MaxValue }, ExpectedResult = 2)]
+        public int GetMinOrMaxLongCountRecursive_ParametersAreValid_ReturnsResult(long[] arrayToSearch)
+        {
+            // Act
+            return WhileMethods.GetMinOrMaxLongCountRecursive(arrayToSearch);
+        }
+
     }
 }
