@@ -112,5 +112,12 @@ namespace CountingArrayElements.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetNullObjectCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => WhileMethods.GetNullObjectCountRecursive(null));
+        }
+
     }
 }
