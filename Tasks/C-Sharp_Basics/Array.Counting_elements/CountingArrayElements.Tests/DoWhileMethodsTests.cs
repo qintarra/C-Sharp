@@ -33,5 +33,12 @@ namespace CountingArrayElements.Tests
             return DoWhileMethods.GetFalseValueCount(arrayToSearch);
         }
 
+        [Test]
+        public void GetFalseValueCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetFalseValueCountRecursive(null));
+        }
+
     }
 }
