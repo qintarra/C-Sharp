@@ -15,5 +15,12 @@ namespace CountingArrayElements.Tests
             new object[] { new[] { decimal.Zero, 1.1m, decimal.Zero, 2.2m, 3.3m, decimal.Zero, decimal.Zero }, 4 },
         };
 
+        [Test]
+        public void GetFalseValueCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetFalseValueCount(null));
+        }
+
     }
 }
