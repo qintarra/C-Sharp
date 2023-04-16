@@ -51,5 +51,12 @@ namespace CountingArrayElements.Tests
             return DoWhileMethods.GetFalseValueCountRecursive(arrayToSearch);
         }
 
+        [Test]
+        public void GetZeroDecimalCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetZeroDecimalCount(null));
+        }
+
     }
 }
