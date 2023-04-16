@@ -68,5 +68,12 @@ namespace CountingArrayElements.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetZeroDecimalCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetZeroDecimalCountRecursive(null));
+        }
+
     }
 }
