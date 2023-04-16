@@ -75,5 +75,15 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetZeroDecimalCountRecursive(null));
         }
 
+        [TestCaseSource(nameof(GetZeroDecimalCountData))]
+        public void GetZeroDecimalCountRecursive_ParametersAreValid_ReturnResult(decimal[] arrayToSearch, int expectedResult)
+        {
+            // Act
+            int actualResult = DoWhileMethods.GetZeroDecimalCountRecursive(arrayToSearch);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
