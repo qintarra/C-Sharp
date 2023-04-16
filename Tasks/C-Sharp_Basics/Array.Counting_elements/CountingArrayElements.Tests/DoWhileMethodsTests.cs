@@ -92,5 +92,19 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetRoundedToEvenCount(null));
         }
 
+        [TestCase(new[] { 0.45 }, ExpectedResult = 1)]
+        [TestCase(new[] { 1.45 }, ExpectedResult = 0)]
+        [TestCase(new[] { 1.5 }, ExpectedResult = 1)]
+        [TestCase(new[] { 0.45, 1.45, 1.5, 2.0, 3.2, 3.5 }, ExpectedResult = 4)]
+        [TestCase(new[] { 0.1, 0.16 }, ExpectedResult = 2)]
+        [TestCase(new[] { 3.26, 5.46, 6.66, 8.86 }, ExpectedResult = 0)]
+        [TestCase(new[] { double.MinValue, 0.22, 0.33, 0.44, 0.55, 0.66, 0.77, 0.88, 0.99 }, ExpectedResult = 4)]
+        [TestCase(new[] { 0.1, double.MaxValue, 0.2, 0.3, 0.4, 0.5, double.MaxValue, 0.6, 0.7, 0.8, 0.9 }, ExpectedResult = 7)]
+        public int GetRoundedToEvenCount_ParametersAreValid_ReturnResult(double[] arrayToSearch)
+        {
+            // Act
+            return DoWhileMethods.GetRoundedToEvenCount(arrayToSearch);
+        }
+
     }
 }
