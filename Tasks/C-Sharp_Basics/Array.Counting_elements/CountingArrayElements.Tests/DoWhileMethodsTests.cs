@@ -85,5 +85,12 @@ namespace CountingArrayElements.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetRoundedToEvenCount_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetRoundedToEvenCount(null));
+        }
+
     }
 }
