@@ -58,5 +58,15 @@ namespace CountingArrayElements.Tests
             Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetZeroDecimalCount(null));
         }
 
+        [TestCaseSource(nameof(GetZeroDecimalCountData))]
+        public void GetZeroDecimalCount_ParametersAreValid_ReturnResult(decimal[] arrayToSearch, int expectedResult)
+        {
+            // Act
+            int actualResult = DoWhileMethods.GetZeroDecimalCount(arrayToSearch);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
     }
 }
