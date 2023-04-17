@@ -5,7 +5,20 @@
         public static int GetIndexOf(uint[]? arrayToSearch, uint value)
         {
             // 1. Analyze the implementation of "GetLastIndexOf(uint[], uint)" method to see how "for" loop works, and implement the method using the "for" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            for (int i = 0; i < arrayToSearch.Length; i++)
+            {
+                if (arrayToSearch[i] == value)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
 
         public static int GetIndexOf(uint[]? arrayToSearch, uint value, int startIndex, int count)
