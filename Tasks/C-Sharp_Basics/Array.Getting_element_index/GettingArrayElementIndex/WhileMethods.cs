@@ -5,7 +5,23 @@
         public static int GetIndexOf(ushort[]? arrayToSearch, ushort value)
         {
             // 3. Analyze the implementation of "GetLastIndexOf(ushort[], ushort)" method to see how "while" loop works, and implement the method using the "while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int i = 0;
+            while (i < arrayToSearch.Length)
+            {
+                if (arrayToSearch[i] == value)
+                {
+                    return i;
+                }
+
+                i++;
+            }
+
+            return -1;
         }
 
         public static int GetIndexOf(ushort[]? arrayToSearch, ushort value, int startIndex, int count)
