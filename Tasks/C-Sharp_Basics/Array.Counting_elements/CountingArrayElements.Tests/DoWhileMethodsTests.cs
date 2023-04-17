@@ -106,5 +106,11 @@ namespace CountingArrayElements.Tests
             return DoWhileMethods.GetRoundedToEvenCount(arrayToSearch);
         }
 
+        [Test]
+        public void GetRoundedToEvenCountRecursive_ArrayToSearchParameterIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => DoWhileMethods.GetRoundedToEvenCountRecursive(null));
+
     }
 }
