@@ -5,7 +5,24 @@
         public static int GetIndexOf(ulong[]? arrayToSearch, ulong value)
         {
             // 5. Analyze the implementation of "GetLastIndexOf(ulong[], ulong)" method to see how "do..while" loop works, and implement the method using the "do..while" loop statement.
+            if (arrayToSearch is null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            int i = 0;
+            do
+            {
+                if (arrayToSearch[i] == value)
+                {
+                    return i;
+                }
+
+                i++;
+            }
+            while (i < arrayToSearch.Length);
+
+            return -1;
         }
 
         public static int GetIndexOf(ulong[]? arrayToSearch, ulong value, int startIndex, int count)
