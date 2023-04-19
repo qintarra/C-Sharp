@@ -51,6 +51,20 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCaseSource("ConstructorData")]
+        public void ConstructorExist(string className, (string, Type)[] constructorTypes)
+        {
+            var classType = GetClass(className);
+            var constructor = classType.GetConstructor(constructorTypes.Select(x => x.Item2).ToArray());
+            Assert.Multiple(() =>
+            {
+                Assert.That(constructor, Is.Not.Null);
+                Assert.That(constructor.GetParameters()
+                    .Select(x => (x.Name, x.ParameterType)).SequenceEqual(constructorTypes),
+                    Is.True);
+            });
+        }
+
     }
 }
 
