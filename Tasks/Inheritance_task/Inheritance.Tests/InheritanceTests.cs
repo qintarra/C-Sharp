@@ -35,6 +35,22 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCase("Employee", "Name", typeof(string), false)]
+        [TestCase("Employee", "Salary", typeof(decimal), true)]
+        public void PropertyExist(string className, string propertyName, Type propertyType, bool isWriteable,
+            bool isReadable = true)
+        {
+            var classType = GetClass(className);
+            var property = classType.GetProperty(propertyName);
+            Assert.Multiple(() =>
+            {
+                Assert.That(property, Is.Not.Null);
+                Assert.That(property.PropertyType, Is.EqualTo(propertyType));
+                Assert.That(property.CanRead, Is.EqualTo(isReadable));
+                Assert.That(property.CanWrite, Is.EqualTo(isWriteable));
+            });
+        }
+
     }
 }
 
