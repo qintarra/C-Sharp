@@ -80,6 +80,15 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCase("Manager")]
+        [TestCase("SalesPerson")]
+        public void InheritanceCheck(string className)
+        {
+            var employeeType = GetClass("Employee");
+            var classType = GetClass(className);
+            Assert.That(classType.BaseType, Is.EqualTo(employeeType));
+        }
+
     }
 }
 
