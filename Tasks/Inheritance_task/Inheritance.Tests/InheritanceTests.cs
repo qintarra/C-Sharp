@@ -65,6 +65,21 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCaseSource("MethodsData")]
+        public void MethodExist(string className, string methodName, Type returnType, (string, Type)[] parameters)
+        {
+            var classType = GetClass(className);
+            var method = classType.GetMethod(methodName);
+            Assert.Multiple(() =>
+            {
+                Assert.That(method, Is.Not.Null);
+                Assert.That(method.ReturnType, Is.EqualTo(returnType));
+                Assert.That(method.GetParameters()
+                        .Select(x => (x.Name, x.ParameterType)).SequenceEqual(parameters),
+                    Is.True);
+            });
+        }
+
     }
 }
 
