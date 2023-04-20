@@ -221,6 +221,18 @@ namespace Inheritance.Tests
             }
         }
 
+        private static IEnumerable<TestCaseData> ConstructorData
+        {
+            get
+            {
+                yield return new TestCaseData("Employee",
+                    new[] { ("name", typeof(string)), ("salary", typeof(decimal)) });
+                yield return new TestCaseData("Manager",
+                    new[] { ("name", typeof(string)), ("salary", typeof(decimal)), ("clientAmount", typeof(int)) });
+                yield return new TestCaseData("SalesPerson",
+                    new[] { ("name", typeof(string)), ("salary", typeof(decimal)), ("percent", typeof(int)) });
+            }
+        }
 
         #endregion
 
