@@ -236,6 +236,17 @@ namespace Inheritance.Tests
 
         #endregion
 
+
+        #region Utilities
+
+        private static Type GetClass(string className)
+        {
+            var classType = Type.GetType($"InheritanceTask.{className}, Inheritance");
+            Assert.That(classType, Is.Not.Null);
+            return classType;
+        }
+
+        #endregion
     }
 }
 
