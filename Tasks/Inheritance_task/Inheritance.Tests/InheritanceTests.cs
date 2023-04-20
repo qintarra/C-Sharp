@@ -169,6 +169,39 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCase(220, 30)]
+        [TestCase(110, 20)]
+        [TestCase(25, 10)]
+        public void SalesPersonFunctionalTest(int percent, decimal bonus)
+        {
+            var classType = GetClass("SalesPerson");
+            var constructor = classType.GetConstructor(new[] { typeof(string), typeof(decimal), typeof(int) });
+            Assert.Multiple(() =>
+            {
+                Assert.That(constructor, Is.Not.Null);
+                var el = constructor.Invoke(new object[] { "name", (decimal)14, percent });
+                var setBonus = classType.GetMethod("SetBonus");
+                Assert.That(setBonus, Is.Not.Null);
+                setBonus.Invoke(el, new object[] { (decimal)10 });
+                var toPay = classType.GetMethod("ToPay");
+                Assert.That(toPay, Is.Not.Null);
+                var res = toPay.Invoke(el, new object[0]);
+                Assert.That(res, Is.InstanceOf<decimal>());
+                Assert.That((decimal)res, Is.EqualTo((decimal)14 + bonus));
+                var salary = classType.GetProperty("Salary");
+                Assert.That(salary, Is.Not.Null);
+                salary.SetMethod.Invoke(el, new object[] { (decimal)45 });
+                Assert.That((decimal)salary.GetMethod.Invoke(el, new object[0]),
+                    Is.EqualTo((decimal)45));
+                res = toPay.Invoke(el, new object[0]);
+                Assert.That((decimal)res, Is.EqualTo((decimal)45 + bonus));
+                var nameProperty = classType.GetProperty("Name");
+                Assert.That(nameProperty, Is.Not.Null);
+                Assert.That((string)nameProperty.GetMethod.Invoke(el, new object[0]),
+                    Is.EqualTo("name"));
+            });
+        }
+
         #endregion
 
     }
