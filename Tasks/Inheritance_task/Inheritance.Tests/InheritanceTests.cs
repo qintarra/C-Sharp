@@ -89,6 +89,24 @@ namespace Inheritance.Tests
             Assert.That(classType.BaseType, Is.EqualTo(employeeType));
         }
 
+        [TestCase("Manager", "SetBonus")]
+        [TestCase("SalesPerson", "SetBonus")]
+        public void VirtualMethodCheck(string className, string methodName)
+        {
+            var employeeType = GetClass("Employee");
+            var classType = GetClass(className);
+            Assert.Multiple(() =>
+            {
+                Assert.That(classType.BaseType, Is.EqualTo(employeeType));
+                Assert.That(employeeType.GetMethod(methodName), Is.Not.Null);
+                Assert.That(classType.GetMethod(methodName), Is.Not.Null);
+                Assert.That(employeeType.GetMethod(methodName).IsVirtual, Is.True);
+                Assert.That(classType.GetMethod(methodName).DeclaringType, Is.Not.EqualTo(employeeType));
+            });
+        }
+
+        #endregion
+
     }
 }
 
