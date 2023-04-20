@@ -202,6 +202,26 @@ namespace Inheritance.Tests
             });
         }
 
+        private static IEnumerable<TestCaseData> MethodsData
+        {
+            get
+            {
+                yield return new TestCaseData("Employee", "SetBonus", typeof(void),
+                    new[] { ("bonus", typeof(decimal)) });
+                yield return new TestCaseData("SalesPerson", "SetBonus", typeof(void),
+                    new[] { ("bonus", typeof(decimal)) });
+                yield return new TestCaseData("Manager", "SetBonus", typeof(void),
+                    new[] { ("bonus", typeof(decimal)) });
+                yield return new TestCaseData("Employee", "ToPay", typeof(decimal),
+                    new List<(string, Type)>().ToArray());
+                yield return new TestCaseData("SalesPerson", "ToPay", typeof(decimal),
+                    new List<(string, Type)>().ToArray());
+                yield return new TestCaseData("Manager", "ToPay", typeof(decimal),
+                    new List<(string, Type)>().ToArray());
+            }
+        }
+
+
         #endregion
 
     }
