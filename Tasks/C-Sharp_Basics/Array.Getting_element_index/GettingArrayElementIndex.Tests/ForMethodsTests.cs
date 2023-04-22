@@ -55,5 +55,35 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentOutOfRangeException>(() => GetIndexOf(Array.Empty<uint>(), 0, 0, -1));
         }
 
+        [TestCase(new uint[0], 0u, 0, 0, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 0, 9, ExpectedResult = 0)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 0, 14, ExpectedResult = 0)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 1, 8, ExpectedResult = 7)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 1, 4, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 7, 1, ExpectedResult = 7)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 0u, 9, 5, ExpectedResult = 11)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 0, 9, ExpectedResult = 1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 0, 14, ExpectedResult = 1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 1, 8, ExpectedResult = 1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 1, 4, ExpectedResult = 1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 2, 1, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 6, 1, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 4, 1, ExpectedResult = 4)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 1u, 9, 5, ExpectedResult = 12)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 0, 9, ExpectedResult = 3)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 0, 14, ExpectedResult = 3)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 1, 8, ExpectedResult = 3)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 1, 4, ExpectedResult = 3)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 2, 1, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 6, 1, ExpectedResult = 6)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 4, 1, ExpectedResult = -1)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }, 3u, 9, 5, ExpectedResult = 10)]
+        [TestCase(new uint[] { 0, 1, 2, 3, 1, 2, 3 }, 4u, 0, 7, ExpectedResult = -1)]
+        public int GetIndexOf_NonEmptyArray_ReturnsPosition2(uint[] arrayToSearch, uint value, int startIndex, int count)
+        {
+            // Act
+            return GetIndexOf(arrayToSearch, value, startIndex, count);
+        }
+
     }
 }
