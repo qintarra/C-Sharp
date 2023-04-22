@@ -48,5 +48,12 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentOutOfRangeException>(() => GetIndexOf(Array.Empty<ushort>(), 0, 1, 0));
         }
 
+        [Test]
+        public void GetIndexOf_StartIndexCount_CountLessZero_ThrowsException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(() => GetIndexOf(Array.Empty<ushort>(), 0, 0, -1));
+        }
+
     }
 }
