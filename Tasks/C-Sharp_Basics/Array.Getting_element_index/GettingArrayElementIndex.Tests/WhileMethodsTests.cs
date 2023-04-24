@@ -92,5 +92,18 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentNullException>(() => GetLastIndexOf(null, 0));
         }
 
+        [TestCase(new ushort[0], (ushort)0, ExpectedResult = -1)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 1, 2, 3 }, (ushort)0, ExpectedResult = 0)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 1, 2, 3 }, (ushort)1, ExpectedResult = 4)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 1, 2, 3 }, (ushort)2, ExpectedResult = 5)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 1, 2, 3 }, (ushort)3, ExpectedResult = 6)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, (ushort)9, ExpectedResult = 9)]
+        [TestCase(new ushort[] { 0, 1, 2, 3, 1, 2, 3 }, (ushort)4, ExpectedResult = -1)]
+        public int GetLastIndexOf_NonEmptyArray_ReturnsPosition(ushort[] arrayToSearch, ushort value)
+        {
+            // Act
+            return GetLastIndexOf(arrayToSearch, value);
+        }
+
     }
 }
