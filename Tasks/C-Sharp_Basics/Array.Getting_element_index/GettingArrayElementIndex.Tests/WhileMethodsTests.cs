@@ -112,5 +112,12 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentNullException>(() => GetLastIndexOf(null, 0, 0, 0));
         }
 
+        [Test]
+        public void GetLastIndexOf_StartIndexCount_StartIndexLessZero_ThrowsException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(() => GetLastIndexOf(Array.Empty<ushort>(), 0, -1, 0));
+        }
+
     }
 }
