@@ -90,5 +90,18 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentNullException>(() => GetLastIndexOf(null, 0));
         }
 
+        [TestCase(new ulong[0], 0ul, ExpectedResult = -1)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 1, 2, 3 }, 0ul, ExpectedResult = 0)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 1, 2, 3 }, 1ul, ExpectedResult = 4)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 1, 2, 3 }, 2ul, ExpectedResult = 5)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 1, 2, 3 }, 3ul, ExpectedResult = 6)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 9ul, ExpectedResult = 9)]
+        [TestCase(new ulong[] { 0, 1, 2, 3, 1, 2, 3 }, 4ul, ExpectedResult = -1)]
+        public int GetLastIndexOf_NonEmptyArray_ReturnsPosition(ulong[] arrayToSearch, ulong value)
+        {
+            // Act
+            return GetLastIndexOf(arrayToSearch, value);
+        }
+
     }
 }
