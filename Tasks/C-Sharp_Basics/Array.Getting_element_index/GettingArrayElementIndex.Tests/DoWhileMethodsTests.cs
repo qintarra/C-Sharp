@@ -83,5 +83,12 @@ namespace GettingArrayElementIndex.Tests
             return GetIndexOf(arrayToSearch, value, startIndex, count);
         }
 
+        [Test]
+        public void GetLastIndexOf_NullArray_ThrowsException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => GetLastIndexOf(null, 0));
+        }
+
     }
 }
