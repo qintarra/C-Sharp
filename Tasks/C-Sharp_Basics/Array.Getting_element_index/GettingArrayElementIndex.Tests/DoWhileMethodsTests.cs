@@ -33,5 +33,12 @@ namespace GettingArrayElementIndex.Tests
             Assert.Throws<ArgumentNullException>(() => GetIndexOf(null, 0, 0, 0));
         }
 
+        [Test]
+        public void GetIndexOf_StartIndexCount_StartIndexLessZero_ThrowsException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(() => GetIndexOf(Array.Empty<ulong>(), 0, -1, 0));
+        }
+
     }
 }
