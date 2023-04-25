@@ -26,5 +26,12 @@ namespace GettingArrayElementIndex.Tests
             return GetIndexOf(arrayToSearch, value);
         }
 
+        [Test]
+        public void GetIndexOf_StartIndexCount_NullArray_ThrowsException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(() => GetIndexOf(null, 0, 0, 0));
+        }
+
     }
 }
