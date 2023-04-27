@@ -236,6 +236,15 @@ namespace Inheritance.Tests
 
         #endregion
 
+        #region advance
+        
+        [Test]
+        public void CompanyClassExist()
+        {
+            GetClass("Company");
+        }
+   
+        #endregion
 
         #region Utilities
 
