@@ -256,7 +256,16 @@ namespace Inheritance.Tests
                 Assert.That(field.FieldType, Is.EqualTo(employeeClass.MakeArrayType()));
             });
         }
-    
+
+        [Test]
+        public void CompanyConstructorExist()
+        {
+            var classType = GetClass("Company");
+            var employeeClass = GetClass("Employee");
+            var constructor = classType.GetConstructor(new[] { employeeClass.MakeArrayType() });
+            Assert.That(constructor, Is.Not.Null);
+        }
+     
         #endregion
 
         #region Utilities
