@@ -243,7 +243,20 @@ namespace Inheritance.Tests
         {
             GetClass("Company");
         }
-   
+
+        [Test]
+        public void CompanyClassEmployeesFieldExist()
+        {
+            var classType = GetClass("Company");
+            var employeeClass = GetClass("Employee");
+            var field = classType.GetField("employees", BindingFlags.NonPublic | BindingFlags.Instance);
+            Assert.Multiple(() =>
+            {
+                Assert.That(field, Is.Not.Null);
+                Assert.That(field.FieldType, Is.EqualTo(employeeClass.MakeArrayType()));
+            });
+        }
+    
         #endregion
 
         #region Utilities
