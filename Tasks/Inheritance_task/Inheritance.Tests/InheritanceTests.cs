@@ -313,6 +313,20 @@ namespace Inheritance.Tests
             });
         }
 
+        private static IEnumerable<TestCaseData> MethodsDataAdvance
+        {
+            get
+            {
+                yield return new TestCaseData("Company", "GiveEverybodyBonus", typeof(void),
+                    new[] { ("companyBonus", typeof(decimal)) });
+                yield return new TestCaseData("Company", "TotalToPay", typeof(decimal),
+                    new (string, Type)[0]);
+                yield return new TestCaseData("Company", "NameMaxSalary", typeof(string),
+                    new (string, Type)[0]);
+            }
+        }
+        
+
         
         #endregion
 
