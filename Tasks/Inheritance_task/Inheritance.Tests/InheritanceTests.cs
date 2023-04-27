@@ -281,6 +281,38 @@ namespace Inheritance.Tests
             });
         }
 
+        [TestCaseSource("FunctionalData")]
+        public void CompanyClassFunctionalityTest(object[] employees, string maxPayHolderBeforeBonus, string maxPayHolderAfterBonus,
+            decimal totalBeforeBonus, decimal totalAfterBonus)
+        {
+            var employeeType = GetClass("Employee");
+            var companyType = GetClass("Company");
+            var constructor = companyType.GetConstructor(new[] { employeeType.MakeArrayType() });
+            Assert.Multiple(() =>
+            {
+                Assert.That(constructor, Is.Not.Null);
+                var arr = Array.CreateInstance(employeeType, employees.Length);
+                Array.Copy(employees, arr, employees.Length);
+                var el = constructor.Invoke(new object[] { arr });
+                var nameMaxSalaryMethod = companyType.GetMethod("NameMaxSalary");
+                var giveEveryBodyBonusMethod = companyType.GetMethod("GiveEverybodyBonus");
+                var totalToPayMethod = companyType.GetMethod("TotalToPay");
+                Assert.That(nameMaxSalaryMethod, Is.Not.Null);
+                Assert.That(giveEveryBodyBonusMethod, Is.Not.Null);
+                Assert.That(totalToPayMethod, Is.Not.Null);
+
+                Assert.That((string)nameMaxSalaryMethod.Invoke(el, new object[0]),
+                    Is.EqualTo(maxPayHolderBeforeBonus));
+                Assert.That((decimal)totalToPayMethod.Invoke(el, new object[0]),
+                    Is.EqualTo(totalBeforeBonus));
+                giveEveryBodyBonusMethod.Invoke(el, new object[] { (decimal)1 });
+                Assert.That((decimal)totalToPayMethod.Invoke(el, new object[0]),
+                    Is.EqualTo(totalAfterBonus));
+                Assert.That((string)nameMaxSalaryMethod.Invoke(el, new object[0]),
+                    Is.EqualTo(maxPayHolderAfterBonus));
+            });
+        }
+
         
         #endregion
 
