@@ -326,7 +326,50 @@ namespace Inheritance.Tests
             }
         }
         
-
+        private static IEnumerable<TestCaseData> FunctionalData
+        {
+            get
+            {
+                var employeeType = GetClass("Employee");
+                var employeeConstructor = employeeType.GetConstructor(new[] { typeof(string), typeof(decimal) });
+                var managerType = GetClass("Manager");
+                var managerConstructor = managerType.GetConstructor(new[] { typeof(string), typeof(decimal), typeof(int) });
+                var salesPersonType = GetClass("SalesPerson");
+                var salesPersonConstructor = salesPersonType.GetConstructor(new[] { typeof(string), typeof(decimal), typeof(int) });
+                if (employeeConstructor == null || managerConstructor == null || salesPersonConstructor == null)
+                    Assert.Fail();
+                yield return new TestCaseData((object)new[]
+                {
+                    employeeConstructor.Invoke(new object[] { "name1", (decimal)15 }),
+                    employeeConstructor.Invoke(new object[] { "name2", (decimal)58 }),
+                    employeeConstructor.Invoke(new object[] { "name3", (decimal)96 })
+                }, "name3", "name3", (decimal)169, (decimal)172);
+                yield return new TestCaseData((object)new[]
+                {
+                    managerConstructor.Invoke(new object[] { "name1", (decimal)1, 200 }),
+                    managerConstructor.Invoke(new object[] { "name2", (decimal)45, 110 }),
+                    managerConstructor.Invoke(new object[] { "name3", (decimal)69, 25 })
+                }, "name3", "name1", (decimal)115, (decimal)1618);
+                yield return new TestCaseData((object)new[]
+                {
+                    salesPersonConstructor.Invoke(new object[] { "name1", (decimal)13, 220 }),
+                    salesPersonConstructor.Invoke(new object[] { "name2", (decimal)13, 110 }),
+                    salesPersonConstructor.Invoke(new object[] { "name3", (decimal)14, 25 })
+                }, "name3", "name1", (decimal)40, (decimal)46);
+                yield return new TestCaseData((object)new[]
+                {
+                    employeeConstructor.Invoke(new object[] { "name1", (decimal)9 }),
+                    employeeConstructor.Invoke(new object[] { "name2", (decimal)4 }),
+                    employeeConstructor.Invoke(new object[] { "name3", (decimal)14 }),
+                    managerConstructor.Invoke(new object[] { "name4", (decimal)14, 200 }),
+                    managerConstructor.Invoke(new object[] { "name5", (decimal)14, 110 }),
+                    managerConstructor.Invoke(new object[] { "name6", (decimal)14, 25 }),
+                    salesPersonConstructor.Invoke(new object[] { "name7", (decimal)14, 220 }),
+                    salesPersonConstructor.Invoke(new object[] { "name8", (decimal)14, 110 }),
+                    salesPersonConstructor.Invoke(new object[] { "name9", (decimal)20, 25 })
+                }, "name9", "name4", (decimal)117, (decimal)1629);
+            }
+        }
         
         #endregion
 
