@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Deposit
+namespace Interfaces
 {
     //Define public class "BaseDeposit" that inherits from "Deposit".
     public class BaseDeposit : Deposit
     {
-		
         //Define constructor that calls constructor of a base class.
-        public BaseDeposit(decimal amount, int period) : base (amount, period)
+        public BaseDeposit(decimal Amount, int Period) : base (Amount, Period)
         {
             
         }
