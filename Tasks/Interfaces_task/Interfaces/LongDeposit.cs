@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Interfaces
 {
-    public class LongDeposit : Deposit
+    public class LongDeposit : Deposit, IProlongable
     {
-        public LongDeposit(decimal amount, int period) : base(amount, period)
+        public LongDeposit(decimal Amount, int Period) : base(Amount, Period)
         {
 
         }
@@ -20,13 +20,9 @@ namespace Interfaces
             }
             return a - Amount;
         }
-        public override bool CanToProlong()
+        public bool CanToProlong()
         {
-            if (Period <= 36)
-            {
-                return true;
-            }
-            return false;
+            return Period <= 36;
         }
     }
 }
