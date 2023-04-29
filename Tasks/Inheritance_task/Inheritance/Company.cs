@@ -26,7 +26,7 @@ namespace Inheritance
         }
 		
         //Define public method 'TotalToPay', that returns the total amount of salary of all employees including awarded bonus.
-        public decimal TotalToPay(decimal salary)
+        public decimal TotalToPay()
         {
             decimal totalSalary = 0;
             foreach (Employee employee in employees)
@@ -44,8 +44,9 @@ namespace Inheritance
             for (int i = 1; i < employees.Length; i++)
             {
                 if (employees[index].ToPay() < employees[i].ToPay())
-                index = i;
-                
+                {
+                    index = i;
+                }
             }
             return employees[index].Name;
         }
