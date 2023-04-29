@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Inheritance
+namespace InheritanceTask
 {
     //Create public class 'Employee' here
     public class Employee
