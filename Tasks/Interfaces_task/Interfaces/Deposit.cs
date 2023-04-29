@@ -12,10 +12,10 @@ namespace Interfaces
         //Define public readonly property "Period" with int type.
         public int Period { get; }
         //Define constructor that gets "Amount" and "Period" and assigns them to its properties.
-        public Deposit(decimal amount, int period)
+        public Deposit(decimal Amount, int Period)
         {
-            Amount = amount;
-            Period = period;
+            this.Amount = Amount;
+            this.Period = Period;
         }
         //Define public abstract method "Income" that returns deposit profit depending on "Amount" and "Period".
         public abstract decimal Income();
