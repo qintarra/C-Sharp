@@ -4,29 +4,25 @@ using System.Text;
 
 namespace Interfaces
 {
-    public class SpecialDeposit : Deposit
+    public class SpecialDeposit : Deposit, IProlongable
     {
-        public SpecialDeposit(decimal amount, int period) : base(amount, period)
+        public SpecialDeposit(decimal Amount, int Period) : base(Amount, Period)
         {
 
         }
         public override decimal Income()
         {
-            decimal a = Amount;
+            decimal income = Amount;
 
             for (int i = 0; i <= Period; i++)
             {
-                a += a / 100 * i;
+                income += income / 100 * i;
             }
-            return a - Amount;
+            return income - Amount;
         }
-        public override bool CanToProlong()
+        public bool CanToProlong()
         {
-            if (Amount > 1000m)
-            {
-                return true;
-            }
-            return false;
+            return Amount > 1000;
         }
     }
 }
