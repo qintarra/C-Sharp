@@ -60,7 +60,48 @@ namespace LookingForArrayElements
         public static int GetFloatsCount(float[]? arrayToSearch, float[]? rangeStart, float[]? rangeEnd, int startIndex, int count)
         {
             // #4. Implement the method using "do..while" statements.
+            if (arrayToSearch == null || rangeStart == null || rangeEnd == null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            for (int i = 0; i < rangeStart.Length; i++)
+            {
+                if (rangeStart[i] > rangeEnd[i])
+                {
+                    throw new ArgumentException("Range start value must not be greater than range end value.");
+                }
+            }
+
+            if (rangeStart.Length != rangeEnd.Length)
+            {
+                throw new ArgumentException("The length of rangeStart and rangeEnd arrays must be the same.");
+            }
+
+            if (startIndex < 0 || startIndex >= arrayToSearch.Length || count < 0 || startIndex + count > arrayToSearch.Length)
+            {
+                throw new ArgumentOutOfRangeException(nameof(arrayToSearch));
+            }
+
+            int endIndex = startIndex + count;
+            int index = startIndex;
+            int matches = 0;
+
+            do
+            {
+                for (int i = 0; i < rangeStart.Length; i++)
+                {
+                    if (arrayToSearch[index] >= rangeStart[i] && arrayToSearch[index] <= rangeEnd[i])
+                    {
+                        matches++;
+                    }
+                }
+
+                index++;
+            }
+            while (index < endIndex);
+
+            return matches;
         }
     }
 }
