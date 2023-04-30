@@ -50,7 +50,44 @@ namespace LookingForArrayElements
         public static int GetIntegersCount(int[]? arrayToSearch, int[]? elementsToSearchFor, int startIndex, int count)
         {
             // #2. Implement the method using "while" statement.
+            if (arrayToSearch == null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            if (elementsToSearchFor == null)
+            {
+                throw new ArgumentNullException(nameof(elementsToSearchFor));
+            }
+
+            if (startIndex < 0 || startIndex > arrayToSearch.Length)
+            {
+                throw new ArgumentOutOfRangeException(nameof(startIndex));
+            }
+
+            if (count < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(count));
+            }
+
+            int occurrences = 0;
+            int i = startIndex;
+            int elementsFound = 0;
+
+            while (i < arrayToSearch.Length && elementsFound < count)
+            {
+                int element = arrayToSearch[i];
+
+                if (Array.IndexOf(elementsToSearchFor, element) != -1)
+                {
+                    occurrences++;
+                }
+
+                i++;
+                elementsFound++;
+            }
+
+            return occurrences;
         }
     }
 }
