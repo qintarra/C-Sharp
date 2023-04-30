@@ -14,7 +14,48 @@ namespace LookingForArrayElements
         public static int GetDecimalsCount(decimal[]? arrayToSearch, decimal[]?[]? ranges)
         {
             // #5. Implement the method using "do..while" statements.
+            if (arrayToSearch == null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            if (ranges == null)
+            {
+                throw new ArgumentNullException(nameof(ranges));
+            }
+
+            int count = 0;
+
+            foreach (decimal[]?range in ranges)
+            {
+                if (range == null)
+                {
+                    throw new ArgumentNullException(nameof(ranges));
+                }
+
+                if (range.Length != 2)
+                {
+                    throw new ArgumentException("Range array must have exactly two elements.", nameof(ranges));
+                }
+
+                decimal rangeStart = range[0];
+                decimal rangeEnd = range[1];
+
+                if (rangeStart > rangeEnd)
+                {
+                    throw new ArgumentException("Range start value must be less than or equal to range end value.", nameof(ranges));
+                }
+
+                foreach (decimal value in arrayToSearch)
+                {
+                    if (value >= rangeStart && value <= rangeEnd)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
 
         /// <summary>
