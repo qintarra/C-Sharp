@@ -13,7 +13,30 @@ namespace LookingForArrayElements
         public static int GetIntegersCount(int[]? arrayToSearch, int[]? elementsToSearchFor)
         {
             // #1. Implement the method using "for" statement.
+            if (arrayToSearch == null)
+            {
+                throw new ArgumentNullException(nameof(arrayToSearch));
+            }
 
+            if (elementsToSearchFor == null)
+            {
+                throw new ArgumentNullException(nameof(elementsToSearchFor));
+            }
+
+            int count = 0;
+
+            for (int i = 0; i < arrayToSearch.Length; i++)
+            {
+                for (int j = 0; j < elementsToSearchFor.Length; j++)
+                {
+                    if (arrayToSearch[i] == elementsToSearchFor[j])
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
 
         /// <summary>
