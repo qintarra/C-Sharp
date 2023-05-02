@@ -17,5 +17,14 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case an array to search is null.");
         }
 
+        [Test]
+        public void GetFloatsCount_RangeStartIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(
+                () => FloatCounter.GetFloatsCount(Array.Empty<float>(), null, Array.Empty<float>()),
+                message: "Method throws ArgumentNullException in case an array of range starts is null.");
+        }
+
     }
 }
