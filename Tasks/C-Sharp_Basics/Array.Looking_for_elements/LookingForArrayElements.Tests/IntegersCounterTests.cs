@@ -119,5 +119,14 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case count is less than zero.");
         }
 
+        [Test]
+        public void GetIntegersCountWithStartIndexAndCount_TheNumberOfElementsToSearchIsGreaterThanTheNumberOfElementsAvailableInTheArrayStartingFromTheStartIndexPosition_ThrowArgumentOutOfRangeException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => IntegersCounter.GetIntegersCount(Array.Empty<int>(), Array.Empty<int>(), 6, 44),
+                message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
+        }
+
     }
 }
