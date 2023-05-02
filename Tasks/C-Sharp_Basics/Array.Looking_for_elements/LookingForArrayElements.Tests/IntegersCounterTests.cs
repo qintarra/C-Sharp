@@ -128,5 +128,18 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
         }
 
+        [TestCase(new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, new[] { 2, 5, 8 }, 5, 0, ExpectedResult = 0)]
+        [TestCase(new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, new[] { 2, 5, 8 }, 0, 9, ExpectedResult = 3)]
+        [TestCase(new[] { 1, 2, 3, 2, 4, 5, 6, 5, 5, 8, 7, 8, 9 }, new[] { 2, 5, 8 }, 0, 13, ExpectedResult = 7)]
+        [TestCase(new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, new[] { 2, 5, 8 }, 2, 5, ExpectedResult = 1)]
+        [TestCase(new[] { 1, 2, 3, 2, 4, 5, 6, 5, 5, 8, 7, 8, 9 }, new[] { 2, 5, 8 }, 3, 7, ExpectedResult = 5)]
+        [TestCase(new[] { 1, 2, 3, 2, 4, 5, 6, 5, 5, 8, 7, 8, 9 }, new[] { -2, -5, -8 }, 5, 3, ExpectedResult = 0)]
+        [TestCase(new[] { 5, 4, 21, 38, 25, int.MaxValue, 48, 98, 14, 43, 11, 6, 81, 532, 58 }, new[] { int.MaxValue, 47, 14, 6, 532, int.MinValue }, 0, 8, ExpectedResult = 1)]
+        [TestCase(new[] { -5, 4, -21, 38, -25, int.MinValue, 48, -98, 14, -43, 11, -6, 81, -532, -58 }, new[] { int.MaxValue, -47, 14, -6, 532, int.MinValue }, 4, 10, ExpectedResult = 3)]
+        public int GetIntegersCount_ParametersAreValid_ReturnsResult(int[] arrayToSearch, int[] elementsToSearchFor, int startIndex, int count)
+        {
+            // Act
+            return IntegersCounter.GetIntegersCount(arrayToSearch, elementsToSearchFor, startIndex, count);
+        }
     }
 }
