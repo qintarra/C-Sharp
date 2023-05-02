@@ -92,5 +92,14 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void GetIntegersCountWithStartIndexAndCount_StartIndexIsNegative_ThrowArgumentOutOfRangeException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => IntegersCounter.GetIntegersCount(Array.Empty<int>(), Array.Empty<int>(), -1, 1),
+                message: "Method throws ArgumentOutOfRangeException in case start index is negative.");
+        }
+
     }
 }
