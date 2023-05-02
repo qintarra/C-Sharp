@@ -70,5 +70,14 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case an array to search is null.");
         }
 
+        [Test]
+        public void GetIntegersCountWithStartIndexAndCount_ElementsToSearchForIsNull_ThrowArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(
+                () => IntegersCounter.GetIntegersCount(Array.Empty<int>(), null, 0, 1),
+                message: "Method throws ArgumentNullException in case an array of elements to for search is null.");
+        }
+
     }
 }
