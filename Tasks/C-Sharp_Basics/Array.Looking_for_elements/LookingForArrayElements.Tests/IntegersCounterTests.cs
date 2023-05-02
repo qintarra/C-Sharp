@@ -37,5 +37,18 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void GetIntegersCount_ElementsToSearchForIsEmpty_ReturnZeroOccurrences()
+        {
+            // Arrange
+            int[] arrayToSearch = { 2, 5, 8 };
+
+            // Act
+            int actual = IntegersCounter.GetIntegersCount(arrayToSearch, Array.Empty<int>());
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
