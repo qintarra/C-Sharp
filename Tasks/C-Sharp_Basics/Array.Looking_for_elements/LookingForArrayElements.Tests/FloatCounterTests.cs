@@ -85,5 +85,18 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentException in case the range start value is greater than the range end value.");
         }
 
+        [TestCase(new[] { 0.1f }, new[] { 0.1f }, new[] { 0.1f }, ExpectedResult = 1)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.4f }, new[] { 0.6f }, ExpectedResult = 3)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.1f, 0.8f }, new[] { 0.2f, 0.9f }, ExpectedResult = 4)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.1f, 0.5f, 0.9f }, new[] { 0.1f, 0.5f, 0.9f }, ExpectedResult = 3)]
+        [TestCase(new[] { float.Epsilon, 0.2f, -0.3f, 0.4f, 0.5f, -0.6f, 1.7f, 0.8f, float.MaxValue }, new[] { -0.1f, 0.5f, 0.9f }, new[] { 0.1f, 0.5f, 1.9f }, ExpectedResult = 3)]
+        [TestCase(new[] { float.MaxValue, 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f, -1.1f, -2.2f, float.MaxValue, -3.3f, -4.4f, -5.5f, -6.6f, -7.7f, -8.8f, -9.9f }, new[] { float.MinValue }, new[] { float.MaxValue }, ExpectedResult = 20)]
+        [TestCase(new[] { float.MaxValue, 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, -0.8f, 0.9f, -1.1f, -2.2f, float.MaxValue, -3.3f, -4.4f, -5.5f, -6.6f, -7.7f, -8.8f, -9.9f }, new[] { 0.8f }, new[] { 0.8f }, ExpectedResult = 0)]
+        public float GetFloatsCount_ParametersAreValid_ReturnsResult(float[] arrayToSearch, float[] rangeStart, float[] rangeEnd)
+        {
+            // Act
+            return FloatCounter.GetFloatsCount(arrayToSearch, rangeStart, rangeEnd);
+        }
+
     }
 }
