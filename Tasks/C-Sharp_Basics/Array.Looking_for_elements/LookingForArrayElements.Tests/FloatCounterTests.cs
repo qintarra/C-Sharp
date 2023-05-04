@@ -98,5 +98,14 @@ namespace LookingForArrayElements.Tests
             return FloatCounter.GetFloatsCount(arrayToSearch, rangeStart, rangeEnd);
         }
 
+        [Test]
+        public void GetFloatsCountWithStartIndexAndCount_ArrayToSearchIsNull_ThrowsArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(
+                () => FloatCounter.GetFloatsCount(null, Array.Empty<float>(), Array.Empty<float>(), 0, 1),
+                message: "Method throws ArgumentNullException in case an array to search is null.");
+        }
+
     }
 }
