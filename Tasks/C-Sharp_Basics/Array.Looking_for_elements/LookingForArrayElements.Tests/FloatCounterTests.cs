@@ -49,5 +49,15 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void GetFloatsCount_RangesAreEmpty_ReturnZeroOccurrences()
+        {
+            // Act
+            int actual = FloatCounter.GetFloatsCount(FloatCounterTests.ArrayWithNineElements, Array.Empty<float>(), Array.Empty<float>());
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
