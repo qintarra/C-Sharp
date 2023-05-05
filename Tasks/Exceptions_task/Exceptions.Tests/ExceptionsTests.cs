@@ -180,6 +180,19 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedRows, matrix.Rows);
             Assert.AreEqual(expectedColumns, matrix.Columns);
         }
+        
+        [TestCase(3, 4)]
+        [TestCase(5, 7)]
+        [TestCase(7, 5)]
+        public void CreateMatrix_WithDimensions_PublicProperties_ReturnsCorrectValues(int expectedRows,
+            int expectedColumns)
+        {
+            // Act
+            var matrix = new Matrix(expectedRows, expectedColumns);
 
+            // Assert
+            Assert.AreEqual(expectedRows, matrix.Rows);
+            Assert.AreEqual(expectedColumns, matrix.Columns);
+        }
     }
 }
