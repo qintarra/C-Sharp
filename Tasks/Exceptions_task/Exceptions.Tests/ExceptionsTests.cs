@@ -93,7 +93,66 @@ namespace Exceptions.Tests
         };
 
         #endregion
+        
+        #region ArraysOperatorMultiply
 
+        private static readonly object[] ArraysOperatorMultiply =
+        {
+            new object[]
+            {
+                new double[0, 0] { }, new double[0, 0] { }, new double[0, 0] { }
+            },
+            
+            new object[]
+            {
+                new double[2, 2] {{2, 2}, {2, 2}}, new double[2, 2] {{2, 2}, {2, 2}}, new double[2, 2] {{8, 8}, {8, 8}}
+            },
+            
+            new object[]
+            {
+                new double[2, 3]
+                {
+                    {1, 4, 2},
+                    {2, 5, 1}
+                },
+                new double[3, 3]
+                {
+                    {3, 4, 2},
+                    {3, 5, 7},
+                    {1, 2, 1}
+                },
+                new double[2, 3]
+                {
+                    {17, 28, 32},
+                    {22, 35, 40}
+                }
+            },
+            new object[]
+            {
+                new double[4, 3]
+                {
+                    {1, 2, 3},
+                    {1, 2, 3},
+                    {1, 2, 3},
+                    {1, 2, 3}
+                },
+                new double[3, 4]
+                {
+                    {4, 3, 2, 1},
+                    {4, 3, 2, 1},
+                    {4, 3, 2, 1},
+                },
+                new double[4, 4]
+                {
+                    {24, 18, 12, 6},
+                    {24, 18, 12, 6},
+                    {24, 18, 12, 6},
+                    {24, 18, 12, 6}
+                }
+            }
+        };
+        
+        #endregion
 
         
         #endregion
