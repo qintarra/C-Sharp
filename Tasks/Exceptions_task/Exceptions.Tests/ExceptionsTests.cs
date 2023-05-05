@@ -166,5 +166,20 @@ namespace Exceptions.Tests
         
         #endregion
 
+        [TestCaseSource(nameof(ArraysCreateMatrix))]
+        public void CreateMatrix_WithArray_PublicProperties_ReturnsCorrectValues(double[,] expectedArray)
+        {
+            // Arrange
+            var expectedRows = expectedArray.GetLength(0);
+            var expectedColumns = expectedArray.GetLength(1);
+
+            // Act
+            var matrix = new Matrix(expectedArray);
+
+            // Assert
+            Assert.AreEqual(expectedRows, matrix.Rows);
+            Assert.AreEqual(expectedColumns, matrix.Columns);
+        }
+
     }
 }
