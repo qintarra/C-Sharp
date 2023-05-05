@@ -153,7 +153,16 @@ namespace Exceptions.Tests
         };
         
         #endregion
+        
+        #region ArraysOperatorMultiplyException
 
+        private static readonly object[] ArraysOperatorMultiplyException =
+        {
+            new object[] {new double[0, 0] { }, new double[1, 0] {{ }}},
+            new object[] {new double[1, 1] {{1}}, new double[0, 0] { }},
+        };
+
+        #endregion
         
         #endregion
 
