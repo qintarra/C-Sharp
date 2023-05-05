@@ -64,6 +64,36 @@ namespace Exceptions.Tests
         };
 
         #endregion
+        
+        #region ArraysMinusOperator
+
+        private static readonly object[] ArraysMinusOperator =
+        {
+            new object[]
+            {
+                new double[3, 4]
+                {
+                    {1, 2, 3, 4},
+                    {1, 2, 3, 4},
+                    {1, 2, 3, 4}
+                },
+                new double[3, 4]
+                {
+                    {4, 3, 2, 1},
+                    {4, 3, 2, 1},
+                    {4, 3, 2, 1},
+                },
+                new double[3, 4]
+                {
+                    {-3, -1, 1, 3},
+                    {-3, -1, 1, 3},
+                    {-3, -1, 1, 3},
+                }
+            }
+        };
+
+        #endregion
+
 
         
         #endregion
