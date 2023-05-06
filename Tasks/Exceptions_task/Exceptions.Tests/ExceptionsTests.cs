@@ -282,6 +282,22 @@ namespace Exceptions.Tests
             // Assert
             Assert.AreEqual(expected.Array, actual.Array, "Multiply method works incorrectly.");
         }
+        
+        [TestCaseSource(nameof(ArraysPlusOperator))]
+        public void Add_Matrix_ReturnsResultMatrix(double[,] array1, double[,] array2,
+            double[,] expectedArray)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+            var expected = new Matrix(expectedArray);
+
+            // Act
+            var actual = matrix1.Add(matrix2);
+
+            // Assert
+            Assert.AreEqual(expected.Array, actual.Array, message: "Add method works incorrectly.");
+        }
 
     }
 }
