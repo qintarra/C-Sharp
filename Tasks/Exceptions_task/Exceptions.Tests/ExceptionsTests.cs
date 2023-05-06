@@ -298,6 +298,23 @@ namespace Exceptions.Tests
             // Assert
             Assert.AreEqual(expected.Array, actual.Array, message: "Add method works incorrectly.");
         }
+        
+        [TestCaseSource(nameof(ArraysMinusOperator))]
+        public void Subtract_Matrix_ReturnsResultMatrix(double[,] array1, double[,] array2,
+            double[,] expectedArray)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+            var expected = new Matrix(expectedArray);
+
+            // Act
+            var actual = matrix1.Subtract(matrix2);
+
+            // Assert
+            Assert.AreEqual(expected.Array, actual.Array, message: "Subtract method works incorrectly.");
+        }
+        
 
     }
 }
