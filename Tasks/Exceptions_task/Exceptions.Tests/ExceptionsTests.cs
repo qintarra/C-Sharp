@@ -267,5 +267,21 @@ namespace Exceptions.Tests
                 message: "Set property in indexer should throw argument exception in case of nonexistent index.");
         }
 
+        [TestCaseSource(nameof(ArraysOperatorMultiply))]
+        public void Multiply_Matrix_ReturnsResultMatrix(double[,] array1, double[,] array2,
+            double[,] expectedArray)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+            var expected = new Matrix(expectedArray);
+
+            // Act
+            var actual = matrix1.Multiply(matrix2);
+
+            // Assert
+            Assert.AreEqual(expected.Array, actual.Array, "Multiply method works incorrectly.");
+        }
+
     }
 }
