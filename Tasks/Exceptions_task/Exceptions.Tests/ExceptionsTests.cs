@@ -215,5 +215,21 @@ namespace Exceptions.Tests
             Assert.AreEqual(true, isValid, message: "Indexer works incorrectly.");
         }
 
+        [TestCase(4, 3)]
+        [TestCase(3, 4)]
+        public void Indexer_GetElementOutOfRange_ArgumentExceptionThrown(int rows, int columns)
+        {
+            // Arrange
+            var matrix = new Matrix(rows, columns);
+            var expectedException = typeof(ArgumentException);
+            
+            // Act
+            var actException = Assert.Catch(() => _ = matrix[-10, -10]);
+
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(),
+                message: "Indexer should throw argument exception in case of nonexistent index.");
+        }
+
     }
 }
