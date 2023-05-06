@@ -194,5 +194,26 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedRows, matrix.Rows);
             Assert.AreEqual(expectedColumns, matrix.Columns);
         }
+
+        [TestCaseSource(nameof(ArraysCreateMatrix))]
+        public void Indexer_GetEachElement_ShouldReturnValue(double[,] array)
+        {
+            // Arrange
+            var matrix = new Matrix(array);
+
+            // Act
+            var isValid = true;
+            for (var i = 0; i < matrix.Rows; i++)
+            {
+                for (var j = 0; j < matrix.Columns; j++)
+                {
+                    if (Math.Abs(matrix[i, j] - array[i, j]) > 0.001) isValid = false;
+                }
+            }
+
+            // Assert
+            Assert.AreEqual(true, isValid, message: "Indexer works incorrectly.");
+        }
+
     }
 }
