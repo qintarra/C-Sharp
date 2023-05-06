@@ -231,5 +231,25 @@ namespace Exceptions.Tests
                 message: "Indexer should throw argument exception in case of nonexistent index.");
         }
 
+        [TestCase(4, 3)]
+        [TestCase(3, 4)]
+        [TestCase(2, 2)]
+        public void Indexer_SetElement_ShouldChangeValue(int rows, int columns)
+        {
+            // Arrange
+            var matrix = new Matrix(rows, columns);
+            const int expected1 = 1337;
+            const int expected2 = 228;
+
+            // Act
+            matrix[rows - 1, columns - 1] = expected1;
+            matrix[0, 0] = expected2;
+
+            // Assert
+            Assert.AreEqual(expected1, matrix[rows - 1, columns - 1],
+                message: "Set property in indexer works incorrectly.");
+            Assert.AreEqual(expected2, matrix[0, 0], message: "Set property in indexer works incorrectly.");
+        }
+
     }
 }
