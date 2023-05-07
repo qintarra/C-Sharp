@@ -161,5 +161,14 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentException in case the range start value is greater than the range end value.");
         }
 
+        [Test]
+        public void GetFloatsCountWithStartIndexAndCount_StartIndexIsNegative_ThrowArgumentOutOfRangeException()
+        {
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => FloatCounter.GetFloatsCount(Array.Empty<float>(), Array.Empty<float>(), Array.Empty<float>(), -123, 1),
+                message: "Method throws ArgumentOutOfRangeException in case start index is negative.");
+        }
+
     }
 }
