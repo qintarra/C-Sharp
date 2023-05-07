@@ -125,5 +125,15 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case an array of range ends is null.");
         }
 
+        [Test]
+        public void GetFloatsCountWithStartIndexAndCount_RangesAreEmpty_ReturnZeroOccurrences()
+        {
+            // Act
+            int actual = FloatCounter.GetFloatsCount(FloatCounterTests.ArrayWithNineElements, Array.Empty<float>(), Array.Empty<float>(), 0, 1);
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
