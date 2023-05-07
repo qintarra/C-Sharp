@@ -135,5 +135,18 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void GetFloatsCountWithStartIndexAndCount_RangeStartAndRangeEndHaveDifferentNumberOfElements_ThrowsArgumentException()
+        {
+            // Arrange
+            float[] rangeStart = { 0.1f };
+            float[] rangeEnd = { 0.2f, 0.9f };
+
+            // Act
+            Assert.Throws<ArgumentException>(
+                () => FloatCounter.GetFloatsCount(Array.Empty<float>(), rangeStart, rangeEnd, 0, 1),
+                message: "Method throws ArgumentException in case an arrays of range starts and range ends contain different number of elements.");
+        }
+
     }
 }
