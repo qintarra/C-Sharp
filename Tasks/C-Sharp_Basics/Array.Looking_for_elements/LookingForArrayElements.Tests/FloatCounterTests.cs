@@ -196,5 +196,18 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case count is less than zero.");
         }
 
+        [Test]
+        public void GetFloatsCountWithStartIndexAndCount_TheNumberOfElementsToSearchIsGreaterThanTheNumberOfElementsAvailableInTheArrayStartingFromTheStartIndexPosition_ThrowArgumentOutOfRangeException()
+        {
+            // Arrange
+            float[] rangeStart = { 0.1f, 0.8f };
+            float[] rangeEnd = { 0.2f, 0.9f };
+
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => FloatCounter.GetFloatsCount(Array.Empty<float>(), rangeStart, rangeEnd, 3, 110),
+                message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
+        }
+
     }
 }
