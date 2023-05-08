@@ -209,5 +209,19 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
         }
 
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.4f }, new[] { 0.6f }, 0, 9, ExpectedResult = 3)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.4f }, new[] { 0.6f }, 2, 0, ExpectedResult = 0)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.4f }, new[] { 0.6f }, 4, 1, ExpectedResult = 1)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.1f, 0.7f }, new[] { 0.3f, 0.9f }, 2, 5, ExpectedResult = 2)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.1f, 0.8f }, new[] { 0.2f, 0.9f }, 0, 8, ExpectedResult = 3)]
+        [TestCase(new[] { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f }, new[] { 0.1f, 0.5f, 0.9f }, new[] { 0.1f, 0.5f, 0.9f }, 4, 2, ExpectedResult = 1)]
+        [TestCase(new[] { float.Epsilon, 0.2f, -0.3f, 0.4f, 0.5f, -0.6f, 1.7f, 0.8f, float.MaxValue }, new[] { -0.1f, 0.5f, 0.9f }, new[] { 0.1f, 0.5f, 1.9f }, 0, 1, ExpectedResult = 1)]
+        [TestCase(new[] { float.MaxValue, 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f, -1.1f, -2.2f, float.MaxValue, -3.3f, -4.4f, -5.5f, -6.6f, -7.7f, -8.8f, -9.9f }, new[] { float.MinValue }, new[] { float.MaxValue }, 6, 7, ExpectedResult = 7)]
+        [TestCase(new[] { float.MaxValue, 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, -0.8f, 0.9f, -1.1f, -2.2f, float.MaxValue, -3.3f, -4.4f, -5.5f, -6.6f, -7.7f, -0.8f, 0.8f }, new[] { 0.8f }, new[] { 0.8f }, 19, 1, ExpectedResult = 1)]
+        public int GetFloatsCount_ParametersAreValid_ReturnsResult(float[] arrayToSearch, float[] rangeStart, float[] rangeEnd, int startIndex, int count)
+        {
+            // Act
+            return FloatCounter.GetFloatsCount(arrayToSearch, rangeStart, rangeEnd, startIndex, count);
+        }
     }
 }
