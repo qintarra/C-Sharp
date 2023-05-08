@@ -42,5 +42,15 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void DecimalCounter_ArrayOfRangesIsEmpty_ReturnZeroOccurrences()
+        {
+            // Act
+            int actual = DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, Array.Empty<decimal[]>());
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
