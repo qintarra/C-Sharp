@@ -26,5 +26,21 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case array of ranges is null.");
         }
 
+        [Test]
+        public void DecimalCounter_ArrayToSearchIsEmpty_ReturnZeroOccurrences()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+            };
+
+            // Act
+            int actual = DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), ranges);
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
