@@ -85,5 +85,21 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentException in case the length of one of the ranges is less or greater than 2.");
         }
 
+        [Test]
+        public void DecimalCounterFiveElementsOneRangeReturnsResult()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+            };
+
+            // Act
+            int actualResult = DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges);
+
+            // Assert
+            Assert.AreEqual(2, actualResult);
+        }
+
     }
 }
