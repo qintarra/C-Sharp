@@ -151,5 +151,15 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(6, actualResult);
         }
 
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_ArrayToSearchIsNull_ThrowArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(
+                () => DecimalCounter.GetDecimalsCount(null, Array.Empty<decimal[]>(), 0, 1),
+                message: "Method throws ArgumentNullException in case array to search is null.");
+        }
+
+        
     }
 }
