@@ -134,5 +134,22 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(4, actualResult);
         }
 
+        [Test]
+        public void DecimalCounterFifteenElementsTwoRangesReturnsResult()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { -0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+            };
+
+            // Act
+            int actualResult = DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFifteenElements, ranges);
+
+            // Assert
+            Assert.AreEqual(6, actualResult);
+        }
+
     }
 }
