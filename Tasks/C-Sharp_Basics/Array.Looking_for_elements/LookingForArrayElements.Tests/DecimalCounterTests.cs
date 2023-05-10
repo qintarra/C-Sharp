@@ -312,5 +312,21 @@ namespace LookingForArrayElements.Tests
             return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges, startIndex, count);
         }
 
+        [TestCase(0, 15, ExpectedResult = 4)]
+        [TestCase(0, 2, ExpectedResult = 1)]
+        [TestCase(0, 0, ExpectedResult = 0)]
+        [TestCase(2, 3, ExpectedResult = 0)]
+        public int DecimalCounter_FifteenElementsOneRange_ReturnsResult(int startIndex, int count)
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { -0.1m, 0.2m },
+            };
+
+            // Act
+            return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFifteenElements, ranges, startIndex, count);
+        }
+
     }
 }
