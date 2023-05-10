@@ -196,5 +196,21 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(1, actual);
         }
 
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_StartIndexIsNegative_ThrowArgumentOutOfRangeException()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+            };
+
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), ranges, -1234, 1),
+                message: "Method throws ArgumentOutOfRangeException in case start index is negative.");
+        }
+
     }
 }
