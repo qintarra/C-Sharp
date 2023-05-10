@@ -260,5 +260,20 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
         }
 
+        [TestCase(0, 5, ExpectedResult = 2)]
+        [TestCase(0, 2, ExpectedResult = 2)]
+        [TestCase(2, 3, ExpectedResult = 0)]
+        public int DecimalCounter_FiveElementsOneRange_ReturnsResult(int startIndex, int count)
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+            };
+
+            // Act
+            return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges, startIndex, count);
+        }
+
     }
 }
