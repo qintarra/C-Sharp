@@ -328,5 +328,41 @@ namespace LookingForArrayElements.Tests
             return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFifteenElements, ranges, startIndex, count);
         }
 
+        [TestCase(0, 15, ExpectedResult = 6)]
+        [TestCase(0, 2, ExpectedResult = 1)]
+        [TestCase(2, 3, ExpectedResult = 0)]
+        [TestCase(10, 5, ExpectedResult = 2)]
+        [TestCase(10, 0, ExpectedResult = 0)]
+        public int DecimalCounter_FifteenElementsTwoRanges_ReturnsResult(int startIndex, int count)
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { -0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+            };
+
+            // Act
+            return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFifteenElements, ranges, startIndex, count);
+        }
+
+        [TestCase(0, 15, ExpectedResult = 8)]
+        [TestCase(0, 2, ExpectedResult = 1)]
+        [TestCase(2, 3, ExpectedResult = 1)]
+        [TestCase(10, 5, ExpectedResult = 3)]
+        [TestCase(10, 0, ExpectedResult = 0)]
+        public int DecimalCounter_FifteenElementsThreeRanges_ReturnsResult(int startIndex, int count)
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { -0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+                new[] { decimal.Zero, decimal.One },
+            };
+
+            // Act
+            return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFifteenElements, ranges, startIndex, count);
+        }
     }
 }
