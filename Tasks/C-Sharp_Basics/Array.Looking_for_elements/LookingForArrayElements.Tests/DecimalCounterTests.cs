@@ -244,5 +244,21 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentOutOfRangeException in case count is less than zero.");
         }
 
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_TheNumberOfElementsToSearchIsGreaterThanTheNumberOfElementsAvailableInTheArrayStartingFromTheStartIndexPosition_ThrowArgumentOutOfRangeException()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+            };
+
+            // Act
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), ranges, 4, 100000),
+                message: "Method throws ArgumentOutOfRangeException in case the number of elements to search is greater than the number of elements available in the array starting from the startIndex position.");
+        }
+
     }
 }
