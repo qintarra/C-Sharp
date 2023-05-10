@@ -169,5 +169,15 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case array of ranges is null.");
         }
 
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_ArrayOfRangesIsEmpty_ReturnZeroOccurrences()
+        {
+            // Act
+            int actual = DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, Array.Empty<decimal[]>(), 0, 1);
+
+            // Assert
+            Assert.AreEqual(0, actual);
+        }
+
     }
 }
