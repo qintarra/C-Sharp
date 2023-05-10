@@ -293,5 +293,24 @@ namespace LookingForArrayElements.Tests
             return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges, startIndex, count);
         }
 
+        [TestCase(0, 5, ExpectedResult = 5)]
+        [TestCase(0, 0, ExpectedResult = 0)]
+        [TestCase(0, 2, ExpectedResult = 2)]
+        [TestCase(2, 3, ExpectedResult = 3)]
+        [TestCase(2, 1, ExpectedResult = 1)]
+        public int DecimalCounter_FiveElementsThreeRanges_ReturnsResult(int startIndex, int count)
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+                new[] { 0.4m, 0.5m },
+                new[] { decimal.Zero, decimal.One },
+            };
+
+            // Act
+            return DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges, startIndex, count);
+        }
+
     }
 }
