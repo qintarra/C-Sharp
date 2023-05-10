@@ -179,5 +179,22 @@ namespace LookingForArrayElements.Tests
             Assert.AreEqual(0, actual);
         }
 
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_OneOfTheRangesIsEmpty_ReturnValidResult()
+        {
+            // Arrange
+            decimal[][] ranges =
+            {
+                new[] { 0.1m, 0.2m },
+                Array.Empty<decimal>(),
+            };
+
+            // Act
+            int actual = DecimalCounter.GetDecimalsCount(DecimalCounterTests.ArrayWithFiveElements, ranges, 0, 1);
+
+            // Assert
+            Assert.AreEqual(1, actual);
+        }
+
     }
 }
