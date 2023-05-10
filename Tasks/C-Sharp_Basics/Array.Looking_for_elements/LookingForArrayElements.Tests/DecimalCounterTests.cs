@@ -160,6 +160,14 @@ namespace LookingForArrayElements.Tests
                 message: "Method throws ArgumentNullException in case array to search is null.");
         }
 
-        
+        [Test]
+        public void DecimalCounterWithStartIndexAndCount_ArrayOfRangesIsNull_ThrowArgumentNullException()
+        {
+            // Act
+            Assert.Throws<ArgumentNullException>(
+                () => DecimalCounter.GetDecimalsCount(Array.Empty<decimal>(), null, 0, 1),
+                message: "Method throws ArgumentNullException in case array of ranges is null.");
+        }
+
     }
 }
