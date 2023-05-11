@@ -40,3 +40,9 @@ Here's an example for ["GetFloatsCount_ParametersAreValid_ReturnsResult"](Lookin
 
 arrayToSearch is an array with { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f } elements, rangeStart array has { 0.1f, 0.8f } elements, rangeEnd array has { 0.2f, 0.9f } elements. That means the first range is 0.1f-0.2f, and the second tange is 0.8f-0.9f.  
 
+| Position in arrayToSearch  |   0  |   1  |    2 |   3  |   4  |   5  |   6  |   7  |   8  |
+|----------------------------|------|------|------|------|------|------|------|------|------|
+| arrayToSearch values       | 0.1f | 0.2f | 0.3f | 0.4f | 0.5f | 0.6f | 0.7f | 0.8f | 0.9f |
+| 0.1f-0.2f range            | 0.1f | 0.2f |      |      |      |      |      |      |      |
+| 0.8f-0.9f range            |      |      |      |      |      |      |      | 0.8f | 0.9f |
+| Sum = 4                    |   1  |   1  |   0  |   0  |   0  |   0  |   0  |   1  |   1  |
