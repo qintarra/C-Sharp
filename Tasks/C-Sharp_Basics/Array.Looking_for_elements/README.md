@@ -21,3 +21,8 @@ arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and eleme
 | elementsToSearchFor values |   | 2 |   |   | 5 |   |   | 8 |   |
 | Sum = 3                    | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
 
+2. Implement "GetIntegersCount(int[], int[], int, int)" method in the [IntegersCounter.cs](LookingForArrayElements/IntegersCounter.cs) file. The method should work like the previous one, but it has additional options (startIndex and count) that can be used for getting a subset of arrayToSearch.  
+
+Here's an example for ["GetIntegersCount_ParametersAreValid_ReturnsResult"](LookingForArrayElements.Tests/IntegersCounterTests.cs#L136) unit test.  
+
+arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and elementsToSearchFor is an array with { 2, 5, 8 } elements. startIndex is 2, and count is 5.  
