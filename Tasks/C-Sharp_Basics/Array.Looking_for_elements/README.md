@@ -46,3 +46,5 @@ arrayToSearch is an array with { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f,
 | 0.1f-0.2f range            | 0.1f | 0.2f |      |      |      |      |      |      |      |
 | 0.8f-0.9f range            |      |      |      |      |      |      |      | 0.8f | 0.9f |
 | Sum = 4                    |   1  |   1  |   0  |   0  |   0  |   0  |   0  |   1  |   1  |
+
+4. Implement "GetFloatsCount(float[], float[], float[], int, int)" method in the [FloatCounter.cs](LookingForArrayElements/FloatCounter.cs) file.  
