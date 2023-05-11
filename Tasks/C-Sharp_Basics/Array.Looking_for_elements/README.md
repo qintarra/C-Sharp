@@ -33,3 +33,10 @@ arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and eleme
 | elementsToSearchFor values |   | 2 |   |   | 5 |   |   | 8 |   |
 | startIndex & count         |   |   | 1 | 2 | 3 | 4 | 5 |   |   |
 | Sum = 1                    | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+3. Implement "GetFloatsCount(float[], float[], float[])" method in the [FloatCounter.cs](LookingForArrayElements/FloatCounter.cs) file. The method should count all elements of "arrayToSearch" array that appears in ranges defined by values in "rangeStart" and "rangeEnd" arrays.  
+
+Here's an example for ["GetFloatsCount_ParametersAreValid_ReturnsResult"](LookingForArrayElements.Tests/FloatCounterTests.cs#L92) unit test.  
+
+arrayToSearch is an array with { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f } elements, rangeStart array has { 0.1f, 0.8f } elements, rangeEnd array has { 0.2f, 0.9f } elements. That means the first range is 0.1f-0.2f, and the second tange is 0.8f-0.9f.  
+
