@@ -26,3 +26,10 @@ arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and eleme
 Here's an example for ["GetIntegersCount_ParametersAreValid_ReturnsResult"](LookingForArrayElements.Tests/IntegersCounterTests.cs#L136) unit test.  
 
 arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and elementsToSearchFor is an array with { 2, 5, 8 } elements. startIndex is 2, and count is 5.  
+
+| Position in arrayToSearch  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|----------------------------|---|---|---|---|---|---|---|---|---|
+| arrayToSearch values       | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| elementsToSearchFor values |   | 2 |   |   | 5 |   |   | 8 |   |
+| startIndex & count         |   |   | 1 | 2 | 3 | 4 | 5 |   |   |
+| Sum = 1                    | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
