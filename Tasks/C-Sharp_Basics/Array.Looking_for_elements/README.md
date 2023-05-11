@@ -21,6 +21,7 @@ arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and eleme
 | elementsToSearchFor values |   | 2 |   |   | 5 |   |   | 8 |   |
 | Sum = 3                    | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 |
 
+
 2. Implement "GetIntegersCount(int[], int[], int, int)" method in the [IntegersCounter.cs](LookingForArrayElements/IntegersCounter.cs) file. The method should work like the previous one, but it has additional options (startIndex and count) that can be used for getting a subset of arrayToSearch.  
 
 Here's an example for ["GetIntegersCount_ParametersAreValid_ReturnsResult"](LookingForArrayElements.Tests/IntegersCounterTests.cs#L136) unit test.  
@@ -33,6 +34,7 @@ arrayToSearch is an array with { 1, 2, 3, 4, 5, 6, 7, 8, 9 } elements, and eleme
 | elementsToSearchFor values |   | 2 |   |   | 5 |   |   | 8 |   |
 | startIndex & count         |   |   | 1 | 2 | 3 | 4 | 5 |   |   |
 | Sum = 1                    | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
 
 3. Implement "GetFloatsCount(float[], float[], float[])" method in the [FloatCounter.cs](LookingForArrayElements/FloatCounter.cs) file. The method should count all elements of "arrayToSearch" array that appears in ranges defined by values in "rangeStart" and "rangeEnd" arrays.  
 
@@ -47,6 +49,9 @@ arrayToSearch is an array with { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f,
 | 0.8f-0.9f range            |      |      |      |      |      |      |      | 0.8f | 0.9f |
 | Sum = 4                    |   1  |   1  |   0  |   0  |   0  |   0  |   0  |   1  |   1  |
 
+
 4. Implement "GetFloatsCount(float[], float[], float[], int, int)" method in the [FloatCounter.cs](LookingForArrayElements/FloatCounter.cs) file.  
 
 5. Implement "GetDecimalsCount(decimal[], decimal[][])" method in the [DecimalCounter.cs](LookingForArrayElements/DecimalCounter.cs) file.   
+
+6. Implement "GetDecimalsCount(decimal[], decimal[][], int, int)" method in the [DecimalCounter.cs](LookingForArrayElements/DecimalCounter.cs) file.   
