@@ -328,5 +328,21 @@ namespace Exceptions.Tests
                 message: "ToArray method returns array that is not equal to expected.");
         }
 
+        [TestCase(-1, 2)]
+        [TestCase(1, -2)]
+        [TestCase(0, 5)]
+        [TestCase(5, 0)]
+        public void CreateMatrix_WithNegativeDimensions_ArgumentOutOfRangeExceptionThrown(int rows, int columns)
+        {
+            // Arrange
+            var expectedException = typeof(ArgumentOutOfRangeException);
+
+            // Act
+            var actException = Assert.Catch(() => new Matrix(rows, columns));
+
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(), message: "Matrix can't be created with zero or negative dimensions.");
+        }
+
     }
 }
