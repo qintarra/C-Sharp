@@ -391,6 +391,23 @@ namespace Exceptions.Tests
             Assert.NotNull(expectedException, message: "'MatrixException' is not implemented.");
             Assert.AreEqual(expectedException, actException.GetType(), message: "Add method should throw matrix exception in case of inappropriate matrices dimensions.");
         }
+        
+        [TestCaseSource(nameof(ArraysPlusAndMinusOperatorException))]
+        public void Subtract_MatricesHaveInappropriateDimensions_MatrixExceptionThrown(double[,] array1,
+            double[,] array2)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+
+            // Act
+            var expectedException = Type.GetType("Exceptions.MatrixException, Exceptions");
+            var actException = Assert.Catch(() => matrix1.Subtract(matrix2));
+
+            // Assert
+            Assert.NotNull(expectedException, message: "'MatrixException' is not implemented.");
+            Assert.AreEqual(expectedException, actException.GetType(), message: "Subtract method should throw matrix exception in case of inappropriate matrices dimensions.");
+        }
 
     }
 }
