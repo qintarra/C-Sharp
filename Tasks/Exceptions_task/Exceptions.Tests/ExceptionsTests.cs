@@ -315,6 +315,18 @@ namespace Exceptions.Tests
             Assert.AreEqual(expected.Array, actual.Array, message: "Subtract method works incorrectly.");
         }
         
+        [TestCaseSource(nameof(ArraysCreateMatrix))]
+        public void ToArray_ReturnsMatrixAsArray(double[,] expectedArray)
+        {
+            // Arrange
+            var matrix = new Matrix(expectedArray);
+
+            // Act
+            var arrayMatrix = matrix.Array;
+
+            Assert.AreEqual(expectedArray, arrayMatrix,
+                message: "ToArray method returns array that is not equal to expected.");
+        }
 
     }
 }
