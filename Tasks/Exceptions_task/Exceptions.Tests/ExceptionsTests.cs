@@ -344,5 +344,19 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), message: "Matrix can't be created with zero or negative dimensions.");
         }
 
+        [Test]
+        public void CreateMatrix_WithNull_ArgumentNullExceptionThrown()
+        {
+            // Arrange
+            var expectedException = typeof(ArgumentNullException);
+
+            // Act
+            var actException = Assert.Catch(() => new Matrix(null));
+
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(), 
+                message: "Matrix can't be created with null argument.");
+        }
+
     }
 }
