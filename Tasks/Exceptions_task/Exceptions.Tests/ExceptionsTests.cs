@@ -409,5 +409,20 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), message: "Subtract method should throw matrix exception in case of inappropriate matrices dimensions.");
         }
 
+        [Test]
+        public void Add_WithNull_ArgumentNullExceptionThrown()
+        {
+            // Arrange
+            var matrix = new Matrix(1, 1);
+            var expectedException = typeof(ArgumentNullException);
+
+            // Act
+            var actException = Assert.Catch(() => _ = matrix.Add(null));
+            
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(), 
+                message: "Add method should throw argument null exception if parameter is null.");
+        }
+
     }
 }
