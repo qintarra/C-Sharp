@@ -25,11 +25,12 @@ In **Matrix** it requires the implementation of the following functionality:
 - Method of matrices addition.  
 - Method of matrices subtraction.  
 - Method of matrices multiplication.  
-- Raise exceptions specified in XML comments to class methods (standard and user).  
-
+  
 ### The Advanced level requires implementation of the following functionality:  
 
 - All completed tasks of Low level.  
-- Overloaded operator “+” for matrices addition.  
-- Overloaded operator “-” for matrices deduction.  
-- Overloaded operator “*” for matrices multiplication.  
+- Overloaded operator `+` for matrices addition.  
+- Overloaded operator `-` for matrices deduction.  
+- Overloaded operator `*` for matrices multiplication.  
+- Define the class of user exception - **MatrixException**.  
+- Raise exceptions specified in XML comments to class methods (standard and user).  
