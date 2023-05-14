@@ -423,6 +423,21 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), 
                 message: "Add method should throw argument null exception if parameter is null.");
         }
+        
+        [Test]
+        public void Multiply_WithNull_ArgumentNullExceptionThrown()
+        {
+            // Arrange
+            var matrix = new Matrix(1, 1);
+            var expectedException = typeof(ArgumentNullException);
+
+            // Act
+            var actException = Assert.Catch(() => _ = matrix.Multiply(null));
+            
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(), 
+                message: "Multiply operator should throw argument null exception if parameter is null.");
+        }
 
     }
 }
