@@ -34,3 +34,5 @@ In **Matrix** it requires the implementation of the following functionality:
 - Overloaded operator `*` for matrices multiplication.  
 - Define the class of user exception - **MatrixException**.  
 - Raise exceptions specified in XML comments to class methods (standard and user).  
+- Implementation of interface **ICloneable**.  
+- Implementation of method **Equals**.  
