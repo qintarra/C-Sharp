@@ -12,9 +12,9 @@ A matrix can provide information regarding the number of array rows and columns,
 
 Matrices can be cloned and compared with one another (content encapsulated in a matrix array is used for comparison).
 
-The task has two levels of complexity: low and advanced.
+The task has two levels of complexity: Low and Advanced.
 
-### The low level requires implementation of the following functionality:  
+### The Low level requires implementation of the following functionality:  
 
 In **Matrix** it requires the implementation of the following functionality:  
 - Creating an empty matrix with a predetermined number of rows and columns (all values in the matrix equal 0).  
@@ -27,5 +27,9 @@ In **Matrix** it requires the implementation of the following functionality:
 - Method of matrices multiplication.  
 - Raise exceptions specified in XML comments to class methods (standard and user).  
 
-### The advanced level requires implementation of the following functionality:  
+### The Advanced level requires implementation of the following functionality:  
 
+- All completed tasks of Low level.  
+- Overloaded operator “+” for matrices addition.  
+- Overloaded operator “-” for matrices deduction.  
+- Overloaded operator “*” for matrices multiplication.  
