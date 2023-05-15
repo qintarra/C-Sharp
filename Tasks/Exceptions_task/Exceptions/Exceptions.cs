@@ -286,34 +286,21 @@ namespace Exceptions
         /// Subtracts <see cref="Matrix"/> from the current matrix.
         /// </summary>
         /// <param name="matrix"><see cref="Matrix"/> for subtracting.</param>
-        /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
-        /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
-        /// <returns><see cref="Matrix"/></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="MatrixException"></exception>
         public Matrix Subtract(Matrix matrix)
         {
             if (matrix == null)
             {
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             }
-            else
+
+            if (Rows != matrix.Rows || Columns != matrix.Columns)
             {
-                if (Rows != matrix.Rows || Columns != matrix.Columns)
-                {
-                    throw new MatrixException();
-                }
-                else
-                {
-                    double[,] matrix2 = new double[Rows, Columns];
-                    for (int i = 0; i < Rows; i++)
-                    {
-                        for (int j = 0; j < Columns; j++)
-                        {
-                            matrix2[i, j] = Array[i, j] - matrix.Array[i,j];
-                        }
-                    }
-                    return new Matrix(matrix2);
-                }
+                throw new MatrixException("The matrices must have the same number of rows and columns.");
             }
+
+            return this - matrix;
         }
 
         /// <summary>
