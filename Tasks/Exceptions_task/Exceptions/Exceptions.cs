@@ -215,6 +215,51 @@ namespace Exceptions
 
             return resultMinus;
         }
+		
+		/// <summary>
+        /// Multiplies two matrices.
+        /// </summary>
+        /// <param name="matrix1"></param>
+        /// <param name="matrix2"></param>
+        /// <returns>New <see cref="Matrix"/> object which is multiplication of two matrices.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="MatrixException"></exception>
+        public static Matrix operator *(Matrix matrix1, Matrix matrix2)
+        {
+            if (matrix1 == null)
+            {
+                throw new ArgumentNullException(nameof(matrix1));
+            }
+
+            if (matrix2 == null)
+            {
+                throw new ArgumentNullException(nameof(matrix2));
+            }
+
+            if (matrix1.Columns != matrix2.Rows)
+            {
+                throw new MatrixException("Number of columns of the first matrix must be equal to the number of rows of the second matrix.");
+            }
+
+            Matrix resultMultiply = new Matrix(matrix1.Rows, matrix1.Columns);
+
+            for (int i = 0; i < matrix1.Rows; i++)
+            {
+                for (int j = 0; j < matrix2.Columns; j++)
+                {
+                    double sum = 0;
+
+                    for (int k = 0; k < matrix1.Columns; k++)
+                    {
+                        sum += matrix1[i, k] * matrix2[k, j];
+                    }
+
+                    resultMultiply[i, j] = sum;
+                }
+            }
+
+            return resultMultiply;
+        }
 
         /// <summary>
         /// Adds <see cref="Matrix"/> to the current matrix.
