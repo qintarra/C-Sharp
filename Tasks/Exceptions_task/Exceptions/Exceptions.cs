@@ -307,31 +307,38 @@ namespace Exceptions
         /// Multiplies <see cref="Matrix"/> on the current matrix.
         /// </summary>
         /// <param name="matrix"><see cref="Matrix"/> for multiplying.</param>
-        /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
-        /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
-        /// <returns><see cref="Matrix"/></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="MatrixException"></exception>
         public Matrix Multiply(Matrix matrix)
         {
             if (matrix == null)
             {
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             }
+
             if (Columns != matrix.Rows)
-                {
-                    throw new MatrixException();
-                }
-            double[,] matrix3 = new double[Rows, matrix.Columns];
+            {
+                throw new MatrixException("Number of columns of the first matrix must be equal to the number of rows of the second matrix.");
+            }
+
+            Matrix resultMultiply = new Matrix(Rows, matrix.Columns);
+
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < matrix.Columns; j++)
                 {
-                    for (int h = 0; h < Columns; h++)
+                    double sum = 0;
+
+                    for (int k = 0; k < Columns; k++)
                     {
-                        matrix3[i, j] += Array[i, h] * matrix[h, j];
+                        sum += this[i, k] * matrix[k, j];
                     }
+
+                    resultMultiply[i, j] = sum;
                 }
             }
-            return new Matrix(matrix3);
+
+            return resultMultiply;
         }
     }
 }
