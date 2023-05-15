@@ -265,33 +265,21 @@ namespace Exceptions
         /// Adds <see cref="Matrix"/> to the current matrix.
         /// </summary>
         /// <param name="matrix"><see cref="Matrix"/> for adding.</param>
-        /// <exception cref="ArgumentNullException">Thrown when parameter is null.</exception>
-        /// <exception cref="MatrixException">Thrown when the matrix has the wrong dimensions for the operation.</exception>
-        /// <returns><see cref="Matrix"/></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="MatrixException"></exception>
         public Matrix Add(Matrix matrix)
         {
             if (matrix == null)
             {
-                throw new ArgumentNullException("matrix");
+                throw new ArgumentNullException(nameof(matrix));
             }
-            else
+
+            if (Rows != matrix.Rows || Columns != matrix.Columns)
             {
-                if (Rows != matrix.Rows || Columns != matrix.Columns)
-                {
-                    throw new MatrixException();
-                }
-                else
-                {
-                    for (int i = 0; i < Rows; i++)
-                    {
-                        for (int j = 0; j < Columns; j++)
-                        {
-                            matrix[i, j] += Array[i, j];
-                        }
-                    }
-                    return matrix;
-                }
+                throw new MatrixException("The matrices must have the same number of rows and columns.");
             }
+
+            return this + matrix;
         }
 
         /// <summary>
