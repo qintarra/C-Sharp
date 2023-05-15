@@ -139,6 +139,44 @@ namespace Exceptions
             Matrix newMatrix = new Matrix(newArray);
             return newMatrix;
         }
+				
+        /// <summary>
+        /// Adds two matrices.
+        /// </summary>
+        /// <param name="matrix1"></param>
+        /// <param name="matrix2"></param>
+        /// <returns>New <see cref="Matrix"/> object which is sum of two matrices.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="MatrixException"></exception>
+        public static Matrix operator +(Matrix matrix1, Matrix matrix2)
+        {
+            if (matrix1 == null)
+            {
+                throw new ArgumentNullException(nameof(matrix1));
+            }
+
+            if (matrix2 == null)
+            {
+                throw new ArgumentNullException(nameof(matrix2));
+            }
+
+            if (matrix1.Rows != matrix2.Rows || matrix1.Columns != matrix2.Columns)
+            {
+                throw new MatrixException("Matrices must have the same dimensions.");
+            }
+
+            Matrix resultPlus = new Matrix(matrix1.Rows, matrix1.Columns);
+
+            for (int i = 0; i < matrix1.Rows; i++)
+            {
+                for (int j = 0; j < matrix1.Columns; j++)
+                {
+                    resultPlus[i, j] = matrix1[i, j] + matrix2[i, j];
+                }
+            }
+
+            return resultPlus;
+        }
 
         /// <summary>
         /// Adds <see cref="Matrix"/> to the current matrix.
