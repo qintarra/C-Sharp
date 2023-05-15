@@ -116,6 +116,28 @@ namespace Exceptions
 
                 Array[row, column] = value;
             }
+        }	
+		
+        /// <summary>
+        /// Creates a deep copy of this Matrix.
+        /// </summary>
+        /// <returns>A deep copy of the current object.</returns>
+        public object Clone()
+        {
+            double[,] newArray = new double[Rows, Columns];
+
+            // Copy elements to new array
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Columns; j++)
+                {
+                    newArray[i, j] = Array[i, j];
+                }
+            }
+
+            // Create new matrix using new array
+            Matrix newMatrix = new Matrix(newArray);
+            return newMatrix;
         }
 
         /// <summary>
