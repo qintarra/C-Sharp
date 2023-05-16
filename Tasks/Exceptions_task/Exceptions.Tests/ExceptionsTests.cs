@@ -84,6 +84,15 @@ namespace Exceptions.Tests
         };
 
         #endregion
+		
+        #region ArraysPlusAndMinusOperatorException
+
+        private static readonly object[] ArraysPlusAndMinusOperatorException =
+        {
+            new object[] {new double[1, 1] { { 1 } }, new double[1, 0] { { }}},
+        };
+
+        #endregion
         
         #region ArraysMinusOperator
 
