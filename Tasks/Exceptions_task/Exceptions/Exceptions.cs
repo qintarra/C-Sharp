@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Exceptions
 {
+    // Create custom exception "MatrixException"
     [Serializable]
     public class MatrixException : Exception
     {
@@ -14,7 +15,8 @@ namespace Exceptions
 
         protected MatrixException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
-    public class Matrix
+	
+    public class Matrix : ICloneable
     {
         /// <summary>
         /// Number of rows.
