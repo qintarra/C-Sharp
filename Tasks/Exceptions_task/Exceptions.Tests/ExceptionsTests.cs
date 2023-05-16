@@ -202,6 +202,16 @@ namespace Exceptions.Tests
         };
 
         #endregion
+		
+        #region ArraysEqualsTrowsExceptions
+
+        private static readonly object[] ArraysEqualsTrowsExceptions =
+        {
+            new object[] {new double[1,2]{{1, 2}}, new double[2,2]{{1, 2}, {1, 2}}},
+            new object[] {new double[2,1]{{1}, {1}}, new double[2,2]{{1, 2}, {1, 2}}}
+        };
+
+        #endregion
         
         #endregion
 
