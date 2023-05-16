@@ -214,6 +214,8 @@ namespace Exceptions.Tests
         #endregion
         
         #endregion
+		
+        #region Low
 
         [TestCaseSource(nameof(ArraysCreateMatrix))]
         public void CreateMatrix_WithArray_PublicProperties_ReturnsCorrectValues(double[,] expectedArray)
@@ -373,9 +375,29 @@ namespace Exceptions.Tests
             // Act
             var arrayMatrix = matrix.Array;
 
+            // Assert
             Assert.AreEqual(expectedArray, arrayMatrix,
                 message: "ToArray method returns array that is not equal to expected.");
         }
+		
+		        
+        [TestCaseSource(nameof(ArraysPlusOperator))]
+        public void PlusOperator_AddingMatrices_ReturnsMatrix(double[,] array1, double[,] array2,
+            double[,] expectedArray)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+            var expected = new Matrix(expectedArray);
+
+            // Act
+            var actual = matrix1 + matrix2;
+
+            // Assert
+            Assert.AreEqual(expected.Array, actual.Array, message: "Plus operator works incorrectly.");
+        }
+		
+        #endregion
 
         [TestCase(-1, 2)]
         [TestCase(1, -2)]
