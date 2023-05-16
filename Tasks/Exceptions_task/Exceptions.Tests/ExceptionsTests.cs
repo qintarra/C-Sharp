@@ -192,6 +192,16 @@ namespace Exceptions.Tests
         };
 
         #endregion
+		
+        #region ArraysEquals
+
+        private static readonly object[] ArraysEquals =
+        {
+            new object[] {new double[1, 1] {{1}}, new double[1, 1] { {1} }, true},
+            new object[] {new double[1, 1] {{1}}, new double[1, 1] { {-1} }, false}
+        };
+
+        #endregion
         
         #endregion
 
