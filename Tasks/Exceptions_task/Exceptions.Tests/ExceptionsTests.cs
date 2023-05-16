@@ -25,6 +25,26 @@ namespace Exceptions.Tests
         };
 
         #endregion
+		
+        #region ArraysEqualsException
+
+        private static readonly object[] ArraysEqualsException =
+        {
+            new object[]
+            {
+                new double[,]{{1 ,1}}, 
+                
+                new double[,]
+                {
+                    {4, 3, 2},
+                    {4, 3, 2},
+                    {4, 3, 2},
+                    {4, 3, 2}
+                }
+            }
+        };
+
+        #endregion
         
         #region ArraysPlusOperator
 
