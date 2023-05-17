@@ -606,6 +606,31 @@ namespace Exceptions.Tests
                 message: "Subtract method should throw argument null exception if parameter is null.");
         }
 		
+        [Test]
+        public void PlusOperator_ThrowsArgumentNullExceptions_IfFirstArgumentIsNull()
+        {
+            Matrix matrix1 = null;
+            Matrix matrix2 = new Matrix(1, 1);
+
+            Assert.Catch<ArgumentNullException>(() =>
+            {
+                var res1 = matrix1 + matrix2;
+            },message:"Operator '+' should throw ArgumentNullException if one of arguments is null.");
+        }
+        
+        [Test]
+        public void PlusOperator_ThrowsArgumentNullExceptions_IfSecondArgumentIsNull()
+        {
+            Matrix matrix1 = new Matrix(1, 1);
+            Matrix matrix2 = null;
+
+            Assert.Catch<ArgumentNullException>(() =>
+            {
+                var res1 = matrix1 + matrix2;
+            },message:"Operator '+' should throw ArgumentNullException if one of arguments is null.");
+        }
+
+		
         #endregion
 		
     }
