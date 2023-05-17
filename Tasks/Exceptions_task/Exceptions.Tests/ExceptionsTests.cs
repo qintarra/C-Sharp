@@ -268,22 +268,6 @@ namespace Exceptions.Tests
 
         [TestCase(4, 3)]
         [TestCase(3, 4)]
-        public void Indexer_GetElementOutOfRange_ArgumentExceptionThrown(int rows, int columns)
-        {
-            // Arrange
-            var matrix = new Matrix(rows, columns);
-            var expectedException = typeof(ArgumentException);
-            
-            // Act
-            var actException = Assert.Catch(() => _ = matrix[-10, -10]);
-
-            // Assert
-            Assert.AreEqual(expectedException, actException.GetType(),
-                message: "Indexer should throw argument exception in case of nonexistent index.");
-        }
-
-        [TestCase(4, 3)]
-        [TestCase(3, 4)]
         [TestCase(2, 2)]
         public void Indexer_SetElement_ShouldChangeValue(int rows, int columns)
         {
@@ -300,22 +284,6 @@ namespace Exceptions.Tests
             Assert.AreEqual(expected1, matrix[rows - 1, columns - 1],
                 message: "Set property in indexer works incorrectly.");
             Assert.AreEqual(expected2, matrix[0, 0], message: "Set property in indexer works incorrectly.");
-        }
-
-        [TestCase(4, 3)]
-        [TestCase(3, 4)]
-        public void Indexer_SetElementOutOfRange_ArgumentExceptionThrown(int rows, int columns)
-        {
-            // Arrange
-            var matrix = new Matrix(rows, columns);
-            var expectedException = typeof(ArgumentException);
-
-            // Act
-            var actException = Assert.Catch(() => matrix[-1, -1] = 1337);
-
-            // Assert
-            Assert.AreEqual(expectedException, actException.GetType(), 
-                message: "Set property in indexer should throw argument exception in case of nonexistent index.");
         }
 
         [TestCaseSource(nameof(ArraysOperatorMultiply))]
@@ -432,6 +400,40 @@ namespace Exceptions.Tests
         }
 		
         #endregion
+		
+        #region Advanced
+			
+        [TestCase(4, 3)]
+        [TestCase(3, 4)]
+        public void Indexer_GetElementOutOfRange_ArgumentExceptionThrown(int rows, int columns)
+        {
+            // Arrange
+            var matrix = new Matrix(rows, columns);
+            var expectedException = typeof(ArgumentException);
+            
+            // Act
+            var actException = Assert.Catch(() => _ = matrix[-10, -10]);
+
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(),
+                message: "Indexer should throw argument exception in case of nonexistent index.");
+        }
+		
+        [TestCase(4, 3)]
+        [TestCase(3, 4)]
+        public void Indexer_SetElementOutOfRange_ArgumentExceptionThrown(int rows, int columns)
+        {
+            // Arrange
+            var matrix = new Matrix(rows, columns);
+            var expectedException = typeof(ArgumentException);
+
+            // Act
+            var actException = Assert.Catch(() => matrix[-1, -1] = 1337);
+
+            // Assert
+            Assert.AreEqual(expectedException, actException.GetType(), 
+                message: "Set property in indexer should throw argument exception in case of nonexistent index.");
+        }
 
         [TestCase(-1, 2)]
         [TestCase(1, -2)]
