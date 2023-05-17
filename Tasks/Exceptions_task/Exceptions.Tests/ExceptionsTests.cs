@@ -693,6 +693,20 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedResult, actualResult,
                 message: "Equals method doesn't compares matrices correctly.");
         }
+        
+        [Test]
+        public void Equals_CompareWithNull_ReturnsFalse()
+        {
+            // Arrange
+            var array = new double[2, 2] {{1, 2}, {1, 2}};
+            var matrix = new Matrix(array);
+
+            // Act
+            var result = matrix.Equals(null);
+            
+            // Assert
+            Assert.AreEqual(false, result, message: "Equals method doesn't compares matrices correctly.");
+        }
 
 		
         #endregion
