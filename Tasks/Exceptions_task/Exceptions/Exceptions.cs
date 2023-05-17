@@ -97,7 +97,7 @@ namespace Exceptions
                     throw new ArgumentException("row");
                 }
                     
-                if(column < 0 || column >= Columns)
+                if (column < 0 || column >= Columns)
                 {
                     throw new ArgumentException("column");
                 }
@@ -341,6 +341,40 @@ namespace Exceptions
             }
 
             return resultMultiply;
+        }
+			
+        /// <summary>
+        /// Tests if <see cref="Matrix"/> is identical to this Matrix.
+        /// </summary>
+        /// <param name="obj">Object to compare with. (Can be null)</param>
+        /// <returns>True if matrices are equal, false if are not equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Matrix))
+            {
+                return false;
+            }
+
+            Matrix otherMatrix = (Matrix)obj;
+
+            if (otherMatrix.Rows != Rows || otherMatrix.Columns != Columns)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Columns; j++)
+                {
+                    if (otherMatrix[i, j] != this[i, j])
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+
         }
     }
 }
