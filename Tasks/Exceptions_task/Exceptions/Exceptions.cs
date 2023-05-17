@@ -374,7 +374,8 @@ namespace Exceptions
             }
 
             return true;
-
         }
+		
+        public override int GetHashCode() => GetHashCode();
     }
 }
