@@ -84,15 +84,6 @@ namespace Exceptions.Tests
         };
 
         #endregion
-		
-        #region ArraysPlusAndMinusOperatorException
-
-        private static readonly object[] ArraysPlusAndMinusOperatorException =
-        {
-            new object[] {new double[1, 1] { { 1 } }, new double[1, 0] { { }}},
-        };
-
-        #endregion
         
         #region ArraysMinusOperator
 
@@ -464,6 +455,25 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), 
                 message: "Matrix can't be created with null argument.");
         }
+		
+		        [TestCaseSource(nameof(ArraysPlusAndMinusOperatorException))]
+        public void PlusOperator_MatricesHaveInappropriateDimensions_MatrixExceptionThrown(double[,] array1,
+            double[,] array2)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+			
+            // Act
+            var expectedException = Type.GetType("Exceptions.MatrixException, Exceptions");
+            var actException = Assert.Catch(() => _ = matrix1 + matrix2);
+			
+            // Assert
+            Assert.NotNull(expectedException, message: "'MatrixException' is not implemented.");
+            Assert.AreEqual(expectedException, actException.GetType(), 
+                message: "Plus operator should throw matrix exception in case of inappropriate matrices dimensions.");
+        }
+
         
         [TestCaseSource(nameof(ArraysOperatorMultiplyException))]
         public void Multiply_MatricesHaveInappropriateDimensions_MatrixExceptionThrown(double[,] array1,
@@ -560,5 +570,8 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), 
                 message: "Subtract method should throw argument null exception if parameter is null.");
         }
+		
+        #endregion
+		
     }
 }
