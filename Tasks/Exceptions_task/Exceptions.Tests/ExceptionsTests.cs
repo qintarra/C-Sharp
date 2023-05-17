@@ -678,6 +678,23 @@ namespace Exceptions.Tests
             },message:"Operator '*' should throw ArgumentNullException if one of arguments is null.");
         }
 		
+        [TestCaseSource(nameof(ArraysEquals))]
+        public void Equals_CompareMatrices_ReturnsCorrectBoolean(double[,] array1, double[,] array2,
+            bool expectedResult)
+        {
+            // Arrange
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+
+            // Act
+            var actualResult = matrix1.Equals(matrix2);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult,
+                message: "Equals method doesn't compares matrices correctly.");
+        }
+
+		
         #endregion
 		
     }
