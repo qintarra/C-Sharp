@@ -350,7 +350,7 @@ namespace Exceptions
         /// <returns>True if matrices are equal, false if are not equal.</returns>
         public override bool Equals(object obj)
         {
-            if (obj == null || !(obj is Matrix))
+            if (obj is not Matrix)
             {
                 return false;
             }
