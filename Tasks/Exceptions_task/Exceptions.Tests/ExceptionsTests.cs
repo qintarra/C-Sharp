@@ -730,7 +730,21 @@ namespace Exceptions.Tests
                 var result2 = matrix2.Equals(matrix1);
             }, message:"Equals should not throw exceptions.");
         }
+        
+        [TestCaseSource(nameof(ArraysCreateMatrix))]
+        public void Clone_Should_ReturnDeepCopy(double[,] array)
+        {
+            var matrix = new Matrix(array);
 
+            var matrixClone = (Matrix) matrix.Clone();
+
+            var referenceEquals = ReferenceEquals(matrix, matrixClone);
+            
+            Assert.AreEqual(matrix, matrixClone, 
+                message: "Matrices should be equal.");
+            Assert.AreEqual(false, referenceEquals, 
+                message: "Matrix and its clone should not refer to the same object.");
+        }
 		
         #endregion
 		
