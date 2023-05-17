@@ -718,6 +718,18 @@ namespace Exceptions.Tests
             
             Assert.AreEqual(false, result, message: "Equals method doesn't compares matrices correctly.");
         }
+        
+        [TestCaseSource(nameof(ArraysEqualsTrowsExceptions))]
+        public void Equals_CompareIncomparableMatrices_DoesntThrowException(double[,] array1, double[,] array2)
+        {
+            var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+
+            Assert.DoesNotThrow(() => { 
+                var result1 = matrix1.Equals(matrix2);
+                var result2 = matrix2.Equals(matrix1);
+            }, message:"Equals should not throw exceptions.");
+        }
 
 		
         #endregion
