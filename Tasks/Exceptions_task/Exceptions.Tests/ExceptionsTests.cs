@@ -491,7 +491,24 @@ namespace Exceptions.Tests
             Assert.AreEqual(expectedException, actException.GetType(), 
                 message: "Minus operator should throw matrix exception in case of inappropriate matrices dimensions.");
         }
-
+        
+        [TestCaseSource(nameof(ArraysOperatorMultiplyException))]
+        public void MultiplyOperator_MatricesHaveInappropriateDimensions_MatrixExceptionThrown(double[,] array1,
+            double[,] array2)
+        {
+            // Arrange
+			var matrix1 = new Matrix(array1);
+            var matrix2 = new Matrix(array2);
+			
+            // Act
+            var expectedException = Type.GetType("Exceptions.MatrixException, Exceptions");
+            var actException = Assert.Catch(() => _ = matrix1 * matrix2);
+			
+            // Assert
+            Assert.NotNull(expectedException, message: "'MatrixException' is not implemented.");
+            Assert.AreEqual(expectedException, actException.GetType(), message:
+                "Multiply operator should throw matrix exception in case of inappropriate matrices dimensions.");
+        }
         
         [TestCaseSource(nameof(ArraysOperatorMultiplyException))]
         public void Multiply_MatricesHaveInappropriateDimensions_MatrixExceptionThrown(double[,] array1,
