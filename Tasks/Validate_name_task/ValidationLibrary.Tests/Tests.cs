@@ -20,5 +20,32 @@ namespace ValidationLibrary.Tests
             methodName = "GetValidName";
         }
 
+        #region Reflection
+        [Test]
+        public void GetValidNameMethod_WithRightSignatureAndParameter_IsExist()
+        {
+            //arrange
+            string parameter = "nameToValidate";
+
+            //act
+            var actualMethod = GetMethod(methodName);
+
+            var actualParameter = actualMethod.GetParameters().FirstOrDefault();
+            if (actualParameter is null)
+            {
+                Assert.Fail("GetValidName method doesn't has any parameter");
+            }
+            if (actualParameter.Name != parameter)
+            {
+                Assert.Fail("GetValidName method doesn't has parameter of  'nameToValidate' name ");
+            }
+            if (actualParameter.ParameterType != paramType)
+            {
+                Assert.Fail("GetValidName method doesn't has parameter of string type ");
+            }
+        }
+
+        #endregion
+
     }
 }
