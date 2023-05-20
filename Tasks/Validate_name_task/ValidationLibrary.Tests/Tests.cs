@@ -80,6 +80,20 @@ namespace ValidationLibrary.Tests
 
         }
 
+        [TestCase("Jam&es Ac575aster", "James Acaster")]
+        [TestCase("(=^･ω･^=) Barnes", "Barnes")]
+        [TestCase("Si6-w 123An7ita 67:/ Andersen", "Siw Anita Andersen")]
+        public void GetValidName_RemoveAllNonLationSymbols(string input, string expected)
+        {
+            //
+            //act 
+            var actualMethod = GetMethod(methodName);
+            var actual = actualMethod.Invoke(type, new object[] { input });
+
+            //assert
+            Assert.AreEqual(expected, actual
+                , message: "GetValidName method doesn't remove non Latin symbols");
+        }
 
         #endregion
 
