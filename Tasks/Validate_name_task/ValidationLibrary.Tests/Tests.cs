@@ -110,6 +110,19 @@ namespace ValidationLibrary.Tests
                 , message: "GetValid method doesn't remove extra whitespaces ");
         }
 
+        [TestCase("o", "O")]
+        [TestCase("R", "R")]
+        public void GetValidName(string input, string expected)
+        {
+
+            //act
+            var actualMethod = GetMethod(methodName);
+            var actual = ((string)actualMethod.Invoke(type, new object[] { input }));
+
+            //assert
+            Assert.AreEqual(expected, actual
+                            , message: "GetValidName doesn't return string less or equal to 50 characters");
+        }
 
         #endregion
 
