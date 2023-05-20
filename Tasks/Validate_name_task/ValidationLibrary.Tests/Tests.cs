@@ -95,6 +95,22 @@ namespace ValidationLibrary.Tests
                 , message: "GetValidName method doesn't remove non Latin symbols");
         }
 
+        [TestCase("    Carl Bad", "Carl Bad")]
+        [TestCase("Rick Flair    ", "Rick Flair")]
+        [TestCase("Brock    Dalton", "Brock Dalton")]
+        [TestCase("  Hello    World        Man  ", "Hello World Man")]
+        public void GetValidName_WithBigWhitespaces_ReturnFormatedString(string input, string expected)
+        {
+            //act
+            var actualMethod = GetMethod(methodName);
+            var actual = actualMethod.Invoke(type, new object[] { input });
+
+            //assert
+            Assert.AreEqual(expected, actual
+                , message: "GetValid method doesn't remove extra whitespaces ");
+        }
+
+
         #endregion
 
         
