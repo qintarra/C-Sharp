@@ -63,6 +63,24 @@ namespace ValidationLibrary.Tests
                 , message: "GetValidName return string of incorrect length");
         }
 
+        [TestCase("voLodYmyr KlyCHko", "Volodymyr Klychko")]
+        [TestCase("marshall mathers", "Marshall Mathers")]
+        [TestCase("Nice Person", "Nice Person")]
+        [TestCase("NICK COPELAND", "Nick Copeland")]
+        public void GetValidName_ReturnStringInRightRegister(string input, string expected)
+        {
+            //
+            //act 
+            var actualMethod = GetMethod(methodName);
+            var actual = actualMethod.Invoke(type, new object[] { input });
+
+            //assert
+            Assert.AreEqual(expected, actual
+                , message: "Case sensitivity logic in GetValidName method works incorrect");
+
+        }
+
+
         #endregion
 
         
