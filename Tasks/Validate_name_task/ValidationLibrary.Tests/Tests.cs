@@ -47,5 +47,24 @@ namespace ValidationLibrary.Tests
 
         #endregion
 
+        #region Invoke
+
+        [TestCase("hello world 2020year ^rt", 19)]
+        [TestCase("<(￣︶￣)> ＼(＾▽＾)／ (o_O)", 2)]
+        [TestCase("Dmy$tro   /Ponasenkov", 17)]
+        public void GetValidName_WithInputString_ReturnStringOfCorrectLength(string input, int expected_length)
+        {
+            //act
+            var actualMethod = GetMethod(methodName);
+            var actualLength = ((string)actualMethod.Invoke(type, new object[] { input })).Length;
+
+            //assert
+            Assert.AreEqual(expected_length, actualLength
+                , message: "GetValidName return string of incorrect length");
+        }
+
+        #endregion
+
+        
     }
 }
