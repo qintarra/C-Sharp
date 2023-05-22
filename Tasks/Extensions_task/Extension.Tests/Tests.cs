@@ -68,5 +68,15 @@ namespace Extension.Tests
             Assert.AreEqual(expected, actualResult, message: "IsDayOff works incorrect");
         }
 
+        [Test,TestCaseSource("Collection")]
+        public void EvenPositiveElements_WithCollectionParameter_ReturnEvenNumbers(IEnumerable<int> numbers,IEnumerable<int> expected)
+        {
+            //Act
+            var actualResult = numbers.EvenPositiveElements();// MyExtensions.EvenPositiveElements(numbers);
+			
+            //Assert
+            CollectionAssert.AreEqual(expected, actualResult, message: "EvenPositiveElements works incorrect ");           
+        }
+
     }
 }
