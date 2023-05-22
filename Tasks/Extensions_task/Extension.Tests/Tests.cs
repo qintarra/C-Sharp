@@ -78,5 +78,13 @@ namespace Extension.Tests
             CollectionAssert.AreEqual(expected, actualResult, message: "EvenPositiveElements works incorrect ");           
         }
 
+        static object[] Collection =
+        {
+            new object []{new int[]{5,1,8,24}, new int[] { 8,24} },
+            new object []{new List<int>() { 2,2,2,5,47,18}, new List<int>() { 2, 2, 2, 18 } },
+            new object[]{ new List<int>() { 3,7,0,1,0},new List<int>() },
+            new object[]{ new int[] { 2, -2, 3, -7, 9, 12, 4, 9 },new List<int>(){2,12,4} },
+            new object[]{ new List<int>() { 1, 3, -4, 11, 5, 18 } ,new int[] { 18}  }
+        };
     }
 }
