@@ -144,6 +144,20 @@ namespace ValidationLibrary.Tests
             }
         }
 
+        [TestCase("")]
+        public void GetValidName_ThrowArgumentException_IfNameToValidateIsEmptyOrWhiteSpace(string input)
+        {
+            //act
+            var actualMethod = GetMethod(methodName);
+            var act = Assert.Catch(() => actualMethod.Invoke(type, new object[] { input })).InnerException;
+
+            //assert
+            if (act.GetType() != typeof(ArgumentException))
+            {
+                Assert.Fail("GetValidName should throw ArgumentException in case of NameToValidate is empty or whitespace ");
+            }
+        }
+
 
         #endregion
 
