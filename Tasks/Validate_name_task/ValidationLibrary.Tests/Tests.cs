@@ -176,5 +176,18 @@ namespace ValidationLibrary.Tests
 
         #endregion
 
+        private MethodInfo GetMethod(string name)
+        {
+            var actualMethod = type.GetMethod(name);
+            if (actualMethod is null)
+            {
+                Assert.Fail("GetValidName method doesn't exist or it's name is incorrect");
+            }
+            if (actualMethod.ReturnType != typeof(string))
+            {
+                Assert.Fail("GetValidName method has incorrect type of return value");
+            }
+            return actualMethod;
+        }
     }
 }
