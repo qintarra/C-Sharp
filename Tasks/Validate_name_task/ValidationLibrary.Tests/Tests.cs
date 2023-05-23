@@ -158,6 +158,21 @@ namespace ValidationLibrary.Tests
             }
         }
 
+        [TestCase("｀、ヽ｀ヽ｀、ヽ(ノ＞＜)ノ ｀、ヽ｀☂ヽ｀、ヽ")]
+        [TestCase("888888")]
+        [TestCase("?(№№::")]
+        public void GetValidName_ThrowArgumentException_IfReturnStringIsEmpty(string input)
+        {
+            //act
+            var actualMethod = GetMethod(methodName);
+            var act = Assert.Catch(() => actualMethod.Invoke(type, new object[] { input })).InnerException;
+
+            //assert
+            if (act.GetType() != typeof(ArgumentException))
+            {
+                Assert.Fail("GetValidName should throw ArgumentException in case of return string is null or empty");
+            }
+        }
 
         #endregion
 
