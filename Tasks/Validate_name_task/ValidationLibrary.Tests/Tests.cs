@@ -126,6 +126,26 @@ namespace ValidationLibrary.Tests
 
         #endregion
 
-        
+        #region ExceptionTests
+		
+        [Test]
+        public void GetValidName_ThrowArgumentException_IfNameToValidateIsNull()
+        {
+            //arrange
+            string input = null;
+
+            //act
+            var actualMethod = GetMethod(methodName);
+            var act = Assert.Catch(() => actualMethod.Invoke(type, new object[] { input })).InnerException;
+
+            if (act.GetType() != typeof(ArgumentException))
+            {
+                Assert.Fail("GetValidName should throw ArgumentException in case of NameToValidate is null");
+            }
+        }
+
+
+        #endregion
+
     }
 }
