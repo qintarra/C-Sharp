@@ -107,6 +107,28 @@ namespace Linq
                 })
                 .OrderBy(maxDiscountOwner => maxDiscountOwner.ShopName);
         }
+		
+        public static IEnumerable<CountryStat> Task15(IEnumerable<Good> goodList,
+            IEnumerable<StorePrice> storePriceList)
+        {
+            return  goodList
+                    .GroupBy(good => good.Country)
+                    .Select(group => new CountryStat
+                    {
+                        Country = group.Key,
+                        StoresNumber = storePriceList
+                            .Where(sp => group.Any(good => good.Id == sp.GoodId))
+                            .Select(sp => sp.Shop)
+                            .Distinct()
+                            .Count(),
+                        MinPrice = storePriceList
+                            .Where(sp => group.Any(good => good.Id == sp.GoodId))
+                            .Select(sp => sp.Price)
+                            .DefaultIfEmpty(0)
+                            .Min()
+                    })
+                    .OrderBy(stat => stat.Country);
+        }
 
         #endregion
     }
