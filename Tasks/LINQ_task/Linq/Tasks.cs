@@ -86,6 +86,27 @@ namespace Linq
         {
             return yearList.Select(n => new YearSchoolStat { Year = n, NumberOfSchools = nameList.Where(y => y.Year == n).Select(s => s.SchoolNumber).Distinct().Count()}).OrderBy(n => n.NumberOfSchools).ThenBy(y => y.Year);
         }
+		
+        public static IEnumerable<MaxDiscountOwner> Task14(IEnumerable<Supplier> supplierList,
+                IEnumerable<SupplierDiscount> supplierDiscountList)
+        {
+            return supplierList.Join(supplierDiscountList, 
+                supplier => supplier.Id, 
+                supplierDiscount => supplierDiscount.SupplierId, 
+                (supplier, supplierDiscount) => new { Supplier = supplier, SupplierDiscount = supplierDiscount })
+                .GroupBy(joined => joined.SupplierDiscount.ShopName)
+                .Select(group => new MaxDiscountOwner
+                {
+                    Discount = group.Max(joined => joined.SupplierDiscount.Discount), 
+                    ShopName = group.Key, 
+                    Owner = group
+                    .Where(joined => joined.SupplierDiscount.Discount == group.Max(subgroup => subgroup.SupplierDiscount.Discount))
+                    .OrderBy(joined => joined.Supplier.Id)
+                    .Select(joined => joined.Supplier)
+                    .First()
+                })
+                .OrderBy(maxDiscountOwner => maxDiscountOwner.ShopName);
+        }
 
         #endregion
     }
