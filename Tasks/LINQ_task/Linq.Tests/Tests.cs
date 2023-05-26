@@ -17,5 +17,23 @@ namespace Linq.Tests
 
 
 
+        #region Utility
+
+        private void AssertIsLinq<T>(IEnumerable<T> result)
+        {
+            Assert.AreEqual("System.Linq", result.GetType().Namespace, "Result is not linq");
+        }
+
+        private void AssertIsAsExpected<T>(IEnumerable<T> expected, IEnumerable<T> actual)
+        {
+            Assert.AreEqual(expected, actual);
+        }
+
+        private void AssertIsAsExpected<T>(IEnumerable<T> expected, IEnumerable<T> actual, IEqualityComparer<T> comparer)
+        {
+            Assert.True(expected.SequenceEqual(actual, comparer), "Result is not as expected");
+        }
+
+        #endregion
     }
 }
